@@ -1,0 +1,13 @@
+**/node_modules
+
+build
+release*
+storage
+.storybook
+
+packages/*/build
+packages/*/release*
+packages/*/storage
+packages/*/.storybook
+packages/*/cra
+packages/*/public

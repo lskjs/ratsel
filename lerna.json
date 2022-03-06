@@ -1,0 +1,32 @@
+{
+  "version": "0.1.0",
+  "packages": [
+    "packages/*"
+  ],
+  "command": {
+    "version": {
+      "allowBranch": [
+        "master"
+      ],
+      "exact": true,
+      "conventionalCommits": true,
+      "conventionalPrerelease": false,
+      "message": "chore(release): %s"
+    },
+    "publish": {
+      "exact": true,
+      "conventionalCommits": true,
+      "conventionalPrerelease": false,
+      "ignoreChanges": [
+        "**/dist/**",
+        "**/build/**",
+        "**/release/**",
+        "**/*.md",
+        "**/example/**",
+        "**/examples/**",
+        "**/test/**",
+        "**/tests/**"
+      ]
+    }
+  }
+}
