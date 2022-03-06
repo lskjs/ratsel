@@ -1,6 +1,6 @@
 {
   "name": "@ratsel/button",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "🧩 Rätsel Button",
   "keywords": [
     "lskjs",
@@ -29,11 +29,5 @@
     "test": "lsk run test",
     "test:watch": "lsk run test:watch",
     "watch": "lsk run watch"
-  },
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
-  "peerDependencies": {
   }
 }
