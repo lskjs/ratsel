@@ -9,10 +9,10 @@ type MakeReturnType = SerializedStyles | string | ((arg: PropsWithTheme) => Seri
 
 export const make = (
   obj: Record<string, MakeReturnType>,
-  value: string,
+  value?: string,
   defaultValue: string = 'default',
 ): MakeReturnType => {
   if (!obj || typeof obj !== 'object') return '';
-  if (!obj[value] && defaultValue) return obj[defaultValue] || '';
+  if (!value || !obj[value] && defaultValue) return obj[defaultValue] || '';
   return obj[value];
 };
