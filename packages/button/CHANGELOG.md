@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/lskjs/ratsel/compare/v0.2.0...v0.2.1) (2022-03-28)
+
+
+### Bug Fixes
+
+* **button:** temp string type ([dd74431](https://github.com/lskjs/ratsel/commit/dd744319fd780d1a27dabd282b52e9acc7c720a9))
+
+
+
+
+
 # [0.2.0](https://github.com/lskjs/ratsel/compare/v0.1.1...v0.2.0) (2022-03-28)
 
 
