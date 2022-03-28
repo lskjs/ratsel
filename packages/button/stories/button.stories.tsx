@@ -13,6 +13,11 @@ export default {
       </ThemeProvider>
     ),
   ],
-}
+};
 
-export const Default = () => <Button>Кнопка</Button>;
+
+const Template = (args) => <Button {...args} />;
+
+export const Primary = Template.bind({
+  children: 'Кнопка',
+});

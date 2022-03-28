@@ -14,14 +14,17 @@ const variants = {
 };
 
 export const Base = styled('button', {
-  shouldForwardProp: (prop) => !['variant'].includes(prop as string),
+  shouldForwardProp: (prop) => !['variant', 'theme'].includes(prop as string),
 })<BaseProps>`
-  font-family: ${(props) => props.theme[Symbol.for('ratsel')].fonts.main};
+  font-family: ${(props) => {
+    console.log('props', props);
+    return props.theme[Symbol.for('ratsel')].fonts.main;
+  }};
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 40px;
   letter-spacing: -0.01em;
 
-  ${(props) => make(variants, props.variant as string, 'primary')}
+  ${(props) => make(variants, props.variant, 'primary')}
 `;
