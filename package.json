@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "13.2.0",
+    "@emotion/babel-plugin": "^11.7.2",
     "@lskjs/eslint-config": "2.6.0",
     "@lskjs/utils": "2.29.0",
     "@types/jest": "27.0.2",
