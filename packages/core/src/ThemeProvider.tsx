@@ -12,7 +12,7 @@ interface ThemeProviderProps {
 export const ThemeProvider: FC<ThemeProviderProps> = ({ children, theme }) => {
   const memoizedTheme = useMemo(
     () => {
-      let composedTheme = theme ?? defaultTheme;
+      let composedTheme = theme || defaultTheme;
       if (theme && typeof theme === 'function') {
         composedTheme = theme(defaultTheme);
       }
