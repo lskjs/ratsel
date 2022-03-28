@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/lskjs/ratsel/compare/v0.2.1...v0.2.2) (2022-03-28)
+
+
+### Bug Fixes
+
+* **core:** add emotion plugin ([05115e3](https://github.com/lskjs/ratsel/commit/05115e3717d53812ebb8db2cf31bb50565079e58))
+* update .babelrc ([5877aea](https://github.com/lskjs/ratsel/commit/5877aeac7dcbfef246ff0c4a3606fa90d070d84e))
+
+
+
+
+
 ## [0.2.1](https://github.com/lskjs/ratsel/compare/v0.2.0...v0.2.1) (2022-03-28)
 
 
