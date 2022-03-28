@@ -1,6 +1,6 @@
 {
   "name": "@ratsel/button",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "🧩 Rätsel Button",
   "keywords": [
     "lskjs",
@@ -37,8 +37,8 @@
     "react": "^17.0.2"
   },
   "peerDependencies": {
-    "@emotion/styled": "11.x",
     "@emotion/react": "11.x",
+    "@emotion/styled": "11.x",
     "react": "17.x"
   }
 }
