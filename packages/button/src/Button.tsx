@@ -1,11 +1,14 @@
 import React from 'react';
 import type { FC } from 'react';
+import { Base, BaseProps } from './components/Base';
 
-export const Button: FC = ({ children }) => {
+export interface ButtonProps extends BaseProps {}
+
+export const Button: FC<ButtonProps> = ({ children, variant }) => {
   return (
-    <button>
+    <Base variant={variant}>
       {children}
-    </button>
+    </Base>
   );
 };
 
