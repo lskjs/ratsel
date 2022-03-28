@@ -1,7 +1,7 @@
 const req = require.context(
   '../packages',
   true,
-  /.story.js|.story.js|.story.jsx|.story.jsx$/,
+  /.story.js|.story.js|.story.jsx|.story.jsx|.story.ts|.story.tsx$/,
 );
 
 export default {
