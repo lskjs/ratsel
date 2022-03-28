@@ -1,1 +1,1 @@
-// For future
+export { Button } from './Button';
