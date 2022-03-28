@@ -1,5 +1,4 @@
 module.exports = {
-  presets: [
-    '@lskjs/babel-preset'
-  ]
+  presets: ['@lskjs/babel-preset'],
+  plugins: ['@emotion'],
 };
