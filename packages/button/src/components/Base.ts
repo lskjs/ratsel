@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 const variants = {
-  primary: (props) => css`
+  primary: (props: any) => css`
     background: ${props.theme[Symbol.for('ratsel')].button.variants.primary.background};
     color: ${props.theme[Symbol.for('ratsel')].button.variants.primary.color};
   `,
