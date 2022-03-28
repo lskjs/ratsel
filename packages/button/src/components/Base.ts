@@ -23,5 +23,5 @@ export const Base = styled('button', {
   line-height: 40px;
   letter-spacing: -0.01em;
 
-  ${(props) => make(variants, props.variant, 'primary')}
+  ${(props) => make(variants, props.variant as string, 'primary')}
 `;
