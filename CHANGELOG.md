@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/lskjs/ratsel/compare/v0.2.2...v0.3.0) (2022-03-29)
+
+
+### Features
+
+* **core:** instance exported ([b1e47ac](https://github.com/lskjs/ratsel/commit/b1e47ac111cdd8c51ad28f80e19294b767da461e))
+
+
+
+
+
 ## [0.2.2](https://github.com/lskjs/ratsel/compare/v0.2.1...v0.2.2) (2022-03-28)
 
 
