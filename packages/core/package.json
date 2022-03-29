@@ -31,12 +31,14 @@
     "watch": "lsk run watch"
   },
   "devDependencies": {
-    "@emotion/react": "^11.8.2",
     "@types/react": "^17.0.43",
     "react": "^17.0.2"
   },
   "peerDependencies": {
-    "@emotion/react": "11.x",
     "react": "17.x"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1"
   }
 }
