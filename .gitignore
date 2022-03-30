@@ -21,3 +21,4 @@ packages/*/public/service-worker.js
 packages/*/public/static
 packages/*/.env*
 packages/*/cra/public/assets
+!packages/*/src/__fixtures__

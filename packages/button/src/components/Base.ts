@@ -14,10 +14,7 @@ const variants = {
 export const Base = styled('button', {
   shouldForwardProp: (prop) => !['variant', 'theme'].includes(prop as string),
 })<BaseProps>`
-  font-family: ${(props) => {
-    console.log('props', props);
-    return props.theme[Symbol.for('ratsel')].fonts.main;
-  }};
+  font-family: ${(props) => props.theme[Symbol.for('ratsel')].fonts.main};
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
