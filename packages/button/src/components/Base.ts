@@ -20,6 +20,9 @@ export const Base = styled('button', {
   font-size: 13px;
   line-height: 40px;
   letter-spacing: -0.01em;
+  border-radius: 8px;
+  border: none;
+  padding: 0 24px;
 
   ${(props) => make(variants, props.variant, 'primary')}
 `;
