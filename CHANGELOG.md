@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/lskjs/ratsel/compare/v0.3.0...v0.3.1) (2022-03-30)
+
+
+### Bug Fixes
+
+* **button:** use right instance ([bd808ec](https://github.com/lskjs/ratsel/commit/bd808ec8a2776a9d689d32324deb08cbba82004c))
+
+
+
+
+
 # [0.3.0](https://github.com/lskjs/ratsel/compare/v0.2.2...v0.3.0) (2022-03-29)
 
 
