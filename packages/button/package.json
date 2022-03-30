@@ -31,15 +31,11 @@
     "watch": "lsk run watch"
   },
   "devDependencies": {
-    "@emotion/react": "^11.8.2",
-    "@emotion/styled": "^11.8.1",
     "@ratsel/core": "0.3.0",
     "@types/react": "^17.0.43",
     "react": "^17.0.2"
   },
   "peerDependencies": {
-    "@emotion/react": "11.x",
-    "@emotion/styled": "11.x",
     "@ratsel/core": "0.x",
     "react": "17.x"
   }

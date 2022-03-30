@@ -1,6 +1,4 @@
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-import { make } from '@ratsel/core';
+import { make, styled, css } from '@ratsel/core';
 
 export interface BaseProps {
   variant?: 'primary' | 'secondary';

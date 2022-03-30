@@ -1,7 +1,7 @@
 import React from 'react';
 import type { FC } from 'react';
 import { Base, BaseProps } from './components/Base';
-import { useTheme } from '@emotion/react';
+import { useTheme } from '@ratsel/core';
 
 export interface ButtonProps extends BaseProps {}
 
