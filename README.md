@@ -8,3 +8,5 @@ Rätsel ([German for puzzle/riddle](https://en.wiktionary.org/wiki/R%C3%A4tsel))
 ✂️ Partial import of only the required components
 
 🚀 Based on the performant [emotion](https://github.com/emotion-js/emotion) CSS-in-JS library
+
+👀 Docs / UI preview: https://lskjs.github.io/ratsel/
