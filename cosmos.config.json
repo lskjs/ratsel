@@ -1,4 +1,6 @@
 {
+  "port": 9001,
+  "exportPath": "docs",
   "watchDirs": ["./packages"],
   "fixtureFileSuffix": "story",
   "fixturesDir": "stories",
