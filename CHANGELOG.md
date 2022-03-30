@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/lskjs/ratsel/compare/v0.3.1...v0.4.0) (2022-03-30)
+
+
+### Features
+
+* use cosmos instead storybook ([d27498a](https://github.com/lskjs/ratsel/commit/d27498ad950e859b52bc761b6922fe7733f74852))
+
+
+
+
+
 ## [0.3.1](https://github.com/lskjs/ratsel/compare/v0.3.0...v0.3.1) (2022-03-30)
 
 
