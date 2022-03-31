@@ -1,4 +1,4 @@
-import { make, sytled, css } from '@ratsel/core';
+import { make, styled, css } from '@ratsel/core';
 export interface BaseProps {
   variant?: 'primary' | 'secondary';
 }
@@ -10,7 +10,7 @@ const variants = {
   `,
 };
 
-export const Base = sytled('button', {
+export const Base = styled('button', {
   shouldForwardProp: (prop) => !['variant', 'theme'].includes(prop as string),
 })<BaseProps>`
   font-family: ${(props) => {
