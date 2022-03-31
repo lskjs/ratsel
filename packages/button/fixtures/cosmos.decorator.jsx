@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from "@ratsel/core";
+import { ThemeProvider } from '@ratsel/core';
 
 const theme = (parentTheme) => ({
   ...parentTheme,
@@ -51,7 +51,5 @@ const theme = (parentTheme) => ({
 });
 
 export default ({ children }) => (
-  <ThemeProvider theme={theme}>
-    {children}
-  </ThemeProvider>
+  <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );

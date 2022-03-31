@@ -12,19 +12,47 @@ export default {
       Кнопка
     </Button>
   ),
-  disabled: <Button variant="primary" disabled bordered={false}>Кнопка</Button>,
+  disabled: (
+    <Button variant="primary" disabled bordered={false}>
+      Кнопка
+    </Button>
+  ),
+  icon: (
+    <Button
+      variant="primary"
+      bordered={false}
+      disabled={false}
+      icon={<BookmarkIcon />}
+    />
+  ),
   iconLeft: (
-    <Button variant="primary" bordered={false} iconLeft={<BookmarkIcon />}>
+    <Button
+      variant="primary"
+      bordered={false}
+      disabled={false}
+      iconLeft={<BookmarkIcon />}
+    >
       Кнопка
     </Button>
   ),
   iconRight: (
-    <Button variant="primary" bordered={false} iconRight={<BookmarkIcon />}>
+    <Button
+      variant="primary"
+      bordered={false}
+      disabled={false}
+      iconRight={<BookmarkIcon />}
+    >
       Кнопка
     </Button>
   ),
   iconBoth: (
-    <Button variant="primary" bordered={false} iconLeft={<BookmarkIcon />} iconRight={<BookmarkIcon />}>
+    <Button
+      variant="primary"
+      bordered={false}
+      disabled={false}
+      iconLeft={<BookmarkIcon />}
+      iconRight={<BookmarkIcon />}
+    >
       Кнопка
     </Button>
   ),
