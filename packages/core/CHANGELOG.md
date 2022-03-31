@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.4](https://github.com/lskjs/ratsel/compare/v0.5.3...v0.5.4) (2022-03-31)
+
+
+### Bug Fixes
+
+* **core:** make normalize ([0b6881d](https://github.com/lskjs/ratsel/commit/0b6881d074a77b6191e98d60beb8d3e7a3127c58))
+
+
+
+
+
 ## [0.5.3](https://github.com/lskjs/ratsel/compare/v0.5.2...v0.5.3) (2022-03-31)
 
 
