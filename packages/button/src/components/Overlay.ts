@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { styled, make } from '@ratsel/core';
 import { variants } from '../utils/variants';
 import { BaseProps } from './Base';
