@@ -33,5 +33,8 @@ export const Base = styled('button', {
   border: none;
   padding: 0 24px;
 
-  ${(props) => make(variants, props.variant, 'primary')}
+  ${(props) => {
+    // @ts-ignore
+    return make(variants, props.variant, 'primary');
+  }}
 `;
