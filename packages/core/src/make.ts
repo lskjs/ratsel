@@ -7,7 +7,9 @@ export interface PropsWithTheme {
   [arg: string]: unknown;
 }
 
-export type MakeReturnType = SerializedStyles | ((arg: PropsWithTheme) => SerializedStyles);
+export type MakeReturnType =
+  | SerializedStyles
+  | ((arg: PropsWithTheme) => SerializedStyles);
 
 export const make = (
   obj: Record<string, MakeReturnType>,
@@ -15,7 +17,7 @@ export const make = (
   defaultValue: string = 'default',
 ): SerializedStyles => {
   if (!obj || typeof obj !== 'object') return css``;
-  if (!value || !obj[value] && defaultValue) {
+  if (!value || (!obj[value] && defaultValue)) {
     return (obj[defaultValue] || css``) as SerializedStyles;
   }
   return obj[value] as SerializedStyles;
