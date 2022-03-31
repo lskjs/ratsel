@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/lskjs/ratsel/compare/v0.5.4...v0.6.0) (2022-03-31)
+
+
+### Features
+
+* **button:** support icon only ([0aebc4e](https://github.com/lskjs/ratsel/commit/0aebc4e3d14d9c07619182ff3e93e3b95657282a))
+* **button:** variants & icons ([e0c65e6](https://github.com/lskjs/ratsel/commit/e0c65e6cf0ed19d20987defba026d30e2eb78768))
+
+
+
+
+
 ## [0.5.4](https://github.com/lskjs/ratsel/compare/v0.5.3...v0.5.4) (2022-03-31)
 
 **Note:** Version bump only for package @ratsel/button

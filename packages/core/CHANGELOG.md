@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/lskjs/ratsel/compare/v0.5.4...v0.6.0) (2022-03-31)
+
+
+### Bug Fixes
+
+* **core:** add font weight 600 ([cf33b8b](https://github.com/lskjs/ratsel/commit/cf33b8bdd995516fa7a445d42a3fae145fb5b0f2))
+
+
+### Features
+
+* **core:** update buttonTheme ([466d531](https://github.com/lskjs/ratsel/commit/466d5314b25971fe0526c3e4eb92fe849f399441))
+
+
+
+
+
 ## [0.5.4](https://github.com/lskjs/ratsel/compare/v0.5.3...v0.5.4) (2022-03-31)
 
 
