@@ -1,5 +1,5 @@
-import React from 'react';
 import { ThemeProvider } from '@ratsel/core';
+import React from 'react';
 
 const theme = (parentTheme) => ({
   ...parentTheme,

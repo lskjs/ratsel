@@ -1,5 +1,6 @@
-import { make, styled, css } from '@ratsel/core';
+import { css, make, styled } from '@ratsel/core';
 import type { ReactNode } from 'react';
+
 import { variants } from '../utils/variants';
 
 export interface BaseProps {

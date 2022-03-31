@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Button } from '../src';
 import { BookmarkIcon } from '../assets/BookmarkIcon';
+import { Button } from '../src';
 
 async function promiseClick(event) {
   return new Promise((resolve) => {
@@ -15,7 +15,7 @@ export default {
   primary: <Button variant="primary">Кнопка</Button>,
   secondary: <Button variant="secondary">Кнопка</Button>,
   shadow: <Button variant="shadow">Кнопка</Button>,
-  ['shadow-bordered']: (
+  'shadow-bordered': (
     <Button variant="shadow" bordered>
       Кнопка
     </Button>

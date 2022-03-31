@@ -1,5 +1,5 @@
-import { css } from '@ratsel/core';
 import type { PropsWithTheme } from '@ratsel/core';
+import { css } from '@ratsel/core';
 
 export const variants = {
   primary: ({ theme }: PropsWithTheme) => css`

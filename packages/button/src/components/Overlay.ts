@@ -1,4 +1,5 @@
-import { styled, make } from '@ratsel/core';
+import { make, styled } from '@ratsel/core';
+
 import { variants } from '../utils/variants';
 import { BaseProps } from './Base';
 
@@ -7,7 +8,7 @@ interface OverlayProps extends Pick<BaseProps, 'variant'> {
 }
 
 export const Overlay = styled('div', {
-  shouldForwardProp: prop => !['variant', 'status'].includes(prop as string),
+  shouldForwardProp: (prop) => !['variant', 'status'].includes(prop as string),
 })<OverlayProps>`
   display: flex;
   align-items: center;

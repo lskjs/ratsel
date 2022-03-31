@@ -1,12 +1,13 @@
-import React, { SyntheticEvent, useState } from 'react';
 import type { FC, ReactNode } from 'react';
+import React, { SyntheticEvent, useState } from 'react';
+
 import { Base, BaseProps } from './components/Base';
+import { CheckIcon } from './components/CheckIcon';
+import { CloseIcon } from './components/CloseIcon';
 import { Icon } from './components/Icon';
-import { isPromise } from './utils/isPromise';
 import { Overlay } from './components/Overlay';
 import { Spinner } from './components/Spinner';
-import { CloseIcon } from './components/CloseIcon';
-import { CheckIcon } from './components/CheckIcon';
+import { isPromise } from './utils/isPromise';
 
 export interface ButtonProps extends BaseProps {
   disabled?: boolean;
@@ -40,8 +41,7 @@ export const Button: FC<ButtonProps> = ({
   const handleSubmit = async (event: SyntheticEvent<HTMLElement>) => {
     if (!onClick) return;
     const promise = onClick(event);
-    if (isPromise(promise as unknown as Promise<Function>)) {
-      console.log('promise?');
+    if (isPromise(promise as unknown as Promise<() => unknown>)) {
       setState({
         ...state,
         loading: true,
@@ -74,7 +74,7 @@ export const Button: FC<ButtonProps> = ({
   const statusRender = status || state.status;
   const isOverlayRender = loadingRender || Boolean(statusRender);
   const inverse = ['primary'].includes(variant);
-  console.log(state);
+
   return (
     <Base
       variant={variant}

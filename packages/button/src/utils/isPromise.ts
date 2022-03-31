@@ -1,3 +1,4 @@
-export const isPromise = (obj: Promise<Function>) => (
-  !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function'
-);
+export const isPromise = (obj: { then: () => unknown }) =>
+  !!obj &&
+  (typeof obj === 'object' || typeof obj === 'function') &&
+  typeof obj.then === 'function';
