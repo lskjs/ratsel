@@ -32,6 +32,6 @@ export type withThemeType = <
 ) => React.FC<DistributiveOmit<PropsOf<C>, 'theme'> & { theme?: InnerTheme }>
 
 
-export const sytled: CreateStyled = emotionStyled as CreateStyled;
+export const styled: CreateStyled = emotionStyled as CreateStyled;
 export const withTheme: withThemeType = emotionWithTheme as withThemeType;
 export const useTheme: () => InnerTheme = emotionUseTheme as unknown as () => InnerTheme;

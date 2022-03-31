@@ -17,7 +17,7 @@ export {
   ClassNames,
 };
 
-export { sytled, withTheme, useTheme } from './styled';
+export { styled, withTheme, useTheme } from './styled';
 export { ThemeProvider } from './ThemeProvider';
 export { globalStyles } from './globalStyles';
 export { make } from './make';
