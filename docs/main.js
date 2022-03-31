@@ -290,17 +290,13 @@ exports.Z = void 0;
 
 var _regenerator = _interopRequireDefault(__webpack_require__(7988));
 
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(2468));
-
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(2792));
 
 var _react = _interopRequireDefault(__webpack_require__(7294));
 
-var _src = __webpack_require__(9604);
-
 var _BookmarkIcon = __webpack_require__(4672);
 
-var _primary$secondary$sh;
+var _src = __webpack_require__(9604);
 
 function promiseClick(_x) {
   return _promiseClick.apply(this, arguments);
@@ -328,7 +324,7 @@ function _promiseClick() {
   return _promiseClick.apply(this, arguments);
 }
 
-var _default = (_primary$secondary$sh = {
+var _default = {
   primary: /*#__PURE__*/_react["default"].createElement(_src.Button, {
     variant: "primary"
   }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
@@ -337,49 +333,58 @@ var _default = (_primary$secondary$sh = {
   }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
   shadow: /*#__PURE__*/_react["default"].createElement(_src.Button, {
     variant: "shadow"
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  'shadow-bordered': /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    variant: "shadow",
+    bordered: true
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  loading: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    loading: true,
+    variant: "primary"
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  success: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    status: "success",
+    variant: "primary"
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  error: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    status: "error",
+    variant: "primary"
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  promiseClick: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    variant: "primary",
+    onClick: promiseClick
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  disabled: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    variant: "primary",
+    disabled: true,
+    bordered: false
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  icon: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    variant: "primary",
+    bordered: false,
+    disabled: false,
+    icon: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
+  }),
+  iconLeft: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    variant: "primary",
+    bordered: false,
+    disabled: false,
+    iconLeft: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  iconRight: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    variant: "primary",
+    bordered: false,
+    disabled: false,
+    iconRight: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  iconBoth: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    variant: "primary",
+    bordered: false,
+    disabled: false,
+    iconLeft: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null),
+    iconRight: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
   }, "\u041A\u043D\u043E\u043F\u043A\u0430")
-}, (0, _defineProperty2["default"])(_primary$secondary$sh, 'shadow-bordered', /*#__PURE__*/_react["default"].createElement(_src.Button, {
-  variant: "shadow",
-  bordered: true
-}, "\u041A\u043D\u043E\u043F\u043A\u0430")), (0, _defineProperty2["default"])(_primary$secondary$sh, "loading", /*#__PURE__*/_react["default"].createElement(_src.Button, {
-  loading: true,
-  variant: "primary"
-}, "\u041A\u043D\u043E\u043F\u043A\u0430")), (0, _defineProperty2["default"])(_primary$secondary$sh, "success", /*#__PURE__*/_react["default"].createElement(_src.Button, {
-  status: "success",
-  variant: "primary"
-}, "\u041A\u043D\u043E\u043F\u043A\u0430")), (0, _defineProperty2["default"])(_primary$secondary$sh, "error", /*#__PURE__*/_react["default"].createElement(_src.Button, {
-  status: "error",
-  variant: "primary"
-}, "\u041A\u043D\u043E\u043F\u043A\u0430")), (0, _defineProperty2["default"])(_primary$secondary$sh, "promiseClick", /*#__PURE__*/_react["default"].createElement(_src.Button, {
-  variant: "primary",
-  onClick: promiseClick
-}, "\u041A\u043D\u043E\u043F\u043A\u0430")), (0, _defineProperty2["default"])(_primary$secondary$sh, "disabled", /*#__PURE__*/_react["default"].createElement(_src.Button, {
-  variant: "primary",
-  disabled: true,
-  bordered: false
-}, "\u041A\u043D\u043E\u043F\u043A\u0430")), (0, _defineProperty2["default"])(_primary$secondary$sh, "icon", /*#__PURE__*/_react["default"].createElement(_src.Button, {
-  variant: "primary",
-  bordered: false,
-  disabled: false,
-  icon: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
-})), (0, _defineProperty2["default"])(_primary$secondary$sh, "iconLeft", /*#__PURE__*/_react["default"].createElement(_src.Button, {
-  variant: "primary",
-  bordered: false,
-  disabled: false,
-  iconLeft: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
-}, "\u041A\u043D\u043E\u043F\u043A\u0430")), (0, _defineProperty2["default"])(_primary$secondary$sh, "iconRight", /*#__PURE__*/_react["default"].createElement(_src.Button, {
-  variant: "primary",
-  bordered: false,
-  disabled: false,
-  iconRight: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
-}, "\u041A\u043D\u043E\u043F\u043A\u0430")), (0, _defineProperty2["default"])(_primary$secondary$sh, "iconBoth", /*#__PURE__*/_react["default"].createElement(_src.Button, {
-  variant: "primary",
-  bordered: false,
-  disabled: false,
-  iconLeft: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null),
-  iconRight: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
-}, "\u041A\u043D\u043E\u043F\u043A\u0430")), _primary$secondary$sh);
-
+};
 exports.Z = _default;
 
 /***/ }),
@@ -400,9 +405,9 @@ exports.Z = void 0;
 
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(2468));
 
-var _react = _interopRequireDefault(__webpack_require__(7294));
-
 var _core = __webpack_require__(8055);
+
+var _react = _interopRequireDefault(__webpack_require__(7294));
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
@@ -503,17 +508,17 @@ var _react = _interopRequireWildcard(__webpack_require__(7294));
 
 var _Base = __webpack_require__(1717);
 
-var _Icon = __webpack_require__(1761);
+var _CheckIcon = __webpack_require__(3619);
 
-var _isPromise = __webpack_require__(5299);
+var _CloseIcon = __webpack_require__(852);
+
+var _Icon = __webpack_require__(1761);
 
 var _Overlay = __webpack_require__(4849);
 
 var _Spinner = __webpack_require__(2430);
 
-var _CloseIcon = __webpack_require__(852);
-
-var _CheckIcon = __webpack_require__(3619);
+var _isPromise = __webpack_require__(5299);
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -562,50 +567,49 @@ var Button = function Button(_ref) {
               promise = onClick(event);
 
               if (!(0, _isPromise.isPromise)(promise)) {
-                _context.next = 18;
+                _context.next = 17;
                 break;
               }
 
-              console.log('promise?');
               setState(_objectSpread(_objectSpread({}, state), {}, {
                 loading: true
               }));
-              _context.prev = 6;
-              _context.next = 9;
+              _context.prev = 5;
+              _context.next = 8;
               return promise;
 
-            case 9:
+            case 8:
               setState(_objectSpread(_objectSpread({}, state), {}, {
                 loading: false,
                 status: 'success'
               }));
-              _context.next = 15;
+              _context.next = 14;
               break;
 
-            case 12:
-              _context.prev = 12;
-              _context.t0 = _context["catch"](6);
+            case 11:
+              _context.prev = 11;
+              _context.t0 = _context["catch"](5);
               setState(_objectSpread(_objectSpread({}, state), {}, {
                 loading: false,
                 status: 'error'
               }));
 
-            case 15:
-              _context.prev = 15;
+            case 14:
+              _context.prev = 14;
               setTimeout(function () {
                 setState(_objectSpread(_objectSpread({}, state), {}, {
                   loading: false,
                   status: null
                 }));
               }, 1000);
-              return _context.finish(15);
+              return _context.finish(14);
 
-            case 18:
+            case 17:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[6, 12, 15, 18]]);
+      }, _callee, null, [[5, 11, 14, 17]]);
     }));
 
     return function handleSubmit(_x) {
@@ -617,7 +621,6 @@ var Button = function Button(_ref) {
   var statusRender = status || state.status;
   var isOverlayRender = loadingRender || Boolean(statusRender);
   var inverse = ['primary'].includes(variant);
-  console.log(state);
   return /*#__PURE__*/_react["default"].createElement(_Base.Base, {
     variant: variant,
     bordered: bordered,
@@ -754,6 +757,7 @@ exports.CloseIcon = void 0;
 
 var _react = _interopRequireDefault(__webpack_require__(7294));
 
+/* eslint-disable max-len */
 var CloseIcon = function CloseIcon() {
   return /*#__PURE__*/_react["default"].createElement("svg", {
     width: "24",
@@ -765,8 +769,8 @@ var CloseIcon = function CloseIcon() {
     id: "Small=No"
   }, /*#__PURE__*/_react["default"].createElement("path", {
     id: "Vector",
-    "fill-rule": "evenodd",
-    "clip-rule": "evenodd",
+    fillRule: "evenodd",
+    clipRule: "evenodd",
     d: "M13.4143 12.0002L18.7073 6.70725C19.0983 6.31625 19.0983 5.68425 18.7073 5.29325C18.3163 4.90225 17.6842 4.90225 17.2932 5.29325L12.0002 10.5863L6.70725 5.29325C6.31625 4.90225 5.68425 4.90225 5.29325 5.29325C4.90225 5.68425 4.90225 6.31625 5.29325 6.70725L10.5863 12.0002L5.29325 17.2932C4.90225 17.6842 4.90225 18.3163 5.29325 18.7073C5.48825 18.9023 5.74425 19.0002 6.00025 19.0002C6.25625 19.0002 6.51225 18.9023 6.70725 18.7073L12.0002 13.4143L17.2932 18.7073C17.4882 18.9023 17.7443 19.0002 18.0002 19.0002C18.2562 19.0002 18.5123 18.9023 18.7073 18.7073C19.0983 18.3163 19.0983 17.6842 18.7073 17.2932L13.4143 12.0002Z",
     fill: "currentColor"
   })));
@@ -998,9 +1002,9 @@ exports.ThemeProvider = void 0;
 
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(1082));
 
-var _react = _interopRequireWildcard(__webpack_require__(7294));
+var _react = __webpack_require__(5198);
 
-var _react2 = __webpack_require__(5198);
+var _react2 = _interopRequireWildcard(__webpack_require__(7294));
 
 var _globalStyles = __webpack_require__(4284);
 
@@ -1019,7 +1023,7 @@ var ThemeProvider = function ThemeProvider(_ref) {
       theme = _ref.theme,
       _ref$globalStyles = _ref.globalStyles,
       globalStyles = _ref$globalStyles === void 0 ? _globalStyles.globalStyles : _ref$globalStyles;
-  var memoizedTheme = (0, _react.useMemo)(function () {
+  var memoizedTheme = (0, _react2.useMemo)(function () {
     var composedTheme = theme || _theme.theme;
 
     if (theme && typeof theme === 'function') {
@@ -1032,9 +1036,9 @@ var ThemeProvider = function ThemeProvider(_ref) {
       });
     };
   }, [theme]);
-  return /*#__PURE__*/_react["default"].createElement(_react2.ThemeProvider, {
+  return /*#__PURE__*/_react2["default"].createElement(_react.ThemeProvider, {
     theme: memoizedTheme
-  }, /*#__PURE__*/_react["default"].createElement(_react2.Global, {
+  }, /*#__PURE__*/_react2["default"].createElement(_react.Global, {
     styles: globalStyles
   }), children);
 };
@@ -1271,9 +1275,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.withTheme = exports.useTheme = exports.styled = void 0;
 
-var _styled = _interopRequireDefault(__webpack_require__(4708));
-
 var _react = __webpack_require__(5198);
+
+var _styled = _interopRequireDefault(__webpack_require__(4708));
 
 var styled = _styled["default"];
 exports.styled = styled;
@@ -1381,9 +1385,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.theme = void 0;
 
-var _fontsTheme = __webpack_require__(514);
-
 var _buttonTheme = __webpack_require__(9852);
+
+var _fontsTheme = __webpack_require__(514);
 
 var theme = {
   fonts: _fontsTheme.fontsTheme,
@@ -39929,9 +39933,9 @@ exports.ThemeProvider = void 0;
 
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(2468));
 
-var _react = _interopRequireWildcard(__webpack_require__(7294));
+var _react = __webpack_require__(7783);
 
-var _react2 = __webpack_require__(7783);
+var _react2 = _interopRequireWildcard(__webpack_require__(7294));
 
 var _globalStyles = __webpack_require__(2451);
 
@@ -39950,7 +39954,7 @@ var ThemeProvider = function ThemeProvider(_ref) {
       theme = _ref.theme,
       _ref$globalStyles = _ref.globalStyles,
       globalStyles = _ref$globalStyles === void 0 ? _globalStyles.globalStyles : _ref$globalStyles;
-  var memoizedTheme = (0, _react.useMemo)(function () {
+  var memoizedTheme = (0, _react2.useMemo)(function () {
     var composedTheme = theme || _theme.theme;
 
     if (theme && typeof theme === 'function') {
@@ -39963,9 +39967,9 @@ var ThemeProvider = function ThemeProvider(_ref) {
       });
     };
   }, [theme]);
-  return /*#__PURE__*/_react["default"].createElement(_react2.ThemeProvider, {
+  return /*#__PURE__*/_react2["default"].createElement(_react.ThemeProvider, {
     theme: memoizedTheme
-  }, /*#__PURE__*/_react["default"].createElement(_react2.Global, {
+  }, /*#__PURE__*/_react2["default"].createElement(_react.Global, {
     styles: globalStyles
   }), children);
 };
@@ -40206,9 +40210,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.withTheme = exports.useTheme = exports.styled = void 0;
 
-var _styled = _interopRequireDefault(__webpack_require__(6305));
-
 var _react = __webpack_require__(7783);
+
+var _styled = _interopRequireDefault(__webpack_require__(6305));
 
 var styled = _styled["default"];
 exports.styled = styled;
@@ -40319,9 +40323,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.theme = void 0;
 
-var _fontsTheme = __webpack_require__(3409);
-
 var _buttonTheme = __webpack_require__(3394);
+
+var _fontsTheme = __webpack_require__(3409);
 
 var theme = {
   fonts: _fontsTheme.fontsTheme,
