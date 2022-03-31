@@ -10,6 +10,7 @@ const variants = {
   `,
 };
 
+// @ts-ignore
 export const Base = styled('button', {
   shouldForwardProp: (prop) => !['variant', 'theme'].includes(prop as string),
 })<BaseProps>`
