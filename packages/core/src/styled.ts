@@ -13,7 +13,7 @@ import type {
   Interpolation,
   ComponentSelector,
 } from '@emotion/react';
-import type { InnerTheme } from './themes/theme';
+import type { Theme } from './themes/theme';
 import { FilteringStyledOptions } from '@emotion/styled/types/base';
 
 export interface StyledComponent<
@@ -47,7 +47,7 @@ export interface CreateStyledComponent<
       Interpolation<
         ComponentProps &
           SpecificComponentProps &
-          AdditionalProps & { theme: InnerTheme }
+          AdditionalProps & { theme: Theme }
       >
     >
   ): StyledComponent<
@@ -59,7 +59,7 @@ export interface CreateStyledComponent<
   (
     template: TemplateStringsArray,
     ...styles: Array<
-      Interpolation<ComponentProps & SpecificComponentProps & { theme: InnerTheme }>
+      Interpolation<ComponentProps & SpecificComponentProps & { theme: Theme }>
     >
   ): StyledComponent<ComponentProps, SpecificComponentProps, JSXProps>
 
@@ -69,7 +69,7 @@ export interface CreateStyledComponent<
       Interpolation<
         ComponentProps &
           SpecificComponentProps &
-          AdditionalProps & { theme: InnerTheme }
+          AdditionalProps & { theme: Theme }
       >
     >
   ): StyledComponent<
@@ -88,7 +88,7 @@ export interface BaseCreateStyled {
     options: FilteringStyledOptions<React.ComponentProps<C>, ForwardedProps>
   ): CreateStyledComponent<
     Pick<PropsOf<C>, ForwardedProps> & {
-      theme?: InnerTheme
+      theme?: Theme
     },
     {},
     {
@@ -101,7 +101,7 @@ export interface BaseCreateStyled {
     options?: StyledOptions<React.ComponentProps<C>>
   ): CreateStyledComponent<
     PropsOf<C> & {
-      theme?: InnerTheme
+      theme?: Theme
     },
     {},
     {
@@ -117,7 +117,7 @@ export interface BaseCreateStyled {
     options: FilteringStyledOptions<React.ComponentProps<C>, ForwardedProps>
   ): CreateStyledComponent<
     Pick<PropsOf<C>, ForwardedProps> & {
-      theme?: InnerTheme
+      theme?: Theme
     }
   >
 
@@ -126,7 +126,7 @@ export interface BaseCreateStyled {
     options?: StyledOptions<React.ComponentProps<C>>
   ): CreateStyledComponent<
     PropsOf<C> & {
-      theme?: InnerTheme
+      theme?: Theme
     }
   >
 
@@ -137,7 +137,7 @@ export interface BaseCreateStyled {
     tag: Tag,
     options: FilteringStyledOptions<JSX.IntrinsicElements[Tag], ForwardedProps>
   ): CreateStyledComponent<
-    { theme?: InnerTheme; as?: React.ElementType },
+    { theme?: Theme; as?: React.ElementType },
     Pick<JSX.IntrinsicElements[Tag], ForwardedProps>
   >
 
@@ -145,7 +145,7 @@ export interface BaseCreateStyled {
     tag: Tag,
     options?: StyledOptions<JSX.IntrinsicElements[Tag]>
   ): CreateStyledComponent<
-    { theme?: InnerTheme; as?: React.ElementType },
+    { theme?: Theme; as?: React.ElementType },
     JSX.IntrinsicElements[Tag]
   >
 }
@@ -153,7 +153,7 @@ export interface BaseCreateStyled {
 export type StyledTags = {
   [Tag in keyof JSX.IntrinsicElements]: CreateStyledComponent<
     {
-      theme?: InnerTheme
+      theme?: Theme
       as?: React.ElementType
     },
     JSX.IntrinsicElements[Tag]
@@ -166,9 +166,9 @@ export type withThemeType = <
   C extends React.ComponentType<React.ComponentProps<C>>
 >(
   component: C
-) => React.FC<DistributiveOmit<PropsOf<C>, 'theme'> & { theme?: InnerTheme }>
+) => React.FC<DistributiveOmit<PropsOf<C>, 'theme'> & { theme?: Theme }>
 
 
-export const styled: CreateStyled = emotionStyled as CreateStyled;
+export const styled: CreateStyled = emotionStyled;
 export const withTheme: withThemeType = emotionWithTheme as withThemeType;
-export const useTheme: () => InnerTheme = emotionUseTheme as unknown as () => InnerTheme;
+export const useTheme: () => Theme = emotionUseTheme as unknown as () => Theme;
