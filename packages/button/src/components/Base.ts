@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { make, styled, css } from '@ratsel/core';
 import type { PropsWithTheme } from '@ratsel/core';
 import type { ReactNode } from 'react';

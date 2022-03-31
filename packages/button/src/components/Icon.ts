@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { styled } from '@ratsel/core';
 
 export const Icon = styled('span')`
