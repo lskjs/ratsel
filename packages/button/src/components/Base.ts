@@ -1,23 +1,31 @@
 import { make, styled, css } from '@ratsel/core';
-
 export interface BaseProps {
   variant?: 'primary' | 'secondary';
 }
 
 const variants = {
   primary: (props: any) => css`
-    background: ${props.theme[Symbol.for('ratsel')].button.variants.primary.background};
-    color: ${props.theme[Symbol.for('ratsel')].button.variants.primary.color};
+    background: ${props.theme.ratsel.button.variants.primary.background};
+    color: ${props.theme.ratsel.button.variants.primary.color};
   `,
 };
 
 export const Base = styled('button', {
   shouldForwardProp: (prop) => !['variant', 'theme'].includes(prop as string),
 })<BaseProps>`
-  font-family: ${(props) => props.theme[Symbol.for('ratsel')].fonts.main};
+  font-family: ${(props) => {
+    // @ts-ignore
+    return props.theme.ratsel.fonts.main;
+  }};
   font-style: normal;
-  font-weight: 500;
-  font-size: 13px;
+  font-weight: ${(props) => {
+    // @ts-ignore
+    return props.theme.ratsel.button.fontWeight;
+  }};
+  font-size: ${(props) => {
+    // @ts-ignore
+    return props.theme.ratsel.button.fontSize;
+  }};
   line-height: 40px;
   letter-spacing: -0.01em;
   border-radius: 8px;
