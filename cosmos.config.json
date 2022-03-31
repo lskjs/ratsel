@@ -2,8 +2,8 @@
   "port": 9001,
   "exportPath": "docs",
   "watchDirs": ["./packages"],
-  "fixtureFileSuffix": "story",
-  "fixturesDir": "stories",
+  "fixtureFileSuffix": "fixture",
+  "fixturesDir": "fixtures",
   "ui": {
     "responsivePreview": {
       "devices": [
