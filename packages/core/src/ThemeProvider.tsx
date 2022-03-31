@@ -1,12 +1,13 @@
 import React, { useMemo } from 'react';
 import { ThemeProvider as EmotionThemeProvider, Global, SerializedStyles } from '@emotion/react';
-import type { FC } from 'react';
-import type { Theme } from '@emotion/react';
 import { globalStyles as defaultGlobalStyles } from './globalStyles';
-import { defaultTheme } from './defaultTheme';
+import { theme as defaultTheme } from './themes/theme';
+import type { FC } from 'react';
+import type { Theme as AnyTheme } from '@emotion/react';
+import type { InnerTheme } from './themes/theme';
 
 interface ThemeProviderProps {
-  theme?: Partial<Theme> | ((outerTheme: Theme) => Theme);
+  theme?: Partial<InnerTheme> | ((outerTheme: InnerTheme) => InnerTheme);
   globalStyles?: SerializedStyles;
 }
 
@@ -20,9 +21,9 @@ export const ThemeProvider: FC<ThemeProviderProps> = ({
     if (theme && typeof theme === 'function') {
       composedTheme = theme(defaultTheme);
     }
-    return (parentTheme: Theme) => ({
+    return (parentTheme: AnyTheme) => ({
       ...parentTheme,
-      [Symbol.for('ratsel')]: composedTheme,
+      ratsel: composedTheme,
     });
   }, [theme]);
 

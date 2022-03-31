@@ -1,9 +1,27 @@
-import styled from '@emotion/styled';
-import { css, keyframes, useTheme, withTheme, ThemeContext, CacheProvider, withEmotionCache, ClassNames } from '@emotion/react';
+import {
+  css,
+  keyframes,
+  ThemeContext,
+  CacheProvider,
+  withEmotionCache,
+  ClassNames,
+} from '@emotion/react';
 
-export { styled, css, keyframes, useTheme, withEmotionCache, withTheme, ThemeContext, CacheProvider, ClassNames };
 
+export {
+  css,
+  keyframes,
+  withEmotionCache,
+  ThemeContext,
+  CacheProvider,
+  ClassNames,
+};
+
+export { sytled, withTheme, useTheme } from './styled';
 export { ThemeProvider } from './ThemeProvider';
-export { defaultTheme } from './defaultTheme';
 export { globalStyles } from './globalStyles';
 export { make } from './make';
+
+export { theme, Theme, InnerTheme } from './themes/theme';
+export { buttonTheme, ButtonTheme } from './themes/buttonTheme';
+export { fontsTheme, FontsTheme } from './themes/fontsTheme';
