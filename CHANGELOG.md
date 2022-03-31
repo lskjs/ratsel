@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/lskjs/ratsel/compare/v0.5.2...v0.5.3) (2022-03-31)
+
+
+### Bug Fixes
+
+* **core:** correct Theme ([e15362e](https://github.com/lskjs/ratsel/commit/e15362e2bd69a56a48106f42e676696c4ed313d3))
+* **core:** SerializedStyles return type ([3df83ea](https://github.com/lskjs/ratsel/commit/3df83eab08def2e9089f178118294a433873a1d8))
+
+
+
+
+
 ## [0.5.2](https://github.com/lskjs/ratsel/compare/v0.5.1...v0.5.2) (2022-03-31)
 
 
