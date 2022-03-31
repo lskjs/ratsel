@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/lskjs/ratsel/compare/v0.4.1...v0.5.0) (2022-03-31)
+
+
+### Features
+
+* **core:** typing styled instance & theme splitting ([71c0bf2](https://github.com/lskjs/ratsel/commit/71c0bf2dcfdbe3e68c7c5395968b78ab9e8e2f99))
+
+
+
+
+
 ## [0.4.1](https://github.com/lskjs/ratsel/compare/v0.4.0...v0.4.1) (2022-03-30)
 
 
