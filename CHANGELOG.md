@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/lskjs/ratsel/compare/v0.7.1...v0.7.2) (2022-03-31)
+
+
+### Bug Fixes
+
+* eslint rules ([c9abf05](https://github.com/lskjs/ratsel/commit/c9abf05f45a2dcd9e68f97800fd9a1123f1bff24))
+
+
+
+
+
 ## [0.7.1](https://github.com/lskjs/ratsel/compare/v0.7.0...v0.7.1) (2022-03-31)
 
 **Note:** Version bump only for package @ratsel/ui
