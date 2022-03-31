@@ -1,18 +1,18 @@
-import emotionStyled from '@emotion/styled';
-import {
-  withTheme as emotionWithTheme,
-  useTheme as emotionUseTheme,
-} from '@emotion/react';
-
-import type { StyledOptions } from '@emotion/styled';
 import type {
-  DistributiveOmit,
-  PropsOf,
-  Interpolation,
   ComponentSelector,
+  DistributiveOmit,
+  Interpolation,
+  PropsOf,
 } from '@emotion/react';
-import type { Theme } from './themes/theme';
+import {
+  useTheme as emotionUseTheme,
+  withTheme as emotionWithTheme,
+} from '@emotion/react';
+import type { StyledOptions } from '@emotion/styled';
+import emotionStyled from '@emotion/styled';
 import { FilteringStyledOptions } from '@emotion/styled/types/base';
+
+import type { Theme } from './themes/theme';
 
 export interface StyledComponent<
   ComponentProps extends {},

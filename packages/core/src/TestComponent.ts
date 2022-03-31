@@ -1,4 +1,4 @@
-import { make, styled, css } from '.';
+import { css, make, styled } from '.';
 import { PropsWithTheme } from './make';
 
 export interface TestProps {

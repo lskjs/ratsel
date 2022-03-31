@@ -1,14 +1,15 @@
-import React, { useMemo } from 'react';
+import type { Theme as AnyTheme } from '@emotion/react';
 import {
-  ThemeProvider as EmotionThemeProvider,
   Global,
   SerializedStyles,
+  ThemeProvider as EmotionThemeProvider,
 } from '@emotion/react';
-import { globalStyles as defaultGlobalStyles } from './globalStyles';
-import { theme as defaultTheme } from './themes/theme';
 import type { FC } from 'react';
-import type { Theme as AnyTheme } from '@emotion/react';
+import React, { useMemo } from 'react';
+
+import { globalStyles as defaultGlobalStyles } from './globalStyles';
 import type { InnerTheme } from './themes/theme';
+import { theme as defaultTheme } from './themes/theme';
 
 interface ThemeProviderProps {
   theme?: Partial<InnerTheme> | ((outerTheme: InnerTheme) => InnerTheme);

@@ -1,8 +1,7 @@
-import { fontsTheme } from './fontsTheme';
-import { buttonTheme } from './buttonTheme';
-
-import type { FontsTheme } from './fontsTheme';
 import type { ButtonTheme } from './buttonTheme';
+import { buttonTheme } from './buttonTheme';
+import type { FontsTheme } from './fontsTheme';
+import { fontsTheme } from './fontsTheme';
 
 export interface InnerTheme {
   fonts: FontsTheme;

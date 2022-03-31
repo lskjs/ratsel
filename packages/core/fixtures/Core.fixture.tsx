@@ -8,8 +8,6 @@ export default (
     <h2>Подзаголовок</h2>
     <button>Просто кнопка</button>
     <br />
-    <code>
-      Something code
-    </code>
+    <code>Something code</code>
   </ThemeProvider>
 );

@@ -1,5 +1,6 @@
-import { css } from '@emotion/react';
 import type { SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
+
 import type { Theme } from './themes/theme';
 
 export interface PropsWithTheme {
@@ -14,7 +15,7 @@ export type MakeReturnType =
 export const make = (
   obj: Record<string, MakeReturnType>,
   value?: string,
-  defaultValue: string = 'default',
+  defaultValue = 'default',
 ): SerializedStyles => {
   if (!obj || typeof obj !== 'object') return css``;
   if (!value || (!obj[value] && defaultValue)) {
