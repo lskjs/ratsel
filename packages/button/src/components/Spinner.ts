@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { keyframes, styled } from '@ratsel/core';
 
 interface SpinnerProps {
