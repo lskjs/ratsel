@@ -239,6 +239,193 @@ module.exports = function(arraybuffer, start, end) {
 
 /***/ }),
 
+/***/ 4672:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(1902);
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.BookmarkIcon = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(7294));
+
+var BookmarkIcon = function BookmarkIcon() {
+  return /*#__PURE__*/_react["default"].createElement("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/_react["default"].createElement("g", {
+    id: "icon/action/turned_in_24px"
+  }, /*#__PURE__*/_react["default"].createElement("path", {
+    id: "icon/action/turned_in_24px_2",
+    d: "M17 3H7C5.9 3 5.01 3.9 5.01 5L5 21L12 18L19 21V5C19 3.9 18.1 3 17 3Z",
+    fill: "currentColor"
+  })));
+};
+
+exports.BookmarkIcon = BookmarkIcon;
+
+/***/ }),
+
+/***/ 2749:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+var _interopRequireDefault = __webpack_require__(1902);
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports.Z = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(2468));
+
+var _react = _interopRequireDefault(__webpack_require__(7294));
+
+var _src = __webpack_require__(9604);
+
+var _BookmarkIcon = __webpack_require__(4672);
+
+var _primary$secondary$sh;
+
+var _default = (_primary$secondary$sh = {
+  primary: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    variant: "primary"
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  secondary: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    variant: "secondary"
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  shadow: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    variant: "shadow"
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430")
+}, (0, _defineProperty2["default"])(_primary$secondary$sh, 'shadow-bordered', /*#__PURE__*/_react["default"].createElement(_src.Button, {
+  variant: "shadow",
+  bordered: true
+}, "\u041A\u043D\u043E\u043F\u043A\u0430")), (0, _defineProperty2["default"])(_primary$secondary$sh, "disabled", /*#__PURE__*/_react["default"].createElement(_src.Button, {
+  variant: "primary",
+  disabled: true,
+  bordered: false
+}, "\u041A\u043D\u043E\u043F\u043A\u0430")), (0, _defineProperty2["default"])(_primary$secondary$sh, "icon", /*#__PURE__*/_react["default"].createElement(_src.Button, {
+  variant: "primary",
+  bordered: false,
+  disabled: false,
+  icon: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
+})), (0, _defineProperty2["default"])(_primary$secondary$sh, "iconLeft", /*#__PURE__*/_react["default"].createElement(_src.Button, {
+  variant: "primary",
+  bordered: false,
+  disabled: false,
+  iconLeft: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
+}, "\u041A\u043D\u043E\u043F\u043A\u0430")), (0, _defineProperty2["default"])(_primary$secondary$sh, "iconRight", /*#__PURE__*/_react["default"].createElement(_src.Button, {
+  variant: "primary",
+  bordered: false,
+  disabled: false,
+  iconRight: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
+}, "\u041A\u043D\u043E\u043F\u043A\u0430")), (0, _defineProperty2["default"])(_primary$secondary$sh, "iconBoth", /*#__PURE__*/_react["default"].createElement(_src.Button, {
+  variant: "primary",
+  bordered: false,
+  disabled: false,
+  iconLeft: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null),
+  iconRight: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
+}, "\u041A\u043D\u043E\u043F\u043A\u0430")), _primary$secondary$sh);
+
+exports.Z = _default;
+
+/***/ }),
+
+/***/ 317:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+var _interopRequireDefault = __webpack_require__(1902);
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports.Z = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(2468));
+
+var _react = _interopRequireDefault(__webpack_require__(7294));
+
+var _core = __webpack_require__(8055);
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+var theme = function theme(parentTheme) {
+  return _objectSpread(_objectSpread({}, parentTheme), {}, {
+    button: _objectSpread(_objectSpread({}, parentTheme.button), {}, {
+      fontWeight: 600,
+      focusShadow: '0 0 4px hsl(160, 76%, 52%)',
+      borderColor: 'hsl(151, 49.3%, 46.5%)',
+      paddings: {
+        base: '24px',
+        icon: '8px',
+        baseIcon: '12px',
+        vertical: '12px',
+        verticalIcon: '8px'
+      },
+      variants: {
+        primary: {
+          background: 'hsl(151, 49.3%, 46.5%)',
+          color: 'hsl(137, 72.0%, 94.0%)',
+          hoverBackground: 'hsl(151, 49.3%, 46.5%)',
+          hoverColor: 'hsl(137, 72.0%, 94.0%)',
+          focusBackground: 'hsl(151, 49.3%, 46.5%)',
+          focusColor: 'hsl(137, 72.0%, 94.0%)',
+          activeBackground: 'hsl(151, 55.0%, 41.5%)',
+          activeColor: 'hsl(137, 72.0%, 94.0%)'
+        },
+        secondary: {
+          background: 'hsl(120, 7%, 89%)',
+          color: 'hsl(110, 25%, 9%)',
+          hoverBackground: 'hsl(120, 5%, 85%)',
+          hoverColor: 'hsl(110, 25%, 9%)',
+          focusBackground: 'hsl(120, 5%, 85%)',
+          focusColor: 'hsl(110, 25%, 9%)',
+          activeBackground: 'hsl(110, 5%, 77%)',
+          activeColor: 'hsl(110, 25%, 9%)'
+        },
+        shadow: {
+          background: 'transparent',
+          color: 'hsl(151, 49.3%, 46.5%)',
+          hoverBackground: 'hsl(120, 54%, 95%)',
+          hoverColor: 'hsl(151, 49.3%, 46.5%)',
+          focusBackground: 'hsl(120, 54%, 95%)',
+          focusColor: 'hsl(151, 49.3%, 46.5%)',
+          activeBackground: 'hsl(120, 45%, 91%)',
+          activeColor: 'hsl(151, 49.3%, 46.5%)'
+        }
+      }
+    })
+  });
+};
+
+var _default = function _default(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/_react["default"].createElement(_core.ThemeProvider, {
+    theme: theme
+  }, children);
+};
+
+exports.Z = _default;
+
+/***/ }),
+
 /***/ 7559:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -256,12 +443,23 @@ var _react = _interopRequireDefault(__webpack_require__(7294));
 
 var _Base = __webpack_require__(1717);
 
+var _Icon = __webpack_require__(1761);
+
 var Button = function Button(_ref) {
   var children = _ref.children,
-      variant = _ref.variant;
+      variant = _ref.variant,
+      bordered = _ref.bordered,
+      iconLeft = _ref.iconLeft,
+      iconRight = _ref.iconRight,
+      icon = _ref.icon,
+      disabled = _ref.disabled;
   return /*#__PURE__*/_react["default"].createElement(_Base.Base, {
-    variant: variant
-  }, children);
+    variant: variant,
+    bordered: bordered,
+    iconLeft: icon || iconLeft,
+    iconRight: icon || iconRight,
+    disabled: disabled
+  }, iconLeft && /*#__PURE__*/_react["default"].createElement(_Icon.Icon, null, iconLeft), !icon ? children : /*#__PURE__*/_react["default"].createElement(_Icon.Icon, null, icon), iconRight && /*#__PURE__*/_react["default"].createElement(_Icon.Icon, null, iconRight));
 };
 
 exports.Button = Button;
@@ -287,23 +485,86 @@ var _taggedTemplateLiteral2 = _interopRequireDefault(__webpack_require__(8543));
 
 var _core = __webpack_require__(8055);
 
-var _templateObject, _templateObject2;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
 
 var variants = {
-  primary: function primary(props) {
-    return (0, _core.css)(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n    background: ", ";\n    color: ", ";\n  "])), props.theme[Symbol["for"]('ratsel')].button.variants.primary.background, props.theme[Symbol["for"]('ratsel')].button.variants.primary.color);
+  primary: function primary(_ref) {
+    var theme = _ref.theme;
+    return (0, _core.css)(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n    background: ", ";\n    color: ", ";\n    &:hover {\n      background: ", ";\n      color: ", ";\n    }\n    &:focus {\n      background: ", ";\n      color: ", ";\n    }\n    &:active {\n      background: ", ";\n      color: ", ";\n    }\n    &:disabled {\n      background: ", ";\n      color: ", ";\n    }\n  "])), theme.ratsel.button.variants.primary.background, theme.ratsel.button.variants.primary.color, theme.ratsel.button.variants.primary.hoverBackground, theme.ratsel.button.variants.primary.hoverColor, theme.ratsel.button.variants.primary.focusBackground, theme.ratsel.button.variants.primary.focusColor, theme.ratsel.button.variants.primary.activeBackground, theme.ratsel.button.variants.primary.activeColor, theme.ratsel.button.variants.secondary.background, theme.ratsel.button.variants.secondary.color);
+  },
+  secondary: function secondary(_ref2) {
+    var theme = _ref2.theme;
+    return (0, _core.css)(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteral2["default"])(["\n    background: ", ";\n    color: ", ";\n    &:hover {\n      background: ", ";\n      color: ", ";\n    }\n    &:focus {\n      background: ", ";\n      color: ", ";\n    }\n    &:active {\n      background: ", ";\n      color: ", ";\n    }\n  "])), theme.ratsel.button.variants.secondary.background, theme.ratsel.button.variants.secondary.color, theme.ratsel.button.variants.secondary.hoverBackground, theme.ratsel.button.variants.secondary.hoverColor, theme.ratsel.button.variants.secondary.focusBackground, theme.ratsel.button.variants.secondary.focusColor, theme.ratsel.button.variants.secondary.activeBackground, theme.ratsel.button.variants.secondary.activeColor);
+  },
+  shadow: function shadow(_ref3) {
+    var theme = _ref3.theme;
+    return (0, _core.css)(_templateObject3 || (_templateObject3 = (0, _taggedTemplateLiteral2["default"])(["\n    background: ", ";\n    color: ", ";\n    &:hover {\n      background: ", ";\n      color: ", ";\n    }\n    &:focus {\n      background: ", ";\n      color: ", ";\n    }\n    &:active {\n      background: ", ";\n      color: ", ";\n    }\n  "])), theme.ratsel.button.variants.shadow.background, theme.ratsel.button.variants.shadow.color, theme.ratsel.button.variants.shadow.hoverBackground, theme.ratsel.button.variants.shadow.hoverColor, theme.ratsel.button.variants.shadow.focusBackground, theme.ratsel.button.variants.shadow.focusColor, theme.ratsel.button.variants.shadow.activeBackground, theme.ratsel.button.variants.shadow.activeColor);
   }
 };
 var Base = (0, _core.styled)('button', {
   shouldForwardProp: function shouldForwardProp(prop) {
-    return !['variant', 'theme'].includes(prop);
+    return !['variant', 'bordered', 'iconLeft', 'iconRight'].includes(prop);
   }
-})(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteral2["default"])(["\n  font-family: ", ";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 13px;\n  line-height: 40px;\n  letter-spacing: -0.01em;\n  border-radius: 8px;\n  border: none;\n  padding: 0 24px;\n\n  ", "\n"])), function (props) {
-  return props.theme[Symbol["for"]('ratsel')].fonts.main;
+})(_templateObject4 || (_templateObject4 = (0, _taggedTemplateLiteral2["default"])(["\n  display: flex;\n  align-items: center;\n  font-family: ", ";\n  font-style: normal;\n  font-weight: ", ";\n  font-size: ", ";\n  letter-spacing: -0.01em;\n  border-radius: 8px;\n  border: none;\n  cursor: pointer;\n  outline: none;\n  padding-left: ", ";\n  padding-right: ", ";\n\n  padding-top: ", ";\n  padding-bottom: ", ";\n\n  box-shadow: ", ";\n\n  &:focus {\n    box-shadow: ", ";\n  }\n\n  &:disabled {\n    filter: grayscale(1) opacity(0.4);\n    pointer-events: none;\n    user-select: none;\n  }\n\n  transition: background 200ms ease-out, color 200ms ease-out;\n  will-change: background, color;\n\n  ", "\n"])), function (props) {
+  return props.theme.ratsel.fonts.main;
+}, function (props) {
+  return props.theme.ratsel.button.fontWeight;
+}, function (props) {
+  return props.theme.ratsel.button.fontSize;
+}, function (props) {
+  if (props.iconRight && !props.iconLeft) return props.theme.ratsel.button.paddings.baseIcon;
+  if (props.iconLeft) return '0px';
+  return props.theme.ratsel.button.paddings.base;
+}, function (props) {
+  if (props.iconLeft && !props.iconRight) return props.theme.ratsel.button.paddings.baseIcon;
+  if (props.iconRight) return '0px';
+  return props.theme.ratsel.button.paddings.base;
+}, function (props) {
+  return props.iconLeft || props.iconRight ? props.theme.ratsel.button.paddings.verticalIcon : props.theme.ratsel.button.paddings.vertical;
+}, function (props) {
+  return props.iconLeft || props.iconRight ? props.theme.ratsel.button.paddings.verticalIcon : props.theme.ratsel.button.paddings.vertical;
+}, function (props) {
+  if (props.bordered) {
+    return "inset 0 0 0 1px ".concat(props.theme.ratsel.button.borderColor);
+  }
+
+  return 'none';
+}, function (props) {
+  if (props.bordered) {
+    return "inset 0 0 0 1px ".concat(props.theme.ratsel.button.borderColor, ", ").concat(props.theme.ratsel.button.focusShadow);
+  }
+
+  return props.theme.ratsel.button.focusShadow;
 }, function (props) {
   return (0, _core.make)(variants, props.variant, 'primary');
 });
 exports.Base = Base;
+
+/***/ }),
+
+/***/ 1761:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(1902);
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.Icon = void 0;
+
+var _taggedTemplateLiteral2 = _interopRequireDefault(__webpack_require__(8543));
+
+var _core = __webpack_require__(8055);
+
+var _templateObject;
+
+var Icon = (0, _core.styled)('span')(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n  padding: 0 ", ";\n  display: flex;\n  font-size: 24px;\n  > svg {\n    display: flex;\n  }\n"])), function (props) {
+  return props.theme.ratsel.button.paddings.icon;
+});
+exports.Icon = Icon;
 
 /***/ }),
 
@@ -327,14 +588,14 @@ var _Button = __webpack_require__(7559);
 
 /***/ }),
 
-/***/ 8403:
+/***/ 3621:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 var __webpack_unused_export__;
 
 
-var _interopRequireDefault = __webpack_require__(1902);
+var _interopRequireDefault = __webpack_require__(3912);
 
 __webpack_unused_export__ = ({
   value: true
@@ -343,42 +604,9 @@ exports.Z = void 0;
 
 var _react = _interopRequireDefault(__webpack_require__(7294));
 
-var _src = __webpack_require__(9604);
+var _src = __webpack_require__(3822);
 
-var _default = {
-  primary: /*#__PURE__*/_react["default"].createElement(_src.Button, {
-    variant: "primary"
-  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
-  secondary: /*#__PURE__*/_react["default"].createElement(_src.Button, {
-    variant: "secondary"
-  }, "\u041A\u043D\u043E\u043F\u043A\u0430")
-};
-exports.Z = _default;
-
-/***/ }),
-
-/***/ 2878:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-var __webpack_unused_export__;
-
-
-var _interopRequireDefault = __webpack_require__(1902);
-
-__webpack_unused_export__ = ({
-  value: true
-});
-exports.Z = void 0;
-
-var _react = _interopRequireDefault(__webpack_require__(7294));
-
-var _core = __webpack_require__(8055);
-
-var _default = function _default(_ref) {
-  var children = _ref.children;
-  return /*#__PURE__*/_react["default"].createElement(_core.ThemeProvider, null, children);
-};
+var _default = /*#__PURE__*/_react["default"].createElement(_src.ThemeProvider, null, /*#__PURE__*/_react["default"].createElement("h1", null, "\u0417\u0430\u0433\u043E\u043B\u043E\u0432\u043E\u043A"), /*#__PURE__*/_react["default"].createElement("h2", null, "\u041F\u043E\u0434\u0437\u0430\u0433\u043E\u043B\u043E\u0432\u043E\u043A"), /*#__PURE__*/_react["default"].createElement("button", null, "\u041F\u0440\u043E\u0441\u0442\u043E \u043A\u043D\u043E\u043F\u043A\u0430"), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement("code", null, "Something code"));
 
 exports.Z = _default;
 
@@ -407,7 +635,7 @@ var _react2 = __webpack_require__(5198);
 
 var _globalStyles = __webpack_require__(4284);
 
-var _defaultTheme = __webpack_require__(5650);
+var _theme = __webpack_require__(91);
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -423,14 +651,16 @@ var ThemeProvider = function ThemeProvider(_ref) {
       _ref$globalStyles = _ref.globalStyles,
       globalStyles = _ref$globalStyles === void 0 ? _globalStyles.globalStyles : _ref$globalStyles;
   var memoizedTheme = (0, _react.useMemo)(function () {
-    var composedTheme = theme || _defaultTheme.defaultTheme;
+    var composedTheme = theme || _theme.theme;
 
     if (theme && typeof theme === 'function') {
-      composedTheme = theme(_defaultTheme.defaultTheme);
+      composedTheme = theme(_theme.theme);
     }
 
     return function (parentTheme) {
-      return _objectSpread(_objectSpread({}, parentTheme), {}, (0, _defineProperty2["default"])({}, Symbol["for"]('ratsel'), composedTheme));
+      return _objectSpread(_objectSpread({}, parentTheme), {}, {
+        ratsel: composedTheme
+      });
     };
   }, [theme]);
   return /*#__PURE__*/_react["default"].createElement(_react2.ThemeProvider, {
@@ -441,35 +671,6 @@ var ThemeProvider = function ThemeProvider(_ref) {
 };
 
 exports.ThemeProvider = ThemeProvider;
-
-/***/ }),
-
-/***/ 5650:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.defaultTheme = void 0;
-var defaultTheme = {
-  fonts: {
-    main: "'Montserrat', sans-serif",
-    headings: "'Montserrat', sans-serif",
-    monospace: 'Monaco, Lucida Console, Courier, monospace'
-  },
-  button: {
-    variants: {
-      primary: {
-        background: 'hsl(151, 49.3%, 46.5%)',
-        color: 'hsl(137, 72.0%, 94.0%)'
-      }
-    }
-  }
-};
-exports.defaultTheme = defaultTheme;
 
 /***/ }),
 
@@ -491,7 +692,7 @@ var globalStyles = function globalStyles(theme) {
     /*#__PURE__*/
 
     /*#__PURE__*/
-    (0, _react.css)("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');{}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}body,button,a{font-family:", theme[Symbol["for"]('ratsel')].fonts.main, ";}h1,h2,h3,h4,h5,h6{font-family:", theme[Symbol["for"]('ratsel')].fonts.headings, ";}pre,code{font-family:", theme[Symbol["for"]('ratsel')].fonts.monospace, ";}*{box-sizing:border-box;}" + ( true ? "" : 0),  true ? "" : 0,  true ? "" : 0)
+    (0, _react.css)("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');{}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}body,button,a{font-family:", theme.ratsel.fonts.main, ";}h1,h2,h3,h4,h5,h6{font-family:", theme.ratsel.fonts.headings, ";}pre,code{font-family:", theme.ratsel.fonts.monospace, ";}*{box-sizing:border-box;}" + ( true ? "" : 0),  true ? "" : 0,  true ? "" : 0)
   );
 };
 
@@ -505,10 +706,14 @@ exports.globalStyles = globalStyles;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(3912);
-
 Object.defineProperty(exports, "__esModule", ({
   value: true
+}));
+Object.defineProperty(exports, "ButtonTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _buttonTheme.ButtonTheme;
+  }
 }));
 Object.defineProperty(exports, "CacheProvider", ({
   enumerable: true,
@@ -520,6 +725,30 @@ Object.defineProperty(exports, "ClassNames", ({
   enumerable: true,
   get: function get() {
     return _react.ClassNames;
+  }
+}));
+Object.defineProperty(exports, "FontsTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _fontsTheme.FontsTheme;
+  }
+}));
+Object.defineProperty(exports, "InnerTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _theme.InnerTheme;
+  }
+}));
+Object.defineProperty(exports, "PropsWithTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _make.PropsWithTheme;
+  }
+}));
+Object.defineProperty(exports, "Theme", ({
+  enumerable: true,
+  get: function get() {
+    return _theme.Theme;
   }
 }));
 Object.defineProperty(exports, "ThemeContext", ({
@@ -534,16 +763,22 @@ Object.defineProperty(exports, "ThemeProvider", ({
     return _ThemeProvider.ThemeProvider;
   }
 }));
+Object.defineProperty(exports, "buttonTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _buttonTheme.buttonTheme;
+  }
+}));
 Object.defineProperty(exports, "css", ({
   enumerable: true,
   get: function get() {
     return _react.css;
   }
 }));
-Object.defineProperty(exports, "defaultTheme", ({
+Object.defineProperty(exports, "fontsTheme", ({
   enumerable: true,
   get: function get() {
-    return _defaultTheme.defaultTheme;
+    return _fontsTheme.fontsTheme;
   }
 }));
 Object.defineProperty(exports, "globalStyles", ({
@@ -567,13 +802,19 @@ Object.defineProperty(exports, "make", ({
 Object.defineProperty(exports, "styled", ({
   enumerable: true,
   get: function get() {
-    return _styled["default"];
+    return _styled.styled;
+  }
+}));
+Object.defineProperty(exports, "theme", ({
+  enumerable: true,
+  get: function get() {
+    return _theme.theme;
   }
 }));
 Object.defineProperty(exports, "useTheme", ({
   enumerable: true,
   get: function get() {
-    return _react.useTheme;
+    return _styled.useTheme;
   }
 }));
 Object.defineProperty(exports, "withEmotionCache", ({
@@ -585,21 +826,25 @@ Object.defineProperty(exports, "withEmotionCache", ({
 Object.defineProperty(exports, "withTheme", ({
   enumerable: true,
   get: function get() {
-    return _react.withTheme;
+    return _styled.withTheme;
   }
 }));
 
-var _styled = _interopRequireDefault(__webpack_require__(4708));
-
 var _react = __webpack_require__(5198);
 
-var _ThemeProvider = __webpack_require__(8714);
+var _styled = __webpack_require__(5834);
 
-var _defaultTheme = __webpack_require__(5650);
+var _ThemeProvider = __webpack_require__(8714);
 
 var _globalStyles = __webpack_require__(4284);
 
 var _make = __webpack_require__(2222);
+
+var _theme = __webpack_require__(91);
+
+var _buttonTheme = __webpack_require__(9852);
+
+var _fontsTheme = __webpack_require__(514);
 
 /***/ }),
 
@@ -618,10 +863,25 @@ exports.make = void 0;
 
 var _typeof2 = _interopRequireDefault(__webpack_require__(3457));
 
+var _react = __webpack_require__(5198);
+
 var make = function make(obj, value) {
   var defaultValue = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'default';
-  if (!obj || (0, _typeof2["default"])(obj) !== 'object') return '';
-  if (!value || !obj[value] && defaultValue) return obj[defaultValue] || '';
+  if (!obj || (0, _typeof2["default"])(obj) !== 'object') return (
+    /*#__PURE__*/
+
+    /*#__PURE__*/
+    (0, _react.css)( true ? "" : 0,  true ? "" : 0,  true ? "" : 0)
+  );
+
+  if (!value || !obj[value] && defaultValue) {
+    return obj[defaultValue] ||
+    /*#__PURE__*/
+
+    /*#__PURE__*/
+    (0, _react.css)( true ? "" : 0,  true ? "" : 0,  true ? "" : 0);
+  }
+
   return obj[value];
 };
 
@@ -629,27 +889,130 @@ exports.make = make;
 
 /***/ }),
 
-/***/ 2744:
+/***/ 5834:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-var __webpack_unused_export__;
 
 
 var _interopRequireDefault = __webpack_require__(3912);
 
-__webpack_unused_export__ = ({
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
-exports.Z = void 0;
+}));
+exports.withTheme = exports.useTheme = exports.styled = void 0;
 
-var _react = _interopRequireDefault(__webpack_require__(7294));
+var _styled = _interopRequireDefault(__webpack_require__(4708));
 
-var _src = __webpack_require__(3822);
+var _react = __webpack_require__(5198);
 
-var _default = /*#__PURE__*/_react["default"].createElement(_src.ThemeProvider, null, /*#__PURE__*/_react["default"].createElement("h1", null, "\u0417\u0430\u0433\u043E\u043B\u043E\u0432\u043E\u043A"), /*#__PURE__*/_react["default"].createElement("h2", null, "\u041F\u043E\u0434\u0437\u0430\u0433\u043E\u043B\u043E\u0432\u043E\u043A"), /*#__PURE__*/_react["default"].createElement("button", null, "\u041F\u0440\u043E\u0441\u0442\u043E \u043A\u043D\u043E\u043F\u043A\u0430"), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement("code", null, "Something code"));
+var styled = _styled["default"];
+exports.styled = styled;
+var withTheme = _react.withTheme;
+exports.withTheme = withTheme;
+var useTheme = _react.useTheme;
+exports.useTheme = useTheme;
 
-exports.Z = _default;
+/***/ }),
+
+/***/ 9852:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.buttonTheme = void 0;
+var buttonTheme = {
+  fontWeight: 600,
+  fontSize: '13px',
+  focusShadow: '0 0 4px hsl(160, 76%, 52%)',
+  borderColor: 'hsl(151, 49.3%, 46.5%)',
+  paddings: {
+    base: '24px',
+    icon: '8px',
+    baseIcon: '12px',
+    vertical: '12px',
+    verticalIcon: '8px'
+  },
+  variants: {
+    primary: {
+      background: 'hsl(151, 49.3%, 46.5%)',
+      color: 'hsl(137, 72.0%, 94.0%)',
+      hoverBackground: 'hsl(151, 49.3%, 46.5%)',
+      hoverColor: 'hsl(137, 72.0%, 94.0%)',
+      focusBackground: 'hsl(151, 49.3%, 46.5%)',
+      focusColor: 'hsl(137, 72.0%, 94.0%)',
+      activeBackground: 'hsl(151, 55.0%, 41.5%)',
+      activeColor: 'hsl(137, 72.0%, 94.0%)'
+    },
+    secondary: {
+      background: 'hsl(120, 7%, 89%)',
+      color: 'hsl(110, 25%, 9%)',
+      hoverBackground: 'hsl(120, 5%, 85%)',
+      hoverColor: 'hsl(110, 25%, 9%)',
+      focusBackground: 'hsl(120, 5%, 85%)',
+      focusColor: 'hsl(110, 25%, 9%)',
+      activeBackground: 'hsl(110, 5%, 77%)',
+      activeColor: 'hsl(110, 25%, 9%)'
+    },
+    shadow: {
+      background: 'transparent',
+      color: 'hsl(151, 49.3%, 46.5%)',
+      hoverBackground: 'hsl(120, 54%, 95%)',
+      hoverColor: 'hsl(151, 49.3%, 46.5%)',
+      focusBackground: 'hsl(120, 54%, 95%)',
+      focusColor: 'hsl(151, 49.3%, 46.5%)',
+      activeBackground: 'hsl(120, 45%, 91%)',
+      activeColor: 'hsl(151, 49.3%, 46.5%)'
+    }
+  }
+};
+exports.buttonTheme = buttonTheme;
+
+/***/ }),
+
+/***/ 514:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.fontsTheme = void 0;
+var fontsTheme = {
+  main: "'Montserrat', sans-serif",
+  headings: "'Montserrat', sans-serif",
+  monospace: 'Monaco, Lucida Console, Courier, monospace'
+};
+exports.fontsTheme = fontsTheme;
+
+/***/ }),
+
+/***/ 91:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.theme = void 0;
+
+var _fontsTheme = __webpack_require__(514);
+
+var _buttonTheme = __webpack_require__(9852);
+
+var theme = {
+  fonts: _fontsTheme.fontsTheme,
+  button: _buttonTheme.buttonTheme
+};
+exports.theme = theme;
 
 /***/ }),
 
@@ -26863,9 +27226,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "fixtures": () => (/* binding */ fixtures),
 /* harmony export */   "rendererConfig": () => (/* binding */ rendererConfig)
 /* harmony export */ });
-/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_button_stories_Button_story_tsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8403);
-/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_core_stories_Core_story_tsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2744);
-/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_button_stories_cosmos_decorator_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2878);
+/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_button_fixtures_Button_fixture_tsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2749);
+/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_core_fixtures_Core_fixture_tsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3621);
+/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_button_fixtures_cosmos_decorator_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(317);
 // This file is automatically generated by Cosmos. Add it to .gitignore and
 // only edit if you know what you're doing.
 
@@ -26883,12 +27246,12 @@ const rendererConfig = {
 };
 
 const fixtures = {
-  'packages/button/stories/Button.story.tsx': { module: { default: _Users_yukioru_Projects_ratsel_packages_button_stories_Button_story_tsx__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z } },
-  'packages/core/stories/Core.story.tsx': { module: { default: _Users_yukioru_Projects_ratsel_packages_core_stories_Core_story_tsx__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z } }
+  'packages/button/fixtures/Button.fixture.tsx': { module: { default: _Users_yukioru_Projects_ratsel_packages_button_fixtures_Button_fixture_tsx__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z } },
+  'packages/core/fixtures/Core.fixture.tsx': { module: { default: _Users_yukioru_Projects_ratsel_packages_core_fixtures_Core_fixture_tsx__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z } }
 };
 
 const decorators = {
-  'packages/button/stories/cosmos.decorator.jsx': _Users_yukioru_Projects_ratsel_packages_button_stories_cosmos_decorator_jsx__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z
+  'packages/button/fixtures/cosmos.decorator.jsx': _Users_yukioru_Projects_ratsel_packages_button_fixtures_cosmos_decorator_jsx__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z
 };
 
 
@@ -39031,7 +39394,7 @@ var _react2 = __webpack_require__(7783);
 
 var _globalStyles = __webpack_require__(2451);
 
-var _defaultTheme = __webpack_require__(2595);
+var _theme = __webpack_require__(3119);
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -39043,57 +39406,31 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 var ThemeProvider = function ThemeProvider(_ref) {
   var children = _ref.children,
-      theme = _ref.theme;
+      theme = _ref.theme,
+      _ref$globalStyles = _ref.globalStyles,
+      globalStyles = _ref$globalStyles === void 0 ? _globalStyles.globalStyles : _ref$globalStyles;
   var memoizedTheme = (0, _react.useMemo)(function () {
-    var composedTheme = theme || _defaultTheme.defaultTheme;
+    var composedTheme = theme || _theme.theme;
 
     if (theme && typeof theme === 'function') {
-      composedTheme = theme(_defaultTheme.defaultTheme);
+      composedTheme = theme(_theme.theme);
     }
 
     return function (parentTheme) {
-      return _objectSpread(_objectSpread({}, parentTheme), {}, (0, _defineProperty2["default"])({}, Symbol["for"]('ratsel'), composedTheme));
+      return _objectSpread(_objectSpread({}, parentTheme), {}, {
+        ratsel: composedTheme
+      });
     };
   }, [theme]);
   return /*#__PURE__*/_react["default"].createElement(_react2.ThemeProvider, {
     theme: memoizedTheme
   }, /*#__PURE__*/_react["default"].createElement(_react2.Global, {
-    styles: _globalStyles.globalStyles
+    styles: globalStyles
   }), children);
 };
 
 exports.ThemeProvider = ThemeProvider;
 //# sourceMappingURL=ThemeProvider.js.map
-
-/***/ }),
-
-/***/ 2595:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.defaultTheme = void 0;
-var defaultTheme = {
-  fonts: {
-    main: "'Montserrat', sans-serif",
-    headings: "'Montserrat', sans-serif",
-    monospace: 'Monaco, Lucida Console, Courier, monospace'
-  },
-  button: {
-    variants: {
-      primary: {
-        background: 'hsl(151, 49.3%, 46.5%)',
-        color: 'hsl(137, 72.0%, 94.0%)'
-      }
-    }
-  }
-};
-exports.defaultTheme = defaultTheme;
-//# sourceMappingURL=defaultTheme.js.map
 
 /***/ }),
 
@@ -39111,12 +39448,11 @@ exports.globalStyles = void 0;
 var _react = __webpack_require__(7783);
 
 var globalStyles = function globalStyles(theme) {
-  console.log(theme);
   return (
     /*#__PURE__*/
 
     /*#__PURE__*/
-    (0, _react.css)("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');{}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}body,button,a{font-family:", theme[Symbol["for"]('ratsel')].fonts.main, ";}h1,h2,h3,h4,h5,h6{font-family:", theme[Symbol["for"]('ratsel')].fonts.headings, ";}pre,code{font-family:", theme[Symbol["for"]('ratsel')].fonts.monospace, ";}*{box-sizing:border-box;}" + ( true ? "" : 0),  true ? "" : 0,  true ? "" : 0)
+    (0, _react.css)("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');{}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}body,button,a{font-family:", theme.ratsel.fonts.main, ";}h1,h2,h3,h4,h5,h6{font-family:", theme.ratsel.fonts.headings, ";}pre,code{font-family:", theme.ratsel.fonts.monospace, ";}*{box-sizing:border-box;}" + ( true ? "" : 0),  true ? "" : 0,  true ? "" : 0)
   );
 };
 
@@ -39131,10 +39467,14 @@ exports.globalStyles = globalStyles;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(1902);
-
 Object.defineProperty(exports, "__esModule", ({
   value: true
+}));
+Object.defineProperty(exports, "ButtonTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _buttonTheme.ButtonTheme;
+  }
 }));
 Object.defineProperty(exports, "CacheProvider", ({
   enumerable: true,
@@ -39146,6 +39486,30 @@ Object.defineProperty(exports, "ClassNames", ({
   enumerable: true,
   get: function get() {
     return _react.ClassNames;
+  }
+}));
+Object.defineProperty(exports, "FontsTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _fontsTheme.FontsTheme;
+  }
+}));
+Object.defineProperty(exports, "InnerTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _theme.InnerTheme;
+  }
+}));
+Object.defineProperty(exports, "PropsWithTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _make.PropsWithTheme;
+  }
+}));
+Object.defineProperty(exports, "Theme", ({
+  enumerable: true,
+  get: function get() {
+    return _theme.Theme;
   }
 }));
 Object.defineProperty(exports, "ThemeContext", ({
@@ -39160,16 +39524,22 @@ Object.defineProperty(exports, "ThemeProvider", ({
     return _ThemeProvider.ThemeProvider;
   }
 }));
+Object.defineProperty(exports, "buttonTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _buttonTheme.buttonTheme;
+  }
+}));
 Object.defineProperty(exports, "css", ({
   enumerable: true,
   get: function get() {
     return _react.css;
   }
 }));
-Object.defineProperty(exports, "defaultTheme", ({
+Object.defineProperty(exports, "fontsTheme", ({
   enumerable: true,
   get: function get() {
-    return _defaultTheme.defaultTheme;
+    return _fontsTheme.fontsTheme;
   }
 }));
 Object.defineProperty(exports, "globalStyles", ({
@@ -39193,13 +39563,19 @@ Object.defineProperty(exports, "make", ({
 Object.defineProperty(exports, "styled", ({
   enumerable: true,
   get: function get() {
-    return _styled["default"];
+    return _styled.styled;
+  }
+}));
+Object.defineProperty(exports, "theme", ({
+  enumerable: true,
+  get: function get() {
+    return _theme.theme;
   }
 }));
 Object.defineProperty(exports, "useTheme", ({
   enumerable: true,
   get: function get() {
-    return _react.useTheme;
+    return _styled.useTheme;
   }
 }));
 Object.defineProperty(exports, "withEmotionCache", ({
@@ -39211,21 +39587,25 @@ Object.defineProperty(exports, "withEmotionCache", ({
 Object.defineProperty(exports, "withTheme", ({
   enumerable: true,
   get: function get() {
-    return _react.withTheme;
+    return _styled.withTheme;
   }
 }));
 
-var _styled = _interopRequireDefault(__webpack_require__(6305));
-
 var _react = __webpack_require__(7783);
 
-var _ThemeProvider = __webpack_require__(1841);
+var _styled = __webpack_require__(386);
 
-var _defaultTheme = __webpack_require__(2595);
+var _ThemeProvider = __webpack_require__(1841);
 
 var _globalStyles = __webpack_require__(2451);
 
 var _make = __webpack_require__(5223);
+
+var _theme = __webpack_require__(3119);
+
+var _buttonTheme = __webpack_require__(3394);
+
+var _fontsTheme = __webpack_require__(3409);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -39245,15 +39625,161 @@ exports.make = void 0;
 
 var _typeof2 = _interopRequireDefault(__webpack_require__(8617));
 
+var _react = __webpack_require__(7783);
+
 var make = function make(obj, value) {
   var defaultValue = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'default';
-  if (!obj || (0, _typeof2["default"])(obj) !== 'object') return '';
-  if (!value || !obj[value] && defaultValue) return obj[defaultValue] || '';
+  if (!obj || (0, _typeof2["default"])(obj) !== 'object') return (
+    /*#__PURE__*/
+
+    /*#__PURE__*/
+    (0, _react.css)( true ? "" : 0,  true ? "" : 0,  true ? "" : 0)
+  );
+
+  if (!value || !obj[value] && defaultValue) {
+    return obj[defaultValue] ||
+    /*#__PURE__*/
+
+    /*#__PURE__*/
+    (0, _react.css)( true ? "" : 0,  true ? "" : 0,  true ? "" : 0);
+  }
+
   return obj[value];
 };
 
 exports.make = make;
 //# sourceMappingURL=make.js.map
+
+/***/ }),
+
+/***/ 386:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(1902);
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.withTheme = exports.useTheme = exports.styled = void 0;
+
+var _styled = _interopRequireDefault(__webpack_require__(6305));
+
+var _react = __webpack_require__(7783);
+
+var styled = _styled["default"];
+exports.styled = styled;
+var withTheme = _react.withTheme;
+exports.withTheme = withTheme;
+var useTheme = _react.useTheme;
+exports.useTheme = useTheme;
+//# sourceMappingURL=styled.js.map
+
+/***/ }),
+
+/***/ 3394:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.buttonTheme = void 0;
+var buttonTheme = {
+  fontWeight: 600,
+  fontSize: '13px',
+  focusShadow: '0 0 4px hsl(160, 76%, 52%)',
+  borderColor: 'hsl(151, 49.3%, 46.5%)',
+  paddings: {
+    base: '24px',
+    icon: '8px',
+    baseIcon: '12px',
+    vertical: '12px',
+    verticalIcon: '8px'
+  },
+  variants: {
+    primary: {
+      background: 'hsl(151, 49.3%, 46.5%)',
+      color: 'hsl(137, 72.0%, 94.0%)',
+      hoverBackground: 'hsl(151, 49.3%, 46.5%)',
+      hoverColor: 'hsl(137, 72.0%, 94.0%)',
+      focusBackground: 'hsl(151, 49.3%, 46.5%)',
+      focusColor: 'hsl(137, 72.0%, 94.0%)',
+      activeBackground: 'hsl(151, 55.0%, 41.5%)',
+      activeColor: 'hsl(137, 72.0%, 94.0%)'
+    },
+    secondary: {
+      background: 'hsl(120, 7%, 89%)',
+      color: 'hsl(110, 25%, 9%)',
+      hoverBackground: 'hsl(120, 5%, 85%)',
+      hoverColor: 'hsl(110, 25%, 9%)',
+      focusBackground: 'hsl(120, 5%, 85%)',
+      focusColor: 'hsl(110, 25%, 9%)',
+      activeBackground: 'hsl(110, 5%, 77%)',
+      activeColor: 'hsl(110, 25%, 9%)'
+    },
+    shadow: {
+      background: 'transparent',
+      color: 'hsl(151, 49.3%, 46.5%)',
+      hoverBackground: 'hsl(120, 54%, 95%)',
+      hoverColor: 'hsl(151, 49.3%, 46.5%)',
+      focusBackground: 'hsl(120, 54%, 95%)',
+      focusColor: 'hsl(151, 49.3%, 46.5%)',
+      activeBackground: 'hsl(120, 45%, 91%)',
+      activeColor: 'hsl(151, 49.3%, 46.5%)'
+    }
+  }
+};
+exports.buttonTheme = buttonTheme;
+//# sourceMappingURL=buttonTheme.js.map
+
+/***/ }),
+
+/***/ 3409:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.fontsTheme = void 0;
+var fontsTheme = {
+  main: "'Montserrat', sans-serif",
+  headings: "'Montserrat', sans-serif",
+  monospace: 'Monaco, Lucida Console, Courier, monospace'
+};
+exports.fontsTheme = fontsTheme;
+//# sourceMappingURL=fontsTheme.js.map
+
+/***/ }),
+
+/***/ 3119:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.theme = void 0;
+
+var _fontsTheme = __webpack_require__(3409);
+
+var _buttonTheme = __webpack_require__(3394);
+
+var theme = {
+  fonts: _fontsTheme.fontsTheme,
+  button: _buttonTheme.buttonTheme
+};
+exports.theme = theme;
+//# sourceMappingURL=theme.js.map
 
 /***/ }),
 
