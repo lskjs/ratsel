@@ -65,7 +65,8 @@ const variants = {
 };
 
 export const Base = styled('button', {
-  shouldForwardProp: (prop) => !['variant', 'bordered', 'iconLeft', 'iconRight'].includes(prop as string),
+  shouldForwardProp: (prop) =>
+    !['variant', 'bordered', 'iconLeft', 'iconRight'].includes(prop as string),
 })<BaseProps>`
   display: flex;
   align-items: center;
@@ -79,12 +80,14 @@ export const Base = styled('button', {
   cursor: pointer;
   outline: none;
   padding-left: ${(props) => {
-    if (props.iconRight && !props.iconLeft) return props.theme.ratsel.button.paddings.baseIcon;
+    if (props.iconRight && !props.iconLeft)
+      return props.theme.ratsel.button.paddings.baseIcon;
     if (props.iconLeft) return '0px';
     return props.theme.ratsel.button.paddings.base;
   }};
   padding-right: ${(props) => {
-    if (props.iconLeft && !props.iconRight) return props.theme.ratsel.button.paddings.baseIcon;
+    if (props.iconLeft && !props.iconRight)
+      return props.theme.ratsel.button.paddings.baseIcon;
     if (props.iconRight) return '0px';
     return props.theme.ratsel.button.paddings.base;
   }};
