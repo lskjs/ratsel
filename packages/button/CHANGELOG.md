@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/lskjs/ratsel/compare/v0.5.1...v0.5.2) (2022-03-31)
+
+
+### Bug Fixes
+
+* **button:** correct path ([8c9012b](https://github.com/lskjs/ratsel/commit/8c9012b5027210980e800b98def3494579834946))
+
+
+
+
+
 ## [0.5.1](https://github.com/lskjs/ratsel/compare/v0.5.0...v0.5.1) (2022-03-31)
 
 **Note:** Version bump only for package @ratsel/button
