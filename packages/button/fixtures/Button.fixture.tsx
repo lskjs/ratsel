@@ -3,12 +3,40 @@ import React from 'react';
 import { Button } from '../src';
 import { BookmarkIcon } from '../assets/BookmarkIcon';
 
+async function promiseClick(event) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(null);
+    }, 1000);
+  });
+}
+
 export default {
   primary: <Button variant="primary">Кнопка</Button>,
   secondary: <Button variant="secondary">Кнопка</Button>,
   shadow: <Button variant="shadow">Кнопка</Button>,
   ['shadow-bordered']: (
     <Button variant="shadow" bordered>
+      Кнопка
+    </Button>
+  ),
+  loading: (
+    <Button loading variant="primary">
+      Кнопка
+    </Button>
+  ),
+  success: (
+    <Button status="success" variant="primary">
+      Кнопка
+    </Button>
+  ),
+  error: (
+    <Button status="error" variant="primary">
+      Кнопка
+    </Button>
+  ),
+  promiseClick: (
+    <Button variant="primary" onClick={promiseClick}>
       Кнопка
     </Button>
   ),

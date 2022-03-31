@@ -8,6 +8,14 @@ const theme = (parentTheme) => ({
     fontWeight: 600,
     focusShadow: '0 0 4px hsl(160, 76%, 52%)',
     borderColor: 'hsl(151, 49.3%, 46.5%)',
+    spinner: {
+      background: 'hsl(120, 8%, 95%)',
+      accent: 'hsl(151, 49.3%, 46.5%)',
+      inverseBackground: 'rgba(255, 255, 255, 0.1)',
+      inverseAccent: '#ffffff',
+      success: 'hsl(151, 49.3%, 46.5%)',
+      error: 'hsl(358, 75.0%, 59.0%)',
+    },
     paddings: {
       base: '24px',
       icon: '8px',

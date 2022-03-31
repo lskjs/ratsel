@@ -1,73 +1,22 @@
 import { make, styled, css } from '@ratsel/core';
-import type { PropsWithTheme } from '@ratsel/core';
 import type { ReactNode } from 'react';
+import { variants } from '../utils/variants';
 
 export interface BaseProps {
   variant?: 'primary' | 'secondary' | 'shadow';
   bordered?: boolean;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
+  loading?: boolean;
 }
-
-const variants = {
-  primary: ({ theme }: PropsWithTheme) => css`
-    background: ${theme.ratsel.button.variants.primary.background};
-    color: ${theme.ratsel.button.variants.primary.color};
-    &:hover {
-      background: ${theme.ratsel.button.variants.primary.hoverBackground};
-      color: ${theme.ratsel.button.variants.primary.hoverColor};
-    }
-    &:focus {
-      background: ${theme.ratsel.button.variants.primary.focusBackground};
-      color: ${theme.ratsel.button.variants.primary.focusColor};
-    }
-    &:active {
-      background: ${theme.ratsel.button.variants.primary.activeBackground};
-      color: ${theme.ratsel.button.variants.primary.activeColor};
-    }
-    &:disabled {
-      background: ${theme.ratsel.button.variants.secondary.background};
-      color: ${theme.ratsel.button.variants.secondary.color};
-    }
-  `,
-  secondary: ({ theme }: PropsWithTheme) => css`
-    background: ${theme.ratsel.button.variants.secondary.background};
-    color: ${theme.ratsel.button.variants.secondary.color};
-    &:hover {
-      background: ${theme.ratsel.button.variants.secondary.hoverBackground};
-      color: ${theme.ratsel.button.variants.secondary.hoverColor};
-    }
-    &:focus {
-      background: ${theme.ratsel.button.variants.secondary.focusBackground};
-      color: ${theme.ratsel.button.variants.secondary.focusColor};
-    }
-    &:active {
-      background: ${theme.ratsel.button.variants.secondary.activeBackground};
-      color: ${theme.ratsel.button.variants.secondary.activeColor};
-    }
-  `,
-  shadow: ({ theme }: PropsWithTheme) => css`
-    background: ${theme.ratsel.button.variants.shadow.background};
-    color: ${theme.ratsel.button.variants.shadow.color};
-    &:hover {
-      background: ${theme.ratsel.button.variants.shadow.hoverBackground};
-      color: ${theme.ratsel.button.variants.shadow.hoverColor};
-    }
-    &:focus {
-      background: ${theme.ratsel.button.variants.shadow.focusBackground};
-      color: ${theme.ratsel.button.variants.shadow.focusColor};
-    }
-    &:active {
-      background: ${theme.ratsel.button.variants.shadow.activeBackground};
-      color: ${theme.ratsel.button.variants.shadow.activeColor};
-    }
-  `,
-};
 
 export const Base = styled('button', {
   shouldForwardProp: (prop) =>
-    !['variant', 'bordered', 'iconLeft', 'iconRight'].includes(prop as string),
+    !['variant', 'bordered', 'iconLeft', 'iconRight', 'loading'].includes(
+      prop as string,
+    ),
 })<BaseProps>`
+  position: relative;
   display: flex;
   align-items: center;
   font-family: ${(props) => props.theme.ratsel.fonts.main};
@@ -116,6 +65,13 @@ export const Base = styled('button', {
       return props.theme.ratsel.button.focusShadow;
     }};
   }
+
+  ${(props) =>
+    props.loading
+      ? css`
+          color: transparent !important;
+        `
+      : css``}
 
   &:disabled {
     filter: grayscale(1) opacity(0.4);
