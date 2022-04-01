@@ -2,6 +2,7 @@ import {
   CacheProvider,
   ClassNames,
   css,
+  Global,
   keyframes,
   ThemeContext,
   withEmotionCache,
@@ -14,6 +15,7 @@ export {
   ThemeContext,
   CacheProvider,
   ClassNames,
+  Global,
 };
 
 export { styled, withTheme, useTheme } from './styled';
