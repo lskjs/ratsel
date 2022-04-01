@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/lskjs/ratsel/compare/v0.7.2...v0.8.0) (2022-04-01)
+
+
+### Features
+
+* **button:** add block, minWidth & other props ([35b9cdd](https://github.com/lskjs/ratsel/commit/35b9cddf88850be25d9fef8f2d4f73a37e3b0424))
+
+
+
+
+
 ## [0.7.2](https://github.com/lskjs/ratsel/compare/v0.7.1...v0.7.2) (2022-03-31)
 
 
