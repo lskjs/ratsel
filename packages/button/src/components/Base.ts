@@ -9,17 +9,28 @@ export interface BaseProps {
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
   loading?: boolean;
+  block?: boolean;
+  minWidth?: number;
 }
 
 export const Base = styled('button', {
   shouldForwardProp: (prop) =>
-    !['variant', 'bordered', 'iconLeft', 'iconRight', 'loading'].includes(
-      prop as string,
-    ),
+    ![
+      'variant',
+      'bordered',
+      'iconLeft',
+      'iconRight',
+      'loading',
+      'block',
+      'minWidth',
+    ].includes(prop as string),
 })<BaseProps>`
+  width: ${(props) => (props.block ? '100%' : 'auto')};
+  min-width: ${(props) => (props.minWidth ? `${props.minWidth}px` : 'auto')};
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-family: ${(props) => props.theme.ratsel.fonts.main};
   font-style: normal;
   font-weight: ${(props) => props.theme.ratsel.button.fontWeight};

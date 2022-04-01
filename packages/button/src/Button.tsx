@@ -32,6 +32,9 @@ export const Button: FC<ButtonProps> = ({
   loading,
   status,
   onClick,
+  minWidth,
+  block,
+  ...props
 }) => {
   const [state, setState] = useState<ButtonState>({
     loading: false,
@@ -70,6 +73,7 @@ export const Button: FC<ButtonProps> = ({
       }
     }
   };
+
   const loadingRender = loading || state.loading;
   const statusRender = status || state.status;
   const isOverlayRender = loadingRender || Boolean(statusRender);
@@ -77,11 +81,14 @@ export const Button: FC<ButtonProps> = ({
 
   return (
     <Base
+      {...props}
+      block={block}
       variant={variant}
       bordered={bordered}
       iconLeft={icon || iconLeft}
       iconRight={icon || iconRight}
       disabled={disabled}
+      minWidth={minWidth}
       loading={isOverlayRender}
       onClick={isOverlayRender ? undefined : handleSubmit}
     >
