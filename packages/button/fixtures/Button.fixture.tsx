@@ -3,7 +3,7 @@ import React from 'react';
 import { BookmarkIcon } from '../assets/BookmarkIcon';
 import { Button } from '../src';
 
-async function promiseClick(event) {
+async function promiseClick() {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(null);
@@ -45,6 +45,8 @@ export default {
       Кнопка
     </Button>
   ),
+  'min-width': <Button minWidth={160}>Кнопка</Button>,
+  block: <Button block>Кнопка</Button>,
   icon: (
     <Button
       variant="primary"
@@ -60,6 +62,11 @@ export default {
       disabled={false}
       iconLeft={<BookmarkIcon />}
     >
+      Кнопка
+    </Button>
+  ),
+  'min-width-with-iconLeft': (
+    <Button minWidth={160} iconLeft={<BookmarkIcon />}>
       Кнопка
     </Button>
   ),
