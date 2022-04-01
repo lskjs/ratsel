@@ -298,12 +298,12 @@ var _BookmarkIcon = __webpack_require__(4672);
 
 var _src = __webpack_require__(9604);
 
-function promiseClick(_x) {
+function promiseClick() {
   return _promiseClick.apply(this, arguments);
 }
 
 function _promiseClick() {
-  _promiseClick = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(event) {
+  _promiseClick = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
     return _regenerator["default"].wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -359,6 +359,12 @@ var _default = {
     disabled: true,
     bordered: false
   }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  'min-width': /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    minWidth: 160
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  block: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    block: true
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
   icon: /*#__PURE__*/_react["default"].createElement(_src.Button, {
     variant: "primary",
     bordered: false,
@@ -369,6 +375,10 @@ var _default = {
     variant: "primary",
     bordered: false,
     disabled: false,
+    iconLeft: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  'min-width-with-iconLeft': /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    minWidth: 160,
     iconLeft: /*#__PURE__*/_react["default"].createElement(_BookmarkIcon.BookmarkIcon, null)
   }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
   iconRight: /*#__PURE__*/_react["default"].createElement(_src.Button, {
@@ -498,11 +508,15 @@ exports["default"] = exports.Button = void 0;
 
 var _regenerator = _interopRequireDefault(__webpack_require__(7988));
 
+var _extends2 = _interopRequireDefault(__webpack_require__(9104));
+
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(2468));
 
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(2792));
 
 var _slicedToArray2 = _interopRequireDefault(__webpack_require__(6118));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(8330));
 
 var _react = _interopRequireWildcard(__webpack_require__(7294));
 
@@ -519,6 +533,8 @@ var _Overlay = __webpack_require__(4849);
 var _Spinner = __webpack_require__(2430);
 
 var _isPromise = __webpack_require__(5299);
+
+var _excluded = ["children", "variant", "bordered", "iconLeft", "iconRight", "icon", "disabled", "loading", "status", "onClick", "minWidth", "block"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -539,7 +555,10 @@ var Button = function Button(_ref) {
       disabled = _ref.disabled,
       loading = _ref.loading,
       status = _ref.status,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      minWidth = _ref.minWidth,
+      block = _ref.block,
+      props = (0, _objectWithoutProperties2["default"])(_ref, _excluded);
 
   var _useState = (0, _react.useState)({
     loading: false,
@@ -621,15 +640,17 @@ var Button = function Button(_ref) {
   var statusRender = status || state.status;
   var isOverlayRender = loadingRender || Boolean(statusRender);
   var inverse = ['primary'].includes(variant);
-  return /*#__PURE__*/_react["default"].createElement(_Base.Base, {
+  return /*#__PURE__*/_react["default"].createElement(_Base.Base, (0, _extends2["default"])({}, props, {
+    block: block,
     variant: variant,
     bordered: bordered,
     iconLeft: icon || iconLeft,
     iconRight: icon || iconRight,
     disabled: disabled,
+    minWidth: minWidth,
     loading: isOverlayRender,
     onClick: isOverlayRender ? undefined : handleSubmit
-  }, isOverlayRender && /*#__PURE__*/_react["default"].createElement(_Overlay.Overlay, {
+  }), isOverlayRender && /*#__PURE__*/_react["default"].createElement(_Overlay.Overlay, {
     variant: variant,
     status: statusRender
   }, loadingRender && /*#__PURE__*/_react["default"].createElement(_Spinner.Spinner, {
@@ -666,9 +687,13 @@ var _templateObject, _templateObject2, _templateObject3;
 
 var Base = (0, _core.styled)('button', {
   shouldForwardProp: function shouldForwardProp(prop) {
-    return !['variant', 'bordered', 'iconLeft', 'iconRight', 'loading'].includes(prop);
+    return !['variant', 'bordered', 'iconLeft', 'iconRight', 'loading', 'block', 'minWidth'].includes(prop);
   }
-})(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n  position: relative;\n  display: flex;\n  align-items: center;\n  font-family: ", ";\n  font-style: normal;\n  font-weight: ", ";\n  font-size: ", ";\n  letter-spacing: -0.01em;\n  border-radius: 8px;\n  border: none;\n  cursor: pointer;\n  outline: none;\n  padding-left: ", ";\n  padding-right: ", ";\n\n  padding-top: ", ";\n  padding-bottom: ", ";\n\n  box-shadow: ", ";\n\n  &:focus {\n    box-shadow: ", ";\n  }\n\n  ", "\n\n  &:disabled {\n    filter: grayscale(1) opacity(0.4);\n    pointer-events: none;\n    user-select: none;\n  }\n\n  transition: background 200ms ease-out, color 200ms ease-out;\n  will-change: background, color;\n\n  ", "\n"])), function (props) {
+})(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n  width: ", ";\n  min-width: ", ";\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-family: ", ";\n  font-style: normal;\n  font-weight: ", ";\n  font-size: ", ";\n  letter-spacing: -0.01em;\n  border-radius: 8px;\n  border: none;\n  cursor: pointer;\n  outline: none;\n  padding-left: ", ";\n  padding-right: ", ";\n\n  padding-top: ", ";\n  padding-bottom: ", ";\n\n  box-shadow: ", ";\n\n  &:focus {\n    box-shadow: ", ";\n  }\n\n  ", "\n\n  &:disabled {\n    filter: grayscale(1) opacity(0.4);\n    pointer-events: none;\n    user-select: none;\n  }\n\n  transition: background 200ms ease-out, color 200ms ease-out;\n  will-change: background, color;\n\n  ", "\n"])), function (props) {
+  return props.block ? '100%' : 'auto';
+}, function (props) {
+  return props.minWidth ? "".concat(props.minWidth, "px") : 'auto';
+}, function (props) {
   return props.theme.ratsel.fonts.main;
 }, function (props) {
   return props.theme.ratsel.button.fontWeight;
@@ -37131,6 +37156,30 @@ module.exports = _defineProperty, module.exports.__esModule = true, module.expor
 
 /***/ }),
 
+/***/ 9104:
+/***/ ((module) => {
+
+function _extends() {
+  module.exports = _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports;
+  return _extends.apply(this, arguments);
+}
+
+module.exports = _extends, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
 /***/ 1902:
 /***/ ((module) => {
 
@@ -37189,6 +37238,56 @@ function _nonIterableRest() {
 }
 
 module.exports = _nonIterableRest, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 8330:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var objectWithoutPropertiesLoose = __webpack_require__(4021);
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = objectWithoutPropertiesLoose(source, excluded);
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
+module.exports = _objectWithoutProperties, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 4021:
+/***/ ((module) => {
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+module.exports = _objectWithoutPropertiesLoose, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
