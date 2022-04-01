@@ -1,0 +1,46 @@
+{
+  "name": "@ratsel/table",
+  "version": "0.8.0",
+  "description": "🧩 Rätsel Table",
+  "keywords": [
+    "lskjs",
+    "ratsel",
+    "table",
+    "ui-library",
+    "styled",
+    "css-in-js",
+    "ka-table"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://github.com/lskjs/ratsel/tree/master/packages/table",
+  "license": "MIT",
+  "author": "Andrey Kondalov <andrey@kondalov.com>",
+  "scripts": {
+    "bootstrap": "lsk run bootstrap",
+    "build": "lsk run build",
+    "dev": "lsk run dev",
+    "prepublishOnly": "lsk run prepublishOnly",
+    "release": "lsk run release",
+    "release:yes": "lsk run release:yes",
+    "start": "node index.js",
+    "storybook": "lsk run storybook",
+    "test": "lsk run test",
+    "test:watch": "lsk run test:watch",
+    "watch": "lsk run watch"
+  },
+  "devDependencies": {
+    "@ratsel/core": "0.8.0",
+    "@types/react": "^17.0.43",
+    "react": "^17.0.2"
+  },
+  "peerDependencies": {
+    "@ratsel/core": "0.x",
+    "react": "17.x"
+  },
+  "dependencies": {
+    "ka-table": "^7.3.0"
+  }
+}
