@@ -1,6 +1,6 @@
 {
   "name": "@ratsel/avatar",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "🧩 Rätsel Avatar",
   "keywords": [
     "lskjs",
@@ -39,7 +39,7 @@
     "react": "17.x"
   },
   "dependencies": {
-    "@ratsel/core": "0.12.0",
+    "@ratsel/core": "0.13.0",
     "react-lazy-load-image-component": "^1.5.3"
   }
 }

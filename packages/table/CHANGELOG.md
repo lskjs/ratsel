@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://github.com/lskjs/ratsel/compare/v0.12.0...v0.13.0) (2022-04-06)
+
+
+### Features
+
+* **table:** export some properties ([0cfe277](https://github.com/lskjs/ratsel/commit/0cfe27787df9f54061dce1ee7a84448d238cd2fa))
+
+
+
+
+
 # [0.12.0](https://github.com/lskjs/ratsel/compare/v0.11.0...v0.12.0) (2022-04-06)
 
 **Note:** Version bump only for package @ratsel/table
