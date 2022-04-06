@@ -130,6 +130,11 @@ export const Wrapper = styled('div')`
     height: ${(props) => props.theme.ratsel.table.body.height};
   }
 
+  .ka-cell-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .ka-tree-cell {
     display: flex;
   }
