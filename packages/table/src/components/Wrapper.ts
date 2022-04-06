@@ -97,6 +97,7 @@ export const Wrapper = styled('div')`
     color: ${(props) => props.theme.ratsel.table.head.color};
     font-weight: ${(props) => props.theme.ratsel.table.head.fontWeight};
     font-size: ${(props) => props.theme.ratsel.table.head.fontSize};
+    box-shadow: inset 0 -${(props) => props.theme.ratsel.table.borderWidth} 0 0 ${(props) => props.theme.ratsel.table.borderColor};
   }
 
   .ka-thead-cell-wrapper {
@@ -188,6 +189,10 @@ export const Wrapper = styled('div')`
     border-bottom-width: ${(props) => props.theme.ratsel.table.borderWidth};
     border-bottom-style: solid;
     border-bottom-color: ${(props) => props.theme.ratsel.table.borderColor};
+  }
+
+  .ka-row:first-of-type {
+    border-top: none;
   }
 
   .ka-thead-row > .ka-thead-cell:first-of-type,
@@ -421,18 +426,33 @@ export const Wrapper = styled('div')`
     position: sticky;
     box-shadow: inset ${(props) => props.theme.ratsel.table.borderWidth} 0 0 0
       ${(props) => props.theme.ratsel.table.borderColor};
-    z-index: 20;
+  }
+
+  .sticky-cell-right.sticky-cell-thead {
+    box-shadow: inset ${(props) => props.theme.ratsel.table.borderWidth}
+      ${(props) => props.theme.ratsel.table.borderWidth} 0 0
+      ${(props) => props.theme.ratsel.table.borderColor};
+  }
+
+  .sticky-cell-left.sticky-cell-thead {
+    box-shadow: inset -${(props) => props.theme.ratsel.table.borderWidth} -${(
+        props,
+      ) => props.theme.ratsel.table.borderWidth}
+      0 0 ${(props) => props.theme.ratsel.table.borderColor};
   }
 
   .sticky-cell-thead {
     background-color: ${(props) => props.theme.ratsel.table.head.background};
+    z-index: 21;
   }
 
   .sticky-cell-tbody {
     background-color: ${(props) => props.theme.ratsel.table.body.background};
+    z-index: 20;
   }
 
   .sticky-cell-summary {
     background-color: ${(props) => props.theme.ratsel.table.summary.background};
+    z-index: 20;
   }
 `;
