@@ -127,6 +127,7 @@ export const Wrapper = styled('div')`
     color: ${(props) => props.theme.ratsel.table.body.color};
     font-size: ${(props) => props.theme.ratsel.table.body.fontSize};
     font-weight: ${(props) => props.theme.ratsel.table.body.fontWeight};
+    height: ${(props) => props.theme.ratsel.table.body.height};
   }
 
   .ka-tree-cell {
