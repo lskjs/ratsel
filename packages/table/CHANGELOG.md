@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.2](https://github.com/lskjs/ratsel/compare/v0.10.1...v0.10.2) (2022-04-06)
+
+
+### Bug Fixes
+
+* **table:** sticky styles ([8428b68](https://github.com/lskjs/ratsel/commit/8428b68419cdf1bf38d8a77f951c1fcbf987b75c))
+
+
+
+
+
 ## [0.10.1](https://github.com/lskjs/ratsel/compare/v0.10.0...v0.10.1) (2022-04-06)
 
 **Note:** Version bump only for package @ratsel/table
