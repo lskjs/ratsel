@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.5](https://github.com/lskjs/ratsel/compare/v0.10.4...v0.10.5) (2022-04-06)
+
+
+### Bug Fixes
+
+* **table:** overflow cell text ([c39779c](https://github.com/lskjs/ratsel/commit/c39779cde4237da6765dd3a0459c0b884ab4c936))
+
+
+
+
+
 ## [0.10.4](https://github.com/lskjs/ratsel/compare/v0.10.3...v0.10.4) (2022-04-06)
 
 
