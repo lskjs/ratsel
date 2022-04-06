@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/lskjs/ratsel/compare/v0.10.5...v0.11.0) (2022-04-06)
+
+
+### Features
+
+* **table:** support async onChange for remote logic ([398daef](https://github.com/lskjs/ratsel/commit/398daef4f981b6cf402003b22d987d06142b5fa1))
+
+
+
+
+
 ## [0.10.5](https://github.com/lskjs/ratsel/compare/v0.10.4...v0.10.5) (2022-04-06)
 
 
