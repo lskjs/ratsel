@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.3](https://github.com/lskjs/ratsel/compare/v0.10.2...v0.10.3) (2022-04-06)
+
+
+### Bug Fixes
+
+* **table:** sticky right position border ([952e77c](https://github.com/lskjs/ratsel/commit/952e77c1b905fa10de9681f2102ace1b4f588dd3))
+
+
+
+
+
 ## [0.10.2](https://github.com/lskjs/ratsel/compare/v0.10.1...v0.10.2) (2022-04-06)
 
 
