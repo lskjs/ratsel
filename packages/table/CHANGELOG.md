@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.4](https://github.com/lskjs/ratsel/compare/v0.10.3...v0.10.4) (2022-04-06)
+
+
+### Bug Fixes
+
+* **table:** forgot cell height ([eb4cfca](https://github.com/lskjs/ratsel/commit/eb4cfca9c348e0a302172b4509acf1db828a2e5f))
+
+
+
+
+
 ## [0.10.3](https://github.com/lskjs/ratsel/compare/v0.10.2...v0.10.3) (2022-04-06)
 
 
