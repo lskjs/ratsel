@@ -26,10 +26,11 @@ export interface ExtendedITableProps extends ITableProps {
 
 interface TableProps {
   data: ExtendedITableProps;
-  onChange?: (arg: any) => any;
+  onChangeState?: (arg: any) => any;
+  onChange?: (arg: any) => any | Promise<any>;
 }
 
-export const Table: FC<TableProps> = ({ data, onChange }) => {
+export const Table: FC<TableProps> = ({ data, onChangeState, onChange }) => {
   const _data = deserialize(data);
   const [custom, changeCustom] = useState(_data.custom);
   const [tableProps, changeTableProps] = useState(_data.tableProps);
@@ -43,9 +44,11 @@ export const Table: FC<TableProps> = ({ data, onChange }) => {
   const dispatch: DispatchFunc = async (action) => {
     changeTableProps((prevState: ExtendedITableProps) => {
       const newState = kaReducer(prevState, action);
-      if (onChange) onChange({ state: newState, action });
+      if (onChangeState) onChangeState({ state: newState, action });
       return newState;
     });
+
+    if (onChange) await onChange({ action, dispatch });
   };
 
   const childComponents = {

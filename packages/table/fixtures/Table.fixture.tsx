@@ -324,8 +324,11 @@ const data = {
 export default (
   <Table
     data={data}
+    onChangeState={(obj) => {
+      console.log('onChangeState', obj.action.type, obj);
+    }}
     onChange={(obj) => {
-      console.log(obj.action.type, obj);
+      console.log('onChange', obj.action.type, obj);
     }}
   />
 );
