@@ -1,57 +1,38 @@
-import { keyframes, styled } from '@ratsel/core';
-
-const typing = keyframes`
-  0% {
-    background-color: #747d86;
-    box-shadow: 20px 0px 0px 0px rgba(116, 125, 134, 0.2),
-      40px 0px 0px 0px rgba(116, 125, 134, 0.2);
-  }
-  25% {
-    background-color: rgba(116, 125, 134, 0.4);
-    box-shadow: 20px 0px 0px 0px #747d86,
-      40px 0px 0px 0px rgba(116, 125, 134, 0.2);
-  }
-  75% {
-    background-color: rgba(116, 125, 134, 0.4);
-    box-shadow: 20px 0px 0px 0px rgba(116, 125, 134, 0.2),
-      40px 0px 0px 0px #747d86;
-  }
-  100% {
-    box-shadow: none;
-  }
-`;
+/* eslint-disable max-len */
+// @ts-nocheck
+import { styled } from '@ratsel/core';
 
 export const Wrapper = styled('div')`
   .ka-icon-tree-arrow-collapsed:before {
-    content: '\e800';
+    content: '\\e800';
   }
 
   .ka-icon-group-arrow-collapsed:before {
-    content: '\e800';
+    content: '\\e800';
   }
 
   .ka-icon-close:before {
-    content: '\e801';
+    content: '\\e801';
   }
 
   .ka-icon-tree-arrow-expanded:before {
-    content: '\e802';
+    content: '\\e802';
   }
 
   .ka-icon-group-arrow-expanded:before {
-    content: '\e802';
+    content: '\\e802';
   }
 
   .ka-icon-sort-arrow-down:before {
-    content: '\e803';
+    content: '\\e803';
   }
 
   .ka-icon-sort-arrow-up:before {
-    content: '\e804';
+    content: '\\e804';
   }
 
   .ka-icon-filter:before {
-    content: '\e805';
+    content: '\\e805';
   }
 
   .ka {
@@ -60,6 +41,7 @@ export const Wrapper = styled('div')`
     font-size: 14px;
     display: flex;
     flex-direction: column;
+    font-family: ${(props) => props.theme.ratsel.fonts.main};
   }
 
   .ka-table-wrapper {
@@ -75,12 +57,12 @@ export const Wrapper = styled('div')`
   }
 
   .ka-thead-background {
-    background-color: #f1f5f7;
+    background-color: ${(props) => props.theme.ratsel.table.head.background};
   }
 
   .ka-thead-cell-height {
     box-sizing: border-box;
-    height: 47px;
+    height: ${(props) => props.theme.ratsel.table.head.height};
   }
 
   .ka-thead-fixed {
@@ -92,28 +74,30 @@ export const Wrapper = styled('div')`
   }
 
   .ka-thead-row:nth-child(2) .ka-thead-fixed {
-    top: 47px;
+    top: ${(props) => props.theme.ratsel.table.head.height};
   }
 
   .ka-thead-row:nth-child(3) .ka-thead-fixed {
-    top: 94px;
+    top: calc(${(props) => props.theme.ratsel.table.head.height} * 2);
   }
 
   .ka-thead-row:nth-child(4) .ka-thead-fixed {
-    top: 141px;
+    top: calc(${(props) => props.theme.ratsel.table.head.height} * 3);
   }
 
   .ka-thead-row:nth-child(5) .ka-thead-fixed {
-    top: 188px;
+    top: calc(${(props) => props.theme.ratsel.table.head.height} * 4);
   }
 
   .ka-thead-row:nth-child(6) .ka-thead-fixed {
-    top: 235px;
+    top: calc(${(props) => props.theme.ratsel.table.head.height} * 5);
   }
 
   .ka-thead-cell {
-    padding: 15px 20px;
-    color: #747d86;
+    padding: ${(props) => props.theme.ratsel.table.head.padding};
+    color: ${(props) => props.theme.ratsel.table.head.color};
+    font-weight: ${(props) => props.theme.ratsel.table.head.fontWeight};
+    font-size: ${(props) => props.theme.ratsel.table.head.fontSize};
   }
 
   .ka-thead-cell-wrapper {
@@ -138,9 +122,11 @@ export const Wrapper = styled('div')`
   }
 
   .ka-cell {
-    padding: 8px 20px;
-    line-height: 29px;
-    color: #353c44;
+    padding: ${(props) => props.theme.ratsel.table.body.padding};
+    line-height: ${(props) => props.theme.ratsel.table.body.lineHeight};
+    color: ${(props) => props.theme.ratsel.table.body.color};
+    font-size: ${(props) => props.theme.ratsel.table.body.fontSize};
+    font-weight: ${(props) => props.theme.ratsel.table.body.fontWeight};
   }
 
   .ka-tree-cell {
@@ -155,12 +141,14 @@ export const Wrapper = styled('div')`
 
   .ka-input {
     max-width: 100%;
-    border: 1px solid;
+    border-width: ${(props) => props.theme.ratsel.table.borderWidth};
+    border-style: solid;
   }
 
   .ka-cell-editor-validation-error .ka-input {
-    background: #ffe7e7;
-    border: 1px solid #ff0c0c;
+    border-width: ${(props) => props.theme.ratsel.table.borderWidth};
+    border-style: solid;
+    border-color: ${(props) => props.theme.ratsel.table.errorColor};
   }
 
   .ka-validation-message-container {
@@ -170,7 +158,7 @@ export const Wrapper = styled('div')`
   .ka-validation-message {
     font-size: 12px;
     color: white;
-    background-color: #ff0c0c;
+    background-color: ${(props) => props.theme.ratsel.table.errorColor};
     padding: 0 10px;
     max-width: 200px;
   }
@@ -195,8 +183,18 @@ export const Wrapper = styled('div')`
 
   .ka-row {
     box-sizing: border-box;
-    border-bottom: 2px solid #f9fbfc;
-    border-top: 2px solid #f9fbfc;
+    border-top-width: ${(props) => props.theme.ratsel.table.borderWidth};
+    border-top-style: solid;
+    border-top-color: ${(props) => props.theme.ratsel.table.borderColor};
+    border-bottom-width: ${(props) => props.theme.ratsel.table.borderWidth};
+    border-bottom-style: solid;
+    border-bottom-color: ${(props) => props.theme.ratsel.table.borderColor};
+  }
+
+  .ka-thead-row > .ka-thead-cell:first-of-type,
+  .ka-row > .ka-cell:first-of-type,
+  .ka-summary-row > .ka-summary-cell:first-of-type {
+    padding-left: ${(props) => props.theme.ratsel.table.firstLeftPadding};
   }
 
   .ka-dragged-row {
@@ -224,10 +222,14 @@ export const Wrapper = styled('div')`
   }
 
   .ka-group-row {
-    background-color: #f9fbfc;
+    background-color: ${(props) => props.theme.ratsel.table.head.background};
     box-sizing: border-box;
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
+    border-top-width: ${(props) => props.theme.ratsel.table.borderWidth};
+    border-top-style: solid;
+    border-top-color: white;
+    border-bottom-width: ${(props) => props.theme.ratsel.table.borderWidth};
+    border-bottom-style: solid;
+    border-bottom-color: white;
   }
 
   .ka-group-cell {
@@ -284,7 +286,7 @@ export const Wrapper = styled('div')`
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    animation: ${typing} 1s linear infinite alternate;
+    /* animation: $typing 1s linear infinite alternate; */
     position: relative;
     left: -20px;
   }
@@ -315,7 +317,12 @@ export const Wrapper = styled('div')`
   }
 
   .ka-summary-cell {
-    padding: 12px 20px;
+    padding: ${(props) => props.theme.ratsel.table.summary.padding};
+    height: ${(props) => props.theme.ratsel.table.summary.height};
+    line-height: ${(props) => props.theme.ratsel.table.summary.lineHeight};
+    color: ${(props) => props.theme.ratsel.table.summary.color};
+    font-size: ${(props) => props.theme.ratsel.table.summary.fontSize};
+    font-weight: ${(props) => props.theme.ratsel.table.summary.fontWeight};
   }
 
   .ka-loading-text {
@@ -393,5 +400,40 @@ export const Wrapper = styled('div')`
 
   .ka-header-filter-button-has-value {
     font-weight: bold;
+  }
+
+  .ka-row {
+    background-color: ${(props) => props.theme.ratsel.table.body.background};
+  }
+
+  .ka-summary-row {
+    background-color: ${(props) => props.theme.ratsel.table.summary.background};
+  }
+
+  .sticky-cell-left {
+    left: 0;
+    position: sticky;
+    box-shadow: inset -${(props) => props.theme.ratsel.table.borderWidth} 0 0 0 ${(props) => props.theme.ratsel.table.borderColor};
+    z-index: 20;
+  }
+
+  .sticky-cell-right {
+    right: 0;
+    position: sticky;
+    box-shadow: inset ${(props) => props.theme.ratsel.table.borderWidth} 0 0 0
+      ${(props) => props.theme.ratsel.table.borderColor};
+    z-index: 20;
+  }
+
+  .sticky-cell-thead {
+    background-color: ${(props) => props.theme.ratsel.table.head.background};
+  }
+
+  .sticky-cell-tbody {
+    background-color: ${(props) => props.theme.ratsel.table.body.background};
+  }
+
+  .sticky-cell-summary {
+    background-color: ${(props) => props.theme.ratsel.table.summary.background};
   }
 `;
