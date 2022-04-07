@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.1](https://github.com/lskjs/ratsel/compare/v0.13.0...v0.13.1) (2022-04-07)
+
+
+### Bug Fixes
+
+* **core:** real parent theme ([0d586bb](https://github.com/lskjs/ratsel/commit/0d586bb3cc3ed7ab7305109fd91e46d65b196fa1))
+
+
+
+
+
 # [0.13.0](https://github.com/lskjs/ratsel/compare/v0.12.0...v0.13.0) (2022-04-06)
 
 **Note:** Version bump only for package @ratsel/core
