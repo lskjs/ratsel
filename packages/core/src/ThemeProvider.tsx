@@ -8,11 +8,11 @@ import type { FC } from 'react';
 import React, { useMemo } from 'react';
 
 import { globalStyles as defaultGlobalStyles } from './globalStyles';
-import type { InnerTheme } from './themes/theme';
+import type { InnerTheme, Theme } from './themes/theme';
 import { theme as defaultTheme } from './themes/theme';
 
 interface ThemeProviderProps {
-  theme?: Partial<InnerTheme> | ((outerTheme: InnerTheme) => InnerTheme);
+  theme?: InnerTheme | ((outerTheme: Theme) => Theme);
   globalStyles?: SerializedStyles;
 }
 
@@ -21,16 +21,22 @@ export const ThemeProvider: FC<ThemeProviderProps> = ({
   theme,
   globalStyles = defaultGlobalStyles,
 }) => {
-  const memoizedTheme = useMemo(() => {
-    let composedTheme = theme || defaultTheme;
-    if (theme && typeof theme === 'function') {
-      composedTheme = theme(defaultTheme);
-    }
-    return (parentTheme: AnyTheme) => ({
-      ...parentTheme,
-      ratsel: composedTheme,
-    });
-  }, [theme]);
+  const memoizedTheme = useMemo(
+    () => (parentTheme: AnyTheme) => {
+      let newTheme = {
+        ...parentTheme,
+        ratsel: defaultTheme,
+      };
+      if (theme && typeof theme === 'function') {
+        newTheme = theme(newTheme);
+      }
+      if (theme && typeof theme !== 'function') {
+        newTheme.ratsel = theme;
+      }
+      return newTheme;
+    },
+    [theme],
+  );
 
   return (
     <EmotionThemeProvider theme={memoizedTheme}>
