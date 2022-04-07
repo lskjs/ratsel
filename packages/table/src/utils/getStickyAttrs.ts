@@ -7,6 +7,7 @@ export const getStickyAttrs = (
 ) => {
   let attrs = {};
   Object.keys(sticky).forEach((key) => {
+    if (!['left', 'right'].includes(key)) return;
     if ((sticky?.[key] || []).includes(column.key)) {
       attrs = {
         className: `sticky-cell-${key} sticky-cell-${type}`,

@@ -420,6 +420,14 @@ export const Wrapper = styled('div')`
     background-color: ${(props) => props.theme.ratsel.table.summary.background};
   }
 
+  .sticky-row-bottom {
+    bottom: 0;
+    position: sticky;
+    z-index: 21;
+    box-shadow: inset 0 ${(props) => props.theme.ratsel.table.borderWidth} 0 0
+      ${(props) => props.theme.ratsel.table.borderColor};
+  }
+
   .sticky-cell-left {
     left: 0;
     position: sticky;

@@ -293,6 +293,7 @@ const data = {
   },
   custom: {
     sticky: {
+      summaryRow: true,
       left: ['user'],
       right: ['cmd:options'],
     },

@@ -7,6 +7,7 @@ import { defaults } from './defaults';
 interface StickyProps {
   left?: string[];
   right?: string[];
+  summaryRow?: boolean;
 }
 
 export interface CustomComponentProps {

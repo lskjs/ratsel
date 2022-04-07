@@ -77,6 +77,14 @@ export const Table: FC<TableProps> = ({ data, onChangeState, onChange }) => {
     ...(tableProps.childComponents || {}),
   };
 
+  if (custom?.sticky?.summaryRow) {
+    childComponents.summaryRow = {
+      elementAttributes: () => ({
+        className: 'sticky-row-bottom',
+      }),
+    };
+  }
+
   if (custom?.cellTotalComponent) {
     childComponents.summaryCell = {
       content: custom?.cellTotalComponent,
