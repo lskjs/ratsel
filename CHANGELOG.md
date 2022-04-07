@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.1](https://github.com/lskjs/ratsel/compare/v0.14.0...v0.14.1) (2022-04-07)
+
+
+### Bug Fixes
+
+* **table:** correct sticky elements no-virtual ([4b349b7](https://github.com/lskjs/ratsel/commit/4b349b77312408f2c3e68592a1175da393de5d5b))
+
+
+
+
+
 # [0.14.0](https://github.com/lskjs/ratsel/compare/v0.13.1...v0.14.0) (2022-04-07)
 
 
