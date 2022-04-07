@@ -1,7 +1,13 @@
 /* eslint-disable max-len */
 import { styled } from '@ratsel/core';
 
-export const Wrapper = styled('div')`
+interface WrapperProps {
+  virtual: boolean;
+}
+
+export const Wrapper = styled('div', {
+  shouldForwardProp: (prop) => !['virtual'].includes(prop as string),
+})<WrapperProps>`
   .ka-icon-tree-arrow-collapsed:before {
     content: '\\e800';
   }
@@ -35,7 +41,7 @@ export const Wrapper = styled('div')`
   }
 
   .ka {
-    overflow: hidden;
+    overflow: ${(props) => (props.virtual ? 'unset' : 'hidden')};
     background-color: white;
     font-size: 14px;
     display: flex;
@@ -46,7 +52,7 @@ export const Wrapper = styled('div')`
   .ka-table-wrapper {
     height: 100%;
     width: 100%;
-    overflow-y: auto;
+    overflow-y: ${(props) => (props.virtual ? 'unset' : 'auto')};
   }
 
   .ka-table {

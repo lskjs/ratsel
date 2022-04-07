@@ -94,7 +94,7 @@ export const Table: FC<TableProps> = ({ data, onChangeState, onChange }) => {
   }
 
   return (
-    <Wrapper>
+    <Wrapper virtual={Boolean(tableProps.virtualScrolling?.enabled)}>
       <Global styles={globalFonts} />
       <KaTable
         {...tableProps}
