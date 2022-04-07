@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@ratsel/core';
+import type { FC } from 'react';
 import React from 'react';
 
 const theme = (parentTheme) => ({
@@ -58,6 +59,8 @@ const theme = (parentTheme) => ({
   },
 });
 
-export default ({ children }) => (
+const Decorator: FC = ({ children }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );
+
+export default Decorator;
