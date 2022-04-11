@@ -17,4 +17,4 @@ const options = [
   },
 ];
 
-export default <Select options={options} />;
+export default <Select options={options} onMenuClose={() => console.log('asd')} isSearchable />;
