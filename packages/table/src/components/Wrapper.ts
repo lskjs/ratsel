@@ -41,7 +41,7 @@ export const Wrapper = styled('div', {
   }
 
   .ka {
-    overflow: ${(props) => (props.virtual ? 'unset' : 'hidden')};
+    overflow: ${(props) => (props.virtual ? 'hidden' : 'unset')};
     background-color: white;
     font-size: 14px;
     display: flex;
@@ -52,7 +52,7 @@ export const Wrapper = styled('div', {
   .ka-table-wrapper {
     height: 100%;
     width: 100%;
-    overflow-y: ${(props) => (props.virtual ? 'unset' : 'auto')};
+    overflow-y: ${(props) => (props.virtual ? 'auto' : 'unset')};
   }
 
   .ka-table {
