@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/lskjs/ratsel/compare/v0.14.1...v0.15.0) (2022-04-12)
+
+
+### Bug Fixes
+
+* **table:** correct virtual keys ([c5cff4b](https://github.com/lskjs/ratsel/commit/c5cff4b1914bc1c50ad6beb2ad5f2f7a9aeca354))
+
+
+
+
+
 ## [0.14.1](https://github.com/lskjs/ratsel/compare/v0.14.0...v0.14.1) (2022-04-07)
 
 

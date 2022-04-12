@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/lskjs/ratsel/compare/v0.14.1...v0.15.0) (2022-04-12)
+
+
+### Bug Fixes
+
+* **avatar:** move core to devDeps ([816bf2b](https://github.com/lskjs/ratsel/commit/816bf2b9e83ef58c310e2afe0f92d071feb17745))
+* **avatar:** peerDeps core version ([9bd7b4d](https://github.com/lskjs/ratsel/commit/9bd7b4dedcf45d544b380bd93129fee7947f67b2))
+
+
+
+
+
 # [0.14.0](https://github.com/lskjs/ratsel/compare/v0.13.1...v0.14.0) (2022-04-07)
 
 **Note:** Version bump only for package @ratsel/avatar
