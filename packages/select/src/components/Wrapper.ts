@@ -12,11 +12,11 @@ export const Wrapper = styled('div')`
     background-color: #fff;
     border: solid 1px #e3e3e3;
     color: #4a4a4a;
-    font-family: 'Gotham Pro', Helvetica, Arial;
     font-size: 13px;
     line-height: 1.43;
     text-align: left;
     /* padding: 3px 6px 3px 3px; */
+    font-family: ${(props) => props.theme.ratsel.fonts.main};
     outline: none;
     cursor: pointer;
   }
@@ -31,9 +31,9 @@ export const Wrapper = styled('div')`
     line-height: 1.43;
     text-align: left;
     color: #4a4a4a;
-    font-family: 'Gotham Pro', Helvetica, Arial;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: ${(props) => props.theme.ratsel.fonts.main};
   }
 
   .ratsel-select .react-select__indicator-separator {
@@ -62,7 +62,7 @@ export const Wrapper = styled('div')`
     padding: 13px 12px !important;
     font-size: 14px !important;
     line-height: 1.43 !important;
-    font-family: 'Gotham Pro', Helvetica, Arial;
+    font-family: ${(props) => props.theme.ratsel.fonts.main};
   }
 
   .ratsel-select .react-select__option.react-select__option--is-focused {
@@ -99,5 +99,8 @@ export const Wrapper = styled('div')`
   }
   .react-select__control {
     line-height: 34px !important;
+  }
+  .react-select__value-container {
+    padding: 2px 11px;
   }
 `;

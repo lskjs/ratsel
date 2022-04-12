@@ -12,8 +12,9 @@ const DropdownIndicator: FC<DropdownIndicatorProps<SelectOption, false, GroupOpt
           border: 'solid #4a4a4a',
           borderWidth: '0 2.5px 2.5px 0',
           display: 'inline-block',
-          padding: 2.5,
+          padding: 2.2,
           transform: 'rotate(-135deg)',
+          marginRight: 14,
         }}
       />
     );
@@ -24,8 +25,9 @@ const DropdownIndicator: FC<DropdownIndicatorProps<SelectOption, false, GroupOpt
           border: 'solid #4a4a4a',
           borderWidth: '0 2.5px 2.5px 0',
           display: 'inline-block',
-          padding: 2.5,
+          padding: 2.2,
           transform: 'rotate(45deg)',
+          marginRight: 14,
         }}
       />
     );

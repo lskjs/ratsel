@@ -4,17 +4,17 @@ import { Select } from '../src';
 
 const options = [
   {
-    value: 'variant1',
-    label: 'Вариант 1',
+    value: '30days',
+    label: '30 дней',
   },
   {
-    value: 'variant2',
-    label: 'Вариант 2',
+    value: '90days',
+    label: '90 дней',
   },
   {
-    value: 'variant3',
-    label: 'Вариант 3',
+    value: '1year',
+    label: '1 год',
   },
 ];
 
-export default <Select options={options} onMenuClose={() => console.log('asd')} isSearchable />;
+export default <Select placeholder="Выберите период" options={options} isSearchable onChange={(val) => console.log(val)} noOptionsMessage={() => <div>No options!</div>} />;

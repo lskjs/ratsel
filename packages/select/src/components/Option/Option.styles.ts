@@ -17,8 +17,9 @@ export const OptionItem = styled('div', {
   height: 48px;
   padding-left: 8px;
   z-index: 111111;
+  cursor: default;
 
-  font-family: 'Gotham Pro', Helvetica, Arial;
+  font-family: ${(props) => props.theme.ratsel.fonts.main};
   background-color: ${(p) =>
     p.focused ? '#f0f0ff' : '#ffffff'};
   font-size: 13px;

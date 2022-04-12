@@ -15,7 +15,7 @@ export const Option = styled('div', {
   width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-family: 'Gotham Pro', Helvetica, Arial;
+  font-family: ${(props) => props.theme.ratsel.fonts.main};
   font-size: 13px;
   font-weight: normal;
   font-style: normal;

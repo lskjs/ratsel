@@ -1,5 +1,5 @@
-import type { FC } from 'react';
-import React, { useState } from 'react';
+import type { FC, ReactNode } from 'react';
+import React from 'react';
 import { ClassNames } from '@ratsel/core';
 import ReactSelect from 'react-select';
 import { SelectComponents } from 'react-select/dist/declarations/src/components';
@@ -12,8 +12,6 @@ import { Option } from './components/Option';
 import SingleValue from './components/SingleValue';
 import DropdownIndicator from './components/DropdownIndicator';
 
-// const NULL_STRING = '@@NULL@@';
-// const getReverseOptionValue = (value: string | number) => (value === NULL_STRING ? null : value);
 export interface SelectOption {
   label?: string;
   value?: string | number;
@@ -34,9 +32,11 @@ interface SelectProps {
   onMenuClose?: () => void;
   styles?: object;
   className?: string;
-  hasError?: boolean,
-  onChange?: (value: string | number | null) => void,
+  hasError?: boolean;
+  onChange?: (value: any) => void | undefined;
   components?: SelectComponents<SelectOption, false, GroupOption>;
+  noOptionsMessage: (value: object) => ReactNode;
+  isDisabled?: boolean;
 }
 
 export const Select: FC<SelectProps> = ({
@@ -53,60 +53,51 @@ export const Select: FC<SelectProps> = ({
   className = '',
   onChange,
   ...props
-}) => {
-  // const [state, setState] = useState({});
-  // function handleChange(option: Object<SelectOption>) {
-  //   setState({ option, initOption: false });
-  //   const _value = getReverseOptionValue(option && option.value);
-  //   if (onChange) onChange(_value);
-  // }
-  return (
-    <ClassNames>
-      {({ cx }) => (
-        <Wrapper>
-          <ReactSelect
-            defaultMenuIsOpen
-            options={options}
-            value={value}
-            placeholder={placeholder}
-            isSearchable={isSearchable}
-            isClearable={isClearable}
-            classNamePrefix="react-select"
-            blurInputOnSelect={blurInputOnSelect}
-            onMenuClose={onMenuClose}
-            styles={{
-              singleValue: (base) => ({
-                ...base,
-                position: 'relative',
-                top: 'inherit',
-                transform: 'inherit',
-                flexWrap: 'nowrap',
-              }),
-              valueContainer: (base) => ({
-                ...base,
-                flexWrap: 'nowrap',
-                whiteSpace: 'nowrap',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-              }),
-              ...styles,
-            }}
-            components={{
-              Option,
-              SingleValue,
-              DropdownIndicator,
-              ...components,
-            }}
-            className={cx({
-              'ratsel-select': true,
-              [className]: !!className,
-              'has-error': hasError,
-            })}
-            {...props}
-            // onChange={handleChange}
-          />
-        </Wrapper>
-      )}
-    </ClassNames>
-  );
-}
+}) => (
+  <ClassNames>
+    {({ cx }) => (
+      <Wrapper>
+        <ReactSelect
+          options={options}
+          value={value}
+          placeholder={placeholder}
+          isSearchable={isSearchable}
+          isClearable={isClearable}
+          classNamePrefix="react-select"
+          blurInputOnSelect={blurInputOnSelect}
+          onMenuClose={onMenuClose}
+          styles={{
+            singleValue: (base) => ({
+              ...base,
+              position: 'relative',
+              top: 'inherit',
+              transform: 'inherit',
+              flexWrap: 'nowrap',
+            }),
+            valueContainer: (base) => ({
+              ...base,
+              flexWrap: 'nowrap',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }),
+            ...styles,
+          }}
+          components={{
+            Option,
+            SingleValue,
+            DropdownIndicator,
+            ...components,
+          }}
+          className={cx({
+            'ratsel-select': true,
+            [className]: !!className,
+            'has-error': hasError,
+          })}
+          onChange={onChange}
+          {...props}
+        />
+      </Wrapper>
+    )}
+  </ClassNames>
+);
