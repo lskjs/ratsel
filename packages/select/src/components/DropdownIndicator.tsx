@@ -7,35 +7,29 @@ const DropdownIndicator: FC<DropdownIndicatorProps<SelectOption, false, GroupOpt
   let arrow;
   if (selectProps.menuIsOpen) {
     arrow = (
-      <i
-        style={{
-          border: 'solid #4a4a4a',
-          borderWidth: '0 2.5px 2.5px 0',
-          display: 'inline-block',
-          padding: 2.2,
-          transform: 'rotate(-135deg)',
-          marginRight: 14,
-          borderColor: '#7070ff',
-        }}
-      />
+      <svg viewBox="0 0 24 24" width="24" height="24" style={{ transform: 'rotate(180deg)' }}>
+        <g fill="none" fillRule="evenodd">
+          <path d="M0 0h24v24H0z"/>
+          <path fill="#7070ff" d="M7 10l5 5 5-5z"/>
+        </g>
+      </svg>
     );
   } else {
     arrow = (
-      <i
-        style={{
-          border: 'solid #4a4a4a',
-          borderWidth: '0 2.5px 2.5px 0',
-          display: 'inline-block',
-          padding: 2.2,
-          transform: 'rotate(45deg)',
-          marginRight: 14,
-          borderColor: '#4a4a4a',
-        }}
-      />
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <g fill="none" fillRule="evenodd">
+          <path d="M0 0h24v24H0z"/>
+          <path fill="#4a4a4a" d="M7 10l5 5 5-5z"/>
+        </g>
+      </svg>
     );
   }
   const DropdownIndicatorBase = components.DropdownIndicator as (props: DropdownIndicatorProps<SelectOption, false, GroupOption>) => JSX.Element;
-  return <DropdownIndicatorBase selectProps={selectProps} {...props}>{arrow}</DropdownIndicatorBase>;
+  return (
+    <DropdownIndicatorBase selectProps={selectProps} {...props}>
+      {arrow}
+    </DropdownIndicatorBase>
+  );
 };
 
 export default DropdownIndicator;
