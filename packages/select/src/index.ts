@@ -1,2 +1,5 @@
-export * from 'react-select/dist/declarations/src/index';
+import { components } from 'react-select';
+
 export { Select } from './Select';
+
+export { components };
