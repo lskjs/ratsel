@@ -15,6 +15,7 @@ const DropdownIndicator: FC<DropdownIndicatorProps<SelectOption, false, GroupOpt
           padding: 2.2,
           transform: 'rotate(-135deg)',
           marginRight: 14,
+          borderColor: '#7070ff',
         }}
       />
     );
@@ -28,6 +29,7 @@ const DropdownIndicator: FC<DropdownIndicatorProps<SelectOption, false, GroupOpt
           padding: 2.2,
           transform: 'rotate(45deg)',
           marginRight: 14,
+          borderColor: '#4a4a4a',
         }}
       />
     );
