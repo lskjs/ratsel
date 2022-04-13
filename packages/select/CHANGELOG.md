@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.1](https://github.com/lskjs/ratsel/compare/v0.16.0...v0.16.1) (2022-04-13)
+
+
+### Bug Fixes
+
+* **select:** ts nocheck remove ([a208c9d](https://github.com/lskjs/ratsel/commit/a208c9d3fda56c2540bc1b840da28707014e58a7))
+
+
+
+
+
 # [0.16.0](https://github.com/lskjs/ratsel/compare/v0.15.0...v0.16.0) (2022-04-13)
 
 
