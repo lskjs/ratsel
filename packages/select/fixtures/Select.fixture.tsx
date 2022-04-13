@@ -17,4 +17,12 @@ const options = [
   },
 ];
 
-export default <Select placeholder="Выберите период" options={options} isSearchable onChange={(val) => console.log(val)} noOptionsMessage={() => <div>No options!</div>} />;
+export default (
+  <Select
+    placeholder="Выберите период"
+    options={options}
+    isSearchable
+    onChange={(val) => console.log(val)}
+    noOptionsMessage={() => <div>No options!</div>}
+  />
+);
