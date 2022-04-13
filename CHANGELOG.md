@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.1](https://github.com/lskjs/ratsel/compare/v0.17.0...v0.17.1) (2022-04-13)
+
+
+### Bug Fixes
+
+* **select:** reimport components react-select ([3a140cc](https://github.com/lskjs/ratsel/commit/3a140cc8706aeb5632da665f60ac99667811861c))
+
+
+
+
+
 # [0.17.0](https://github.com/lskjs/ratsel/compare/v0.16.1...v0.17.0) (2022-04-13)
 
 
