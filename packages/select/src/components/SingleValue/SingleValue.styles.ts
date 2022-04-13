@@ -1,7 +1,8 @@
+// @ts-nocheck
 import { styled } from '@ratsel/core';
 
 interface OptionProps {
-  value?: string | number | undefined,
+  value?: string | number | undefined;
 }
 
 export const Option = styled('div', {
@@ -20,9 +21,12 @@ export const Option = styled('div', {
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  background-color: #ffffff;
+  background-color: ${(props) => props.theme.ratsel.select.colors.background};
   letter-spacing: -0.1px;
-  color: ${(p) => p.value === '@@NULL@@' ? '#808080' : '#4a4a4a'};
+  color: ${(props) =>
+    props.value === '@@NULL@@'
+      ? props.theme.ratsel.select.colors.placeholder
+      : props.theme.ratsel.select.colors.base};
 `;
 
 export const Title = styled('div')`

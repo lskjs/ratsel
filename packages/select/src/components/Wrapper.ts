@@ -1,17 +1,19 @@
-/* eslint-disable max-len */
+// @ts-nocheck
 import { styled } from '@ratsel/core';
 
 export const Wrapper = styled('div')`
   .ratsel-select .react-select__control.react-select__control--is-focused {
-    border: solid 1px #7070ff !important;
+    border: solid ${(props) => props.theme.ratsel.select.borderWidth}
+      ${(props) => props.theme.ratsel.select.colors.primary} !important;
     box-shadow: none !important;
   }
 
   .ratsel-select .react-select__control {
-    border-radius: 8px;
-    background-color: #fff;
-    border: solid 1px #e3e3e3;
-    color: #4a4a4a;
+    border-radius: ${(props) => props.theme.ratsel.select.borderRadius};
+    background-color: ${(props) => props.theme.ratsel.select.colors.background};
+    border: solid ${(props) => props.theme.ratsel.select.borderWidth}
+      ${(props) => props.theme.ratsel.select.colors.border};
+    color: ${(props) => props.theme.ratsel.select.colors.base};
     font-size: 13px;
     line-height: 1.43;
     text-align: left;
@@ -30,7 +32,7 @@ export const Wrapper = styled('div')`
     font-size: 13px;
     line-height: 1.43;
     text-align: left;
-    color: #4a4a4a;
+    color: ${(props) => props.theme.ratsel.select.colors.base};
     overflow: hidden;
     text-overflow: ellipsis;
     font-family: ${(props) => props.theme.ratsel.fonts.main};
@@ -40,16 +42,25 @@ export const Wrapper = styled('div')`
     display: none !important;
   }
 
-  .ratsel-select .Select-arrow {
-    border-color: rgb(112, 112, 255) transparent transparent !important;
-  }
-
-  .ratsel-select.is-open .Select-arrow {
-    border-color: transparent transparent rgb(112, 112, 255) !important;
-  }
-
   .ratsel-select .Select-arrow-zone {
     padding: 0 !important;
+  }
+
+  .ratsel-select .react-select__dropdown-indicator {
+    color: ${(props) => props.theme.ratsel.select.colors.base};
+  }
+
+  .ratsel-select
+    .react-select__control--menu-is-open
+    .react-select__dropdown-indicator {
+    color: ${(props) => props.theme.ratsel.select.colors.primary};
+  }
+
+  .ratsel-select
+    .react-select__control--menu-is-open
+    .react-select__dropdown-indicator
+    > svg {
+    transform: rotate(180deg);
   }
 
   .ratsel-select .react-select__menu {
@@ -66,27 +77,30 @@ export const Wrapper = styled('div')`
   }
 
   .ratsel-select .react-select__option.react-select__option--is-focused {
-    background-color: #eff4fa !important;
-    color: #4a4a4a !important;
+    background-color: ${(props) =>
+      props.theme.ratsel.select.colors.hover} !important;
+    color: ${(props) => props.theme.ratsel.select.colors.base} !important;
   }
 
   .ratsel-select .react-select__option.react-select__option--is-selected {
     background-color: #f0f0ff !important;
-    color: #7070ff !important;
+    color: ${(props) => props.theme.ratsel.select.colors.primary} !important;
   }
 
   .ratsel-select.react-select__control--is-focused > .react-select__control {
-    border-color: #B3B3B3;
+    border-color: ${(props) => props.theme.ratsel.select.colors.border};
     box-shadow: none !important;
   }
 
   .ratsel-select.has-error .react-select__control {
-    border-color: #da4c5a !important;
-    color: #da4c5a !important;
+    border-color: ${(props) =>
+      props.theme.ratsel.select.colors.error} !important;
+    color: ${(props) => props.theme.ratsel.select.colors.error} !important;
   }
 
   .ratsel-select.has-error .react-select__control {
-    border-color: #da4c5a !important;
+    border-color: ${(props) =>
+      props.theme.ratsel.select.colors.error} !important;
   }
 
   .ratsel-select .react-select__clear {
@@ -94,7 +108,7 @@ export const Wrapper = styled('div')`
   }
 
   .ratsel-select .react-select__control--is-disabled {
-    opacity: .5;
+    opacity: 0.5;
     cursor: not-allowed;
   }
   .react-select__control {
