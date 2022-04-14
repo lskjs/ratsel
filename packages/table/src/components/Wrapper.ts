@@ -72,6 +72,7 @@ export const Wrapper = styled('div', {
 
   .ka-thead-fixed {
     position: sticky;
+    z-index: 2;
   }
 
   .ka-thead-row:nth-child(1) .ka-thead-fixed {
