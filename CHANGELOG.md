@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.2](https://github.com/lskjs/ratsel/compare/v0.17.1...v0.17.2) (2022-04-14)
+
+
+### Bug Fixes
+
+* **table:** zIndex thead fixed ([cf1b2aa](https://github.com/lskjs/ratsel/commit/cf1b2aa159872569d635c8350df7dbdd4f4d644c))
+
+
+
+
+
 ## [0.17.1](https://github.com/lskjs/ratsel/compare/v0.17.0...v0.17.1) (2022-04-13)
 
 
