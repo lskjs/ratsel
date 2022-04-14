@@ -109,6 +109,7 @@ export const Wrapper = styled('div', {
 
   .ka-thead-cell-wrapper {
     display: flex;
+    align-items: center;
   }
 
   .ka-thead-cell-content-wrapper {
@@ -310,11 +311,13 @@ export const Wrapper = styled('div', {
 
   .ka-thead-cell-resize {
     user-select: none;
-    width: 2px;
+    width: 1px;
     cursor: col-resize;
-    background-color: #d7e4eb;
+    background-color: ${(props) => props.theme.ratsel.table.borderColor};
     position: relative;
-    left: 19px;
+    left: 10px;
+    z-index: 3;
+    height: 24px;
   }
 
   .ka-thead-cell-resize:active:after {
