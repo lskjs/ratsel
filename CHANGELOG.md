@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.5](https://github.com/lskjs/ratsel/compare/v0.17.4...v0.17.5) (2022-04-14)
+
+
+### Bug Fixes
+
+* **table:** export defaultComponents ka-table ([7438abe](https://github.com/lskjs/ratsel/commit/7438abe303db3580367ca537732c3ce3e772fc99))
+
+
+
+
+
 ## [0.17.4](https://github.com/lskjs/ratsel/compare/v0.17.3...v0.17.4) (2022-04-14)
 
 
