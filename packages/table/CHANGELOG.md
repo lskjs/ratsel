@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.3](https://github.com/lskjs/ratsel/compare/v0.17.2...v0.17.3) (2022-04-14)
+
+
+### Bug Fixes
+
+* **table:** resize caret styled ([514702e](https://github.com/lskjs/ratsel/commit/514702e6fece9f10a4def9f9fba2d032df57231d))
+
+
+
+
+
 ## [0.17.2](https://github.com/lskjs/ratsel/compare/v0.17.1...v0.17.2) (2022-04-14)
 
 
