@@ -75,27 +75,27 @@ export const Wrapper = styled('div', {
     z-index: 2;
   }
 
-  .ka-thead-row:nth-child(1) .ka-thead-fixed {
+  .ka-thead-row:nth-of-type(1) .ka-thead-fixed {
     top: 0px;
   }
 
-  .ka-thead-row:nth-child(2) .ka-thead-fixed {
+  .ka-thead-row:nth-of-type(2) .ka-thead-fixed {
     top: ${(props) => props.theme.ratsel.table.head.height};
   }
 
-  .ka-thead-row:nth-child(3) .ka-thead-fixed {
+  .ka-thead-row:nth-of-type(3) .ka-thead-fixed {
     top: calc(${(props) => props.theme.ratsel.table.head.height} * 2);
   }
 
-  .ka-thead-row:nth-child(4) .ka-thead-fixed {
+  .ka-thead-row:nth-of-type(4) .ka-thead-fixed {
     top: calc(${(props) => props.theme.ratsel.table.head.height} * 3);
   }
 
-  .ka-thead-row:nth-child(5) .ka-thead-fixed {
+  .ka-thead-row:nth-of-type(5) .ka-thead-fixed {
     top: calc(${(props) => props.theme.ratsel.table.head.height} * 4);
   }
 
-  .ka-thead-row:nth-child(6) .ka-thead-fixed {
+  .ka-thead-row:nth-of-type(6) .ka-thead-fixed {
     top: calc(${(props) => props.theme.ratsel.table.head.height} * 5);
   }
 
