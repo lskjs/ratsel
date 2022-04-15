@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.7](https://github.com/lskjs/ratsel/compare/v0.17.6...v0.17.7) (2022-04-15)
+
+
+### Bug Fixes
+
+* **table:** nth-of-type instead nth-child ([8048910](https://github.com/lskjs/ratsel/commit/8048910ff7e4520adf3f3f21c6f220a842694656))
+
+
+
+
+
 ## [0.17.6](https://github.com/lskjs/ratsel/compare/v0.17.5...v0.17.6) (2022-04-15)
 
 
