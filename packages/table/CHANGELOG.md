@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.6](https://github.com/lskjs/ratsel/compare/v0.17.5...v0.17.6) (2022-04-15)
+
+
+### Bug Fixes
+
+* **table:** resizer ([37d25e3](https://github.com/lskjs/ratsel/commit/37d25e31dd29db974baace8ec7cc21104a1f0c39))
+
+
+
+
+
 ## [0.17.5](https://github.com/lskjs/ratsel/compare/v0.17.4...v0.17.5) (2022-04-14)
 
 
