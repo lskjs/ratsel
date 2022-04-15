@@ -311,13 +311,19 @@ export const Wrapper = styled('div', {
 
   .ka-thead-cell-resize {
     user-select: none;
-    width: 1px;
+    width: 5px;
     cursor: col-resize;
     background-color: ${(props) => props.theme.ratsel.table.borderColor};
     position: relative;
     left: 10px;
     z-index: 3;
     height: 24px;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+
+  .ka-thead-row:hover .ka-thead-cell-resize {
+    opacity: 1;
   }
 
   .ka-thead-cell-resize:active:after {
