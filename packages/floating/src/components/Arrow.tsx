@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { css, styled } from '@ratsel/core';
 
 interface ArrowProps {
@@ -7,7 +8,8 @@ interface ArrowProps {
 }
 
 export const Arrow = styled('div', {
-  shouldForwardProp: (prop) => !['x', 'y', 'staticSide'].includes(prop as string),
+  shouldForwardProp: (prop) =>
+    !['x', 'y', 'staticSide'].includes(prop as string),
 })<ArrowProps>`
   position: absolute;
   top: ${(props) => (typeof props.y === 'number' ? `${props.y}px` : 'unset')};
