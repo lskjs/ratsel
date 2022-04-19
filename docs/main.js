@@ -901,57 +901,59 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 var theme = function theme(parentTheme) {
   return _objectSpread(_objectSpread({}, parentTheme), {}, {
-    button: _objectSpread(_objectSpread({}, parentTheme.button), {}, {
-      fontWeight: 600,
-      focusShadow: '0 0 4px hsl(160, 76%, 52%)',
-      borderColor: 'hsl(151, 49.3%, 46.5%)',
-      spinner: {
-        background: 'hsl(120, 8%, 95%)',
-        accent: 'hsl(151, 49.3%, 46.5%)',
-        inverseBackground: 'rgba(255, 255, 255, 0.1)',
-        inverseAccent: '#ffffff',
-        success: 'hsl(151, 49.3%, 46.5%)',
-        error: 'hsl(358, 75.0%, 59.0%)'
-      },
-      paddings: {
-        base: '24px',
-        icon: '8px',
-        baseIcon: '12px',
-        vertical: '12px',
-        verticalIcon: '8px'
-      },
-      variants: {
-        primary: {
-          background: 'hsl(151, 49.3%, 46.5%)',
-          color: 'hsl(137, 72.0%, 94.0%)',
-          hoverBackground: 'hsl(151, 49.3%, 46.5%)',
-          hoverColor: 'hsl(137, 72.0%, 94.0%)',
-          focusBackground: 'hsl(151, 49.3%, 46.5%)',
-          focusColor: 'hsl(137, 72.0%, 94.0%)',
-          activeBackground: 'hsl(151, 55.0%, 41.5%)',
-          activeColor: 'hsl(137, 72.0%, 94.0%)'
+    ratsel: _objectSpread(_objectSpread({}, parentTheme.ratsel), {}, {
+      button: _objectSpread(_objectSpread({}, parentTheme.ratsel.button), {}, {
+        fontWeight: 600,
+        focusShadow: '0 0 4px hsl(160, 76%, 52%)',
+        borderColor: 'hsl(151, 49.3%, 46.5%)',
+        spinner: {
+          background: 'hsl(120, 8%, 95%)',
+          accent: 'hsl(151, 49.3%, 46.5%)',
+          inverseBackground: 'rgba(255, 255, 255, 0.1)',
+          inverseAccent: '#ffffff',
+          success: 'hsl(151, 49.3%, 46.5%)',
+          error: 'hsl(358, 75.0%, 59.0%)'
         },
-        secondary: {
-          background: 'hsl(120, 7%, 89%)',
-          color: 'hsl(110, 25%, 9%)',
-          hoverBackground: 'hsl(120, 5%, 85%)',
-          hoverColor: 'hsl(110, 25%, 9%)',
-          focusBackground: 'hsl(120, 5%, 85%)',
-          focusColor: 'hsl(110, 25%, 9%)',
-          activeBackground: 'hsl(110, 5%, 77%)',
-          activeColor: 'hsl(110, 25%, 9%)'
+        paddings: {
+          base: '24px',
+          icon: '8px',
+          baseIcon: '12px',
+          vertical: '12px',
+          verticalIcon: '8px'
         },
-        shadow: {
-          background: 'transparent',
-          color: 'hsl(151, 49.3%, 46.5%)',
-          hoverBackground: 'hsl(120, 54%, 95%)',
-          hoverColor: 'hsl(151, 49.3%, 46.5%)',
-          focusBackground: 'hsl(120, 54%, 95%)',
-          focusColor: 'hsl(151, 49.3%, 46.5%)',
-          activeBackground: 'hsl(120, 45%, 91%)',
-          activeColor: 'hsl(151, 49.3%, 46.5%)'
+        variants: {
+          primary: {
+            background: 'hsl(151, 49.3%, 46.5%)',
+            color: 'hsl(137, 72.0%, 94.0%)',
+            hoverBackground: 'hsl(151, 49.3%, 46.5%)',
+            hoverColor: 'hsl(137, 72.0%, 94.0%)',
+            focusBackground: 'hsl(151, 49.3%, 46.5%)',
+            focusColor: 'hsl(137, 72.0%, 94.0%)',
+            activeBackground: 'hsl(151, 55.0%, 41.5%)',
+            activeColor: 'hsl(137, 72.0%, 94.0%)'
+          },
+          secondary: {
+            background: 'hsl(120, 7%, 89%)',
+            color: 'hsl(110, 25%, 9%)',
+            hoverBackground: 'hsl(120, 5%, 85%)',
+            hoverColor: 'hsl(110, 25%, 9%)',
+            focusBackground: 'hsl(120, 5%, 85%)',
+            focusColor: 'hsl(110, 25%, 9%)',
+            activeBackground: 'hsl(110, 5%, 77%)',
+            activeColor: 'hsl(110, 25%, 9%)'
+          },
+          shadow: {
+            background: 'transparent',
+            color: 'hsl(151, 49.3%, 46.5%)',
+            hoverBackground: 'hsl(120, 54%, 95%)',
+            hoverColor: 'hsl(151, 49.3%, 46.5%)',
+            focusBackground: 'hsl(120, 54%, 95%)',
+            focusColor: 'hsl(151, 49.3%, 46.5%)',
+            activeBackground: 'hsl(120, 45%, 91%)',
+            activeColor: 'hsl(151, 49.3%, 46.5%)'
+          }
         }
-      }
+      })
     })
   });
 };
@@ -1867,6 +1869,27 @@ exports.buttonTheme = buttonTheme;
 
 /***/ }),
 
+/***/ 61319:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.floatingTheme = void 0;
+var floatingTheme = {
+  background: '#fff',
+  borderRadius: '6px',
+  padding: '8px 0',
+  boxShadow: '-8px 12px 50px -3px hsla(146, 38.5%, 69.0%, 0.32)',
+  arrowSize: '14px'
+};
+exports.floatingTheme = floatingTheme;
+
+/***/ }),
+
 /***/ 10514:
 /***/ ((__unused_webpack_module, exports) => {
 
@@ -1973,6 +1996,8 @@ exports.theme = void 0;
 
 var _buttonTheme = __webpack_require__(49852);
 
+var _floatingTheme = __webpack_require__(61319);
+
 var _fontsTheme = __webpack_require__(10514);
 
 var _selectTheme = __webpack_require__(57517);
@@ -1983,9 +2008,405 @@ var theme = {
   fonts: _fontsTheme.fontsTheme,
   button: _buttonTheme.buttonTheme,
   table: _tableTheme.tableTheme,
-  select: _selectTheme.selectTheme
+  select: _selectTheme.selectTheme,
+  floating: _floatingTheme.floatingTheme
 };
 exports.theme = theme;
+
+/***/ }),
+
+/***/ 57022:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+var _interopRequireDefault = __webpack_require__(23742);
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports.Z = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(67294));
+
+var _src = __webpack_require__(42837);
+
+var trigger = /*#__PURE__*/_react["default"].createElement("button", {
+  type: "button",
+  style: {
+    margin: '120px 400px'
+  }
+}, "\u041A\u043D\u043E\u043F\u043A\u0430 \u0442\u0440\u0438\u0433\u0433\u0435\u0440");
+
+var content = /*#__PURE__*/_react["default"].createElement("div", {
+  style: {
+    width: 250
+  }
+}, "\u041A\u043E\u043D\u0442\u0435\u043D\u0442");
+
+var _default = {
+  "default": /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger
+  }, content),
+  defaultOpen: /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true
+  }, content),
+  arrow: /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true,
+    arrow: true
+  }, content),
+  'arrow-placement-top-start': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true,
+    arrow: true,
+    placement: "top-start"
+  }, content),
+  'arrow-placement-top-end': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true,
+    arrow: true,
+    placement: "top-end"
+  }, content),
+  'arrow-placement-top': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true,
+    arrow: true,
+    placement: "top"
+  }, content),
+  'arrow-placement-bottom-start': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true,
+    arrow: true,
+    placement: "bottom-start"
+  }, content),
+  'arrow-placement-bottom-end': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true,
+    arrow: true,
+    placement: "bottom-end"
+  }, content),
+  'arrow-placement-bottom': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true,
+    arrow: true,
+    placement: "bottom"
+  }, content),
+  'arrow-placement-left-start': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true,
+    arrow: true,
+    placement: "left-start"
+  }, content),
+  'arrow-placement-left-end': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true,
+    arrow: true,
+    placement: "left-end"
+  }, content),
+  'arrow-placement-left': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true,
+    arrow: true,
+    placement: "left"
+  }, content),
+  'arrow-placement-right-start': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true,
+    arrow: true,
+    placement: "right-start"
+  }, content),
+  'arrow-placement-right-end': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true,
+    arrow: true,
+    placement: "right-end"
+  }, content),
+  'arrow-placement-right': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    defaultOpen: true,
+    arrow: true,
+    placement: "right"
+  }, content)
+};
+exports.Z = _default;
+
+/***/ }),
+
+/***/ 25057:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+var _interopRequireDefault = __webpack_require__(23742);
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports.Z = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(58091));
+
+var _core = __webpack_require__(74069);
+
+var _react = _interopRequireDefault(__webpack_require__(67294));
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+var theme = function theme(parentTheme) {
+  return _objectSpread(_objectSpread({}, parentTheme), {}, {
+    ratsel: _objectSpread(_objectSpread({}, parentTheme.ratsel), {}, {
+      floating: _objectSpread(_objectSpread({}, parentTheme.ratsel.floating), {}, {
+        background: '#fff',
+        borderRadius: '6px',
+        padding: '8px 0',
+        boxShadow: '-8px 12px 50px -3px hsla(146, 38.5%, 69.0%, 0.32)',
+        arrowSize: '14px'
+      })
+    })
+  });
+};
+
+var Decorator = function Decorator(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/_react["default"].createElement(_core.ThemeProvider, {
+    theme: theme
+  }, children);
+};
+
+var _default = Decorator;
+exports.Z = _default;
+
+/***/ }),
+
+/***/ 78747:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(23742);
+
+var _typeof = __webpack_require__(5954);
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.Popover = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(58091));
+
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(77774));
+
+var _reactDomInteractions = __webpack_require__(8324);
+
+var _react = _interopRequireWildcard(__webpack_require__(67294));
+
+var _Arrow = __webpack_require__(29822);
+
+var _PopoverBase = __webpack_require__(55700);
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+var Popover = function Popover(_ref) {
+  var _middlewareData$arrow, _middlewareData$arrow2;
+
+  var trigger = _ref.trigger,
+      children = _ref.children,
+      _ref$placement = _ref.placement,
+      placement = _ref$placement === void 0 ? 'bottom' : _ref$placement,
+      arrow = _ref.arrow,
+      _ref$offset = _ref.offset,
+      offset = _ref$offset === void 0 ? 0 : _ref$offset,
+      _ref$defaultOpen = _ref.defaultOpen,
+      defaultOpen = _ref$defaultOpen === void 0 ? false : _ref$defaultOpen,
+      components = _ref.components;
+  var arrowRef = (0, _react.useRef)(null);
+
+  var _useState = (0, _react.useState)(defaultOpen),
+      _useState2 = (0, _slicedToArray2["default"])(_useState, 2),
+      open = _useState2[0],
+      onOpenChange = _useState2[1];
+
+  var middlewares = [(0, _reactDomInteractions.offset)(offset), (0, _reactDomInteractions.flip)(), (0, _reactDomInteractions.shift)()];
+  if (arrow) middlewares.push((0, _reactDomInteractions.arrow)({
+    element: arrowRef
+  }));
+
+  var _useFloating = (0, _reactDomInteractions.useFloating)({
+    open: open,
+    onOpenChange: onOpenChange,
+    middleware: middlewares,
+    placement: placement
+  }),
+      x = _useFloating.x,
+      y = _useFloating.y,
+      reference = _useFloating.reference,
+      floating = _useFloating.floating,
+      strategy = _useFloating.strategy,
+      refs = _useFloating.refs,
+      update = _useFloating.update,
+      context = _useFloating.context,
+      middlewareData = _useFloating.middlewareData;
+
+  var _useInteractions = (0, _reactDomInteractions.useInteractions)([(0, _reactDomInteractions.useClick)(context), (0, _reactDomInteractions.useRole)(context), (0, _reactDomInteractions.useDismiss)(context)]),
+      getReferenceProps = _useInteractions.getReferenceProps,
+      getFloatingProps = _useInteractions.getFloatingProps;
+
+  (0, _react.useEffect)(function () {
+    if (refs.reference.current && refs.floating.current && open) {
+      return (0, _reactDomInteractions.autoUpdate)(refs.reference.current, refs.floating.current, update);
+    }
+
+    return undefined;
+  }, [open, update, refs.reference, refs.floating]);
+  var staticSide = {
+    top: 'bottom',
+    right: 'left',
+    bottom: 'top',
+    left: 'right'
+  }[placement.split('-')[0]];
+  var PopoverComponent = (components === null || components === void 0 ? void 0 : components.Popover) || _PopoverBase.PopoverBase;
+  return /*#__PURE__*/_react["default"].createElement(_react.Fragment, null, /*#__PURE__*/(0, _react.cloneElement)(trigger, getReferenceProps(_objectSpread({
+    ref: reference
+  }, trigger === null || trigger === void 0 ? void 0 : trigger.props))), open && /*#__PURE__*/_react["default"].createElement(_reactDomInteractions.FloatingFocusManager, {
+    context: context,
+    modal: false,
+    order: ['reference', 'content'],
+    returnFocus: false
+  }, /*#__PURE__*/_react["default"].createElement(PopoverComponent, getFloatingProps({
+    ref: floating,
+    position: strategy,
+    y: y,
+    x: x
+  }), children, arrow && /*#__PURE__*/_react["default"].createElement(_Arrow.Arrow, {
+    ref: arrowRef,
+    staticSide: staticSide,
+    x: (_middlewareData$arrow = middlewareData.arrow) === null || _middlewareData$arrow === void 0 ? void 0 : _middlewareData$arrow.x,
+    y: (_middlewareData$arrow2 = middlewareData.arrow) === null || _middlewareData$arrow2 === void 0 ? void 0 : _middlewareData$arrow2.y
+  }))));
+};
+
+exports.Popover = Popover;
+
+/***/ }),
+
+/***/ 29822:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(23742);
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.Arrow = void 0;
+
+var _taggedTemplateLiteral2 = _interopRequireDefault(__webpack_require__(26833));
+
+var _core = __webpack_require__(74069);
+
+var _templateObject, _templateObject2, _templateObject3;
+
+var Arrow = (0, _core.styled)('div', {
+  shouldForwardProp: function shouldForwardProp(prop) {
+    return !['x', 'y', 'staticSide'].includes(prop);
+  }
+})(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n  position: absolute;\n  top: ", ";\n  left: ", ";\n  will-change: top, bottom, left, right;\n  transform: rotate(45deg);\n\n  width: ", ";\n  height: ", ";\n\n  background: ", ";\n\n  ", "\n"])), function (props) {
+  return typeof props.y === 'number' ? "".concat(props.y, "px") : 'unset';
+}, function (props) {
+  return typeof props.x === 'number' ? "".concat(props.x, "px") : 'unset';
+}, function (props) {
+  return props.theme.ratsel.floating.arrowSize;
+}, function (props) {
+  return props.theme.ratsel.floating.arrowSize;
+}, function (props) {
+  return props.theme.ratsel.floating.background;
+}, function (props) {
+  if (props.staticSide) {
+    return (0, _core.css)(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteral2["default"])(["\n        ", ": -4px;\n      "])), props.staticSide);
+  }
+
+  return (0, _core.css)(_templateObject3 || (_templateObject3 = (0, _taggedTemplateLiteral2["default"])([""])));
+});
+exports.Arrow = Arrow;
+
+/***/ }),
+
+/***/ 55700:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(23742);
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.PopoverBase = void 0;
+
+var _taggedTemplateLiteral2 = _interopRequireDefault(__webpack_require__(26833));
+
+var _core = __webpack_require__(74069);
+
+var _templateObject;
+
+var PopoverBase = (0, _core.styled)('div', {
+  shouldForwardProp: function shouldForwardProp(prop) {
+    return !['position', 'x', 'y'].includes(prop);
+  }
+})(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n  position: ", ";\n  top: ", ";\n  left: ", ";\n\n  will-change: top, bottom, left, right, width, height;\n  background-color: ", ";\n  border-radius: ", ";\n  padding: ", ";\n  box-shadow: ", ";\n  z-index: 1010;\n  transition: opacity 300ms ease 0s, transform 300ms ease 0s;\n  opacity: 1;\n"])), function (props) {
+  return props.position;
+}, function (props) {
+  return typeof props.y === 'number' ? "".concat(props.y, "px") : 'unset';
+}, function (props) {
+  return typeof props.x === 'number' ? "".concat(props.x, "px") : 'unset';
+}, function (props) {
+  return props.theme.ratsel.floating.background;
+}, function (props) {
+  return props.theme.ratsel.floating.borderRadius;
+}, function (props) {
+  return props.theme.ratsel.floating.padding;
+}, function (props) {
+  return props.theme.ratsel.floating.boxShadow;
+});
+exports.PopoverBase = PopoverBase;
+
+/***/ }),
+
+/***/ 42837:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+Object.defineProperty(exports, "Popover", ({
+  enumerable: true,
+  get: function get() {
+    return _Popover.Popover;
+  }
+}));
+
+var _Popover = __webpack_require__(78747);
 
 /***/ }),
 
@@ -2526,6 +2947,14 @@ Object.defineProperty(exports, "Select", ({
     return _Select.Select;
   }
 }));
+Object.defineProperty(exports, "components", ({
+  enumerable: true,
+  get: function get() {
+    return _reactSelect.components;
+  }
+}));
+
+var _reactSelect = __webpack_require__(37987);
 
 var _Select = __webpack_require__(77982);
 
@@ -2945,39 +3374,41 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 var theme = function theme(parentTheme) {
   return _objectSpread(_objectSpread({}, parentTheme), {}, {
-    table: {
-      borderWidth: '1px',
-      borderColor: 'hsl(210, 16.7%, 97.6%)',
-      errorColor: 'hsl(358, 75.0%, 59.0%)',
-      firstLeftPadding: '24px',
-      head: {
-        height: '47px',
-        padding: '18px 10px',
-        lineHeight: '16px',
-        fontWeight: 400,
-        fontSize: '11px',
-        background: 'hsl(138, 62.5%, 96.9%)',
-        color: 'hsl(151, 40.2%, 54.1%)'
-      },
-      body: {
-        height: '64px',
-        padding: '12px 10px',
-        lineHeight: '16px',
-        fontWeight: 400,
-        fontSize: '11px',
-        background: '#ffffff',
-        color: 'hsl(206, 5.8%, 52.3%)'
-      },
-      summary: {
-        padding: '12px 10px',
-        height: '64px',
-        lineHeight: '16px',
-        fontWeight: 400,
-        fontSize: '11px',
-        background: 'hsl(210 16.7% 97.6%)',
-        color: 'hsl(206, 5.8%, 52.3%)'
-      }
-    }
+    ratsel: _objectSpread(_objectSpread({}, parentTheme.ratsel), {}, {
+      table: _objectSpread(_objectSpread({}, parentTheme.ratsel.table), {}, {
+        borderWidth: '1px',
+        borderColor: 'hsl(210, 16.7%, 97.6%)',
+        errorColor: 'hsl(358, 75.0%, 59.0%)',
+        firstLeftPadding: '24px',
+        head: {
+          height: '47px',
+          padding: '18px 10px',
+          lineHeight: '16px',
+          fontWeight: 400,
+          fontSize: '11px',
+          background: 'hsl(138, 62.5%, 96.9%)',
+          color: 'hsl(151, 40.2%, 54.1%)'
+        },
+        body: {
+          height: '64px',
+          padding: '12px 10px',
+          lineHeight: '16px',
+          fontWeight: 400,
+          fontSize: '11px',
+          background: '#ffffff',
+          color: 'hsl(206, 5.8%, 52.3%)'
+        },
+        summary: {
+          padding: '12px 10px',
+          height: '64px',
+          lineHeight: '16px',
+          fontWeight: 400,
+          fontSize: '11px',
+          background: 'hsl(210 16.7% 97.6%)',
+          color: 'hsl(206, 5.8%, 52.3%)'
+        }
+      })
+    })
   });
 };
 
@@ -3190,7 +3621,7 @@ var Wrapper = (0, _core.styled)('div', {
   shouldForwardProp: function shouldForwardProp(prop) {
     return !['virtual'].includes(prop);
   }
-})(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n  .ka-icon-tree-arrow-collapsed:before {\n    content: '\\e800';\n  }\n\n  .ka-icon-group-arrow-collapsed:before {\n    content: '\\e800';\n  }\n\n  .ka-icon-close:before {\n    content: '\\e801';\n  }\n\n  .ka-icon-tree-arrow-expanded:before {\n    content: '\\e802';\n  }\n\n  .ka-icon-group-arrow-expanded:before {\n    content: '\\e802';\n  }\n\n  .ka-icon-sort-arrow-down:before {\n    content: '\\e803';\n  }\n\n  .ka-icon-sort-arrow-up:before {\n    content: '\\e804';\n  }\n\n  .ka-icon-filter:before {\n    content: '\\e805';\n  }\n\n  .ka {\n    overflow: ", ";\n    background-color: white;\n    font-size: 14px;\n    display: flex;\n    flex-direction: column;\n    font-family: ", ";\n  }\n\n  .ka-table-wrapper {\n    height: 100%;\n    width: 100%;\n    overflow-y: ", ";\n  }\n\n  .ka-table {\n    width: 100%;\n    table-layout: fixed;\n    border-collapse: collapse;\n  }\n\n  .ka-thead-background {\n    background-color: ", ";\n  }\n\n  .ka-thead-cell-height {\n    box-sizing: border-box;\n    height: ", ";\n  }\n\n  .ka-thead-fixed {\n    position: sticky;\n  }\n\n  .ka-thead-row:nth-child(1) .ka-thead-fixed {\n    top: 0px;\n  }\n\n  .ka-thead-row:nth-child(2) .ka-thead-fixed {\n    top: ", ";\n  }\n\n  .ka-thead-row:nth-child(3) .ka-thead-fixed {\n    top: calc(", " * 2);\n  }\n\n  .ka-thead-row:nth-child(4) .ka-thead-fixed {\n    top: calc(", " * 3);\n  }\n\n  .ka-thead-row:nth-child(5) .ka-thead-fixed {\n    top: calc(", " * 4);\n  }\n\n  .ka-thead-row:nth-child(6) .ka-thead-fixed {\n    top: calc(", " * 5);\n  }\n\n  .ka-thead-cell {\n    padding: ", ";\n    color: ", ";\n    font-weight: ", ";\n    font-size: ", ";\n    box-shadow: inset 0 -", " 0 0 ", ";\n  }\n\n  .ka-thead-cell-wrapper {\n    display: flex;\n  }\n\n  .ka-thead-cell-content-wrapper {\n    width: 100%;\n  }\n\n  .ka-thead-cell-content {\n    width: 100%;\n  }\n\n  .ka-tbody {\n    height: 100%;\n  }\n\n  .ka-thead-cell,\n  .ka-cell {\n    text-align: left;\n  }\n\n  .ka-cell {\n    padding: ", ";\n    line-height: ", ";\n    color: ", ";\n    font-size: ", ";\n    font-weight: ", ";\n    height: ", ";\n  }\n\n  .ka-cell-text {\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n\n  .ka-tree-cell {\n    display: flex;\n  }\n\n  .ka-icon {\n    font-weight: 100;\n    font-size: 10px;\n    font-family: 'icons';\n  }\n\n  .ka-input {\n    max-width: 100%;\n    border-width: ", ";\n    border-style: solid;\n  }\n\n  .ka-cell-editor-validation-error .ka-input {\n    border-width: ", ";\n    border-style: solid;\n    border-color: ", ";\n  }\n\n  .ka-validation-message-container {\n    position: absolute;\n  }\n\n  .ka-validation-message {\n    font-size: 12px;\n    color: white;\n    background-color: ", ";\n    padding: 0 10px;\n    max-width: 200px;\n  }\n\n  .ka-empty-cell {\n    width: 40px;\n    min-width: 40px;\n  }\n\n  .ka-tree-empty-space {\n    width: 20px;\n  }\n\n  .ka-tr {\n    width: 100%;\n  }\n\n  .ka-no-data-row {\n    height: 100px;\n    text-align: center;\n  }\n\n  .ka-row {\n    box-sizing: border-box;\n    border-top-width: ", ";\n    border-top-style: solid;\n    border-top-color: ", ";\n    border-bottom-width: ", ";\n    border-bottom-style: solid;\n    border-bottom-color: ", ";\n  }\n\n  .ka-row:first-of-type {\n    border-top: none;\n  }\n\n  .ka-thead-row > .ka-thead-cell:first-of-type,\n  .ka-row > .ka-cell:first-of-type,\n  .ka-summary-row > .ka-summary-cell:first-of-type {\n    padding-left: ", ";\n  }\n\n  .ka-dragged-row {\n    opacity: 0.5;\n  }\n\n  .ka-drag-over-row {\n    box-shadow: inset 0 7px 0px -4px #e1ebf0;\n  }\n\n  .ka-dragged-row ~ .ka-drag-over-row {\n    box-shadow: inset 0 -7px 0px -4px #e1ebf0;\n  }\n\n  .ka-drag-over-column {\n    box-shadow: inset 7px 0 0px -4px #e1ebf0;\n  }\n\n  .ka-dragged-column ~ .ka-drag-over-column {\n    box-shadow: inset -7px 0 0px -4px #e1ebf0;\n  }\n\n  .ka-row-selected {\n    background-color: #f7fcfd;\n  }\n\n  .ka-group-row {\n    background-color: ", ";\n    box-sizing: border-box;\n    border-top-width: ", ";\n    border-top-style: solid;\n    border-top-color: white;\n    border-bottom-width: ", ";\n    border-bottom-style: solid;\n    border-bottom-color: white;\n  }\n\n  .ka-group-cell {\n    padding: 8px 10px;\n  }\n\n  .ka-group-cell-content {\n    display: flex;\n    align-items: center;\n  }\n\n  .ka-icon-group-arrow {\n    padding: 10px 5px 10px 10px;\n    margin-right: 5px;\n    cursor: pointer;\n  }\n\n  .ka-icon-tree-arrow {\n    padding: 0 10px 0 10px;\n    margin-left: -10px;\n    cursor: pointer;\n  }\n\n  .ka-icon-sort {\n    margin-left: 3px;\n  }\n\n  .ka-pointer {\n    cursor: pointer;\n  }\n\n  .ka-filter-row-cell {\n    padding: 0 20px 15px 20px;\n  }\n\n  .ka-loading {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #ffffff88;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: column;\n  }\n\n  .ka-loading-active {\n    position: relative;\n  }\n\n  .ka-loading-icon {\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    /* animation: $typing 1s linear infinite alternate; */\n    position: relative;\n    left: -20px;\n  }\n\n  .ka-thead-cell-resize {\n    user-select: none;\n    width: 2px;\n    cursor: col-resize;\n    background-color: #d7e4eb;\n    position: relative;\n    left: 19px;\n  }\n\n  .ka-thead-cell-resize:active:after {\n    content: '';\n    display: block;\n    position: fixed;\n    cursor: col-resize;\n    z-index: 2;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n  }\n\n  .ka-thead-background:active {\n    z-index: 1;\n  }\n\n  .ka-summary-cell {\n    padding: ", ";\n    height: ", ";\n    line-height: ", ";\n    color: ", ";\n    font-size: ", ";\n    font-weight: ", ";\n  }\n\n  .ka-loading-text {\n    margin-top: 15px;\n    color: #353c44;\n  }\n\n  .ka-paging-sizes-active {\n    display: flex;\n    justify-content: space-between;\n  }\n\n  .ka-paging-pages,\n  .ka-paging-sizes {\n    list-style: none;\n    display: flex;\n    flex-direction: row;\n    padding: 0 10px;\n    margin: 0;\n  }\n\n  .ka-paging-pages {\n    justify-content: flex-end;\n  }\n\n  .ka-paging-page-index,\n  .ka-paging-size {\n    cursor: pointer;\n    padding: 5px;\n    margin: 10px 5px;\n    min-width: 18px;\n    border-radius: 50%;\n    text-align: center;\n    color: #747d86;\n    user-select: none;\n  }\n\n  .ka-paging-page-index-active,\n  .ka-paging-size-active {\n    background-color: #f1f5f7;\n    font-weight: bold;\n    color: #747d86;\n  }\n\n  .ka-popup {\n    background-color: white;\n    border: 1px solid #ddd;\n    border-radius: 6px;\n    box-sizing: border-box;\n    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);\n    color: #747d86;\n    padding: 15px 20px;\n    position: absolute;\n    text-align: center;\n    width: 245px;\n    max-height: 325px;\n    overflow-y: auto;\n    z-index: 1000;\n  }\n\n  .ka-popup-content-item {\n    display: flex;\n    align-items: center;\n    border-bottom: 1px solid #f9fbfc;\n  }\n\n  .ka-popup-content-item-value {\n    padding: 8px 20px;\n  }\n\n  .ka-header-filter-button {\n    font-size: 16px;\n    margin-left: 3px;\n  }\n\n  .ka-header-filter-button-has-value {\n    font-weight: bold;\n  }\n\n  .ka-row {\n    background-color: ", ";\n  }\n\n  .ka-summary-row {\n    background-color: ", ";\n  }\n\n  .sticky-row-bottom {\n    bottom: 0;\n    position: sticky;\n    z-index: 21;\n    box-shadow: inset 0 ", " 0 0\n      ", ";\n  }\n\n  .sticky-cell-left {\n    left: 0;\n    position: sticky;\n    box-shadow: inset -", " 0 0 0 ", ";\n    z-index: 20;\n  }\n\n  .sticky-cell-right {\n    right: 0;\n    position: sticky;\n    box-shadow: inset ", " 0 0 0\n      ", ";\n  }\n\n  .sticky-cell-right.sticky-cell-thead {\n    box-shadow: inset ", " -", " 0 0 ", ";\n  }\n\n  .sticky-cell-left.sticky-cell-thead {\n    box-shadow: inset -", " -", "\n      0 0 ", ";\n  }\n\n  .sticky-cell-thead {\n    background-color: ", ";\n    z-index: 21;\n  }\n\n  .sticky-cell-tbody {\n    background-color: ", ";\n    z-index: 20;\n  }\n\n  .sticky-cell-summary {\n    background-color: ", ";\n    z-index: 20;\n  }\n"], ["\n  .ka-icon-tree-arrow-collapsed:before {\n    content: '\\\\e800';\n  }\n\n  .ka-icon-group-arrow-collapsed:before {\n    content: '\\\\e800';\n  }\n\n  .ka-icon-close:before {\n    content: '\\\\e801';\n  }\n\n  .ka-icon-tree-arrow-expanded:before {\n    content: '\\\\e802';\n  }\n\n  .ka-icon-group-arrow-expanded:before {\n    content: '\\\\e802';\n  }\n\n  .ka-icon-sort-arrow-down:before {\n    content: '\\\\e803';\n  }\n\n  .ka-icon-sort-arrow-up:before {\n    content: '\\\\e804';\n  }\n\n  .ka-icon-filter:before {\n    content: '\\\\e805';\n  }\n\n  .ka {\n    overflow: ", ";\n    background-color: white;\n    font-size: 14px;\n    display: flex;\n    flex-direction: column;\n    font-family: ", ";\n  }\n\n  .ka-table-wrapper {\n    height: 100%;\n    width: 100%;\n    overflow-y: ", ";\n  }\n\n  .ka-table {\n    width: 100%;\n    table-layout: fixed;\n    border-collapse: collapse;\n  }\n\n  .ka-thead-background {\n    background-color: ", ";\n  }\n\n  .ka-thead-cell-height {\n    box-sizing: border-box;\n    height: ", ";\n  }\n\n  .ka-thead-fixed {\n    position: sticky;\n  }\n\n  .ka-thead-row:nth-child(1) .ka-thead-fixed {\n    top: 0px;\n  }\n\n  .ka-thead-row:nth-child(2) .ka-thead-fixed {\n    top: ", ";\n  }\n\n  .ka-thead-row:nth-child(3) .ka-thead-fixed {\n    top: calc(", " * 2);\n  }\n\n  .ka-thead-row:nth-child(4) .ka-thead-fixed {\n    top: calc(", " * 3);\n  }\n\n  .ka-thead-row:nth-child(5) .ka-thead-fixed {\n    top: calc(", " * 4);\n  }\n\n  .ka-thead-row:nth-child(6) .ka-thead-fixed {\n    top: calc(", " * 5);\n  }\n\n  .ka-thead-cell {\n    padding: ", ";\n    color: ", ";\n    font-weight: ", ";\n    font-size: ", ";\n    box-shadow: inset 0 -", " 0 0 ", ";\n  }\n\n  .ka-thead-cell-wrapper {\n    display: flex;\n  }\n\n  .ka-thead-cell-content-wrapper {\n    width: 100%;\n  }\n\n  .ka-thead-cell-content {\n    width: 100%;\n  }\n\n  .ka-tbody {\n    height: 100%;\n  }\n\n  .ka-thead-cell,\n  .ka-cell {\n    text-align: left;\n  }\n\n  .ka-cell {\n    padding: ", ";\n    line-height: ", ";\n    color: ", ";\n    font-size: ", ";\n    font-weight: ", ";\n    height: ", ";\n  }\n\n  .ka-cell-text {\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n\n  .ka-tree-cell {\n    display: flex;\n  }\n\n  .ka-icon {\n    font-weight: 100;\n    font-size: 10px;\n    font-family: 'icons';\n  }\n\n  .ka-input {\n    max-width: 100%;\n    border-width: ", ";\n    border-style: solid;\n  }\n\n  .ka-cell-editor-validation-error .ka-input {\n    border-width: ", ";\n    border-style: solid;\n    border-color: ", ";\n  }\n\n  .ka-validation-message-container {\n    position: absolute;\n  }\n\n  .ka-validation-message {\n    font-size: 12px;\n    color: white;\n    background-color: ", ";\n    padding: 0 10px;\n    max-width: 200px;\n  }\n\n  .ka-empty-cell {\n    width: 40px;\n    min-width: 40px;\n  }\n\n  .ka-tree-empty-space {\n    width: 20px;\n  }\n\n  .ka-tr {\n    width: 100%;\n  }\n\n  .ka-no-data-row {\n    height: 100px;\n    text-align: center;\n  }\n\n  .ka-row {\n    box-sizing: border-box;\n    border-top-width: ", ";\n    border-top-style: solid;\n    border-top-color: ", ";\n    border-bottom-width: ", ";\n    border-bottom-style: solid;\n    border-bottom-color: ", ";\n  }\n\n  .ka-row:first-of-type {\n    border-top: none;\n  }\n\n  .ka-thead-row > .ka-thead-cell:first-of-type,\n  .ka-row > .ka-cell:first-of-type,\n  .ka-summary-row > .ka-summary-cell:first-of-type {\n    padding-left: ", ";\n  }\n\n  .ka-dragged-row {\n    opacity: 0.5;\n  }\n\n  .ka-drag-over-row {\n    box-shadow: inset 0 7px 0px -4px #e1ebf0;\n  }\n\n  .ka-dragged-row ~ .ka-drag-over-row {\n    box-shadow: inset 0 -7px 0px -4px #e1ebf0;\n  }\n\n  .ka-drag-over-column {\n    box-shadow: inset 7px 0 0px -4px #e1ebf0;\n  }\n\n  .ka-dragged-column ~ .ka-drag-over-column {\n    box-shadow: inset -7px 0 0px -4px #e1ebf0;\n  }\n\n  .ka-row-selected {\n    background-color: #f7fcfd;\n  }\n\n  .ka-group-row {\n    background-color: ", ";\n    box-sizing: border-box;\n    border-top-width: ", ";\n    border-top-style: solid;\n    border-top-color: white;\n    border-bottom-width: ", ";\n    border-bottom-style: solid;\n    border-bottom-color: white;\n  }\n\n  .ka-group-cell {\n    padding: 8px 10px;\n  }\n\n  .ka-group-cell-content {\n    display: flex;\n    align-items: center;\n  }\n\n  .ka-icon-group-arrow {\n    padding: 10px 5px 10px 10px;\n    margin-right: 5px;\n    cursor: pointer;\n  }\n\n  .ka-icon-tree-arrow {\n    padding: 0 10px 0 10px;\n    margin-left: -10px;\n    cursor: pointer;\n  }\n\n  .ka-icon-sort {\n    margin-left: 3px;\n  }\n\n  .ka-pointer {\n    cursor: pointer;\n  }\n\n  .ka-filter-row-cell {\n    padding: 0 20px 15px 20px;\n  }\n\n  .ka-loading {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #ffffff88;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: column;\n  }\n\n  .ka-loading-active {\n    position: relative;\n  }\n\n  .ka-loading-icon {\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    /* animation: $typing 1s linear infinite alternate; */\n    position: relative;\n    left: -20px;\n  }\n\n  .ka-thead-cell-resize {\n    user-select: none;\n    width: 2px;\n    cursor: col-resize;\n    background-color: #d7e4eb;\n    position: relative;\n    left: 19px;\n  }\n\n  .ka-thead-cell-resize:active:after {\n    content: '';\n    display: block;\n    position: fixed;\n    cursor: col-resize;\n    z-index: 2;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n  }\n\n  .ka-thead-background:active {\n    z-index: 1;\n  }\n\n  .ka-summary-cell {\n    padding: ", ";\n    height: ", ";\n    line-height: ", ";\n    color: ", ";\n    font-size: ", ";\n    font-weight: ", ";\n  }\n\n  .ka-loading-text {\n    margin-top: 15px;\n    color: #353c44;\n  }\n\n  .ka-paging-sizes-active {\n    display: flex;\n    justify-content: space-between;\n  }\n\n  .ka-paging-pages,\n  .ka-paging-sizes {\n    list-style: none;\n    display: flex;\n    flex-direction: row;\n    padding: 0 10px;\n    margin: 0;\n  }\n\n  .ka-paging-pages {\n    justify-content: flex-end;\n  }\n\n  .ka-paging-page-index,\n  .ka-paging-size {\n    cursor: pointer;\n    padding: 5px;\n    margin: 10px 5px;\n    min-width: 18px;\n    border-radius: 50%;\n    text-align: center;\n    color: #747d86;\n    user-select: none;\n  }\n\n  .ka-paging-page-index-active,\n  .ka-paging-size-active {\n    background-color: #f1f5f7;\n    font-weight: bold;\n    color: #747d86;\n  }\n\n  .ka-popup {\n    background-color: white;\n    border: 1px solid #ddd;\n    border-radius: 6px;\n    box-sizing: border-box;\n    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);\n    color: #747d86;\n    padding: 15px 20px;\n    position: absolute;\n    text-align: center;\n    width: 245px;\n    max-height: 325px;\n    overflow-y: auto;\n    z-index: 1000;\n  }\n\n  .ka-popup-content-item {\n    display: flex;\n    align-items: center;\n    border-bottom: 1px solid #f9fbfc;\n  }\n\n  .ka-popup-content-item-value {\n    padding: 8px 20px;\n  }\n\n  .ka-header-filter-button {\n    font-size: 16px;\n    margin-left: 3px;\n  }\n\n  .ka-header-filter-button-has-value {\n    font-weight: bold;\n  }\n\n  .ka-row {\n    background-color: ", ";\n  }\n\n  .ka-summary-row {\n    background-color: ", ";\n  }\n\n  .sticky-row-bottom {\n    bottom: 0;\n    position: sticky;\n    z-index: 21;\n    box-shadow: inset 0 ", " 0 0\n      ", ";\n  }\n\n  .sticky-cell-left {\n    left: 0;\n    position: sticky;\n    box-shadow: inset -", " 0 0 0 ", ";\n    z-index: 20;\n  }\n\n  .sticky-cell-right {\n    right: 0;\n    position: sticky;\n    box-shadow: inset ", " 0 0 0\n      ", ";\n  }\n\n  .sticky-cell-right.sticky-cell-thead {\n    box-shadow: inset ", " -", " 0 0 ", ";\n  }\n\n  .sticky-cell-left.sticky-cell-thead {\n    box-shadow: inset -", " -", "\n      0 0 ", ";\n  }\n\n  .sticky-cell-thead {\n    background-color: ", ";\n    z-index: 21;\n  }\n\n  .sticky-cell-tbody {\n    background-color: ", ";\n    z-index: 20;\n  }\n\n  .sticky-cell-summary {\n    background-color: ", ";\n    z-index: 20;\n  }\n"])), function (props) {
+})(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n  .ka-icon-tree-arrow-collapsed:before {\n    content: '\\e800';\n  }\n\n  .ka-icon-group-arrow-collapsed:before {\n    content: '\\e800';\n  }\n\n  .ka-icon-close:before {\n    content: '\\e801';\n  }\n\n  .ka-icon-tree-arrow-expanded:before {\n    content: '\\e802';\n  }\n\n  .ka-icon-group-arrow-expanded:before {\n    content: '\\e802';\n  }\n\n  .ka-icon-sort-arrow-down:before {\n    content: '\\e803';\n  }\n\n  .ka-icon-sort-arrow-up:before {\n    content: '\\e804';\n  }\n\n  .ka-icon-filter:before {\n    content: '\\e805';\n  }\n\n  .ka {\n    overflow: ", ";\n    background-color: white;\n    font-size: 14px;\n    display: flex;\n    flex-direction: column;\n    font-family: ", ";\n  }\n\n  .ka-table-wrapper {\n    height: 100%;\n    width: 100%;\n    overflow-y: ", ";\n  }\n\n  .ka-table {\n    width: 100%;\n    table-layout: fixed;\n    border-collapse: collapse;\n  }\n\n  .ka-thead-background {\n    background-color: ", ";\n  }\n\n  .ka-thead-cell-height {\n    box-sizing: border-box;\n    height: ", ";\n  }\n\n  .ka-thead-fixed {\n    position: sticky;\n    z-index: 2;\n  }\n\n  .ka-thead-row:nth-of-type(1) .ka-thead-fixed {\n    top: 0px;\n  }\n\n  .ka-thead-row:nth-of-type(2) .ka-thead-fixed {\n    top: ", ";\n  }\n\n  .ka-thead-row:nth-of-type(3) .ka-thead-fixed {\n    top: calc(", " * 2);\n  }\n\n  .ka-thead-row:nth-of-type(4) .ka-thead-fixed {\n    top: calc(", " * 3);\n  }\n\n  .ka-thead-row:nth-of-type(5) .ka-thead-fixed {\n    top: calc(", " * 4);\n  }\n\n  .ka-thead-row:nth-of-type(6) .ka-thead-fixed {\n    top: calc(", " * 5);\n  }\n\n  .ka-thead-cell {\n    padding: ", ";\n    color: ", ";\n    font-weight: ", ";\n    font-size: ", ";\n    box-shadow: inset 0 -", " 0 0 ", ";\n  }\n\n  .ka-thead-cell-wrapper {\n    display: flex;\n    align-items: center;\n  }\n\n  .ka-thead-cell-content-wrapper {\n    width: 100%;\n  }\n\n  .ka-thead-cell-content {\n    width: 100%;\n  }\n\n  .ka-tbody {\n    height: 100%;\n  }\n\n  .ka-thead-cell,\n  .ka-cell {\n    text-align: left;\n  }\n\n  .ka-cell {\n    padding: ", ";\n    line-height: ", ";\n    color: ", ";\n    font-size: ", ";\n    font-weight: ", ";\n    height: ", ";\n  }\n\n  .ka-cell-text {\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n\n  .ka-tree-cell {\n    display: flex;\n  }\n\n  .ka-icon {\n    font-weight: 100;\n    font-size: 10px;\n    font-family: 'icons';\n  }\n\n  .ka-input {\n    max-width: 100%;\n    border-width: ", ";\n    border-style: solid;\n  }\n\n  .ka-cell-editor-validation-error .ka-input {\n    border-width: ", ";\n    border-style: solid;\n    border-color: ", ";\n  }\n\n  .ka-validation-message-container {\n    position: absolute;\n  }\n\n  .ka-validation-message {\n    font-size: 12px;\n    color: white;\n    background-color: ", ";\n    padding: 0 10px;\n    max-width: 200px;\n  }\n\n  .ka-empty-cell {\n    width: 40px;\n    min-width: 40px;\n  }\n\n  .ka-tree-empty-space {\n    width: 20px;\n  }\n\n  .ka-tr {\n    width: 100%;\n  }\n\n  .ka-no-data-row {\n    height: 100px;\n    text-align: center;\n  }\n\n  .ka-row {\n    box-sizing: border-box;\n    border-top-width: ", ";\n    border-top-style: solid;\n    border-top-color: ", ";\n    border-bottom-width: ", ";\n    border-bottom-style: solid;\n    border-bottom-color: ", ";\n  }\n\n  .ka-row:first-of-type {\n    border-top: none;\n  }\n\n  .ka-thead-row > .ka-thead-cell:first-of-type,\n  .ka-row > .ka-cell:first-of-type,\n  .ka-summary-row > .ka-summary-cell:first-of-type {\n    padding-left: ", ";\n  }\n\n  .ka-dragged-row {\n    opacity: 0.5;\n  }\n\n  .ka-drag-over-row {\n    box-shadow: inset 0 7px 0px -4px #e1ebf0;\n  }\n\n  .ka-dragged-row ~ .ka-drag-over-row {\n    box-shadow: inset 0 -7px 0px -4px #e1ebf0;\n  }\n\n  .ka-drag-over-column {\n    box-shadow: inset 7px 0 0px -4px #e1ebf0;\n  }\n\n  .ka-dragged-column ~ .ka-drag-over-column {\n    box-shadow: inset -7px 0 0px -4px #e1ebf0;\n  }\n\n  .ka-row-selected {\n    background-color: #f7fcfd;\n  }\n\n  .ka-group-row {\n    background-color: ", ";\n    box-sizing: border-box;\n    border-top-width: ", ";\n    border-top-style: solid;\n    border-top-color: white;\n    border-bottom-width: ", ";\n    border-bottom-style: solid;\n    border-bottom-color: white;\n  }\n\n  .ka-group-cell {\n    padding: 8px 10px;\n  }\n\n  .ka-group-cell-content {\n    display: flex;\n    align-items: center;\n  }\n\n  .ka-icon-group-arrow {\n    padding: 10px 5px 10px 10px;\n    margin-right: 5px;\n    cursor: pointer;\n  }\n\n  .ka-icon-tree-arrow {\n    padding: 0 10px 0 10px;\n    margin-left: -10px;\n    cursor: pointer;\n  }\n\n  .ka-icon-sort {\n    margin-left: 3px;\n  }\n\n  .ka-pointer {\n    cursor: pointer;\n  }\n\n  .ka-filter-row-cell {\n    padding: 0 20px 15px 20px;\n  }\n\n  .ka-loading {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #ffffff88;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: column;\n  }\n\n  .ka-loading-active {\n    position: relative;\n  }\n\n  .ka-loading-icon {\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    /* animation: $typing 1s linear infinite alternate; */\n    position: relative;\n    left: -20px;\n  }\n\n  .ka-thead-cell-resize {\n    user-select: none;\n    width: 5px;\n    cursor: col-resize;\n    background-color: ", ";\n    position: relative;\n    left: 10px;\n    z-index: 3;\n    height: 24px;\n    opacity: 0;\n    transition: opacity 0.2s ease-out;\n  }\n\n  .ka-thead-row:hover .ka-thead-cell-resize {\n    opacity: 1;\n  }\n\n  .ka-thead-cell-resize:active:after {\n    content: '';\n    display: block;\n    position: fixed;\n    cursor: col-resize;\n    z-index: 2;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n  }\n\n  .ka-thead-background:active {\n    z-index: 1;\n  }\n\n  .ka-summary-cell {\n    padding: ", ";\n    height: ", ";\n    line-height: ", ";\n    color: ", ";\n    font-size: ", ";\n    font-weight: ", ";\n  }\n\n  .ka-loading-text {\n    margin-top: 15px;\n    color: #353c44;\n  }\n\n  .ka-paging-sizes-active {\n    display: flex;\n    justify-content: space-between;\n  }\n\n  .ka-paging-pages,\n  .ka-paging-sizes {\n    list-style: none;\n    display: flex;\n    flex-direction: row;\n    padding: 0 10px;\n    margin: 0;\n  }\n\n  .ka-paging-pages {\n    justify-content: flex-end;\n  }\n\n  .ka-paging-page-index,\n  .ka-paging-size {\n    cursor: pointer;\n    padding: 5px;\n    margin: 10px 5px;\n    min-width: 18px;\n    border-radius: 50%;\n    text-align: center;\n    color: #747d86;\n    user-select: none;\n  }\n\n  .ka-paging-page-index-active,\n  .ka-paging-size-active {\n    background-color: #f1f5f7;\n    font-weight: bold;\n    color: #747d86;\n  }\n\n  .ka-popup {\n    background-color: white;\n    border: 1px solid #ddd;\n    border-radius: 6px;\n    box-sizing: border-box;\n    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);\n    color: #747d86;\n    padding: 15px 20px;\n    position: absolute;\n    text-align: center;\n    width: 245px;\n    max-height: 325px;\n    overflow-y: auto;\n    z-index: 1000;\n  }\n\n  .ka-popup-content-item {\n    display: flex;\n    align-items: center;\n    border-bottom: 1px solid #f9fbfc;\n  }\n\n  .ka-popup-content-item-value {\n    padding: 8px 20px;\n  }\n\n  .ka-header-filter-button {\n    font-size: 16px;\n    margin-left: 3px;\n  }\n\n  .ka-header-filter-button-has-value {\n    font-weight: bold;\n  }\n\n  .ka-row {\n    background-color: ", ";\n  }\n\n  .ka-summary-row {\n    background-color: ", ";\n  }\n\n  .sticky-row-bottom {\n    bottom: 0;\n    position: sticky;\n    z-index: 21;\n    box-shadow: inset 0 ", " 0 0\n      ", ";\n  }\n\n  .sticky-cell-left {\n    left: 0;\n    position: sticky;\n    box-shadow: inset -", " 0 0 0 ", ";\n    z-index: 20;\n  }\n\n  .sticky-cell-right {\n    right: 0;\n    position: sticky;\n    box-shadow: inset ", " 0 0 0\n      ", ";\n    z-index: 20;\n  }\n\n  .sticky-cell-thead.sticky-cell-left,\n  .sticky-cell-thead.sticky-cell-right {\n    pointer-events: none;\n  }\n\n  .sticky-cell-right.sticky-cell-thead {\n    box-shadow: inset ", " -", " 0 0 ", ";\n  }\n\n  .sticky-cell-left.sticky-cell-thead {\n    box-shadow: inset -", " -", "\n      0 0 ", ";\n  }\n\n  .sticky-cell-thead {\n    background-color: ", ";\n    z-index: 21;\n  }\n\n  .sticky-cell-tbody {\n    background-color: ", ";\n    z-index: 20;\n  }\n\n  .sticky-cell-summary {\n    background-color: ", ";\n    z-index: 20;\n  }\n"], ["\n  .ka-icon-tree-arrow-collapsed:before {\n    content: '\\\\e800';\n  }\n\n  .ka-icon-group-arrow-collapsed:before {\n    content: '\\\\e800';\n  }\n\n  .ka-icon-close:before {\n    content: '\\\\e801';\n  }\n\n  .ka-icon-tree-arrow-expanded:before {\n    content: '\\\\e802';\n  }\n\n  .ka-icon-group-arrow-expanded:before {\n    content: '\\\\e802';\n  }\n\n  .ka-icon-sort-arrow-down:before {\n    content: '\\\\e803';\n  }\n\n  .ka-icon-sort-arrow-up:before {\n    content: '\\\\e804';\n  }\n\n  .ka-icon-filter:before {\n    content: '\\\\e805';\n  }\n\n  .ka {\n    overflow: ", ";\n    background-color: white;\n    font-size: 14px;\n    display: flex;\n    flex-direction: column;\n    font-family: ", ";\n  }\n\n  .ka-table-wrapper {\n    height: 100%;\n    width: 100%;\n    overflow-y: ", ";\n  }\n\n  .ka-table {\n    width: 100%;\n    table-layout: fixed;\n    border-collapse: collapse;\n  }\n\n  .ka-thead-background {\n    background-color: ", ";\n  }\n\n  .ka-thead-cell-height {\n    box-sizing: border-box;\n    height: ", ";\n  }\n\n  .ka-thead-fixed {\n    position: sticky;\n    z-index: 2;\n  }\n\n  .ka-thead-row:nth-of-type(1) .ka-thead-fixed {\n    top: 0px;\n  }\n\n  .ka-thead-row:nth-of-type(2) .ka-thead-fixed {\n    top: ", ";\n  }\n\n  .ka-thead-row:nth-of-type(3) .ka-thead-fixed {\n    top: calc(", " * 2);\n  }\n\n  .ka-thead-row:nth-of-type(4) .ka-thead-fixed {\n    top: calc(", " * 3);\n  }\n\n  .ka-thead-row:nth-of-type(5) .ka-thead-fixed {\n    top: calc(", " * 4);\n  }\n\n  .ka-thead-row:nth-of-type(6) .ka-thead-fixed {\n    top: calc(", " * 5);\n  }\n\n  .ka-thead-cell {\n    padding: ", ";\n    color: ", ";\n    font-weight: ", ";\n    font-size: ", ";\n    box-shadow: inset 0 -", " 0 0 ", ";\n  }\n\n  .ka-thead-cell-wrapper {\n    display: flex;\n    align-items: center;\n  }\n\n  .ka-thead-cell-content-wrapper {\n    width: 100%;\n  }\n\n  .ka-thead-cell-content {\n    width: 100%;\n  }\n\n  .ka-tbody {\n    height: 100%;\n  }\n\n  .ka-thead-cell,\n  .ka-cell {\n    text-align: left;\n  }\n\n  .ka-cell {\n    padding: ", ";\n    line-height: ", ";\n    color: ", ";\n    font-size: ", ";\n    font-weight: ", ";\n    height: ", ";\n  }\n\n  .ka-cell-text {\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n\n  .ka-tree-cell {\n    display: flex;\n  }\n\n  .ka-icon {\n    font-weight: 100;\n    font-size: 10px;\n    font-family: 'icons';\n  }\n\n  .ka-input {\n    max-width: 100%;\n    border-width: ", ";\n    border-style: solid;\n  }\n\n  .ka-cell-editor-validation-error .ka-input {\n    border-width: ", ";\n    border-style: solid;\n    border-color: ", ";\n  }\n\n  .ka-validation-message-container {\n    position: absolute;\n  }\n\n  .ka-validation-message {\n    font-size: 12px;\n    color: white;\n    background-color: ", ";\n    padding: 0 10px;\n    max-width: 200px;\n  }\n\n  .ka-empty-cell {\n    width: 40px;\n    min-width: 40px;\n  }\n\n  .ka-tree-empty-space {\n    width: 20px;\n  }\n\n  .ka-tr {\n    width: 100%;\n  }\n\n  .ka-no-data-row {\n    height: 100px;\n    text-align: center;\n  }\n\n  .ka-row {\n    box-sizing: border-box;\n    border-top-width: ", ";\n    border-top-style: solid;\n    border-top-color: ", ";\n    border-bottom-width: ", ";\n    border-bottom-style: solid;\n    border-bottom-color: ", ";\n  }\n\n  .ka-row:first-of-type {\n    border-top: none;\n  }\n\n  .ka-thead-row > .ka-thead-cell:first-of-type,\n  .ka-row > .ka-cell:first-of-type,\n  .ka-summary-row > .ka-summary-cell:first-of-type {\n    padding-left: ", ";\n  }\n\n  .ka-dragged-row {\n    opacity: 0.5;\n  }\n\n  .ka-drag-over-row {\n    box-shadow: inset 0 7px 0px -4px #e1ebf0;\n  }\n\n  .ka-dragged-row ~ .ka-drag-over-row {\n    box-shadow: inset 0 -7px 0px -4px #e1ebf0;\n  }\n\n  .ka-drag-over-column {\n    box-shadow: inset 7px 0 0px -4px #e1ebf0;\n  }\n\n  .ka-dragged-column ~ .ka-drag-over-column {\n    box-shadow: inset -7px 0 0px -4px #e1ebf0;\n  }\n\n  .ka-row-selected {\n    background-color: #f7fcfd;\n  }\n\n  .ka-group-row {\n    background-color: ", ";\n    box-sizing: border-box;\n    border-top-width: ", ";\n    border-top-style: solid;\n    border-top-color: white;\n    border-bottom-width: ", ";\n    border-bottom-style: solid;\n    border-bottom-color: white;\n  }\n\n  .ka-group-cell {\n    padding: 8px 10px;\n  }\n\n  .ka-group-cell-content {\n    display: flex;\n    align-items: center;\n  }\n\n  .ka-icon-group-arrow {\n    padding: 10px 5px 10px 10px;\n    margin-right: 5px;\n    cursor: pointer;\n  }\n\n  .ka-icon-tree-arrow {\n    padding: 0 10px 0 10px;\n    margin-left: -10px;\n    cursor: pointer;\n  }\n\n  .ka-icon-sort {\n    margin-left: 3px;\n  }\n\n  .ka-pointer {\n    cursor: pointer;\n  }\n\n  .ka-filter-row-cell {\n    padding: 0 20px 15px 20px;\n  }\n\n  .ka-loading {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #ffffff88;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: column;\n  }\n\n  .ka-loading-active {\n    position: relative;\n  }\n\n  .ka-loading-icon {\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    /* animation: $typing 1s linear infinite alternate; */\n    position: relative;\n    left: -20px;\n  }\n\n  .ka-thead-cell-resize {\n    user-select: none;\n    width: 5px;\n    cursor: col-resize;\n    background-color: ", ";\n    position: relative;\n    left: 10px;\n    z-index: 3;\n    height: 24px;\n    opacity: 0;\n    transition: opacity 0.2s ease-out;\n  }\n\n  .ka-thead-row:hover .ka-thead-cell-resize {\n    opacity: 1;\n  }\n\n  .ka-thead-cell-resize:active:after {\n    content: '';\n    display: block;\n    position: fixed;\n    cursor: col-resize;\n    z-index: 2;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n  }\n\n  .ka-thead-background:active {\n    z-index: 1;\n  }\n\n  .ka-summary-cell {\n    padding: ", ";\n    height: ", ";\n    line-height: ", ";\n    color: ", ";\n    font-size: ", ";\n    font-weight: ", ";\n  }\n\n  .ka-loading-text {\n    margin-top: 15px;\n    color: #353c44;\n  }\n\n  .ka-paging-sizes-active {\n    display: flex;\n    justify-content: space-between;\n  }\n\n  .ka-paging-pages,\n  .ka-paging-sizes {\n    list-style: none;\n    display: flex;\n    flex-direction: row;\n    padding: 0 10px;\n    margin: 0;\n  }\n\n  .ka-paging-pages {\n    justify-content: flex-end;\n  }\n\n  .ka-paging-page-index,\n  .ka-paging-size {\n    cursor: pointer;\n    padding: 5px;\n    margin: 10px 5px;\n    min-width: 18px;\n    border-radius: 50%;\n    text-align: center;\n    color: #747d86;\n    user-select: none;\n  }\n\n  .ka-paging-page-index-active,\n  .ka-paging-size-active {\n    background-color: #f1f5f7;\n    font-weight: bold;\n    color: #747d86;\n  }\n\n  .ka-popup {\n    background-color: white;\n    border: 1px solid #ddd;\n    border-radius: 6px;\n    box-sizing: border-box;\n    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);\n    color: #747d86;\n    padding: 15px 20px;\n    position: absolute;\n    text-align: center;\n    width: 245px;\n    max-height: 325px;\n    overflow-y: auto;\n    z-index: 1000;\n  }\n\n  .ka-popup-content-item {\n    display: flex;\n    align-items: center;\n    border-bottom: 1px solid #f9fbfc;\n  }\n\n  .ka-popup-content-item-value {\n    padding: 8px 20px;\n  }\n\n  .ka-header-filter-button {\n    font-size: 16px;\n    margin-left: 3px;\n  }\n\n  .ka-header-filter-button-has-value {\n    font-weight: bold;\n  }\n\n  .ka-row {\n    background-color: ", ";\n  }\n\n  .ka-summary-row {\n    background-color: ", ";\n  }\n\n  .sticky-row-bottom {\n    bottom: 0;\n    position: sticky;\n    z-index: 21;\n    box-shadow: inset 0 ", " 0 0\n      ", ";\n  }\n\n  .sticky-cell-left {\n    left: 0;\n    position: sticky;\n    box-shadow: inset -", " 0 0 0 ", ";\n    z-index: 20;\n  }\n\n  .sticky-cell-right {\n    right: 0;\n    position: sticky;\n    box-shadow: inset ", " 0 0 0\n      ", ";\n    z-index: 20;\n  }\n\n  .sticky-cell-thead.sticky-cell-left,\n  .sticky-cell-thead.sticky-cell-right {\n    pointer-events: none;\n  }\n\n  .sticky-cell-right.sticky-cell-thead {\n    box-shadow: inset ", " -", " 0 0 ", ";\n  }\n\n  .sticky-cell-left.sticky-cell-thead {\n    box-shadow: inset -", " -", "\n      0 0 ", ";\n  }\n\n  .sticky-cell-thead {\n    background-color: ", ";\n    z-index: 21;\n  }\n\n  .sticky-cell-tbody {\n    background-color: ", ";\n    z-index: 20;\n  }\n\n  .sticky-cell-summary {\n    background-color: ", ";\n    z-index: 20;\n  }\n"])), function (props) {
   return props.virtual ? 'hidden' : 'unset';
 }, function (props) {
   return props.theme.ratsel.fonts.main;
@@ -3258,6 +3689,8 @@ var Wrapper = (0, _core.styled)('div', {
   return props.theme.ratsel.table.borderWidth;
 }, function (props) {
   return props.theme.ratsel.table.borderWidth;
+}, function (props) {
+  return props.theme.ratsel.table.borderColor;
 }, function (props) {
   return props.theme.ratsel.table.summary.padding;
 }, function (props) {
@@ -3339,17 +3772,192 @@ exports.globalFonts = globalFonts;
 "use strict";
 
 
+var _interopRequireDefault = __webpack_require__(27861);
+
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 Object.defineProperty(exports, "Table", ({
   enumerable: true,
   get: function get() {
-    return _Table.Table;
+    return _Table2.Table;
   }
 }));
+exports.components = void 0;
 
-var _Table = __webpack_require__(23447);
+var _CellComponent = _interopRequireDefault(__webpack_require__(17523));
+
+var _CellEditor = _interopRequireDefault(__webpack_require__(78997));
+
+var _CellEditorBoolean = _interopRequireDefault(__webpack_require__(24009));
+
+var _CellEditorDataType = _interopRequireDefault(__webpack_require__(69669));
+
+var _CellEditorDate = _interopRequireDefault(__webpack_require__(64222));
+
+var _CellEditorNumber = _interopRequireDefault(__webpack_require__(19295));
+
+var _CellEditorState = _interopRequireDefault(__webpack_require__(28960));
+
+var _CellEditorString = _interopRequireDefault(__webpack_require__(99214));
+
+var _CellEditorValidation = _interopRequireDefault(__webpack_require__(18425));
+
+var _CellEditorValidationMessage = _interopRequireDefault(__webpack_require__(23199));
+
+var _CellText = _interopRequireDefault(__webpack_require__(18484));
+
+var _ColGroup = _interopRequireDefault(__webpack_require__(92144));
+
+var _DataAndDetailsRows = _interopRequireDefault(__webpack_require__(19538));
+
+var _DataRow = _interopRequireDefault(__webpack_require__(20491));
+
+var _DataRowContent = _interopRequireDefault(__webpack_require__(94457));
+
+var _DetailsRow = _interopRequireDefault(__webpack_require__(3176));
+
+var _EmptyCells = _interopRequireDefault(__webpack_require__(86700));
+
+var _FilterCell = _interopRequireDefault(__webpack_require__(32470));
+
+var _FilterRow = _interopRequireDefault(__webpack_require__(93496));
+
+var _FilterRowBoolean = _interopRequireDefault(__webpack_require__(15889));
+
+var _FilterRowDataType = _interopRequireDefault(__webpack_require__(97696));
+
+var _FilterRowDate = _interopRequireDefault(__webpack_require__(30406));
+
+var _FilterRowNumber = _interopRequireDefault(__webpack_require__(70224));
+
+var _FilterRowString = _interopRequireDefault(__webpack_require__(56527));
+
+var _GroupedColumnsRow = _interopRequireDefault(__webpack_require__(62424));
+
+var _GroupRow = _interopRequireDefault(__webpack_require__(8113));
+
+var _GroupRowContent = _interopRequireDefault(__webpack_require__(52728));
+
+var _GroupSummaryCell = _interopRequireDefault(__webpack_require__(98288));
+
+var _GroupSummaryRow = _interopRequireDefault(__webpack_require__(15557));
+
+var _HeadCell = _interopRequireDefault(__webpack_require__(76373));
+
+var _HeadCellContent = _interopRequireDefault(__webpack_require__(96782));
+
+var _HeadCellResize = _interopRequireDefault(__webpack_require__(57512));
+
+var _HeaderFilterButton = _interopRequireDefault(__webpack_require__(18724));
+
+var _HeadRow = _interopRequireDefault(__webpack_require__(1580));
+
+var _Loading = _interopRequireDefault(__webpack_require__(34927));
+
+var _NewRow = _interopRequireDefault(__webpack_require__(85866));
+
+var _NoDataRow = _interopRequireDefault(__webpack_require__(45551));
+
+var _Paging = _interopRequireDefault(__webpack_require__(92205));
+
+var _PagingIndex = _interopRequireDefault(__webpack_require__(64361));
+
+var _PagingPages = _interopRequireDefault(__webpack_require__(44329));
+
+var _PagingSize = _interopRequireDefault(__webpack_require__(30346));
+
+var _PagingSizes = _interopRequireDefault(__webpack_require__(47113));
+
+var _Popup = _interopRequireDefault(__webpack_require__(23738));
+
+var _PopupContent = _interopRequireDefault(__webpack_require__(99653));
+
+var _PopupContentItem = _interopRequireDefault(__webpack_require__(8739));
+
+var _Rows = _interopRequireDefault(__webpack_require__(21641));
+
+var _SummaryCell = _interopRequireDefault(__webpack_require__(46461));
+
+var _SummaryRow = _interopRequireDefault(__webpack_require__(27826));
+
+var _Table = _interopRequireDefault(__webpack_require__(56381));
+
+var _TableBody = _interopRequireDefault(__webpack_require__(31787));
+
+var _TableBodyContent = _interopRequireDefault(__webpack_require__(31845));
+
+var _TableFoot = _interopRequireDefault(__webpack_require__(9135));
+
+var _TableHead = _interopRequireDefault(__webpack_require__(42616));
+
+var _TablePaging = _interopRequireDefault(__webpack_require__(29934));
+
+var _TableWrapper = _interopRequireDefault(__webpack_require__(57658));
+
+var _VirtualizedRows = _interopRequireDefault(__webpack_require__(47194));
+
+var _Table2 = __webpack_require__(23447);
+
+var components = {
+  CellComponent: _CellComponent["default"],
+  CellEditor: _CellEditor["default"],
+  CellEditorBoolean: _CellEditorBoolean["default"],
+  CellEditorDataType: _CellEditorDataType["default"],
+  CellEditorDate: _CellEditorDate["default"],
+  CellEditorNumber: _CellEditorNumber["default"],
+  CellEditorState: _CellEditorState["default"],
+  CellEditorString: _CellEditorString["default"],
+  CellEditorValidation: _CellEditorValidation["default"],
+  CellEditorValidationMessage: _CellEditorValidationMessage["default"],
+  CellText: _CellText["default"],
+  ColGroup: _ColGroup["default"],
+  DataAndDetailsRows: _DataAndDetailsRows["default"],
+  DataRow: _DataRow["default"],
+  DataRowContent: _DataRowContent["default"],
+  DetailsRow: _DetailsRow["default"],
+  EmptyCells: _EmptyCells["default"],
+  FilterCell: _FilterCell["default"],
+  FilterRow: _FilterRow["default"],
+  FilterRowBoolean: _FilterRowBoolean["default"],
+  FilterRowDataType: _FilterRowDataType["default"],
+  FilterRowDate: _FilterRowDate["default"],
+  FilterRowNumber: _FilterRowNumber["default"],
+  FilterRowString: _FilterRowString["default"],
+  GroupedColumnsRow: _GroupedColumnsRow["default"],
+  GroupRow: _GroupRow["default"],
+  GroupRowContent: _GroupRowContent["default"],
+  GroupSummaryCell: _GroupSummaryCell["default"],
+  GroupSummaryRow: _GroupSummaryRow["default"],
+  HeadCell: _HeadCell["default"],
+  HeadCellContent: _HeadCellContent["default"],
+  HeadCellResize: _HeadCellResize["default"],
+  HeaderFilterButton: _HeaderFilterButton["default"],
+  HeadRow: _HeadRow["default"],
+  Loading: _Loading["default"],
+  NewRow: _NewRow["default"],
+  NoDataRow: _NoDataRow["default"],
+  Paging: _Paging["default"],
+  PagingIndex: _PagingIndex["default"],
+  PagingPages: _PagingPages["default"],
+  PagingSize: _PagingSize["default"],
+  PagingSizes: _PagingSizes["default"],
+  Popup: _Popup["default"],
+  PopupContent: _PopupContent["default"],
+  PopupContentItem: _PopupContentItem["default"],
+  Rows: _Rows["default"],
+  SummaryCell: _SummaryCell["default"],
+  SummaryRow: _SummaryRow["default"],
+  DefaultTable: _Table["default"],
+  TableBody: _TableBody["default"],
+  TableBodyContent: _TableBodyContent["default"],
+  TableFoot: _TableFoot["default"],
+  TableHead: _TableHead["default"],
+  TablePaging: _TablePaging["default"],
+  TableWrapper: _TableWrapper["default"],
+  VirtualizedRows: _VirtualizedRows["default"]
+};
+exports.components = components;
 
 /***/ }),
 
@@ -29698,17 +30306,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Users_yukioru_Projects_ratsel_packages_avatar_fixtures_Avatar_fixture_tsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(28217);
 /* harmony import */ var _Users_yukioru_Projects_ratsel_packages_button_fixtures_Button_fixture_tsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(12749);
 /* harmony import */ var _Users_yukioru_Projects_ratsel_packages_core_fixtures_Core_fixture_tsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16283);
-/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_select_fixtures_Select_fixture_tsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(38634);
-/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_table_fixtures_Table_fixture_tsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(47604);
-/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_avatar_fixtures_cosmos_decorator_ts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(80522);
-/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_button_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(22062);
-/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_select_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(85568);
-/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_table_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(63486);
+/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_floating_fixtures_Popover_fixture_tsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(57022);
+/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_select_fixtures_Select_fixture_tsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(38634);
+/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_table_fixtures_Table_fixture_tsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(47604);
+/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_avatar_fixtures_cosmos_decorator_ts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(80522);
+/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_button_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(22062);
+/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_floating_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(25057);
+/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_select_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(85568);
+/* harmony import */ var _Users_yukioru_Projects_ratsel_packages_table_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(63486);
 // This file is automatically generated by Cosmos. Add it to .gitignore and
 // only edit if you know what you're doing.
 
 // Keeping global imports here is superior to making them bundle entry points
 // because this way they become hot-reloadable.
+
+
 
 
 
@@ -29730,15 +30342,17 @@ const fixtures = {
   'packages/avatar/fixtures/Avatar.fixture.tsx': { module: { default: _Users_yukioru_Projects_ratsel_packages_avatar_fixtures_Avatar_fixture_tsx__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z } },
   'packages/button/fixtures/Button.fixture.tsx': { module: { default: _Users_yukioru_Projects_ratsel_packages_button_fixtures_Button_fixture_tsx__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z } },
   'packages/core/fixtures/Core.fixture.tsx': { module: { default: _Users_yukioru_Projects_ratsel_packages_core_fixtures_Core_fixture_tsx__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z } },
-  'packages/select/fixtures/Select.fixture.tsx': { module: { default: _Users_yukioru_Projects_ratsel_packages_select_fixtures_Select_fixture_tsx__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z } },
-  'packages/table/fixtures/Table.fixture.tsx': { module: { default: _Users_yukioru_Projects_ratsel_packages_table_fixtures_Table_fixture_tsx__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z } }
+  'packages/floating/fixtures/Popover.fixture.tsx': { module: { default: _Users_yukioru_Projects_ratsel_packages_floating_fixtures_Popover_fixture_tsx__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z } },
+  'packages/select/fixtures/Select.fixture.tsx': { module: { default: _Users_yukioru_Projects_ratsel_packages_select_fixtures_Select_fixture_tsx__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z } },
+  'packages/table/fixtures/Table.fixture.tsx': { module: { default: _Users_yukioru_Projects_ratsel_packages_table_fixtures_Table_fixture_tsx__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z } }
 };
 
 const decorators = {
-  'packages/avatar/fixtures/cosmos.decorator.ts': _Users_yukioru_Projects_ratsel_packages_avatar_fixtures_cosmos_decorator_ts__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z,
-  'packages/button/fixtures/cosmos.decorator.tsx': _Users_yukioru_Projects_ratsel_packages_button_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z,
-  'packages/select/fixtures/cosmos.decorator.tsx': _Users_yukioru_Projects_ratsel_packages_select_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z,
-  'packages/table/fixtures/cosmos.decorator.tsx': _Users_yukioru_Projects_ratsel_packages_table_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .Z
+  'packages/avatar/fixtures/cosmos.decorator.ts': _Users_yukioru_Projects_ratsel_packages_avatar_fixtures_cosmos_decorator_ts__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z,
+  'packages/button/fixtures/cosmos.decorator.tsx': _Users_yukioru_Projects_ratsel_packages_button_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z,
+  'packages/floating/fixtures/cosmos.decorator.tsx': _Users_yukioru_Projects_ratsel_packages_floating_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .Z,
+  'packages/select/fixtures/cosmos.decorator.tsx': _Users_yukioru_Projects_ratsel_packages_select_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .Z,
+  'packages/table/fixtures/cosmos.decorator.tsx': _Users_yukioru_Projects_ratsel_packages_table_fixtures_cosmos_decorator_tsx__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .Z
 };
 
 
@@ -49812,6 +50426,3655 @@ if (true) {
 
 /***/ }),
 
+/***/ 35013:
+/***/ ((module) => {
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 25325:
+/***/ ((module) => {
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+module.exports = _arrayWithHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 58091:
+/***/ ((module) => {
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+module.exports = _defineProperty, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 23742:
+/***/ ((module) => {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 68585:
+/***/ ((module) => {
+
+function _iterableToArrayLimit(arr, i) {
+  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
+
+  if (_i == null) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+
+  var _s, _e;
+
+  try {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 18611:
+/***/ ((module) => {
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+module.exports = _nonIterableRest, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 77774:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var arrayWithHoles = __webpack_require__(25325);
+
+var iterableToArrayLimit = __webpack_require__(68585);
+
+var unsupportedIterableToArray = __webpack_require__(3082);
+
+var nonIterableRest = __webpack_require__(18611);
+
+function _slicedToArray(arr, i) {
+  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
+}
+
+module.exports = _slicedToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 26833:
+/***/ ((module) => {
+
+function _taggedTemplateLiteral(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+
+  return Object.freeze(Object.defineProperties(strings, {
+    raw: {
+      value: Object.freeze(raw)
+    }
+  }));
+}
+
+module.exports = _taggedTemplateLiteral, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 5954:
+/***/ ((module) => {
+
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+    return typeof obj;
+  } : function (obj) {
+    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(obj);
+}
+
+module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 3082:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var arrayLikeToArray = __webpack_require__(35013);
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
+}
+
+module.exports = _unsupportedIterableToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ 90017:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "Z": () => (/* binding */ emotion_cache_browser_esm)
+});
+
+;// CONCATENATED MODULE: ./packages/floating/node_modules/@emotion/sheet/dist/emotion-sheet.browser.esm.js
+/*
+
+Based off glamor's StyleSheet, thanks Sunil ❤️
+
+high performance StyleSheet for css-in-js systems
+
+- uses multiple style tags behind the scenes for millions of rules
+- uses `insertRule` for appending in production for *much* faster performance
+
+// usage
+
+import { StyleSheet } from '@emotion/sheet'
+
+let styleSheet = new StyleSheet({ key: '', container: document.head })
+
+styleSheet.insert('#box { border: 1px solid red; }')
+- appends a css rule into the stylesheet
+
+styleSheet.flush()
+- empties the stylesheet of all its contents
+
+*/
+// $FlowFixMe
+function sheetForTag(tag) {
+  if (tag.sheet) {
+    // $FlowFixMe
+    return tag.sheet;
+  } // this weirdness brought to you by firefox
+
+  /* istanbul ignore next */
+
+
+  for (var i = 0; i < document.styleSheets.length; i++) {
+    if (document.styleSheets[i].ownerNode === tag) {
+      // $FlowFixMe
+      return document.styleSheets[i];
+    }
+  }
+}
+
+function createStyleElement(options) {
+  var tag = document.createElement('style');
+  tag.setAttribute('data-emotion', options.key);
+
+  if (options.nonce !== undefined) {
+    tag.setAttribute('nonce', options.nonce);
+  }
+
+  tag.appendChild(document.createTextNode(''));
+  tag.setAttribute('data-s', '');
+  return tag;
+}
+
+var StyleSheet = /*#__PURE__*/function () {
+  function StyleSheet(options) {
+    var _this = this;
+
+    this._insertTag = function (tag) {
+      var before;
+
+      if (_this.tags.length === 0) {
+        if (_this.insertionPoint) {
+          before = _this.insertionPoint.nextSibling;
+        } else if (_this.prepend) {
+          before = _this.container.firstChild;
+        } else {
+          before = _this.before;
+        }
+      } else {
+        before = _this.tags[_this.tags.length - 1].nextSibling;
+      }
+
+      _this.container.insertBefore(tag, before);
+
+      _this.tags.push(tag);
+    };
+
+    this.isSpeedy = options.speedy === undefined ? "production" === 'production' : options.speedy;
+    this.tags = [];
+    this.ctr = 0;
+    this.nonce = options.nonce; // key is the value of the data-emotion attribute, it's used to identify different sheets
+
+    this.key = options.key;
+    this.container = options.container;
+    this.prepend = options.prepend;
+    this.insertionPoint = options.insertionPoint;
+    this.before = null;
+  }
+
+  var _proto = StyleSheet.prototype;
+
+  _proto.hydrate = function hydrate(nodes) {
+    nodes.forEach(this._insertTag);
+  };
+
+  _proto.insert = function insert(rule) {
+    // the max length is how many rules we have per style tag, it's 65000 in speedy mode
+    // it's 1 in dev because we insert source maps that map a single rule to a location
+    // and you can only have one source map per style tag
+    if (this.ctr % (this.isSpeedy ? 65000 : 1) === 0) {
+      this._insertTag(createStyleElement(this));
+    }
+
+    var tag = this.tags[this.tags.length - 1];
+
+    if (false) { var isImportRule; }
+
+    if (this.isSpeedy) {
+      var sheet = sheetForTag(tag);
+
+      try {
+        // this is the ultrafast version, works across browsers
+        // the big drawback is that the css won't be editable in devtools
+        sheet.insertRule(rule, sheet.cssRules.length);
+      } catch (e) {
+        if (false) {}
+      }
+    } else {
+      tag.appendChild(document.createTextNode(rule));
+    }
+
+    this.ctr++;
+  };
+
+  _proto.flush = function flush() {
+    // $FlowFixMe
+    this.tags.forEach(function (tag) {
+      return tag.parentNode && tag.parentNode.removeChild(tag);
+    });
+    this.tags = [];
+    this.ctr = 0;
+
+    if (false) {}
+  };
+
+  return StyleSheet;
+}();
+
+
+
+;// CONCATENATED MODULE: ./packages/floating/node_modules/stylis/src/Utility.js
+/**
+ * @param {number}
+ * @return {number}
+ */
+var abs = Math.abs
+
+/**
+ * @param {number}
+ * @return {string}
+ */
+var Utility_from = String.fromCharCode
+
+/**
+ * @param {object}
+ * @return {object}
+ */
+var Utility_assign = Object.assign
+
+/**
+ * @param {string} value
+ * @param {number} length
+ * @return {number}
+ */
+function hash (value, length) {
+	return (((((((length << 2) ^ Utility_charat(value, 0)) << 2) ^ Utility_charat(value, 1)) << 2) ^ Utility_charat(value, 2)) << 2) ^ Utility_charat(value, 3)
+}
+
+/**
+ * @param {string} value
+ * @return {string}
+ */
+function trim (value) {
+	return value.trim()
+}
+
+/**
+ * @param {string} value
+ * @param {RegExp} pattern
+ * @return {string?}
+ */
+function match (value, pattern) {
+	return (value = pattern.exec(value)) ? value[0] : value
+}
+
+/**
+ * @param {string} value
+ * @param {(string|RegExp)} pattern
+ * @param {string} replacement
+ * @return {string}
+ */
+function replace (value, pattern, replacement) {
+	return value.replace(pattern, replacement)
+}
+
+/**
+ * @param {string} value
+ * @param {string} search
+ * @return {number}
+ */
+function indexof (value, search) {
+	return value.indexOf(search)
+}
+
+/**
+ * @param {string} value
+ * @param {number} index
+ * @return {number}
+ */
+function Utility_charat (value, index) {
+	return value.charCodeAt(index) | 0
+}
+
+/**
+ * @param {string} value
+ * @param {number} begin
+ * @param {number} end
+ * @return {string}
+ */
+function Utility_substr (value, begin, end) {
+	return value.slice(begin, end)
+}
+
+/**
+ * @param {string} value
+ * @return {number}
+ */
+function Utility_strlen (value) {
+	return value.length
+}
+
+/**
+ * @param {any[]} value
+ * @return {number}
+ */
+function Utility_sizeof (value) {
+	return value.length
+}
+
+/**
+ * @param {any} value
+ * @param {any[]} array
+ * @return {any}
+ */
+function Utility_append (value, array) {
+	return array.push(value), value
+}
+
+/**
+ * @param {string[]} array
+ * @param {function} callback
+ * @return {string}
+ */
+function Utility_combine (array, callback) {
+	return array.map(callback).join('')
+}
+
+;// CONCATENATED MODULE: ./packages/floating/node_modules/stylis/src/Tokenizer.js
+
+
+var line = 1
+var column = 1
+var Tokenizer_length = 0
+var position = 0
+var character = 0
+var characters = ''
+
+/**
+ * @param {string} value
+ * @param {object | null} root
+ * @param {object | null} parent
+ * @param {string} type
+ * @param {string[] | string} props
+ * @param {object[] | string} children
+ * @param {number} length
+ */
+function node (value, root, parent, type, props, children, length) {
+	return {value: value, root: root, parent: parent, type: type, props: props, children: children, line: line, column: column, length: length, return: ''}
+}
+
+/**
+ * @param {object} root
+ * @param {object} props
+ * @return {object}
+ */
+function copy (root, props) {
+	return Utility_assign(node('', null, null, '', null, null, 0), root, {length: -root.length}, props)
+}
+
+/**
+ * @return {number}
+ */
+function Tokenizer_char () {
+	return character
+}
+
+/**
+ * @return {number}
+ */
+function prev () {
+	character = position > 0 ? Utility_charat(characters, --position) : 0
+
+	if (column--, character === 10)
+		column = 1, line--
+
+	return character
+}
+
+/**
+ * @return {number}
+ */
+function next () {
+	character = position < Tokenizer_length ? Utility_charat(characters, position++) : 0
+
+	if (column++, character === 10)
+		column = 1, line++
+
+	return character
+}
+
+/**
+ * @return {number}
+ */
+function peek () {
+	return Utility_charat(characters, position)
+}
+
+/**
+ * @return {number}
+ */
+function caret () {
+	return position
+}
+
+/**
+ * @param {number} begin
+ * @param {number} end
+ * @return {string}
+ */
+function slice (begin, end) {
+	return Utility_substr(characters, begin, end)
+}
+
+/**
+ * @param {number} type
+ * @return {number}
+ */
+function token (type) {
+	switch (type) {
+		// \0 \t \n \r \s whitespace token
+		case 0: case 9: case 10: case 13: case 32:
+			return 5
+		// ! + , / > @ ~ isolate token
+		case 33: case 43: case 44: case 47: case 62: case 64: case 126:
+		// ; { } breakpoint token
+		case 59: case 123: case 125:
+			return 4
+		// : accompanied token
+		case 58:
+			return 3
+		// " ' ( [ opening delimit token
+		case 34: case 39: case 40: case 91:
+			return 2
+		// ) ] closing delimit token
+		case 41: case 93:
+			return 1
+	}
+
+	return 0
+}
+
+/**
+ * @param {string} value
+ * @return {any[]}
+ */
+function alloc (value) {
+	return line = column = 1, Tokenizer_length = Utility_strlen(characters = value), position = 0, []
+}
+
+/**
+ * @param {any} value
+ * @return {any}
+ */
+function dealloc (value) {
+	return characters = '', value
+}
+
+/**
+ * @param {number} type
+ * @return {string}
+ */
+function delimit (type) {
+	return trim(slice(position - 1, delimiter(type === 91 ? type + 2 : type === 40 ? type + 1 : type)))
+}
+
+/**
+ * @param {string} value
+ * @return {string[]}
+ */
+function Tokenizer_tokenize (value) {
+	return dealloc(tokenizer(alloc(value)))
+}
+
+/**
+ * @param {number} type
+ * @return {string}
+ */
+function whitespace (type) {
+	while (character = peek())
+		if (character < 33)
+			next()
+		else
+			break
+
+	return token(type) > 2 || token(character) > 3 ? '' : ' '
+}
+
+/**
+ * @param {string[]} children
+ * @return {string[]}
+ */
+function tokenizer (children) {
+	while (next())
+		switch (token(character)) {
+			case 0: append(identifier(position - 1), children)
+				break
+			case 2: append(delimit(character), children)
+				break
+			default: append(from(character), children)
+		}
+
+	return children
+}
+
+/**
+ * @param {number} index
+ * @param {number} count
+ * @return {string}
+ */
+function escaping (index, count) {
+	while (--count && next())
+		// not 0-9 A-F a-f
+		if (character < 48 || character > 102 || (character > 57 && character < 65) || (character > 70 && character < 97))
+			break
+
+	return slice(index, caret() + (count < 6 && peek() == 32 && next() == 32))
+}
+
+/**
+ * @param {number} type
+ * @return {number}
+ */
+function delimiter (type) {
+	while (next())
+		switch (character) {
+			// ] ) " '
+			case type:
+				return position
+			// " '
+			case 34: case 39:
+				if (type !== 34 && type !== 39)
+					delimiter(character)
+				break
+			// (
+			case 40:
+				if (type === 41)
+					delimiter(type)
+				break
+			// \
+			case 92:
+				next()
+				break
+		}
+
+	return position
+}
+
+/**
+ * @param {number} type
+ * @param {number} index
+ * @return {number}
+ */
+function commenter (type, index) {
+	while (next())
+		// //
+		if (type + character === 47 + 10)
+			break
+		// /*
+		else if (type + character === 42 + 42 && peek() === 47)
+			break
+
+	return '/*' + slice(index, position - 1) + '*' + Utility_from(type === 47 ? type : next())
+}
+
+/**
+ * @param {number} index
+ * @return {string}
+ */
+function identifier (index) {
+	while (!token(peek()))
+		next()
+
+	return slice(index, position)
+}
+
+;// CONCATENATED MODULE: ./packages/floating/node_modules/stylis/src/Enum.js
+var MS = '-ms-'
+var MOZ = '-moz-'
+var WEBKIT = '-webkit-'
+
+var COMMENT = 'comm'
+var Enum_RULESET = 'rule'
+var DECLARATION = 'decl'
+
+var PAGE = '@page'
+var MEDIA = '@media'
+var IMPORT = '@import'
+var CHARSET = '@charset'
+var VIEWPORT = '@viewport'
+var SUPPORTS = '@supports'
+var DOCUMENT = '@document'
+var NAMESPACE = '@namespace'
+var KEYFRAMES = '@keyframes'
+var FONT_FACE = '@font-face'
+var COUNTER_STYLE = '@counter-style'
+var FONT_FEATURE_VALUES = '@font-feature-values'
+
+;// CONCATENATED MODULE: ./packages/floating/node_modules/stylis/src/Serializer.js
+
+
+
+/**
+ * @param {object[]} children
+ * @param {function} callback
+ * @return {string}
+ */
+function serialize (children, callback) {
+	var output = ''
+	var length = Utility_sizeof(children)
+
+	for (var i = 0; i < length; i++)
+		output += callback(children[i], i, children, callback) || ''
+
+	return output
+}
+
+/**
+ * @param {object} element
+ * @param {number} index
+ * @param {object[]} children
+ * @param {function} callback
+ * @return {string}
+ */
+function stringify (element, index, children, callback) {
+	switch (element.type) {
+		case IMPORT: case DECLARATION: return element.return = element.return || element.value
+		case COMMENT: return ''
+		case KEYFRAMES: return element.return = element.value + '{' + serialize(element.children, callback) + '}'
+		case Enum_RULESET: element.value = element.props.join(',')
+	}
+
+	return Utility_strlen(children = serialize(element.children, callback)) ? element.return = element.value + '{' + children + '}' : ''
+}
+
+;// CONCATENATED MODULE: ./packages/floating/node_modules/stylis/src/Prefixer.js
+
+
+
+/**
+ * @param {string} value
+ * @param {number} length
+ * @return {string}
+ */
+function prefix (value, length) {
+	switch (hash(value, length)) {
+		// color-adjust
+		case 5103:
+			return WEBKIT + 'print-' + value + value
+		// animation, animation-(delay|direction|duration|fill-mode|iteration-count|name|play-state|timing-function)
+		case 5737: case 4201: case 3177: case 3433: case 1641: case 4457: case 2921:
+		// text-decoration, filter, clip-path, backface-visibility, column, box-decoration-break
+		case 5572: case 6356: case 5844: case 3191: case 6645: case 3005:
+		// mask, mask-image, mask-(mode|clip|size), mask-(repeat|origin), mask-position, mask-composite,
+		case 6391: case 5879: case 5623: case 6135: case 4599: case 4855:
+		// background-clip, columns, column-(count|fill|gap|rule|rule-color|rule-style|rule-width|span|width)
+		case 4215: case 6389: case 5109: case 5365: case 5621: case 3829:
+			return WEBKIT + value + value
+		// appearance, user-select, transform, hyphens, text-size-adjust
+		case 5349: case 4246: case 4810: case 6968: case 2756:
+			return WEBKIT + value + MOZ + value + MS + value + value
+		// flex, flex-direction
+		case 6828: case 4268:
+			return WEBKIT + value + MS + value + value
+		// order
+		case 6165:
+			return WEBKIT + value + MS + 'flex-' + value + value
+		// align-items
+		case 5187:
+			return WEBKIT + value + replace(value, /(\w+).+(:[^]+)/, WEBKIT + 'box-$1$2' + MS + 'flex-$1$2') + value
+		// align-self
+		case 5443:
+			return WEBKIT + value + MS + 'flex-item-' + replace(value, /flex-|-self/, '') + value
+		// align-content
+		case 4675:
+			return WEBKIT + value + MS + 'flex-line-pack' + replace(value, /align-content|flex-|-self/, '') + value
+		// flex-shrink
+		case 5548:
+			return WEBKIT + value + MS + replace(value, 'shrink', 'negative') + value
+		// flex-basis
+		case 5292:
+			return WEBKIT + value + MS + replace(value, 'basis', 'preferred-size') + value
+		// flex-grow
+		case 6060:
+			return WEBKIT + 'box-' + replace(value, '-grow', '') + WEBKIT + value + MS + replace(value, 'grow', 'positive') + value
+		// transition
+		case 4554:
+			return WEBKIT + replace(value, /([^-])(transform)/g, '$1' + WEBKIT + '$2') + value
+		// cursor
+		case 6187:
+			return replace(replace(replace(value, /(zoom-|grab)/, WEBKIT + '$1'), /(image-set)/, WEBKIT + '$1'), value, '') + value
+		// background, background-image
+		case 5495: case 3959:
+			return replace(value, /(image-set\([^]*)/, WEBKIT + '$1' + '$`$1')
+		// justify-content
+		case 4968:
+			return replace(replace(value, /(.+:)(flex-)?(.*)/, WEBKIT + 'box-pack:$3' + MS + 'flex-pack:$3'), /s.+-b[^;]+/, 'justify') + WEBKIT + value + value
+		// (margin|padding)-inline-(start|end)
+		case 4095: case 3583: case 4068: case 2532:
+			return replace(value, /(.+)-inline(.+)/, WEBKIT + '$1$2') + value
+		// (min|max)?(width|height|inline-size|block-size)
+		case 8116: case 7059: case 5753: case 5535:
+		case 5445: case 5701: case 4933: case 4677:
+		case 5533: case 5789: case 5021: case 4765:
+			// stretch, max-content, min-content, fill-available
+			if (Utility_strlen(value) - 1 - length > 6)
+				switch (Utility_charat(value, length + 1)) {
+					// (m)ax-content, (m)in-content
+					case 109:
+						// -
+						if (Utility_charat(value, length + 4) !== 45)
+							break
+					// (f)ill-available, (f)it-content
+					case 102:
+						return replace(value, /(.+:)(.+)-([^]+)/, '$1' + WEBKIT + '$2-$3' + '$1' + MOZ + (Utility_charat(value, length + 3) == 108 ? '$3' : '$2-$3')) + value
+					// (s)tretch
+					case 115:
+						return ~indexof(value, 'stretch') ? prefix(replace(value, 'stretch', 'fill-available'), length) + value : value
+				}
+			break
+		// position: sticky
+		case 4949:
+			// (s)ticky?
+			if (Utility_charat(value, length + 1) !== 115)
+				break
+		// display: (flex|inline-flex)
+		case 6444:
+			switch (Utility_charat(value, Utility_strlen(value) - 3 - (~indexof(value, '!important') && 10))) {
+				// stic(k)y
+				case 107:
+					return replace(value, ':', ':' + WEBKIT) + value
+				// (inline-)?fl(e)x
+				case 101:
+					return replace(value, /(.+:)([^;!]+)(;|!.+)?/, '$1' + WEBKIT + (Utility_charat(value, 14) === 45 ? 'inline-' : '') + 'box$3' + '$1' + WEBKIT + '$2$3' + '$1' + MS + '$2box$3') + value
+			}
+			break
+		// writing-mode
+		case 5936:
+			switch (Utility_charat(value, length + 11)) {
+				// vertical-l(r)
+				case 114:
+					return WEBKIT + value + MS + replace(value, /[svh]\w+-[tblr]{2}/, 'tb') + value
+				// vertical-r(l)
+				case 108:
+					return WEBKIT + value + MS + replace(value, /[svh]\w+-[tblr]{2}/, 'tb-rl') + value
+				// horizontal(-)tb
+				case 45:
+					return WEBKIT + value + MS + replace(value, /[svh]\w+-[tblr]{2}/, 'lr') + value
+			}
+
+			return WEBKIT + value + MS + value + value
+	}
+
+	return value
+}
+
+;// CONCATENATED MODULE: ./packages/floating/node_modules/stylis/src/Middleware.js
+
+
+
+
+
+
+/**
+ * @param {function[]} collection
+ * @return {function}
+ */
+function middleware (collection) {
+	var length = Utility_sizeof(collection)
+
+	return function (element, index, children, callback) {
+		var output = ''
+
+		for (var i = 0; i < length; i++)
+			output += collection[i](element, index, children, callback) || ''
+
+		return output
+	}
+}
+
+/**
+ * @param {function} callback
+ * @return {function}
+ */
+function rulesheet (callback) {
+	return function (element) {
+		if (!element.root)
+			if (element = element.return)
+				callback(element)
+	}
+}
+
+/**
+ * @param {object} element
+ * @param {number} index
+ * @param {object[]} children
+ * @param {function} callback
+ */
+function prefixer (element, index, children, callback) {
+	if (element.length > -1)
+		if (!element.return)
+			switch (element.type) {
+				case DECLARATION: element.return = prefix(element.value, element.length)
+					break
+				case KEYFRAMES:
+					return serialize([copy(element, {value: replace(element.value, '@', '@' + WEBKIT)})], callback)
+				case Enum_RULESET:
+					if (element.length)
+						return Utility_combine(element.props, function (value) {
+							switch (match(value, /(::plac\w+|:read-\w+)/)) {
+								// :read-(only|write)
+								case ':read-only': case ':read-write':
+									return serialize([copy(element, {props: [replace(value, /:(read-\w+)/, ':' + MOZ + '$1')]})], callback)
+								// :placeholder
+								case '::placeholder':
+									return serialize([
+										copy(element, {props: [replace(value, /:(plac\w+)/, ':' + WEBKIT + 'input-$1')]}),
+										copy(element, {props: [replace(value, /:(plac\w+)/, ':' + MOZ + '$1')]}),
+										copy(element, {props: [replace(value, /:(plac\w+)/, MS + 'input-$1')]})
+									], callback)
+							}
+
+							return ''
+						})
+			}
+}
+
+/**
+ * @param {object} element
+ * @param {number} index
+ * @param {object[]} children
+ */
+function namespace (element) {
+	switch (element.type) {
+		case RULESET:
+			element.props = element.props.map(function (value) {
+				return combine(tokenize(value), function (value, index, children) {
+					switch (charat(value, 0)) {
+						// \f
+						case 12:
+							return substr(value, 1, strlen(value))
+						// \0 ( + > ~
+						case 0: case 40: case 43: case 62: case 126:
+							return value
+						// :
+						case 58:
+							if (children[++index] === 'global')
+								children[index] = '', children[++index] = '\f' + substr(children[index], index = 1, -1)
+						// \s
+						case 32:
+							return index === 1 ? '' : value
+						default:
+							switch (index) {
+								case 0: element = value
+									return sizeof(children) > 1 ? '' : value
+								case index = sizeof(children) - 1: case 2:
+									return index === 2 ? value + element + element : value + element
+								default:
+									return value
+							}
+					}
+				})
+			})
+	}
+}
+
+;// CONCATENATED MODULE: ./packages/floating/node_modules/stylis/src/Parser.js
+
+
+
+
+/**
+ * @param {string} value
+ * @return {object[]}
+ */
+function compile (value) {
+	return dealloc(parse('', null, null, null, [''], value = alloc(value), 0, [0], value))
+}
+
+/**
+ * @param {string} value
+ * @param {object} root
+ * @param {object?} parent
+ * @param {string[]} rule
+ * @param {string[]} rules
+ * @param {string[]} rulesets
+ * @param {number[]} pseudo
+ * @param {number[]} points
+ * @param {string[]} declarations
+ * @return {object}
+ */
+function parse (value, root, parent, rule, rules, rulesets, pseudo, points, declarations) {
+	var index = 0
+	var offset = 0
+	var length = pseudo
+	var atrule = 0
+	var property = 0
+	var previous = 0
+	var variable = 1
+	var scanning = 1
+	var ampersand = 1
+	var character = 0
+	var type = ''
+	var props = rules
+	var children = rulesets
+	var reference = rule
+	var characters = type
+
+	while (scanning)
+		switch (previous = character, character = next()) {
+			// (
+			case 40:
+				if (previous != 108 && characters.charCodeAt(length - 1) == 58) {
+					if (indexof(characters += replace(delimit(character), '&', '&\f'), '&\f') != -1)
+						ampersand = -1
+					break
+				}
+			// " ' [
+			case 34: case 39: case 91:
+				characters += delimit(character)
+				break
+			// \t \n \r \s
+			case 9: case 10: case 13: case 32:
+				characters += whitespace(previous)
+				break
+			// \
+			case 92:
+				characters += escaping(caret() - 1, 7)
+				continue
+			// /
+			case 47:
+				switch (peek()) {
+					case 42: case 47:
+						Utility_append(comment(commenter(next(), caret()), root, parent), declarations)
+						break
+					default:
+						characters += '/'
+				}
+				break
+			// {
+			case 123 * variable:
+				points[index++] = Utility_strlen(characters) * ampersand
+			// } ; \0
+			case 125 * variable: case 59: case 0:
+				switch (character) {
+					// \0 }
+					case 0: case 125: scanning = 0
+					// ;
+					case 59 + offset:
+						if (property > 0 && (Utility_strlen(characters) - length))
+							Utility_append(property > 32 ? declaration(characters + ';', rule, parent, length - 1) : declaration(replace(characters, ' ', '') + ';', rule, parent, length - 2), declarations)
+						break
+					// @ ;
+					case 59: characters += ';'
+					// { rule/at-rule
+					default:
+						Utility_append(reference = ruleset(characters, root, parent, index, offset, rules, points, type, props = [], children = [], length), rulesets)
+
+						if (character === 123)
+							if (offset === 0)
+								parse(characters, root, reference, reference, props, rulesets, length, points, children)
+							else
+								switch (atrule) {
+									// d m s
+									case 100: case 109: case 115:
+										parse(value, reference, reference, rule && Utility_append(ruleset(value, reference, reference, 0, 0, rules, points, type, rules, props = [], length), children), rules, children, length, points, rule ? props : children)
+										break
+									default:
+										parse(characters, reference, reference, reference, [''], children, 0, points, children)
+								}
+				}
+
+				index = offset = property = 0, variable = ampersand = 1, type = characters = '', length = pseudo
+				break
+			// :
+			case 58:
+				length = 1 + Utility_strlen(characters), property = previous
+			default:
+				if (variable < 1)
+					if (character == 123)
+						--variable
+					else if (character == 125 && variable++ == 0 && prev() == 125)
+						continue
+
+				switch (characters += Utility_from(character), character * variable) {
+					// &
+					case 38:
+						ampersand = offset > 0 ? 1 : (characters += '\f', -1)
+						break
+					// ,
+					case 44:
+						points[index++] = (Utility_strlen(characters) - 1) * ampersand, ampersand = 1
+						break
+					// @
+					case 64:
+						// -
+						if (peek() === 45)
+							characters += delimit(next())
+
+						atrule = peek(), offset = length = Utility_strlen(type = characters += identifier(caret())), character++
+						break
+					// -
+					case 45:
+						if (previous === 45 && Utility_strlen(characters) == 2)
+							variable = 0
+				}
+		}
+
+	return rulesets
+}
+
+/**
+ * @param {string} value
+ * @param {object} root
+ * @param {object?} parent
+ * @param {number} index
+ * @param {number} offset
+ * @param {string[]} rules
+ * @param {number[]} points
+ * @param {string} type
+ * @param {string[]} props
+ * @param {string[]} children
+ * @param {number} length
+ * @return {object}
+ */
+function ruleset (value, root, parent, index, offset, rules, points, type, props, children, length) {
+	var post = offset - 1
+	var rule = offset === 0 ? rules : ['']
+	var size = Utility_sizeof(rule)
+
+	for (var i = 0, j = 0, k = 0; i < index; ++i)
+		for (var x = 0, y = Utility_substr(value, post + 1, post = abs(j = points[i])), z = value; x < size; ++x)
+			if (z = trim(j > 0 ? rule[x] + ' ' + y : replace(y, /&\f/g, rule[x])))
+				props[k++] = z
+
+	return node(value, root, parent, offset === 0 ? Enum_RULESET : type, props, children, length)
+}
+
+/**
+ * @param {number} value
+ * @param {object} root
+ * @param {object?} parent
+ * @return {object}
+ */
+function comment (value, root, parent) {
+	return node(value, root, parent, COMMENT, Utility_from(Tokenizer_char()), Utility_substr(value, 2, -2), 0)
+}
+
+/**
+ * @param {string} value
+ * @param {object} root
+ * @param {object?} parent
+ * @param {number} length
+ * @return {object}
+ */
+function declaration (value, root, parent, length) {
+	return node(value, root, parent, DECLARATION, Utility_substr(value, 0, length), Utility_substr(value, length + 1, -1), length)
+}
+
+;// CONCATENATED MODULE: ./packages/floating/node_modules/@emotion/cache/dist/emotion-cache.browser.esm.js
+
+
+
+
+
+var last = function last(arr) {
+  return arr.length ? arr[arr.length - 1] : null;
+}; // based on https://github.com/thysultan/stylis.js/blob/e6843c373ebcbbfade25ebcc23f540ed8508da0a/src/Tokenizer.js#L239-L244
+
+
+var identifierWithPointTracking = function identifierWithPointTracking(begin, points, index) {
+  var previous = 0;
+  var character = 0;
+
+  while (true) {
+    previous = character;
+    character = peek(); // &\f
+
+    if (previous === 38 && character === 12) {
+      points[index] = 1;
+    }
+
+    if (token(character)) {
+      break;
+    }
+
+    next();
+  }
+
+  return slice(begin, position);
+};
+
+var toRules = function toRules(parsed, points) {
+  // pretend we've started with a comma
+  var index = -1;
+  var character = 44;
+
+  do {
+    switch (token(character)) {
+      case 0:
+        // &\f
+        if (character === 38 && peek() === 12) {
+          // this is not 100% correct, we don't account for literal sequences here - like for example quoted strings
+          // stylis inserts \f after & to know when & where it should replace this sequence with the context selector
+          // and when it should just concatenate the outer and inner selectors
+          // it's very unlikely for this sequence to actually appear in a different context, so we just leverage this fact here
+          points[index] = 1;
+        }
+
+        parsed[index] += identifierWithPointTracking(position - 1, points, index);
+        break;
+
+      case 2:
+        parsed[index] += delimit(character);
+        break;
+
+      case 4:
+        // comma
+        if (character === 44) {
+          // colon
+          parsed[++index] = peek() === 58 ? '&\f' : '';
+          points[index] = parsed[index].length;
+          break;
+        }
+
+      // fallthrough
+
+      default:
+        parsed[index] += Utility_from(character);
+    }
+  } while (character = next());
+
+  return parsed;
+};
+
+var getRules = function getRules(value, points) {
+  return dealloc(toRules(alloc(value), points));
+}; // WeakSet would be more appropriate, but only WeakMap is supported in IE11
+
+
+var fixedElements = /* #__PURE__ */new WeakMap();
+var compat = function compat(element) {
+  if (element.type !== 'rule' || !element.parent || // positive .length indicates that this rule contains pseudo
+  // negative .length indicates that this rule has been already prefixed
+  element.length < 1) {
+    return;
+  }
+
+  var value = element.value,
+      parent = element.parent;
+  var isImplicitRule = element.column === parent.column && element.line === parent.line;
+
+  while (parent.type !== 'rule') {
+    parent = parent.parent;
+    if (!parent) return;
+  } // short-circuit for the simplest case
+
+
+  if (element.props.length === 1 && value.charCodeAt(0) !== 58
+  /* colon */
+  && !fixedElements.get(parent)) {
+    return;
+  } // if this is an implicitly inserted rule (the one eagerly inserted at the each new nested level)
+  // then the props has already been manipulated beforehand as they that array is shared between it and its "rule parent"
+
+
+  if (isImplicitRule) {
+    return;
+  }
+
+  fixedElements.set(element, true);
+  var points = [];
+  var rules = getRules(value, points);
+  var parentRules = parent.props;
+
+  for (var i = 0, k = 0; i < rules.length; i++) {
+    for (var j = 0; j < parentRules.length; j++, k++) {
+      element.props[k] = points[i] ? rules[i].replace(/&\f/g, parentRules[j]) : parentRules[j] + " " + rules[i];
+    }
+  }
+};
+var removeLabel = function removeLabel(element) {
+  if (element.type === 'decl') {
+    var value = element.value;
+
+    if ( // charcode for l
+    value.charCodeAt(0) === 108 && // charcode for b
+    value.charCodeAt(2) === 98) {
+      // this ignores label
+      element["return"] = '';
+      element.value = '';
+    }
+  }
+};
+var ignoreFlag = 'emotion-disable-server-rendering-unsafe-selector-warning-please-do-not-use-this-the-warning-exists-for-a-reason';
+
+var isIgnoringComment = function isIgnoringComment(element) {
+  return !!element && element.type === 'comm' && element.children.indexOf(ignoreFlag) > -1;
+};
+
+var createUnsafeSelectorsAlarm = function createUnsafeSelectorsAlarm(cache) {
+  return function (element, index, children) {
+    if (element.type !== 'rule') return;
+    var unsafePseudoClasses = element.value.match(/(:first|:nth|:nth-last)-child/g);
+
+    if (unsafePseudoClasses && cache.compat !== true) {
+      var prevElement = index > 0 ? children[index - 1] : null;
+
+      if (prevElement && isIgnoringComment(last(prevElement.children))) {
+        return;
+      }
+
+      unsafePseudoClasses.forEach(function (unsafePseudoClass) {
+        console.error("The pseudo class \"" + unsafePseudoClass + "\" is potentially unsafe when doing server-side rendering. Try changing it to \"" + unsafePseudoClass.split('-child')[0] + "-of-type\".");
+      });
+    }
+  };
+};
+
+var isImportRule = function isImportRule(element) {
+  return element.type.charCodeAt(1) === 105 && element.type.charCodeAt(0) === 64;
+};
+
+var isPrependedWithRegularRules = function isPrependedWithRegularRules(index, children) {
+  for (var i = index - 1; i >= 0; i--) {
+    if (!isImportRule(children[i])) {
+      return true;
+    }
+  }
+
+  return false;
+}; // use this to remove incorrect elements from further processing
+// so they don't get handed to the `sheet` (or anything else)
+// as that could potentially lead to additional logs which in turn could be overhelming to the user
+
+
+var nullifyElement = function nullifyElement(element) {
+  element.type = '';
+  element.value = '';
+  element["return"] = '';
+  element.children = '';
+  element.props = '';
+};
+
+var incorrectImportAlarm = function incorrectImportAlarm(element, index, children) {
+  if (!isImportRule(element)) {
+    return;
+  }
+
+  if (element.parent) {
+    console.error("`@import` rules can't be nested inside other rules. Please move it to the top level and put it before regular rules. Keep in mind that they can only be used within global styles.");
+    nullifyElement(element);
+  } else if (isPrependedWithRegularRules(index, children)) {
+    console.error("`@import` rules can't be after other rules. Please put your `@import` rules before your other rules.");
+    nullifyElement(element);
+  }
+};
+
+var defaultStylisPlugins = [prefixer];
+
+var createCache = function createCache(options) {
+  var key = options.key;
+
+  if (false) {}
+
+  if ( key === 'css') {
+    var ssrStyles = document.querySelectorAll("style[data-emotion]:not([data-s])"); // get SSRed styles out of the way of React's hydration
+    // document.head is a safe place to move them to(though note document.head is not necessarily the last place they will be)
+    // note this very very intentionally targets all style elements regardless of the key to ensure
+    // that creating a cache works inside of render of a React component
+
+    Array.prototype.forEach.call(ssrStyles, function (node) {
+      // we want to only move elements which have a space in the data-emotion attribute value
+      // because that indicates that it is an Emotion 11 server-side rendered style elements
+      // while we will already ignore Emotion 11 client-side inserted styles because of the :not([data-s]) part in the selector
+      // Emotion 10 client-side inserted styles did not have data-s (but importantly did not have a space in their data-emotion attributes)
+      // so checking for the space ensures that loading Emotion 11 after Emotion 10 has inserted some styles
+      // will not result in the Emotion 10 styles being destroyed
+      var dataEmotionAttribute = node.getAttribute('data-emotion');
+
+      if (dataEmotionAttribute.indexOf(' ') === -1) {
+        return;
+      }
+      document.head.appendChild(node);
+      node.setAttribute('data-s', '');
+    });
+  }
+
+  var stylisPlugins = options.stylisPlugins || defaultStylisPlugins;
+
+  if (false) {}
+
+  var inserted = {}; // $FlowFixMe
+
+  var container;
+  var nodesToHydrate = [];
+
+  {
+    container = options.container || document.head;
+    Array.prototype.forEach.call( // this means we will ignore elements which don't have a space in them which
+    // means that the style elements we're looking at are only Emotion 11 server-rendered style elements
+    document.querySelectorAll("style[data-emotion^=\"" + key + " \"]"), function (node) {
+      var attrib = node.getAttribute("data-emotion").split(' '); // $FlowFixMe
+
+      for (var i = 1; i < attrib.length; i++) {
+        inserted[attrib[i]] = true;
+      }
+
+      nodesToHydrate.push(node);
+    });
+  }
+
+  var _insert;
+
+  var omnipresentPlugins = [compat, removeLabel];
+
+  if (false) {}
+
+  {
+    var currentSheet;
+    var finalizingPlugins = [stringify,  false ? 0 : rulesheet(function (rule) {
+      currentSheet.insert(rule);
+    })];
+    var serializer = middleware(omnipresentPlugins.concat(stylisPlugins, finalizingPlugins));
+
+    var stylis = function stylis(styles) {
+      return serialize(compile(styles), serializer);
+    };
+
+    _insert = function insert(selector, serialized, sheet, shouldCache) {
+      currentSheet = sheet;
+
+      if (false) {}
+
+      stylis(selector ? selector + "{" + serialized.styles + "}" : serialized.styles);
+
+      if (shouldCache) {
+        cache.inserted[serialized.name] = true;
+      }
+    };
+  }
+
+  var cache = {
+    key: key,
+    sheet: new StyleSheet({
+      key: key,
+      container: container,
+      nonce: options.nonce,
+      speedy: options.speedy,
+      prepend: options.prepend,
+      insertionPoint: options.insertionPoint
+    }),
+    nonce: options.nonce,
+    inserted: inserted,
+    registered: {},
+    insert: _insert
+  };
+  cache.sheet.hydrate(nodesToHydrate);
+  return cache;
+};
+
+/* harmony default export */ const emotion_cache_browser_esm = (createCache);
+
+
+/***/ }),
+
+/***/ 53697:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function memoize(fn) {
+  var cache = Object.create(null);
+  return function (arg) {
+    if (cache[arg] === undefined) cache[arg] = fn(arg);
+    return cache[arg];
+  };
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (memoize);
+
+
+/***/ }),
+
+/***/ 5992:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "C": () => (/* binding */ CacheProvider),
+  "E": () => (/* binding */ Emotion),
+  "T": () => (/* binding */ ThemeContext),
+  "_": () => (/* binding */ __unsafe_useEmotionCache),
+  "a": () => (/* binding */ useTheme),
+  "b": () => (/* binding */ ThemeProvider),
+  "c": () => (/* binding */ createEmotionProps),
+  "d": () => (/* binding */ withTheme),
+  "h": () => (/* binding */ emotion_element_cbed451f_browser_esm_hasOwnProperty),
+  "u": () => (/* binding */ useInsertionEffectMaybe),
+  "w": () => (/* binding */ withEmotionCache)
+});
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(67294);
+var react_namespaceObject = /*#__PURE__*/__webpack_require__.t(react, 2);
+// EXTERNAL MODULE: ./packages/floating/node_modules/@emotion/cache/dist/emotion-cache.browser.esm.js + 8 modules
+var emotion_cache_browser_esm = __webpack_require__(90017);
+// EXTERNAL MODULE: ./packages/floating/node_modules/@babel/runtime/helpers/esm/extends.js
+var esm_extends = __webpack_require__(54481);
+;// CONCATENATED MODULE: ./packages/floating/node_modules/@emotion/weak-memoize/dist/weak-memoize.browser.esm.js
+var weakMemoize = function weakMemoize(func) {
+  // $FlowFixMe flow doesn't include all non-primitive types as allowed for weakmaps
+  var cache = new WeakMap();
+  return function (arg) {
+    if (cache.has(arg)) {
+      // $FlowFixMe
+      return cache.get(arg);
+    }
+
+    var ret = func(arg);
+    cache.set(arg, ret);
+    return ret;
+  };
+};
+
+/* harmony default export */ const weak_memoize_browser_esm = (weakMemoize);
+
+// EXTERNAL MODULE: ./packages/floating/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
+var hoist_non_react_statics_cjs = __webpack_require__(126);
+var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
+;// CONCATENATED MODULE: ./packages/floating/node_modules/@emotion/react/_isolated-hnrs/dist/emotion-react-_isolated-hnrs.browser.esm.js
+
+
+// this file isolates this package that is not tree-shakeable
+// and if this module doesn't actually contain any logic of its own
+// then Rollup just use 'hoist-non-react-statics' directly in other chunks
+
+var hoistNonReactStatics = (function (targetComponent, sourceComponent) {
+  return hoist_non_react_statics_cjs_default()(targetComponent, sourceComponent);
+});
+
+/* harmony default export */ const emotion_react_isolated_hnrs_browser_esm = (hoistNonReactStatics);
+
+// EXTERNAL MODULE: ./packages/floating/node_modules/@emotion/utils/dist/emotion-utils.browser.esm.js
+var emotion_utils_browser_esm = __webpack_require__(38694);
+// EXTERNAL MODULE: ./packages/floating/node_modules/@emotion/serialize/dist/emotion-serialize.browser.esm.js + 2 modules
+var emotion_serialize_browser_esm = __webpack_require__(5131);
+;// CONCATENATED MODULE: ./packages/floating/node_modules/@emotion/react/dist/emotion-element-cbed451f.browser.esm.js
+
+
+
+
+
+
+
+
+
+var emotion_element_cbed451f_browser_esm_hasOwnProperty = {}.hasOwnProperty;
+
+var EmotionCacheContext = /* #__PURE__ */(0,react.createContext)( // we're doing this to avoid preconstruct's dead code elimination in this one case
+// because this module is primarily intended for the browser and node
+// but it's also required in react native and similar environments sometimes
+// and we could have a special build just for that
+// but this is much easier and the native packages
+// might use a different theme context in the future anyway
+typeof HTMLElement !== 'undefined' ? /* #__PURE__ */(0,emotion_cache_browser_esm/* default */.Z)({
+  key: 'css'
+}) : null);
+
+if (false) {}
+
+var CacheProvider = EmotionCacheContext.Provider;
+var __unsafe_useEmotionCache = function useEmotionCache() {
+  return (0,react.useContext)(EmotionCacheContext);
+};
+
+var withEmotionCache = function withEmotionCache(func) {
+  // $FlowFixMe
+  return /*#__PURE__*/(0,react.forwardRef)(function (props, ref) {
+    // the cache will never be null in the browser
+    var cache = (0,react.useContext)(EmotionCacheContext);
+    return func(props, cache, ref);
+  });
+};
+
+var ThemeContext = /* #__PURE__ */(0,react.createContext)({});
+
+if (false) {}
+
+var useTheme = function useTheme() {
+  return (0,react.useContext)(ThemeContext);
+};
+
+var getTheme = function getTheme(outerTheme, theme) {
+  if (typeof theme === 'function') {
+    var mergedTheme = theme(outerTheme);
+
+    if (false) {}
+
+    return mergedTheme;
+  }
+
+  if (false) {}
+
+  return (0,esm_extends/* default */.Z)({}, outerTheme, theme);
+};
+
+var createCacheWithTheme = /* #__PURE__ */weak_memoize_browser_esm(function (outerTheme) {
+  return weak_memoize_browser_esm(function (theme) {
+    return getTheme(outerTheme, theme);
+  });
+});
+var ThemeProvider = function ThemeProvider(props) {
+  var theme = (0,react.useContext)(ThemeContext);
+
+  if (props.theme !== theme) {
+    theme = createCacheWithTheme(theme)(props.theme);
+  }
+
+  return /*#__PURE__*/(0,react.createElement)(ThemeContext.Provider, {
+    value: theme
+  }, props.children);
+};
+function withTheme(Component) {
+  var componentName = Component.displayName || Component.name || 'Component';
+
+  var render = function render(props, ref) {
+    var theme = (0,react.useContext)(ThemeContext);
+    return /*#__PURE__*/(0,react.createElement)(Component, (0,esm_extends/* default */.Z)({
+      theme: theme,
+      ref: ref
+    }, props));
+  }; // $FlowFixMe
+
+
+  var WithTheme = /*#__PURE__*/(0,react.forwardRef)(render);
+  WithTheme.displayName = "WithTheme(" + componentName + ")";
+  return emotion_react_isolated_hnrs_browser_esm(WithTheme, Component);
+}
+
+var getLastPart = function getLastPart(functionName) {
+  // The match may be something like 'Object.createEmotionProps' or
+  // 'Loader.prototype.render'
+  var parts = functionName.split('.');
+  return parts[parts.length - 1];
+};
+
+var getFunctionNameFromStackTraceLine = function getFunctionNameFromStackTraceLine(line) {
+  // V8
+  var match = /^\s+at\s+([A-Za-z0-9$.]+)\s/.exec(line);
+  if (match) return getLastPart(match[1]); // Safari / Firefox
+
+  match = /^([A-Za-z0-9$.]+)@/.exec(line);
+  if (match) return getLastPart(match[1]);
+  return undefined;
+};
+
+var internalReactFunctionNames = /* #__PURE__ */new Set(['renderWithHooks', 'processChild', 'finishClassComponent', 'renderToString']); // These identifiers come from error stacks, so they have to be valid JS
+// identifiers, thus we only need to replace what is a valid character for JS,
+// but not for CSS.
+
+var sanitizeIdentifier = function sanitizeIdentifier(identifier) {
+  return identifier.replace(/\$/g, '-');
+};
+
+var getLabelFromStackTrace = function getLabelFromStackTrace(stackTrace) {
+  if (!stackTrace) return undefined;
+  var lines = stackTrace.split('\n');
+
+  for (var i = 0; i < lines.length; i++) {
+    var functionName = getFunctionNameFromStackTraceLine(lines[i]); // The first line of V8 stack traces is just "Error"
+
+    if (!functionName) continue; // If we reach one of these, we have gone too far and should quit
+
+    if (internalReactFunctionNames.has(functionName)) break; // The component name is the first function in the stack that starts with an
+    // uppercase letter
+
+    if (/^[A-Z]/.test(functionName)) return sanitizeIdentifier(functionName);
+  }
+
+  return undefined;
+};
+
+var useInsertionEffect = react_namespaceObject['useInsertion' + 'Effect'] ? react_namespaceObject['useInsertion' + 'Effect'] : function useInsertionEffect(create) {
+  create();
+};
+function useInsertionEffectMaybe(create) {
+
+  useInsertionEffect(create);
+}
+
+var typePropName = '__EMOTION_TYPE_PLEASE_DO_NOT_USE__';
+var labelPropName = '__EMOTION_LABEL_PLEASE_DO_NOT_USE__';
+var createEmotionProps = function createEmotionProps(type, props) {
+  if (false) {}
+
+  var newProps = {};
+
+  for (var key in props) {
+    if (emotion_element_cbed451f_browser_esm_hasOwnProperty.call(props, key)) {
+      newProps[key] = props[key];
+    }
+  }
+
+  newProps[typePropName] = type; // For performance, only call getLabelFromStackTrace in development and when
+  // the label hasn't already been computed
+
+  if (false) { var label; }
+
+  return newProps;
+};
+
+var Insertion = function Insertion(_ref) {
+  var cache = _ref.cache,
+      serialized = _ref.serialized,
+      isStringTag = _ref.isStringTag;
+  (0,emotion_utils_browser_esm/* registerStyles */.hC)(cache, serialized, isStringTag);
+  var rules = useInsertionEffectMaybe(function () {
+    return (0,emotion_utils_browser_esm/* insertStyles */.My)(cache, serialized, isStringTag);
+  });
+
+  return null;
+};
+
+var Emotion = /* #__PURE__ */withEmotionCache(function (props, cache, ref) {
+  var cssProp = props.css; // so that using `css` from `emotion` and passing the result to the css prop works
+  // not passing the registered cache to serializeStyles because it would
+  // make certain babel optimisations not possible
+
+  if (typeof cssProp === 'string' && cache.registered[cssProp] !== undefined) {
+    cssProp = cache.registered[cssProp];
+  }
+
+  var WrappedComponent = props[typePropName];
+  var registeredStyles = [cssProp];
+  var className = '';
+
+  if (typeof props.className === 'string') {
+    className = (0,emotion_utils_browser_esm/* getRegisteredStyles */.fp)(cache.registered, registeredStyles, props.className);
+  } else if (props.className != null) {
+    className = props.className + " ";
+  }
+
+  var serialized = (0,emotion_serialize_browser_esm/* serializeStyles */.O)(registeredStyles, undefined, (0,react.useContext)(ThemeContext));
+
+  if (false) { var labelFromStack; }
+
+  className += cache.key + "-" + serialized.name;
+  var newProps = {};
+
+  for (var key in props) {
+    if (emotion_element_cbed451f_browser_esm_hasOwnProperty.call(props, key) && key !== 'css' && key !== typePropName && ( true || 0)) {
+      newProps[key] = props[key];
+    }
+  }
+
+  newProps.ref = ref;
+  newProps.className = className;
+  return /*#__PURE__*/(0,react.createElement)(react.Fragment, null, /*#__PURE__*/(0,react.createElement)(Insertion, {
+    cache: cache,
+    serialized: serialized,
+    isStringTag: typeof WrappedComponent === 'string'
+  }), /*#__PURE__*/(0,react.createElement)(WrappedComponent, newProps));
+});
+
+if (false) {}
+
+
+
+
+/***/ }),
+
+/***/ 98791:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+var react__WEBPACK_IMPORTED_MODULE_0___namespace_cache;
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CacheProvider": () => (/* reexport safe */ _emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.C),
+/* harmony export */   "ClassNames": () => (/* binding */ ClassNames),
+/* harmony export */   "Global": () => (/* binding */ Global),
+/* harmony export */   "ThemeContext": () => (/* reexport safe */ _emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.T),
+/* harmony export */   "ThemeProvider": () => (/* reexport safe */ _emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.b),
+/* harmony export */   "__unsafe_useEmotionCache": () => (/* reexport safe */ _emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__._),
+/* harmony export */   "createElement": () => (/* binding */ jsx),
+/* harmony export */   "css": () => (/* binding */ css),
+/* harmony export */   "jsx": () => (/* binding */ jsx),
+/* harmony export */   "keyframes": () => (/* binding */ keyframes),
+/* harmony export */   "useTheme": () => (/* reexport safe */ _emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.a),
+/* harmony export */   "withEmotionCache": () => (/* reexport safe */ _emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.w),
+/* harmony export */   "withTheme": () => (/* reexport safe */ _emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.d)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(67294);
+/* harmony import */ var _emotion_cache__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(90017);
+/* harmony import */ var _emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5992);
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(126);
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _emotion_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(38694);
+/* harmony import */ var _emotion_serialize__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5131);
+
+
+
+
+
+
+
+
+
+
+
+
+var pkg = {
+	name: "@emotion/react",
+	version: "11.9.0",
+	main: "dist/emotion-react.cjs.js",
+	module: "dist/emotion-react.esm.js",
+	browser: {
+		"./dist/emotion-react.cjs.js": "./dist/emotion-react.browser.cjs.js",
+		"./dist/emotion-react.esm.js": "./dist/emotion-react.browser.esm.js"
+	},
+	types: "types/index.d.ts",
+	files: [
+		"src",
+		"dist",
+		"jsx-runtime",
+		"jsx-dev-runtime",
+		"_isolated-hnrs",
+		"types/*.d.ts",
+		"macro.js",
+		"macro.d.ts",
+		"macro.js.flow"
+	],
+	sideEffects: false,
+	author: "Emotion Contributors",
+	license: "MIT",
+	scripts: {
+		"test:typescript": "dtslint types"
+	},
+	dependencies: {
+		"@babel/runtime": "^7.13.10",
+		"@emotion/babel-plugin": "^11.7.1",
+		"@emotion/cache": "^11.7.1",
+		"@emotion/serialize": "^1.0.3",
+		"@emotion/utils": "^1.1.0",
+		"@emotion/weak-memoize": "^0.2.5",
+		"hoist-non-react-statics": "^3.3.1"
+	},
+	peerDependencies: {
+		"@babel/core": "^7.0.0",
+		react: ">=16.8.0"
+	},
+	peerDependenciesMeta: {
+		"@babel/core": {
+			optional: true
+		},
+		"@types/react": {
+			optional: true
+		}
+	},
+	devDependencies: {
+		"@babel/core": "^7.13.10",
+		"@emotion/css": "11.9.0",
+		"@emotion/css-prettifier": "1.0.1",
+		"@emotion/server": "11.4.0",
+		"@emotion/styled": "11.8.1",
+		"@types/react": "^16.9.11",
+		dtslint: "^4.2.1",
+		"html-tag-names": "^1.1.2",
+		react: "16.14.0",
+		"svg-tag-names": "^1.1.1",
+		typescript: "^4.5.5"
+	},
+	repository: "https://github.com/emotion-js/emotion/tree/main/packages/react",
+	publishConfig: {
+		access: "public"
+	},
+	"umd:main": "dist/emotion-react.umd.min.js",
+	preconstruct: {
+		entrypoints: [
+			"./index.js",
+			"./jsx-runtime.js",
+			"./jsx-dev-runtime.js",
+			"./_isolated-hnrs.js"
+		],
+		umdName: "emotionReact"
+	}
+};
+
+var jsx = function jsx(type, props) {
+  var args = arguments;
+
+  if (props == null || !_emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.h.call(props, 'css')) {
+    // $FlowFixMe
+    return react__WEBPACK_IMPORTED_MODULE_0__.createElement.apply(undefined, args);
+  }
+
+  var argsLength = args.length;
+  var createElementArgArray = new Array(argsLength);
+  createElementArgArray[0] = _emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.E;
+  createElementArgArray[1] = (0,_emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.c)(type, props);
+
+  for (var i = 2; i < argsLength; i++) {
+    createElementArgArray[i] = args[i];
+  } // $FlowFixMe
+
+
+  return react__WEBPACK_IMPORTED_MODULE_0__.createElement.apply(null, createElementArgArray);
+};
+
+var useInsertionEffect = /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2)))['useInsertion' + 'Effect'] ? /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2)))['useInsertion' + 'Effect'] : react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect;
+var warnedAboutCssPropForGlobal = false; // maintain place over rerenders.
+// initial render from browser, insertBefore context.sheet.tags[0] or if a style hasn't been inserted there yet, appendChild
+// initial client-side render from SSR, use place of hydrating tag
+
+var Global = /* #__PURE__ */(0,_emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.w)(function (props, cache) {
+  if (false) {}
+
+  var styles = props.styles;
+  var serialized = (0,_emotion_serialize__WEBPACK_IMPORTED_MODULE_4__/* .serializeStyles */ .O)([styles], undefined, (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.T));
+  // but it is based on a constant that will never change at runtime
+  // it's effectively like having two implementations and switching them out
+  // so it's not actually breaking anything
+
+
+  var sheetRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+  useInsertionEffect(function () {
+    var key = cache.key + "-global"; // use case of https://github.com/emotion-js/emotion/issues/2675
+
+    var sheet = new cache.sheet.constructor({
+      key: key,
+      nonce: cache.sheet.nonce,
+      container: cache.sheet.container,
+      speedy: cache.sheet.isSpeedy
+    });
+    var rehydrating = false; // $FlowFixMe
+
+    var node = document.querySelector("style[data-emotion=\"" + key + " " + serialized.name + "\"]");
+
+    if (cache.sheet.tags.length) {
+      sheet.before = cache.sheet.tags[0];
+    }
+
+    if (node !== null) {
+      rehydrating = true; // clear the hash so this node won't be recognizable as rehydratable by other <Global/>s
+
+      node.setAttribute('data-emotion', key);
+      sheet.hydrate([node]);
+    }
+
+    sheetRef.current = [sheet, rehydrating];
+    return function () {
+      sheet.flush();
+    };
+  }, [cache]);
+  useInsertionEffect(function () {
+    var sheetRefCurrent = sheetRef.current;
+    var sheet = sheetRefCurrent[0],
+        rehydrating = sheetRefCurrent[1];
+
+    if (rehydrating) {
+      sheetRefCurrent[1] = false;
+      return;
+    }
+
+    if (serialized.next !== undefined) {
+      // insert keyframes
+      (0,_emotion_utils__WEBPACK_IMPORTED_MODULE_5__/* .insertStyles */ .My)(cache, serialized.next, true);
+    }
+
+    if (sheet.tags.length) {
+      // if this doesn't exist then it will be null so the style element will be appended
+      var element = sheet.tags[sheet.tags.length - 1].nextElementSibling;
+      sheet.before = element;
+      sheet.flush();
+    }
+
+    cache.insert("", serialized, sheet, false);
+  }, [cache, serialized.name]);
+  return null;
+});
+
+if (false) {}
+
+function css() {
+  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return (0,_emotion_serialize__WEBPACK_IMPORTED_MODULE_4__/* .serializeStyles */ .O)(args);
+}
+
+var keyframes = function keyframes() {
+  var insertable = css.apply(void 0, arguments);
+  var name = "animation-" + insertable.name; // $FlowFixMe
+
+  return {
+    name: name,
+    styles: "@keyframes " + name + "{" + insertable.styles + "}",
+    anim: 1,
+    toString: function toString() {
+      return "_EMO_" + this.name + "_" + this.styles + "_EMO_";
+    }
+  };
+};
+
+var classnames = function classnames(args) {
+  var len = args.length;
+  var i = 0;
+  var cls = '';
+
+  for (; i < len; i++) {
+    var arg = args[i];
+    if (arg == null) continue;
+    var toAdd = void 0;
+
+    switch (typeof arg) {
+      case 'boolean':
+        break;
+
+      case 'object':
+        {
+          if (Array.isArray(arg)) {
+            toAdd = classnames(arg);
+          } else {
+            if (false) {}
+
+            toAdd = '';
+
+            for (var k in arg) {
+              if (arg[k] && k) {
+                toAdd && (toAdd += ' ');
+                toAdd += k;
+              }
+            }
+          }
+
+          break;
+        }
+
+      default:
+        {
+          toAdd = arg;
+        }
+    }
+
+    if (toAdd) {
+      cls && (cls += ' ');
+      cls += toAdd;
+    }
+  }
+
+  return cls;
+};
+
+function merge(registered, css, className) {
+  var registeredStyles = [];
+  var rawClassName = (0,_emotion_utils__WEBPACK_IMPORTED_MODULE_5__/* .getRegisteredStyles */ .fp)(registered, registeredStyles, className);
+
+  if (registeredStyles.length < 2) {
+    return className;
+  }
+
+  return rawClassName + css(registeredStyles);
+}
+
+var Insertion = function Insertion(_ref) {
+  var cache = _ref.cache,
+      serializedArr = _ref.serializedArr;
+  var rules = (0,_emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.u)(function () {
+
+    for (var i = 0; i < serializedArr.length; i++) {
+      var res = (0,_emotion_utils__WEBPACK_IMPORTED_MODULE_5__/* .insertStyles */ .My)(cache, serializedArr[i], false);
+    }
+  });
+
+  return null;
+};
+
+var ClassNames = /* #__PURE__ */(0,_emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.w)(function (props, cache) {
+  var hasRendered = false;
+  var serializedArr = [];
+
+  var css = function css() {
+    if (hasRendered && "production" !== 'production') {}
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    var serialized = (0,_emotion_serialize__WEBPACK_IMPORTED_MODULE_4__/* .serializeStyles */ .O)(args, cache.registered);
+    serializedArr.push(serialized); // registration has to happen here as the result of this might get consumed by `cx`
+
+    (0,_emotion_utils__WEBPACK_IMPORTED_MODULE_5__/* .registerStyles */ .hC)(cache, serialized, false);
+    return cache.key + "-" + serialized.name;
+  };
+
+  var cx = function cx() {
+    if (hasRendered && "production" !== 'production') {}
+
+    for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      args[_key2] = arguments[_key2];
+    }
+
+    return merge(cache.registered, css, classnames(args));
+  };
+
+  var content = {
+    css: css,
+    cx: cx,
+    theme: (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_emotion_element_cbed451f_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.T)
+  };
+  var ele = props.children(content);
+  hasRendered = true;
+  return /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(Insertion, {
+    cache: cache,
+    serializedArr: serializedArr
+  }), ele);
+});
+
+if (false) {}
+
+if (false) { var globalKey, globalContext, isJest, isBrowser; }
+
+
+
+
+/***/ }),
+
+/***/ 5131:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "O": () => (/* binding */ serializeStyles)
+});
+
+;// CONCATENATED MODULE: ./packages/floating/node_modules/@emotion/hash/dist/hash.browser.esm.js
+/* eslint-disable */
+// Inspired by https://github.com/garycourt/murmurhash-js
+// Ported from https://github.com/aappleby/smhasher/blob/61a0530f28277f2e850bfc39600ce61d02b518de/src/MurmurHash2.cpp#L37-L86
+function murmur2(str) {
+  // 'm' and 'r' are mixing constants generated offline.
+  // They're not really 'magic', they just happen to work well.
+  // const m = 0x5bd1e995;
+  // const r = 24;
+  // Initialize the hash
+  var h = 0; // Mix 4 bytes at a time into the hash
+
+  var k,
+      i = 0,
+      len = str.length;
+
+  for (; len >= 4; ++i, len -= 4) {
+    k = str.charCodeAt(i) & 0xff | (str.charCodeAt(++i) & 0xff) << 8 | (str.charCodeAt(++i) & 0xff) << 16 | (str.charCodeAt(++i) & 0xff) << 24;
+    k =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16);
+    k ^=
+    /* k >>> r: */
+    k >>> 24;
+    h =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16) ^
+    /* Math.imul(h, m): */
+    (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Handle the last few bytes of the input array
+
+
+  switch (len) {
+    case 3:
+      h ^= (str.charCodeAt(i + 2) & 0xff) << 16;
+
+    case 2:
+      h ^= (str.charCodeAt(i + 1) & 0xff) << 8;
+
+    case 1:
+      h ^= str.charCodeAt(i) & 0xff;
+      h =
+      /* Math.imul(h, m): */
+      (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Do a few final mixes of the hash to ensure the last few
+  // bytes are well-incorporated.
+
+
+  h ^= h >>> 13;
+  h =
+  /* Math.imul(h, m): */
+  (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  return ((h ^ h >>> 15) >>> 0).toString(36);
+}
+
+/* harmony default export */ const hash_browser_esm = (murmur2);
+
+;// CONCATENATED MODULE: ./packages/floating/node_modules/@emotion/unitless/dist/unitless.browser.esm.js
+var unitlessKeys = {
+  animationIterationCount: 1,
+  borderImageOutset: 1,
+  borderImageSlice: 1,
+  borderImageWidth: 1,
+  boxFlex: 1,
+  boxFlexGroup: 1,
+  boxOrdinalGroup: 1,
+  columnCount: 1,
+  columns: 1,
+  flex: 1,
+  flexGrow: 1,
+  flexPositive: 1,
+  flexShrink: 1,
+  flexNegative: 1,
+  flexOrder: 1,
+  gridRow: 1,
+  gridRowEnd: 1,
+  gridRowSpan: 1,
+  gridRowStart: 1,
+  gridColumn: 1,
+  gridColumnEnd: 1,
+  gridColumnSpan: 1,
+  gridColumnStart: 1,
+  msGridRow: 1,
+  msGridRowSpan: 1,
+  msGridColumn: 1,
+  msGridColumnSpan: 1,
+  fontWeight: 1,
+  lineHeight: 1,
+  opacity: 1,
+  order: 1,
+  orphans: 1,
+  tabSize: 1,
+  widows: 1,
+  zIndex: 1,
+  zoom: 1,
+  WebkitLineClamp: 1,
+  // SVG-related properties
+  fillOpacity: 1,
+  floodOpacity: 1,
+  stopOpacity: 1,
+  strokeDasharray: 1,
+  strokeDashoffset: 1,
+  strokeMiterlimit: 1,
+  strokeOpacity: 1,
+  strokeWidth: 1
+};
+
+/* harmony default export */ const unitless_browser_esm = (unitlessKeys);
+
+// EXTERNAL MODULE: ./packages/floating/node_modules/@emotion/memoize/dist/emotion-memoize.browser.esm.js
+var emotion_memoize_browser_esm = __webpack_require__(53697);
+;// CONCATENATED MODULE: ./packages/floating/node_modules/@emotion/serialize/dist/emotion-serialize.browser.esm.js
+
+
+
+
+var ILLEGAL_ESCAPE_SEQUENCE_ERROR = "You have illegal escape sequence in your template literal, most likely inside content's property value.\nBecause you write your CSS inside a JavaScript string you actually have to do double escaping, so for example \"content: '\\00d7';\" should become \"content: '\\\\00d7';\".\nYou can read more about this here:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences";
+var UNDEFINED_AS_OBJECT_KEY_ERROR = "You have passed in falsy value as style object's key (can happen when in example you pass unexported component as computed key).";
+var hyphenateRegex = /[A-Z]|^ms/g;
+var animationRegex = /_EMO_([^_]+?)_([^]*?)_EMO_/g;
+
+var isCustomProperty = function isCustomProperty(property) {
+  return property.charCodeAt(1) === 45;
+};
+
+var isProcessableValue = function isProcessableValue(value) {
+  return value != null && typeof value !== 'boolean';
+};
+
+var processStyleName = /* #__PURE__ */(0,emotion_memoize_browser_esm/* default */.Z)(function (styleName) {
+  return isCustomProperty(styleName) ? styleName : styleName.replace(hyphenateRegex, '-$&').toLowerCase();
+});
+
+var processStyleValue = function processStyleValue(key, value) {
+  switch (key) {
+    case 'animation':
+    case 'animationName':
+      {
+        if (typeof value === 'string') {
+          return value.replace(animationRegex, function (match, p1, p2) {
+            cursor = {
+              name: p1,
+              styles: p2,
+              next: cursor
+            };
+            return p1;
+          });
+        }
+      }
+  }
+
+  if (unitless_browser_esm[key] !== 1 && !isCustomProperty(key) && typeof value === 'number' && value !== 0) {
+    return value + 'px';
+  }
+
+  return value;
+};
+
+if (false) { var hyphenatedCache, hyphenPattern, msPattern, oldProcessStyleValue, contentValues, contentValuePattern; }
+
+function handleInterpolation(mergedProps, registered, interpolation) {
+  if (interpolation == null) {
+    return '';
+  }
+
+  if (interpolation.__emotion_styles !== undefined) {
+    if (false) {}
+
+    return interpolation;
+  }
+
+  switch (typeof interpolation) {
+    case 'boolean':
+      {
+        return '';
+      }
+
+    case 'object':
+      {
+        if (interpolation.anim === 1) {
+          cursor = {
+            name: interpolation.name,
+            styles: interpolation.styles,
+            next: cursor
+          };
+          return interpolation.name;
+        }
+
+        if (interpolation.styles !== undefined) {
+          var next = interpolation.next;
+
+          if (next !== undefined) {
+            // not the most efficient thing ever but this is a pretty rare case
+            // and there will be very few iterations of this generally
+            while (next !== undefined) {
+              cursor = {
+                name: next.name,
+                styles: next.styles,
+                next: cursor
+              };
+              next = next.next;
+            }
+          }
+
+          var styles = interpolation.styles + ";";
+
+          if (false) {}
+
+          return styles;
+        }
+
+        return createStringFromObject(mergedProps, registered, interpolation);
+      }
+
+    case 'function':
+      {
+        if (mergedProps !== undefined) {
+          var previousCursor = cursor;
+          var result = interpolation(mergedProps);
+          cursor = previousCursor;
+          return handleInterpolation(mergedProps, registered, result);
+        } else if (false) {}
+
+        break;
+      }
+
+    case 'string':
+      if (false) { var replaced, matched; }
+
+      break;
+  } // finalize string values (regular strings and functions interpolated into css calls)
+
+
+  if (registered == null) {
+    return interpolation;
+  }
+
+  var cached = registered[interpolation];
+  return cached !== undefined ? cached : interpolation;
+}
+
+function createStringFromObject(mergedProps, registered, obj) {
+  var string = '';
+
+  if (Array.isArray(obj)) {
+    for (var i = 0; i < obj.length; i++) {
+      string += handleInterpolation(mergedProps, registered, obj[i]) + ";";
+    }
+  } else {
+    for (var _key in obj) {
+      var value = obj[_key];
+
+      if (typeof value !== 'object') {
+        if (registered != null && registered[value] !== undefined) {
+          string += _key + "{" + registered[value] + "}";
+        } else if (isProcessableValue(value)) {
+          string += processStyleName(_key) + ":" + processStyleValue(_key, value) + ";";
+        }
+      } else {
+        if (_key === 'NO_COMPONENT_SELECTOR' && "production" !== 'production') {}
+
+        if (Array.isArray(value) && typeof value[0] === 'string' && (registered == null || registered[value[0]] === undefined)) {
+          for (var _i = 0; _i < value.length; _i++) {
+            if (isProcessableValue(value[_i])) {
+              string += processStyleName(_key) + ":" + processStyleValue(_key, value[_i]) + ";";
+            }
+          }
+        } else {
+          var interpolated = handleInterpolation(mergedProps, registered, value);
+
+          switch (_key) {
+            case 'animation':
+            case 'animationName':
+              {
+                string += processStyleName(_key) + ":" + interpolated + ";";
+                break;
+              }
+
+            default:
+              {
+                if (false) {}
+
+                string += _key + "{" + interpolated + "}";
+              }
+          }
+        }
+      }
+    }
+  }
+
+  return string;
+}
+
+var labelPattern = /label:\s*([^\s;\n{]+)\s*(;|$)/g;
+var sourceMapPattern;
+
+if (false) {} // this is the cursor for keyframes
+// keyframes are stored on the SerializedStyles object as a linked list
+
+
+var cursor;
+var serializeStyles = function serializeStyles(args, registered, mergedProps) {
+  if (args.length === 1 && typeof args[0] === 'object' && args[0] !== null && args[0].styles !== undefined) {
+    return args[0];
+  }
+
+  var stringMode = true;
+  var styles = '';
+  cursor = undefined;
+  var strings = args[0];
+
+  if (strings == null || strings.raw === undefined) {
+    stringMode = false;
+    styles += handleInterpolation(mergedProps, registered, strings);
+  } else {
+    if (false) {}
+
+    styles += strings[0];
+  } // we start at 1 since we've already handled the first arg
+
+
+  for (var i = 1; i < args.length; i++) {
+    styles += handleInterpolation(mergedProps, registered, args[i]);
+
+    if (stringMode) {
+      if (false) {}
+
+      styles += strings[i];
+    }
+  }
+
+  var sourceMap;
+
+  if (false) {} // using a global regex with .exec is stateful so lastIndex has to be reset each time
+
+
+  labelPattern.lastIndex = 0;
+  var identifierName = '';
+  var match; // https://esbench.com/bench/5b809c2cf2949800a0f61fb5
+
+  while ((match = labelPattern.exec(styles)) !== null) {
+    identifierName += '-' + // $FlowFixMe we know it's not null
+    match[1];
+  }
+
+  var name = hash_browser_esm(styles) + identifierName;
+
+  if (false) {}
+
+  return {
+    name: name,
+    styles: styles,
+    next: cursor
+  };
+};
+
+
+
+
+/***/ }),
+
+/***/ 84066:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ emotion_styled_browser_esm)
+});
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(67294);
+var react_namespaceObject = /*#__PURE__*/__webpack_require__.t(react, 2);
+// EXTERNAL MODULE: ./packages/floating/node_modules/@babel/runtime/helpers/esm/extends.js
+var esm_extends = __webpack_require__(54481);
+// EXTERNAL MODULE: ./packages/floating/node_modules/@emotion/memoize/dist/emotion-memoize.browser.esm.js
+var emotion_memoize_browser_esm = __webpack_require__(53697);
+;// CONCATENATED MODULE: ./packages/floating/node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.browser.esm.js
+
+
+var reactPropsRegex = /^((children|dangerouslySetInnerHTML|key|ref|autoFocus|defaultValue|defaultChecked|innerHTML|suppressContentEditableWarning|suppressHydrationWarning|valueLink|abbr|accept|acceptCharset|accessKey|action|allow|allowUserMedia|allowPaymentRequest|allowFullScreen|allowTransparency|alt|async|autoComplete|autoPlay|capture|cellPadding|cellSpacing|challenge|charSet|checked|cite|classID|className|cols|colSpan|content|contentEditable|contextMenu|controls|controlsList|coords|crossOrigin|data|dateTime|decoding|default|defer|dir|disabled|disablePictureInPicture|download|draggable|encType|enterKeyHint|form|formAction|formEncType|formMethod|formNoValidate|formTarget|frameBorder|headers|height|hidden|high|href|hrefLang|htmlFor|httpEquiv|id|inputMode|integrity|is|keyParams|keyType|kind|label|lang|list|loading|loop|low|marginHeight|marginWidth|max|maxLength|media|mediaGroup|method|min|minLength|multiple|muted|name|nonce|noValidate|open|optimum|pattern|placeholder|playsInline|poster|preload|profile|radioGroup|readOnly|referrerPolicy|rel|required|reversed|role|rows|rowSpan|sandbox|scope|scoped|scrolling|seamless|selected|shape|size|sizes|slot|span|spellCheck|src|srcDoc|srcLang|srcSet|start|step|style|summary|tabIndex|target|title|translate|type|useMap|value|width|wmode|wrap|about|datatype|inlist|prefix|property|resource|typeof|vocab|autoCapitalize|autoCorrect|autoSave|color|incremental|fallback|inert|itemProp|itemScope|itemType|itemID|itemRef|on|option|results|security|unselectable|accentHeight|accumulate|additive|alignmentBaseline|allowReorder|alphabetic|amplitude|arabicForm|ascent|attributeName|attributeType|autoReverse|azimuth|baseFrequency|baselineShift|baseProfile|bbox|begin|bias|by|calcMode|capHeight|clip|clipPathUnits|clipPath|clipRule|colorInterpolation|colorInterpolationFilters|colorProfile|colorRendering|contentScriptType|contentStyleType|cursor|cx|cy|d|decelerate|descent|diffuseConstant|direction|display|divisor|dominantBaseline|dur|dx|dy|edgeMode|elevation|enableBackground|end|exponent|externalResourcesRequired|fill|fillOpacity|fillRule|filter|filterRes|filterUnits|floodColor|floodOpacity|focusable|fontFamily|fontSize|fontSizeAdjust|fontStretch|fontStyle|fontVariant|fontWeight|format|from|fr|fx|fy|g1|g2|glyphName|glyphOrientationHorizontal|glyphOrientationVertical|glyphRef|gradientTransform|gradientUnits|hanging|horizAdvX|horizOriginX|ideographic|imageRendering|in|in2|intercept|k|k1|k2|k3|k4|kernelMatrix|kernelUnitLength|kerning|keyPoints|keySplines|keyTimes|lengthAdjust|letterSpacing|lightingColor|limitingConeAngle|local|markerEnd|markerMid|markerStart|markerHeight|markerUnits|markerWidth|mask|maskContentUnits|maskUnits|mathematical|mode|numOctaves|offset|opacity|operator|order|orient|orientation|origin|overflow|overlinePosition|overlineThickness|panose1|paintOrder|pathLength|patternContentUnits|patternTransform|patternUnits|pointerEvents|points|pointsAtX|pointsAtY|pointsAtZ|preserveAlpha|preserveAspectRatio|primitiveUnits|r|radius|refX|refY|renderingIntent|repeatCount|repeatDur|requiredExtensions|requiredFeatures|restart|result|rotate|rx|ry|scale|seed|shapeRendering|slope|spacing|specularConstant|specularExponent|speed|spreadMethod|startOffset|stdDeviation|stemh|stemv|stitchTiles|stopColor|stopOpacity|strikethroughPosition|strikethroughThickness|string|stroke|strokeDasharray|strokeDashoffset|strokeLinecap|strokeLinejoin|strokeMiterlimit|strokeOpacity|strokeWidth|surfaceScale|systemLanguage|tableValues|targetX|targetY|textAnchor|textDecoration|textRendering|textLength|to|transform|u1|u2|underlinePosition|underlineThickness|unicode|unicodeBidi|unicodeRange|unitsPerEm|vAlphabetic|vHanging|vIdeographic|vMathematical|values|vectorEffect|version|vertAdvY|vertOriginX|vertOriginY|viewBox|viewTarget|visibility|widths|wordSpacing|writingMode|x|xHeight|x1|x2|xChannelSelector|xlinkActuate|xlinkArcrole|xlinkHref|xlinkRole|xlinkShow|xlinkTitle|xlinkType|xmlBase|xmlns|xmlnsXlink|xmlLang|xmlSpace|y|y1|y2|yChannelSelector|z|zoomAndPan|for|class|autofocus)|(([Dd][Aa][Tt][Aa]|[Aa][Rr][Ii][Aa]|x)-.*))$/; // https://esbench.com/bench/5bfee68a4cd7e6009ef61d23
+
+var isPropValid = /* #__PURE__ */(0,emotion_memoize_browser_esm/* default */.Z)(function (prop) {
+  return reactPropsRegex.test(prop) || prop.charCodeAt(0) === 111
+  /* o */
+  && prop.charCodeAt(1) === 110
+  /* n */
+  && prop.charCodeAt(2) < 91;
+}
+/* Z+1 */
+);
+
+/* harmony default export */ const emotion_is_prop_valid_browser_esm = (isPropValid);
+
+// EXTERNAL MODULE: ./packages/floating/node_modules/@emotion/react/dist/emotion-element-cbed451f.browser.esm.js + 2 modules
+var emotion_element_cbed451f_browser_esm = __webpack_require__(5992);
+// EXTERNAL MODULE: ./packages/floating/node_modules/@emotion/utils/dist/emotion-utils.browser.esm.js
+var emotion_utils_browser_esm = __webpack_require__(38694);
+// EXTERNAL MODULE: ./packages/floating/node_modules/@emotion/serialize/dist/emotion-serialize.browser.esm.js + 2 modules
+var emotion_serialize_browser_esm = __webpack_require__(5131);
+;// CONCATENATED MODULE: ./packages/floating/node_modules/@emotion/styled/base/dist/emotion-styled-base.browser.esm.js
+
+
+
+
+
+
+
+
+var testOmitPropsOnStringTag = emotion_is_prop_valid_browser_esm;
+
+var testOmitPropsOnComponent = function testOmitPropsOnComponent(key) {
+  return key !== 'theme';
+};
+
+var getDefaultShouldForwardProp = function getDefaultShouldForwardProp(tag) {
+  return typeof tag === 'string' && // 96 is one less than the char code
+  // for "a" so this is checking that
+  // it's a lowercase character
+  tag.charCodeAt(0) > 96 ? testOmitPropsOnStringTag : testOmitPropsOnComponent;
+};
+var composeShouldForwardProps = function composeShouldForwardProps(tag, options, isReal) {
+  var shouldForwardProp;
+
+  if (options) {
+    var optionsShouldForwardProp = options.shouldForwardProp;
+    shouldForwardProp = tag.__emotion_forwardProp && optionsShouldForwardProp ? function (propName) {
+      return tag.__emotion_forwardProp(propName) && optionsShouldForwardProp(propName);
+    } : optionsShouldForwardProp;
+  }
+
+  if (typeof shouldForwardProp !== 'function' && isReal) {
+    shouldForwardProp = tag.__emotion_forwardProp;
+  }
+
+  return shouldForwardProp;
+};
+
+var useInsertionEffect = react_namespaceObject['useInsertion' + 'Effect'] ? react_namespaceObject['useInsertion' + 'Effect'] : function useInsertionEffect(create) {
+  create();
+};
+function useInsertionEffectMaybe(create) {
+
+  useInsertionEffect(create);
+}
+
+var ILLEGAL_ESCAPE_SEQUENCE_ERROR = "You have illegal escape sequence in your template literal, most likely inside content's property value.\nBecause you write your CSS inside a JavaScript string you actually have to do double escaping, so for example \"content: '\\00d7';\" should become \"content: '\\\\00d7';\".\nYou can read more about this here:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences";
+
+var Insertion = function Insertion(_ref) {
+  var cache = _ref.cache,
+      serialized = _ref.serialized,
+      isStringTag = _ref.isStringTag;
+  (0,emotion_utils_browser_esm/* registerStyles */.hC)(cache, serialized, isStringTag);
+  var rules = useInsertionEffectMaybe(function () {
+    return (0,emotion_utils_browser_esm/* insertStyles */.My)(cache, serialized, isStringTag);
+  });
+
+  return null;
+};
+
+var createStyled = function createStyled(tag, options) {
+  if (false) {}
+
+  var isReal = tag.__emotion_real === tag;
+  var baseTag = isReal && tag.__emotion_base || tag;
+  var identifierName;
+  var targetClassName;
+
+  if (options !== undefined) {
+    identifierName = options.label;
+    targetClassName = options.target;
+  }
+
+  var shouldForwardProp = composeShouldForwardProps(tag, options, isReal);
+  var defaultShouldForwardProp = shouldForwardProp || getDefaultShouldForwardProp(baseTag);
+  var shouldUseAs = !defaultShouldForwardProp('as');
+  return function () {
+    var args = arguments;
+    var styles = isReal && tag.__emotion_styles !== undefined ? tag.__emotion_styles.slice(0) : [];
+
+    if (identifierName !== undefined) {
+      styles.push("label:" + identifierName + ";");
+    }
+
+    if (args[0] == null || args[0].raw === undefined) {
+      styles.push.apply(styles, args);
+    } else {
+      if (false) {}
+
+      styles.push(args[0][0]);
+      var len = args.length;
+      var i = 1;
+
+      for (; i < len; i++) {
+        if (false) {}
+
+        styles.push(args[i], args[0][i]);
+      }
+    } // $FlowFixMe: we need to cast StatelessFunctionalComponent to our PrivateStyledComponent class
+
+
+    var Styled = (0,emotion_element_cbed451f_browser_esm.w)(function (props, cache, ref) {
+      var FinalTag = shouldUseAs && props.as || baseTag;
+      var className = '';
+      var classInterpolations = [];
+      var mergedProps = props;
+
+      if (props.theme == null) {
+        mergedProps = {};
+
+        for (var key in props) {
+          mergedProps[key] = props[key];
+        }
+
+        mergedProps.theme = (0,react.useContext)(emotion_element_cbed451f_browser_esm.T);
+      }
+
+      if (typeof props.className === 'string') {
+        className = (0,emotion_utils_browser_esm/* getRegisteredStyles */.fp)(cache.registered, classInterpolations, props.className);
+      } else if (props.className != null) {
+        className = props.className + " ";
+      }
+
+      var serialized = (0,emotion_serialize_browser_esm/* serializeStyles */.O)(styles.concat(classInterpolations), cache.registered, mergedProps);
+      className += cache.key + "-" + serialized.name;
+
+      if (targetClassName !== undefined) {
+        className += " " + targetClassName;
+      }
+
+      var finalShouldForwardProp = shouldUseAs && shouldForwardProp === undefined ? getDefaultShouldForwardProp(FinalTag) : defaultShouldForwardProp;
+      var newProps = {};
+
+      for (var _key in props) {
+        if (shouldUseAs && _key === 'as') continue;
+
+        if ( // $FlowFixMe
+        finalShouldForwardProp(_key)) {
+          newProps[_key] = props[_key];
+        }
+      }
+
+      newProps.className = className;
+      newProps.ref = ref;
+      return /*#__PURE__*/(0,react.createElement)(react.Fragment, null, /*#__PURE__*/(0,react.createElement)(Insertion, {
+        cache: cache,
+        serialized: serialized,
+        isStringTag: typeof FinalTag === 'string'
+      }), /*#__PURE__*/(0,react.createElement)(FinalTag, newProps));
+    });
+    Styled.displayName = identifierName !== undefined ? identifierName : "Styled(" + (typeof baseTag === 'string' ? baseTag : baseTag.displayName || baseTag.name || 'Component') + ")";
+    Styled.defaultProps = tag.defaultProps;
+    Styled.__emotion_real = Styled;
+    Styled.__emotion_base = baseTag;
+    Styled.__emotion_styles = styles;
+    Styled.__emotion_forwardProp = shouldForwardProp;
+    Object.defineProperty(Styled, 'toString', {
+      value: function value() {
+        if (targetClassName === undefined && "production" !== 'production') {} // $FlowFixMe: coerce undefined to string
+
+
+        return "." + targetClassName;
+      }
+    });
+
+    Styled.withComponent = function (nextTag, nextOptions) {
+      return createStyled(nextTag, (0,esm_extends/* default */.Z)({}, options, nextOptions, {
+        shouldForwardProp: composeShouldForwardProps(Styled, nextOptions, true)
+      })).apply(void 0, styles);
+    };
+
+    return Styled;
+  };
+};
+
+/* harmony default export */ const emotion_styled_base_browser_esm = (createStyled);
+
+;// CONCATENATED MODULE: ./packages/floating/node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js
+
+
+
+
+
+
+
+
+var tags = ['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo', 'big', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 'cite', 'code', 'col', 'colgroup', 'data', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'div', 'dl', 'dt', 'em', 'embed', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hgroup', 'hr', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'keygen', 'label', 'legend', 'li', 'link', 'main', 'map', 'mark', 'marquee', 'menu', 'menuitem', 'meta', 'meter', 'nav', 'noscript', 'object', 'ol', 'optgroup', 'option', 'output', 'p', 'param', 'picture', 'pre', 'progress', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'script', 'section', 'select', 'small', 'source', 'span', 'strong', 'style', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track', 'u', 'ul', 'var', 'video', 'wbr', // SVG
+'circle', 'clipPath', 'defs', 'ellipse', 'foreignObject', 'g', 'image', 'line', 'linearGradient', 'mask', 'path', 'pattern', 'polygon', 'polyline', 'radialGradient', 'rect', 'stop', 'svg', 'text', 'tspan'];
+
+var newStyled = emotion_styled_base_browser_esm.bind();
+tags.forEach(function (tagName) {
+  // $FlowFixMe: we can ignore this because its exposed type is defined by the CreateStyled type
+  newStyled[tagName] = newStyled(tagName);
+});
+
+/* harmony default export */ const emotion_styled_browser_esm = (newStyled);
+
+
+/***/ }),
+
+/***/ 38694:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "My": () => (/* binding */ insertStyles),
+/* harmony export */   "fp": () => (/* binding */ getRegisteredStyles),
+/* harmony export */   "hC": () => (/* binding */ registerStyles)
+/* harmony export */ });
+var isBrowser = "object" !== 'undefined';
+function getRegisteredStyles(registered, registeredStyles, classNames) {
+  var rawClassName = '';
+  classNames.split(' ').forEach(function (className) {
+    if (registered[className] !== undefined) {
+      registeredStyles.push(registered[className] + ";");
+    } else {
+      rawClassName += className + " ";
+    }
+  });
+  return rawClassName;
+}
+var registerStyles = function registerStyles(cache, serialized, isStringTag) {
+  var className = cache.key + "-" + serialized.name;
+
+  if ( // we only need to add the styles to the registered cache if the
+  // class name could be used further down
+  // the tree but if it's a string tag, we know it won't
+  // so we don't have to add it to registered cache.
+  // this improves memory usage since we can avoid storing the whole style string
+  (isStringTag === false || // we need to always store it if we're in compat mode and
+  // in node since emotion-server relies on whether a style is in
+  // the registered cache to know whether a style is global or not
+  // also, note that this check will be dead code eliminated in the browser
+  isBrowser === false ) && cache.registered[className] === undefined) {
+    cache.registered[className] = serialized.styles;
+  }
+};
+var insertStyles = function insertStyles(cache, serialized, isStringTag) {
+  registerStyles(cache, serialized, isStringTag);
+  var className = cache.key + "-" + serialized.name;
+
+  if (cache.inserted[serialized.name] === undefined) {
+    var current = serialized;
+
+    do {
+      var maybeStyles = cache.insert(serialized === current ? "." + className : '', current, cache.sheet, true);
+
+      current = current.next;
+    } while (current !== undefined);
+  }
+};
+
+
+
+
+/***/ }),
+
+/***/ 22069:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(23742);
+
+var _typeof = __webpack_require__(5954);
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.ThemeProvider = void 0;
+
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(58091));
+
+var _react = __webpack_require__(98791);
+
+var _react2 = _interopRequireWildcard(__webpack_require__(67294));
+
+var _globalStyles = __webpack_require__(74700);
+
+var _theme = __webpack_require__(93946);
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+var ThemeProvider = function ThemeProvider(_ref) {
+  var children = _ref.children,
+      theme = _ref.theme,
+      _ref$globalStyles = _ref.globalStyles,
+      globalStyles = _ref$globalStyles === void 0 ? _globalStyles.globalStyles : _ref$globalStyles;
+  var memoizedTheme = (0, _react2.useMemo)(function () {
+    return function (parentTheme) {
+      var newTheme = _objectSpread(_objectSpread({}, parentTheme), {}, {
+        ratsel: _theme.theme
+      });
+
+      if (theme && typeof theme === 'function') {
+        newTheme = theme(newTheme);
+      }
+
+      if (theme && typeof theme !== 'function') {
+        newTheme.ratsel = theme;
+      }
+
+      return newTheme;
+    };
+  }, [theme]);
+  return /*#__PURE__*/_react2["default"].createElement(_react.ThemeProvider, {
+    theme: memoizedTheme
+  }, /*#__PURE__*/_react2["default"].createElement(_react.Global, {
+    styles: globalStyles
+  }), children);
+};
+
+exports.ThemeProvider = ThemeProvider;
+//# sourceMappingURL=ThemeProvider.js.map
+
+/***/ }),
+
+/***/ 74700:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.globalStyles = void 0;
+
+var _react = __webpack_require__(98791);
+
+var globalStyles = function globalStyles(theme) {
+  return (
+    /*#__PURE__*/
+
+    /*#__PURE__*/
+    (0, _react.css)("@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');{}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}body,button,a{font-family:", theme.ratsel.fonts.main, ";}h1,h2,h3,h4,h5,h6{font-family:", theme.ratsel.fonts.headings, ";}pre,code{font-family:", theme.ratsel.fonts.monospace, ";}*{box-sizing:border-box;}" + ( true ? "" : 0),  true ? "" : 0,  true ? "" : 0)
+  );
+};
+
+exports.globalStyles = globalStyles;
+//# sourceMappingURL=globalStyles.js.map
+
+/***/ }),
+
+/***/ 74069:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+Object.defineProperty(exports, "ButtonTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _buttonTheme.ButtonTheme;
+  }
+}));
+Object.defineProperty(exports, "CacheProvider", ({
+  enumerable: true,
+  get: function get() {
+    return _react.CacheProvider;
+  }
+}));
+Object.defineProperty(exports, "ClassNames", ({
+  enumerable: true,
+  get: function get() {
+    return _react.ClassNames;
+  }
+}));
+Object.defineProperty(exports, "FontsTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _fontsTheme.FontsTheme;
+  }
+}));
+Object.defineProperty(exports, "Global", ({
+  enumerable: true,
+  get: function get() {
+    return _react.Global;
+  }
+}));
+Object.defineProperty(exports, "InnerTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _theme.InnerTheme;
+  }
+}));
+Object.defineProperty(exports, "PropsWithTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _make.PropsWithTheme;
+  }
+}));
+Object.defineProperty(exports, "Theme", ({
+  enumerable: true,
+  get: function get() {
+    return _theme.Theme;
+  }
+}));
+Object.defineProperty(exports, "ThemeContext", ({
+  enumerable: true,
+  get: function get() {
+    return _react.ThemeContext;
+  }
+}));
+Object.defineProperty(exports, "ThemeProvider", ({
+  enumerable: true,
+  get: function get() {
+    return _ThemeProvider.ThemeProvider;
+  }
+}));
+Object.defineProperty(exports, "buttonTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _buttonTheme.buttonTheme;
+  }
+}));
+Object.defineProperty(exports, "css", ({
+  enumerable: true,
+  get: function get() {
+    return _react.css;
+  }
+}));
+Object.defineProperty(exports, "fontsTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _fontsTheme.fontsTheme;
+  }
+}));
+Object.defineProperty(exports, "globalStyles", ({
+  enumerable: true,
+  get: function get() {
+    return _globalStyles.globalStyles;
+  }
+}));
+Object.defineProperty(exports, "keyframes", ({
+  enumerable: true,
+  get: function get() {
+    return _react.keyframes;
+  }
+}));
+Object.defineProperty(exports, "make", ({
+  enumerable: true,
+  get: function get() {
+    return _make.make;
+  }
+}));
+Object.defineProperty(exports, "styled", ({
+  enumerable: true,
+  get: function get() {
+    return _styled.styled;
+  }
+}));
+Object.defineProperty(exports, "theme", ({
+  enumerable: true,
+  get: function get() {
+    return _theme.theme;
+  }
+}));
+Object.defineProperty(exports, "useTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _styled.useTheme;
+  }
+}));
+Object.defineProperty(exports, "withEmotionCache", ({
+  enumerable: true,
+  get: function get() {
+    return _react.withEmotionCache;
+  }
+}));
+Object.defineProperty(exports, "withTheme", ({
+  enumerable: true,
+  get: function get() {
+    return _styled.withTheme;
+  }
+}));
+
+var _react = __webpack_require__(98791);
+
+var _styled = __webpack_require__(17492);
+
+var _ThemeProvider = __webpack_require__(22069);
+
+var _globalStyles = __webpack_require__(74700);
+
+var _make = __webpack_require__(12345);
+
+var _theme = __webpack_require__(93946);
+
+var _buttonTheme = __webpack_require__(7084);
+
+var _fontsTheme = __webpack_require__(68518);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 12345:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(23742);
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.make = void 0;
+
+var _typeof2 = _interopRequireDefault(__webpack_require__(5954));
+
+var _react = __webpack_require__(98791);
+
+var make = function make(obj, value) {
+  var defaultValue = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'default';
+  if (!obj || (0, _typeof2["default"])(obj) !== 'object') return (
+    /*#__PURE__*/
+
+    /*#__PURE__*/
+    (0, _react.css)( true ? "" : 0,  true ? "" : 0,  true ? "" : 0)
+  );
+
+  if (!value || !obj[value] && defaultValue) {
+    return obj[defaultValue] ||
+    /*#__PURE__*/
+
+    /*#__PURE__*/
+    (0, _react.css)( true ? "" : 0,  true ? "" : 0,  true ? "" : 0);
+  }
+
+  return obj[value];
+};
+
+exports.make = make;
+//# sourceMappingURL=make.js.map
+
+/***/ }),
+
+/***/ 17492:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(23742);
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.withTheme = exports.useTheme = exports.styled = void 0;
+
+var _react = __webpack_require__(98791);
+
+var _styled = _interopRequireDefault(__webpack_require__(84066));
+
+var styled = _styled["default"];
+exports.styled = styled;
+var withTheme = _react.withTheme;
+exports.withTheme = withTheme;
+var useTheme = _react.useTheme;
+exports.useTheme = useTheme;
+//# sourceMappingURL=styled.js.map
+
+/***/ }),
+
+/***/ 7084:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.buttonTheme = void 0;
+var buttonTheme = {
+  fontWeight: 600,
+  fontSize: '13px',
+  focusShadow: '0 0 4px hsl(160, 76%, 52%)',
+  borderColor: 'hsl(151, 49.3%, 46.5%)',
+  spinner: {
+    background: 'hsl(120, 8%, 95%)',
+    accent: 'hsl(151, 49.3%, 46.5%)',
+    inverseBackground: 'rgba(255, 255, 255, 0.1)',
+    inverseAccent: '#ffffff',
+    success: 'hsl(151, 49.3%, 46.5%)',
+    error: 'hsl(358, 75.0%, 59.0%)'
+  },
+  paddings: {
+    base: '24px',
+    icon: '8px',
+    baseIcon: '12px',
+    vertical: '12px',
+    verticalIcon: '8px'
+  },
+  variants: {
+    primary: {
+      background: 'hsl(151, 49.3%, 46.5%)',
+      color: 'hsl(137, 72.0%, 94.0%)',
+      hoverBackground: 'hsl(151, 49.3%, 46.5%)',
+      hoverColor: 'hsl(137, 72.0%, 94.0%)',
+      focusBackground: 'hsl(151, 49.3%, 46.5%)',
+      focusColor: 'hsl(137, 72.0%, 94.0%)',
+      activeBackground: 'hsl(151, 55.0%, 41.5%)',
+      activeColor: 'hsl(137, 72.0%, 94.0%)'
+    },
+    secondary: {
+      background: 'hsl(120, 7%, 89%)',
+      color: 'hsl(110, 25%, 9%)',
+      hoverBackground: 'hsl(120, 5%, 85%)',
+      hoverColor: 'hsl(110, 25%, 9%)',
+      focusBackground: 'hsl(120, 5%, 85%)',
+      focusColor: 'hsl(110, 25%, 9%)',
+      activeBackground: 'hsl(110, 5%, 77%)',
+      activeColor: 'hsl(110, 25%, 9%)'
+    },
+    shadow: {
+      background: 'transparent',
+      color: 'hsl(151, 49.3%, 46.5%)',
+      hoverBackground: 'hsl(120, 54%, 95%)',
+      hoverColor: 'hsl(151, 49.3%, 46.5%)',
+      focusBackground: 'hsl(120, 54%, 95%)',
+      focusColor: 'hsl(151, 49.3%, 46.5%)',
+      activeBackground: 'hsl(120, 45%, 91%)',
+      activeColor: 'hsl(151, 49.3%, 46.5%)'
+    }
+  }
+};
+exports.buttonTheme = buttonTheme;
+//# sourceMappingURL=buttonTheme.js.map
+
+/***/ }),
+
+/***/ 68518:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.fontsTheme = void 0;
+var fontsTheme = {
+  main: "'Montserrat', sans-serif",
+  headings: "'Montserrat', sans-serif",
+  monospace: 'Monaco, Lucida Console, Courier, monospace'
+};
+exports.fontsTheme = fontsTheme;
+//# sourceMappingURL=fontsTheme.js.map
+
+/***/ }),
+
+/***/ 24938:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.selectTheme = void 0;
+var selectTheme = {
+  borderWidth: '1px',
+  borderRadius: '8px',
+  colors: {
+    base: 'hsl(110, 25%, 9%)',
+    placeholder: 'hsl(57, 6.0%, 90.7%)',
+    border: 'hsl(210, 16.7%, 97.6%)',
+    error: 'hsl(358, 75.0%, 59.0%)',
+    background: '#ffffff',
+    primary: 'hsl(151, 49.3%, 46.5%)',
+    hover: 'hsl(140, 48.7%, 91.0%)'
+  }
+};
+exports.selectTheme = selectTheme;
+//# sourceMappingURL=selectTheme.js.map
+
+/***/ }),
+
+/***/ 33781:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.tableTheme = void 0;
+var tableTheme = {
+  borderWidth: '1px',
+  borderColor: 'hsl(210, 16.7%, 97.6%)',
+  errorColor: 'hsl(358, 75.0%, 59.0%)',
+  firstLeftPadding: '24px',
+  head: {
+    height: '47px',
+    padding: '18px 10px',
+    lineHeight: '16px',
+    fontWeight: 400,
+    fontSize: '11px',
+    background: 'hsl(138, 62.5%, 96.9%)',
+    color: 'hsl(151, 40.2%, 54.1%)'
+  },
+  body: {
+    height: '64px',
+    padding: '12px 10px',
+    lineHeight: '16px',
+    fontWeight: 400,
+    fontSize: '11px',
+    background: '#ffffff',
+    color: 'hsl(206, 5.8%, 52.3%)'
+  },
+  summary: {
+    height: '64px',
+    padding: '12px 10px',
+    lineHeight: '16px',
+    fontWeight: 400,
+    fontSize: '11px',
+    background: 'hsl(210 16.7% 97.6%)',
+    color: 'hsl(206, 5.8%, 52.3%)'
+  }
+};
+exports.tableTheme = tableTheme;
+//# sourceMappingURL=tableTheme.js.map
+
+/***/ }),
+
+/***/ 93946:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.theme = void 0;
+
+var _buttonTheme = __webpack_require__(7084);
+
+var _fontsTheme = __webpack_require__(68518);
+
+var _selectTheme = __webpack_require__(24938);
+
+var _tableTheme = __webpack_require__(33781);
+
+var theme = {
+  fonts: _fontsTheme.fontsTheme,
+  button: _buttonTheme.buttonTheme,
+  table: _tableTheme.tableTheme,
+  select: _selectTheme.selectTheme
+};
+exports.theme = theme;
+//# sourceMappingURL=theme.js.map
+
+/***/ }),
+
+/***/ 76087:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "hideOthers": () => (/* binding */ hideOthers)
+/* harmony export */ });
+var getDefaultParent = function (originalTarget) {
+    if (typeof document === 'undefined') {
+        return null;
+    }
+    var sampleTarget = Array.isArray(originalTarget) ? originalTarget[0] : originalTarget;
+    return sampleTarget.ownerDocument.body;
+};
+var counterMap = new WeakMap();
+var uncontrolledNodes = new WeakMap();
+var markerMap = {};
+var lockCount = 0;
+var hideOthers = function (originalTarget, parentNode, markerName) {
+    if (parentNode === void 0) { parentNode = getDefaultParent(originalTarget); }
+    if (markerName === void 0) { markerName = "data-aria-hidden"; }
+    var targets = Array.isArray(originalTarget) ? originalTarget : [originalTarget];
+    if (!markerMap[markerName]) {
+        markerMap[markerName] = new WeakMap();
+    }
+    var markerCounter = markerMap[markerName];
+    var hiddenNodes = [];
+    var elementsToKeep = new Set();
+    var keep = (function (el) {
+        if (!el || elementsToKeep.has(el)) {
+            return;
+        }
+        elementsToKeep.add(el);
+        keep(el.parentNode);
+    });
+    targets.forEach(keep);
+    var deep = function (parent) {
+        if (!parent || targets.indexOf(parent) >= 0) {
+            return;
+        }
+        Array.prototype.forEach.call(parent.children, function (node) {
+            if (elementsToKeep.has(node)) {
+                deep(node);
+            }
+            else {
+                var attr = node.getAttribute('aria-hidden');
+                var alreadyHidden = attr !== null && attr !== 'false';
+                var counterValue = (counterMap.get(node) || 0) + 1;
+                var markerValue = (markerCounter.get(node) || 0) + 1;
+                counterMap.set(node, counterValue);
+                markerCounter.set(node, markerValue);
+                hiddenNodes.push(node);
+                if (counterValue === 1 && alreadyHidden) {
+                    uncontrolledNodes.set(node, true);
+                }
+                if (markerValue === 1) {
+                    node.setAttribute(markerName, 'true');
+                }
+                if (!alreadyHidden) {
+                    node.setAttribute('aria-hidden', 'true');
+                }
+            }
+        });
+    };
+    deep(parentNode);
+    elementsToKeep.clear();
+    lockCount++;
+    return function () {
+        hiddenNodes.forEach(function (node) {
+            var counterValue = counterMap.get(node) - 1;
+            var markerValue = markerCounter.get(node) - 1;
+            counterMap.set(node, counterValue);
+            markerCounter.set(node, markerValue);
+            if (!counterValue) {
+                if (!uncontrolledNodes.has(node)) {
+                    node.removeAttribute('aria-hidden');
+                }
+                uncontrolledNodes.delete(node);
+            }
+            if (!markerValue) {
+                node.removeAttribute(markerName);
+            }
+        });
+        lockCount--;
+        if (!lockCount) {
+            counterMap = new WeakMap();
+            counterMap = new WeakMap();
+            uncontrolledNodes = new WeakMap();
+            markerMap = {};
+        }
+    };
+};
+
+
+/***/ }),
+
+/***/ 126:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var reactIs = __webpack_require__(8107);
+
+/**
+ * Copyright 2015, Yahoo! Inc.
+ * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
+ */
+var REACT_STATICS = {
+  childContextTypes: true,
+  contextType: true,
+  contextTypes: true,
+  defaultProps: true,
+  displayName: true,
+  getDefaultProps: true,
+  getDerivedStateFromError: true,
+  getDerivedStateFromProps: true,
+  mixins: true,
+  propTypes: true,
+  type: true
+};
+var KNOWN_STATICS = {
+  name: true,
+  length: true,
+  prototype: true,
+  caller: true,
+  callee: true,
+  arguments: true,
+  arity: true
+};
+var FORWARD_REF_STATICS = {
+  '$$typeof': true,
+  render: true,
+  defaultProps: true,
+  displayName: true,
+  propTypes: true
+};
+var MEMO_STATICS = {
+  '$$typeof': true,
+  compare: true,
+  defaultProps: true,
+  displayName: true,
+  propTypes: true,
+  type: true
+};
+var TYPE_STATICS = {};
+TYPE_STATICS[reactIs.ForwardRef] = FORWARD_REF_STATICS;
+TYPE_STATICS[reactIs.Memo] = MEMO_STATICS;
+
+function getStatics(component) {
+  // React v16.11 and below
+  if (reactIs.isMemo(component)) {
+    return MEMO_STATICS;
+  } // React v16.12 and above
+
+
+  return TYPE_STATICS[component['$$typeof']] || REACT_STATICS;
+}
+
+var defineProperty = Object.defineProperty;
+var getOwnPropertyNames = Object.getOwnPropertyNames;
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+var getPrototypeOf = Object.getPrototypeOf;
+var objectPrototype = Object.prototype;
+function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
+  if (typeof sourceComponent !== 'string') {
+    // don't hoist over string (html) components
+    if (objectPrototype) {
+      var inheritedComponent = getPrototypeOf(sourceComponent);
+
+      if (inheritedComponent && inheritedComponent !== objectPrototype) {
+        hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
+      }
+    }
+
+    var keys = getOwnPropertyNames(sourceComponent);
+
+    if (getOwnPropertySymbols) {
+      keys = keys.concat(getOwnPropertySymbols(sourceComponent));
+    }
+
+    var targetStatics = getStatics(targetComponent);
+    var sourceStatics = getStatics(sourceComponent);
+
+    for (var i = 0; i < keys.length; ++i) {
+      var key = keys[i];
+
+      if (!KNOWN_STATICS[key] && !(blacklist && blacklist[key]) && !(sourceStatics && sourceStatics[key]) && !(targetStatics && targetStatics[key])) {
+        var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+
+        try {
+          // Avoid failures from read-only properties
+          defineProperty(targetComponent, key, descriptor);
+        } catch (e) {}
+      }
+    }
+  }
+
+  return targetComponent;
+}
+
+module.exports = hoistNonReactStatics;
+
+
+/***/ }),
+
+/***/ 32701:
+/***/ ((module) => {
+
+module.exports = function pointInPolygonFlat (point, vs, start, end) {
+    var x = point[0], y = point[1];
+    var inside = false;
+    if (start === undefined) start = 0;
+    if (end === undefined) end = vs.length;
+    var len = (end-start)/2;
+    for (var i = 0, j = len - 1; i < len; j = i++) {
+        var xi = vs[start+i*2+0], yi = vs[start+i*2+1];
+        var xj = vs[start+j*2+0], yj = vs[start+j*2+1];
+        var intersect = ((yi > y) !== (yj > y))
+            && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+        if (intersect) inside = !inside;
+    }
+    return inside;
+};
+
+
+/***/ }),
+
+/***/ 37526:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pointInPolygonFlat = __webpack_require__(32701)
+var pointInPolygonNested = __webpack_require__(87173)
+
+module.exports = function pointInPolygon (point, vs, start, end) {
+    if (vs.length > 0 && Array.isArray(vs[0])) {
+        return pointInPolygonNested(point, vs, start, end);
+    } else {
+        return pointInPolygonFlat(point, vs, start, end);
+    }
+}
+module.exports.nested = pointInPolygonNested
+module.exports.flat = pointInPolygonFlat
+
+
+/***/ }),
+
+/***/ 87173:
+/***/ ((module) => {
+
+// ray-casting algorithm based on
+// https://wrf.ecse.rpi.edu/Research/Short_Notes/pnpoly.html
+
+module.exports = function pointInPolygonNested (point, vs, start, end) {
+    var x = point[0], y = point[1];
+    var inside = false;
+    if (start === undefined) start = 0;
+    if (end === undefined) end = vs.length;
+    var len = end - start;
+    for (var i = 0, j = len - 1; i < len; j = i++) {
+        var xi = vs[i+start][0], yi = vs[i+start][1];
+        var xj = vs[j+start][0], yj = vs[j+start][1];
+        var intersect = ((yi > y) !== (yj > y))
+            && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+        if (intersect) inside = !inside;
+    }
+    return inside;
+};
+
+
+/***/ }),
+
+/***/ 93123:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+/** @license React v16.13.1
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var b="function"===typeof Symbol&&Symbol.for,c=b?Symbol.for("react.element"):60103,d=b?Symbol.for("react.portal"):60106,e=b?Symbol.for("react.fragment"):60107,f=b?Symbol.for("react.strict_mode"):60108,g=b?Symbol.for("react.profiler"):60114,h=b?Symbol.for("react.provider"):60109,k=b?Symbol.for("react.context"):60110,l=b?Symbol.for("react.async_mode"):60111,m=b?Symbol.for("react.concurrent_mode"):60111,n=b?Symbol.for("react.forward_ref"):60112,p=b?Symbol.for("react.suspense"):60113,q=b?
+Symbol.for("react.suspense_list"):60120,r=b?Symbol.for("react.memo"):60115,t=b?Symbol.for("react.lazy"):60116,v=b?Symbol.for("react.block"):60121,w=b?Symbol.for("react.fundamental"):60117,x=b?Symbol.for("react.responder"):60118,y=b?Symbol.for("react.scope"):60119;
+function z(a){if("object"===typeof a&&null!==a){var u=a.$$typeof;switch(u){case c:switch(a=a.type,a){case l:case m:case e:case g:case f:case p:return a;default:switch(a=a&&a.$$typeof,a){case k:case n:case t:case r:case h:return a;default:return u}}case d:return u}}}function A(a){return z(a)===m}exports.AsyncMode=l;exports.ConcurrentMode=m;exports.ContextConsumer=k;exports.ContextProvider=h;exports.Element=c;exports.ForwardRef=n;exports.Fragment=e;exports.Lazy=t;exports.Memo=r;exports.Portal=d;
+exports.Profiler=g;exports.StrictMode=f;exports.Suspense=p;exports.isAsyncMode=function(a){return A(a)||z(a)===l};exports.isConcurrentMode=A;exports.isContextConsumer=function(a){return z(a)===k};exports.isContextProvider=function(a){return z(a)===h};exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===c};exports.isForwardRef=function(a){return z(a)===n};exports.isFragment=function(a){return z(a)===e};exports.isLazy=function(a){return z(a)===t};
+exports.isMemo=function(a){return z(a)===r};exports.isPortal=function(a){return z(a)===d};exports.isProfiler=function(a){return z(a)===g};exports.isStrictMode=function(a){return z(a)===f};exports.isSuspense=function(a){return z(a)===p};
+exports.isValidElementType=function(a){return"string"===typeof a||"function"===typeof a||a===e||a===m||a===g||a===f||a===p||a===q||"object"===typeof a&&null!==a&&(a.$$typeof===t||a.$$typeof===r||a.$$typeof===h||a.$$typeof===k||a.$$typeof===n||a.$$typeof===w||a.$$typeof===x||a.$$typeof===y||a.$$typeof===v)};exports.typeOf=z;
+
+
+/***/ }),
+
+/***/ 8107:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+if (true) {
+  module.exports = __webpack_require__(93123);
+} else {}
+
+
+/***/ }),
+
 /***/ 91663:
 /***/ ((module) => {
 
@@ -67266,6 +71529,4168 @@ try {
 
 /***/ }),
 
+/***/ 14640:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+function getSide(placement) {
+  return placement.split('-')[0];
+}
+
+function getAlignment(placement) {
+  return placement.split('-')[1];
+}
+
+function getMainAxisFromPlacement(placement) {
+  return ['top', 'bottom'].includes(getSide(placement)) ? 'x' : 'y';
+}
+
+function getLengthFromAxis(axis) {
+  return axis === 'y' ? 'height' : 'width';
+}
+
+function computeCoordsFromPlacement(_ref, placement, rtl) {
+  let {
+    reference,
+    floating
+  } = _ref;
+  const commonX = reference.x + reference.width / 2 - floating.width / 2;
+  const commonY = reference.y + reference.height / 2 - floating.height / 2;
+  const mainAxis = getMainAxisFromPlacement(placement);
+  const length = getLengthFromAxis(mainAxis);
+  const commonAlign = reference[length] / 2 - floating[length] / 2;
+  const side = getSide(placement);
+  const isVertical = mainAxis === 'x';
+  let coords;
+
+  switch (side) {
+    case 'top':
+      coords = {
+        x: commonX,
+        y: reference.y - floating.height
+      };
+      break;
+
+    case 'bottom':
+      coords = {
+        x: commonX,
+        y: reference.y + reference.height
+      };
+      break;
+
+    case 'right':
+      coords = {
+        x: reference.x + reference.width,
+        y: commonY
+      };
+      break;
+
+    case 'left':
+      coords = {
+        x: reference.x - floating.width,
+        y: commonY
+      };
+      break;
+
+    default:
+      coords = {
+        x: reference.x,
+        y: reference.y
+      };
+  }
+
+  switch (getAlignment(placement)) {
+    case 'start':
+      coords[mainAxis] -= commonAlign * (rtl && isVertical ? -1 : 1);
+      break;
+
+    case 'end':
+      coords[mainAxis] += commonAlign * (rtl && isVertical ? -1 : 1);
+      break;
+  }
+
+  return coords;
+}
+
+/**
+ * Computes the `x` and `y` coordinates that will place the floating element
+ * next to a reference element when it is given a certain positioning strategy.
+ *
+ * This export does not have any `platform` interface logic. You will need to
+ * write one for the platform you are using Floating UI with.
+ */
+
+const computePosition = async (reference, floating, config) => {
+  const {
+    placement = 'bottom',
+    strategy = 'absolute',
+    middleware = [],
+    platform
+  } = config;
+  const rtl = await (platform.isRTL == null ? void 0 : platform.isRTL(floating));
+
+  if (false) {}
+
+  let rects = await platform.getElementRects({
+    reference,
+    floating,
+    strategy
+  });
+  let {
+    x,
+    y
+  } = computeCoordsFromPlacement(rects, placement, rtl);
+  let statefulPlacement = placement;
+  let middlewareData = {};
+  let _debug_loop_count_ = 0;
+
+  for (let i = 0; i < middleware.length; i++) {
+    if (false) {}
+
+    const {
+      name,
+      fn
+    } = middleware[i];
+    const {
+      x: nextX,
+      y: nextY,
+      data,
+      reset
+    } = await fn({
+      x,
+      y,
+      initialPlacement: placement,
+      placement: statefulPlacement,
+      strategy,
+      middlewareData,
+      rects,
+      platform,
+      elements: {
+        reference,
+        floating
+      }
+    });
+    x = nextX != null ? nextX : x;
+    y = nextY != null ? nextY : y;
+    middlewareData = { ...middlewareData,
+      [name]: { ...middlewareData[name],
+        ...data
+      }
+    };
+
+    if (reset) {
+      if (typeof reset === 'object') {
+        if (reset.placement) {
+          statefulPlacement = reset.placement;
+        }
+
+        if (reset.rects) {
+          rects = reset.rects === true ? await platform.getElementRects({
+            reference,
+            floating,
+            strategy
+          }) : reset.rects;
+        }
+
+        ({
+          x,
+          y
+        } = computeCoordsFromPlacement(rects, statefulPlacement, rtl));
+      }
+
+      i = -1;
+      continue;
+    }
+  }
+
+  return {
+    x,
+    y,
+    placement: statefulPlacement,
+    strategy,
+    middlewareData
+  };
+};
+
+function expandPaddingObject(padding) {
+  return {
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    ...padding
+  };
+}
+
+function getSideObjectFromPadding(padding) {
+  return typeof padding !== 'number' ? expandPaddingObject(padding) : {
+    top: padding,
+    right: padding,
+    bottom: padding,
+    left: padding
+  };
+}
+
+function rectToClientRect(rect) {
+  return { ...rect,
+    top: rect.y,
+    left: rect.x,
+    right: rect.x + rect.width,
+    bottom: rect.y + rect.height
+  };
+}
+
+/**
+ * Resolves with an object of overflow side offsets that determine how much the
+ * element is overflowing a given clipping boundary.
+ * - positive = overflowing the boundary by that number of pixels
+ * - negative = how many pixels left before it will overflow
+ * - 0 = lies flush with the boundary
+ * @see https://floating-ui.com/docs/detectOverflow
+ */
+async function detectOverflow(middlewareArguments, options) {
+  var _await$platform$isEle;
+
+  if (options === void 0) {
+    options = {};
+  }
+
+  const {
+    x,
+    y,
+    platform,
+    rects,
+    elements,
+    strategy
+  } = middlewareArguments;
+  const {
+    boundary = 'clippingAncestors',
+    rootBoundary = 'viewport',
+    elementContext = 'floating',
+    altBoundary = false,
+    padding = 0
+  } = options;
+  const paddingObject = getSideObjectFromPadding(padding);
+  const altContext = elementContext === 'floating' ? 'reference' : 'floating';
+  const element = elements[altBoundary ? altContext : elementContext];
+  const clippingClientRect = rectToClientRect(await platform.getClippingRect({
+    element: ((_await$platform$isEle = await (platform.isElement == null ? void 0 : platform.isElement(element))) != null ? _await$platform$isEle : true) ? element : element.contextElement || (await (platform.getDocumentElement == null ? void 0 : platform.getDocumentElement(elements.floating))),
+    boundary,
+    rootBoundary,
+    strategy
+  }));
+  const elementClientRect = rectToClientRect(platform.convertOffsetParentRelativeRectToViewportRelativeRect ? await platform.convertOffsetParentRelativeRectToViewportRelativeRect({
+    rect: elementContext === 'floating' ? { ...rects.floating,
+      x,
+      y
+    } : rects.reference,
+    offsetParent: await (platform.getOffsetParent == null ? void 0 : platform.getOffsetParent(elements.floating)),
+    strategy
+  }) : rects[elementContext]); // positive = overflowing the clipping rect
+  // 0 or negative = within the clipping rect
+
+  return {
+    top: clippingClientRect.top - elementClientRect.top + paddingObject.top,
+    bottom: elementClientRect.bottom - clippingClientRect.bottom + paddingObject.bottom,
+    left: clippingClientRect.left - elementClientRect.left + paddingObject.left,
+    right: elementClientRect.right - clippingClientRect.right + paddingObject.right
+  };
+}
+
+const min = Math.min;
+const max = Math.max;
+
+function within(min$1, value, max$1) {
+  return max(min$1, min(value, max$1));
+}
+
+/**
+ * Positions an inner element of the floating element such that it is centered
+ * to the reference element.
+ * @see https://floating-ui.com/docs/arrow
+ */
+const arrow = options => ({
+  name: 'arrow',
+  options,
+
+  async fn(middlewareArguments) {
+    // Since `element` is required, we don't Partial<> the type
+    const {
+      element,
+      padding = 0
+    } = options != null ? options : {};
+    const {
+      x,
+      y,
+      placement,
+      rects,
+      platform
+    } = middlewareArguments;
+
+    if (element == null) {
+      if (false) {}
+
+      return {};
+    }
+
+    const paddingObject = getSideObjectFromPadding(padding);
+    const coords = {
+      x,
+      y
+    };
+    const axis = getMainAxisFromPlacement(placement);
+    const length = getLengthFromAxis(axis);
+    const arrowDimensions = await platform.getDimensions(element);
+    const minProp = axis === 'y' ? 'top' : 'left';
+    const maxProp = axis === 'y' ? 'bottom' : 'right';
+    const endDiff = rects.reference[length] + rects.reference[axis] - coords[axis] - rects.floating[length];
+    const startDiff = coords[axis] - rects.reference[axis];
+    const arrowOffsetParent = await (platform.getOffsetParent == null ? void 0 : platform.getOffsetParent(element));
+    const clientSize = arrowOffsetParent ? axis === 'y' ? arrowOffsetParent.clientHeight || 0 : arrowOffsetParent.clientWidth || 0 : 0;
+    const centerToReference = endDiff / 2 - startDiff / 2; // Make sure the arrow doesn't overflow the floating element if the center
+    // point is outside of the floating element's bounds
+
+    const min = paddingObject[minProp];
+    const max = clientSize - arrowDimensions[length] - paddingObject[maxProp];
+    const center = clientSize / 2 - arrowDimensions[length] / 2 + centerToReference;
+    const offset = within(min, center, max);
+    return {
+      data: {
+        [axis]: offset,
+        centerOffset: center - offset
+      }
+    };
+  }
+
+});
+
+const hash$1 = {
+  left: 'right',
+  right: 'left',
+  bottom: 'top',
+  top: 'bottom'
+};
+function getOppositePlacement(placement) {
+  return placement.replace(/left|right|bottom|top/g, matched => hash$1[matched]);
+}
+
+function getAlignmentSides(placement, rects, rtl) {
+  if (rtl === void 0) {
+    rtl = false;
+  }
+
+  const alignment = getAlignment(placement);
+  const mainAxis = getMainAxisFromPlacement(placement);
+  const length = getLengthFromAxis(mainAxis);
+  let mainAlignmentSide = mainAxis === 'x' ? alignment === (rtl ? 'end' : 'start') ? 'right' : 'left' : alignment === 'start' ? 'bottom' : 'top';
+
+  if (rects.reference[length] > rects.floating[length]) {
+    mainAlignmentSide = getOppositePlacement(mainAlignmentSide);
+  }
+
+  return {
+    main: mainAlignmentSide,
+    cross: getOppositePlacement(mainAlignmentSide)
+  };
+}
+
+const hash = {
+  start: 'end',
+  end: 'start'
+};
+function getOppositeAlignmentPlacement(placement) {
+  return placement.replace(/start|end/g, matched => hash[matched]);
+}
+
+const sides = ['top', 'right', 'bottom', 'left'];
+const allPlacements = /*#__PURE__*/sides.reduce((acc, side) => acc.concat(side, side + "-start", side + "-end"), []);
+
+function getPlacementList(alignment, autoAlignment, allowedPlacements) {
+  const allowedPlacementsSortedByAlignment = alignment ? [...allowedPlacements.filter(placement => getAlignment(placement) === alignment), ...allowedPlacements.filter(placement => getAlignment(placement) !== alignment)] : allowedPlacements.filter(placement => getSide(placement) === placement);
+  return allowedPlacementsSortedByAlignment.filter(placement => {
+    if (alignment) {
+      return getAlignment(placement) === alignment || (autoAlignment ? getOppositeAlignmentPlacement(placement) !== placement : false);
+    }
+
+    return true;
+  });
+}
+
+/**
+ * Automatically chooses the `placement` which has the most space available.
+ * @see https://floating-ui.com/docs/autoPlacement
+ */
+const autoPlacement = function (options) {
+  if (options === void 0) {
+    options = {};
+  }
+
+  return {
+    name: 'autoPlacement',
+    options,
+
+    async fn(middlewareArguments) {
+      var _middlewareData$autoP, _middlewareData$autoP2, _middlewareData$autoP3, _middlewareData$autoP4, _placementsSortedByLe;
+
+      const {
+        x,
+        y,
+        rects,
+        middlewareData,
+        placement,
+        platform,
+        elements
+      } = middlewareArguments;
+      const {
+        alignment = null,
+        allowedPlacements = allPlacements,
+        autoAlignment = true,
+        ...detectOverflowOptions
+      } = options;
+      const placements = getPlacementList(alignment, autoAlignment, allowedPlacements);
+      const overflow = await detectOverflow(middlewareArguments, detectOverflowOptions);
+      const currentIndex = (_middlewareData$autoP = (_middlewareData$autoP2 = middlewareData.autoPlacement) == null ? void 0 : _middlewareData$autoP2.index) != null ? _middlewareData$autoP : 0;
+      const currentPlacement = placements[currentIndex];
+
+      if (currentPlacement == null) {
+        return {};
+      }
+
+      const {
+        main,
+        cross
+      } = getAlignmentSides(currentPlacement, rects, await (platform.isRTL == null ? void 0 : platform.isRTL(elements.floating))); // Make `computeCoords` start from the right place
+
+      if (placement !== currentPlacement) {
+        return {
+          x,
+          y,
+          reset: {
+            placement: placements[0]
+          }
+        };
+      }
+
+      const currentOverflows = [overflow[getSide(currentPlacement)], overflow[main], overflow[cross]];
+      const allOverflows = [...((_middlewareData$autoP3 = (_middlewareData$autoP4 = middlewareData.autoPlacement) == null ? void 0 : _middlewareData$autoP4.overflows) != null ? _middlewareData$autoP3 : []), {
+        placement: currentPlacement,
+        overflows: currentOverflows
+      }];
+      const nextPlacement = placements[currentIndex + 1]; // There are more placements to check
+
+      if (nextPlacement) {
+        return {
+          data: {
+            index: currentIndex + 1,
+            overflows: allOverflows
+          },
+          reset: {
+            placement: nextPlacement
+          }
+        };
+      }
+
+      const placementsSortedByLeastOverflow = allOverflows.slice().sort((a, b) => a.overflows[0] - b.overflows[0]);
+      const placementThatFitsOnAllSides = (_placementsSortedByLe = placementsSortedByLeastOverflow.find(_ref => {
+        let {
+          overflows
+        } = _ref;
+        return overflows.every(overflow => overflow <= 0);
+      })) == null ? void 0 : _placementsSortedByLe.placement;
+      const resetPlacement = placementThatFitsOnAllSides != null ? placementThatFitsOnAllSides : placementsSortedByLeastOverflow[0].placement;
+
+      if (resetPlacement !== placement) {
+        return {
+          data: {
+            index: currentIndex + 1,
+            overflows: allOverflows
+          },
+          reset: {
+            placement: resetPlacement
+          }
+        };
+      }
+
+      return {};
+    }
+
+  };
+};
+
+function getExpandedPlacements(placement) {
+  const oppositePlacement = getOppositePlacement(placement);
+  return [getOppositeAlignmentPlacement(placement), oppositePlacement, getOppositeAlignmentPlacement(oppositePlacement)];
+}
+
+/**
+ * Changes the placement of the floating element to one that will fit if the
+ * initially specified `placement` does not.
+ * @see https://floating-ui.com/docs/flip
+ */
+const flip = function (options) {
+  if (options === void 0) {
+    options = {};
+  }
+
+  return {
+    name: 'flip',
+    options,
+
+    async fn(middlewareArguments) {
+      var _middlewareData$flip;
+
+      const {
+        placement,
+        middlewareData,
+        rects,
+        initialPlacement,
+        platform,
+        elements
+      } = middlewareArguments;
+      const {
+        mainAxis: checkMainAxis = true,
+        crossAxis: checkCrossAxis = true,
+        fallbackPlacements: specifiedFallbackPlacements,
+        fallbackStrategy = 'bestFit',
+        flipAlignment = true,
+        ...detectOverflowOptions
+      } = options;
+      const side = getSide(placement);
+      const isBasePlacement = side === initialPlacement;
+      const fallbackPlacements = specifiedFallbackPlacements || (isBasePlacement || !flipAlignment ? [getOppositePlacement(initialPlacement)] : getExpandedPlacements(initialPlacement));
+      const placements = [initialPlacement, ...fallbackPlacements];
+      const overflow = await detectOverflow(middlewareArguments, detectOverflowOptions);
+      const overflows = [];
+      let overflowsData = ((_middlewareData$flip = middlewareData.flip) == null ? void 0 : _middlewareData$flip.overflows) || [];
+
+      if (checkMainAxis) {
+        overflows.push(overflow[side]);
+      }
+
+      if (checkCrossAxis) {
+        const {
+          main,
+          cross
+        } = getAlignmentSides(placement, rects, await (platform.isRTL == null ? void 0 : platform.isRTL(elements.floating)));
+        overflows.push(overflow[main], overflow[cross]);
+      }
+
+      overflowsData = [...overflowsData, {
+        placement,
+        overflows
+      }]; // One or more sides is overflowing
+
+      if (!overflows.every(side => side <= 0)) {
+        var _middlewareData$flip$, _middlewareData$flip2;
+
+        const nextIndex = ((_middlewareData$flip$ = (_middlewareData$flip2 = middlewareData.flip) == null ? void 0 : _middlewareData$flip2.index) != null ? _middlewareData$flip$ : 0) + 1;
+        const nextPlacement = placements[nextIndex];
+
+        if (nextPlacement) {
+          // Try next placement and re-run the lifecycle
+          return {
+            data: {
+              index: nextIndex,
+              overflows: overflowsData
+            },
+            reset: {
+              placement: nextPlacement
+            }
+          };
+        }
+
+        let resetPlacement = 'bottom';
+
+        switch (fallbackStrategy) {
+          case 'bestFit':
+            {
+              var _overflowsData$map$so;
+
+              const placement = (_overflowsData$map$so = overflowsData.map(d => [d, d.overflows.filter(overflow => overflow > 0).reduce((acc, overflow) => acc + overflow, 0)]).sort((a, b) => a[1] - b[1])[0]) == null ? void 0 : _overflowsData$map$so[0].placement;
+
+              if (placement) {
+                resetPlacement = placement;
+              }
+
+              break;
+            }
+
+          case 'initialPlacement':
+            resetPlacement = initialPlacement;
+            break;
+        }
+
+        if (placement !== resetPlacement) {
+          return {
+            reset: {
+              placement: resetPlacement
+            }
+          };
+        }
+      }
+
+      return {};
+    }
+
+  };
+};
+
+function getSideOffsets(overflow, rect) {
+  return {
+    top: overflow.top - rect.height,
+    right: overflow.right - rect.width,
+    bottom: overflow.bottom - rect.height,
+    left: overflow.left - rect.width
+  };
+}
+
+function isAnySideFullyClipped(overflow) {
+  return sides.some(side => overflow[side] >= 0);
+}
+
+/**
+ * Provides data to hide the floating element in applicable situations, such as
+ * when it is not in the same clipping context as the reference element.
+ * @see https://floating-ui.com/docs/hide
+ */
+const hide = function (_temp) {
+  let {
+    strategy = 'referenceHidden',
+    ...detectOverflowOptions
+  } = _temp === void 0 ? {} : _temp;
+  return {
+    name: 'hide',
+
+    async fn(middlewareArguments) {
+      const {
+        rects
+      } = middlewareArguments;
+
+      switch (strategy) {
+        case 'referenceHidden':
+          {
+            const overflow = await detectOverflow(middlewareArguments, { ...detectOverflowOptions,
+              elementContext: 'reference'
+            });
+            const offsets = getSideOffsets(overflow, rects.reference);
+            return {
+              data: {
+                referenceHiddenOffsets: offsets,
+                referenceHidden: isAnySideFullyClipped(offsets)
+              }
+            };
+          }
+
+        case 'escaped':
+          {
+            const overflow = await detectOverflow(middlewareArguments, { ...detectOverflowOptions,
+              altBoundary: true
+            });
+            const offsets = getSideOffsets(overflow, rects.floating);
+            return {
+              data: {
+                escapedOffsets: offsets,
+                escaped: isAnySideFullyClipped(offsets)
+              }
+            };
+          }
+
+        default:
+          {
+            return {};
+          }
+      }
+    }
+
+  };
+};
+
+function convertValueToCoords(placement, rects, value, rtl) {
+  if (rtl === void 0) {
+    rtl = false;
+  }
+
+  const side = getSide(placement);
+  const alignment = getAlignment(placement);
+  const isVertical = getMainAxisFromPlacement(placement) === 'x';
+  const mainAxisMulti = ['left', 'top'].includes(side) ? -1 : 1;
+  const crossAxisMulti = rtl && isVertical ? -1 : 1;
+  const rawValue = typeof value === 'function' ? value({ ...rects,
+    placement
+  }) : value; // eslint-disable-next-line prefer-const
+
+  let {
+    mainAxis,
+    crossAxis,
+    alignmentAxis
+  } = typeof rawValue === 'number' ? {
+    mainAxis: rawValue,
+    crossAxis: 0,
+    alignmentAxis: null
+  } : {
+    mainAxis: 0,
+    crossAxis: 0,
+    alignmentAxis: null,
+    ...rawValue
+  };
+
+  if (alignment && typeof alignmentAxis === 'number') {
+    crossAxis = alignment === 'end' ? alignmentAxis * -1 : alignmentAxis;
+  }
+
+  return isVertical ? {
+    x: crossAxis * crossAxisMulti,
+    y: mainAxis * mainAxisMulti
+  } : {
+    x: mainAxis * mainAxisMulti,
+    y: crossAxis * crossAxisMulti
+  };
+}
+/**
+ * Displaces the floating element from its reference element.
+ * @see https://floating-ui.com/docs/offset
+ */
+
+const offset = function (value) {
+  if (value === void 0) {
+    value = 0;
+  }
+
+  return {
+    name: 'offset',
+    options: value,
+
+    async fn(middlewareArguments) {
+      const {
+        x,
+        y,
+        placement,
+        rects,
+        platform,
+        elements
+      } = middlewareArguments;
+      const diffCoords = convertValueToCoords(placement, rects, value, await (platform.isRTL == null ? void 0 : platform.isRTL(elements.floating)));
+      return {
+        x: x + diffCoords.x,
+        y: y + diffCoords.y,
+        data: diffCoords
+      };
+    }
+
+  };
+};
+
+function getCrossAxis(axis) {
+  return axis === 'x' ? 'y' : 'x';
+}
+
+/**
+ * Shifts the floating element in order to keep it in view when it will overflow
+ * a clipping boundary.
+ * @see https://floating-ui.com/docs/shift
+ */
+const shift = function (options) {
+  if (options === void 0) {
+    options = {};
+  }
+
+  return {
+    name: 'shift',
+    options,
+
+    async fn(middlewareArguments) {
+      const {
+        x,
+        y,
+        placement
+      } = middlewareArguments;
+      const {
+        mainAxis: checkMainAxis = true,
+        crossAxis: checkCrossAxis = false,
+        limiter = {
+          fn: _ref => {
+            let {
+              x,
+              y
+            } = _ref;
+            return {
+              x,
+              y
+            };
+          }
+        },
+        ...detectOverflowOptions
+      } = options;
+      const coords = {
+        x,
+        y
+      };
+      const overflow = await detectOverflow(middlewareArguments, detectOverflowOptions);
+      const mainAxis = getMainAxisFromPlacement(getSide(placement));
+      const crossAxis = getCrossAxis(mainAxis);
+      let mainAxisCoord = coords[mainAxis];
+      let crossAxisCoord = coords[crossAxis];
+
+      if (checkMainAxis) {
+        const minSide = mainAxis === 'y' ? 'top' : 'left';
+        const maxSide = mainAxis === 'y' ? 'bottom' : 'right';
+        const min = mainAxisCoord + overflow[minSide];
+        const max = mainAxisCoord - overflow[maxSide];
+        mainAxisCoord = within(min, mainAxisCoord, max);
+      }
+
+      if (checkCrossAxis) {
+        const minSide = crossAxis === 'y' ? 'top' : 'left';
+        const maxSide = crossAxis === 'y' ? 'bottom' : 'right';
+        const min = crossAxisCoord + overflow[minSide];
+        const max = crossAxisCoord - overflow[maxSide];
+        crossAxisCoord = within(min, crossAxisCoord, max);
+      }
+
+      const limitedCoords = limiter.fn({ ...middlewareArguments,
+        [mainAxis]: mainAxisCoord,
+        [crossAxis]: crossAxisCoord
+      });
+      return { ...limitedCoords,
+        data: {
+          x: limitedCoords.x - x,
+          y: limitedCoords.y - y
+        }
+      };
+    }
+
+  };
+};
+
+/**
+ * Built-in `limiter` that will stop `shift()` at a certain point.
+ */
+const limitShift = function (options) {
+  if (options === void 0) {
+    options = {};
+  }
+
+  return {
+    options,
+
+    fn(middlewareArguments) {
+      const {
+        x,
+        y,
+        placement,
+        rects,
+        middlewareData
+      } = middlewareArguments;
+      const {
+        offset = 0,
+        mainAxis: checkMainAxis = true,
+        crossAxis: checkCrossAxis = true
+      } = options;
+      const coords = {
+        x,
+        y
+      };
+      const mainAxis = getMainAxisFromPlacement(placement);
+      const crossAxis = getCrossAxis(mainAxis);
+      let mainAxisCoord = coords[mainAxis];
+      let crossAxisCoord = coords[crossAxis];
+      const rawOffset = typeof offset === 'function' ? offset({ ...rects,
+        placement
+      }) : offset;
+      const computedOffset = typeof rawOffset === 'number' ? {
+        mainAxis: rawOffset,
+        crossAxis: 0
+      } : {
+        mainAxis: 0,
+        crossAxis: 0,
+        ...rawOffset
+      };
+
+      if (checkMainAxis) {
+        const len = mainAxis === 'y' ? 'height' : 'width';
+        const limitMin = rects.reference[mainAxis] - rects.floating[len] + computedOffset.mainAxis;
+        const limitMax = rects.reference[mainAxis] + rects.reference[len] - computedOffset.mainAxis;
+
+        if (mainAxisCoord < limitMin) {
+          mainAxisCoord = limitMin;
+        } else if (mainAxisCoord > limitMax) {
+          mainAxisCoord = limitMax;
+        }
+      }
+
+      if (checkCrossAxis) {
+        var _middlewareData$offse, _middlewareData$offse2, _middlewareData$offse3, _middlewareData$offse4;
+
+        const len = mainAxis === 'y' ? 'width' : 'height';
+        const isOriginSide = ['top', 'left'].includes(getSide(placement));
+        const limitMin = rects.reference[crossAxis] - rects.floating[len] + (isOriginSide ? (_middlewareData$offse = (_middlewareData$offse2 = middlewareData.offset) == null ? void 0 : _middlewareData$offse2[crossAxis]) != null ? _middlewareData$offse : 0 : 0) + (isOriginSide ? 0 : computedOffset.crossAxis);
+        const limitMax = rects.reference[crossAxis] + rects.reference[len] + (isOriginSide ? 0 : (_middlewareData$offse3 = (_middlewareData$offse4 = middlewareData.offset) == null ? void 0 : _middlewareData$offse4[crossAxis]) != null ? _middlewareData$offse3 : 0) - (isOriginSide ? computedOffset.crossAxis : 0);
+
+        if (crossAxisCoord < limitMin) {
+          crossAxisCoord = limitMin;
+        } else if (crossAxisCoord > limitMax) {
+          crossAxisCoord = limitMax;
+        }
+      }
+
+      return {
+        [mainAxis]: mainAxisCoord,
+        [crossAxis]: crossAxisCoord
+      };
+    }
+
+  };
+};
+
+/**
+ * Provides data to change the size of the floating element. For instance,
+ * prevent it from overflowing its clipping boundary or match the width of the
+ * reference element.
+ * @see https://floating-ui.com/docs/size
+ */
+const size = function (options) {
+  if (options === void 0) {
+    options = {};
+  }
+
+  return {
+    name: 'size',
+    options,
+
+    async fn(middlewareArguments) {
+      const {
+        placement,
+        rects,
+        platform,
+        elements
+      } = middlewareArguments;
+      const {
+        apply,
+        ...detectOverflowOptions
+      } = options;
+      const overflow = await detectOverflow(middlewareArguments, detectOverflowOptions);
+      const side = getSide(placement);
+      const alignment = getAlignment(placement);
+      let heightSide;
+      let widthSide;
+
+      if (side === 'top' || side === 'bottom') {
+        heightSide = side;
+        widthSide = alignment === ((await (platform.isRTL == null ? void 0 : platform.isRTL(elements.floating))) ? 'start' : 'end') ? 'left' : 'right';
+      } else {
+        widthSide = side;
+        heightSide = alignment === 'end' ? 'top' : 'bottom';
+      }
+
+      const xMin = max(overflow.left, 0);
+      const xMax = max(overflow.right, 0);
+      const yMin = max(overflow.top, 0);
+      const yMax = max(overflow.bottom, 0);
+      const dimensions = {
+        height: rects.floating.height - (['left', 'right'].includes(placement) ? 2 * (yMin !== 0 || yMax !== 0 ? yMin + yMax : max(overflow.top, overflow.bottom)) : overflow[heightSide]),
+        width: rects.floating.width - (['top', 'bottom'].includes(placement) ? 2 * (xMin !== 0 || xMax !== 0 ? xMin + xMax : max(overflow.left, overflow.right)) : overflow[widthSide])
+      };
+      const prevDimensions = await platform.getDimensions(elements.floating);
+      apply == null ? void 0 : apply({ ...dimensions,
+        ...rects
+      });
+      const nextDimensions = await platform.getDimensions(elements.floating);
+
+      if (prevDimensions.width !== nextDimensions.width || prevDimensions.height !== nextDimensions.height) {
+        return {
+          reset: {
+            rects: true
+          }
+        };
+      }
+
+      return {};
+    }
+
+  };
+};
+
+/**
+ * Provides improved positioning for inline reference elements that can span
+ * over multiple lines, such as hyperlinks or range selections.
+ * @see https://floating-ui.com/docs/inline
+ */
+const inline = function (options) {
+  if (options === void 0) {
+    options = {};
+  }
+
+  return {
+    name: 'inline',
+    options,
+
+    async fn(middlewareArguments) {
+      var _await$platform$getCl;
+
+      const {
+        placement,
+        elements,
+        rects,
+        platform,
+        strategy
+      } = middlewareArguments; // A MouseEvent's client{X,Y} coords can be up to 2 pixels off a
+      // ClientRect's bounds, despite the event listener being triggered. A
+      // padding of 2 seems to handle this issue.
+
+      const {
+        padding = 2,
+        x,
+        y
+      } = options;
+      const fallback = rectToClientRect(platform.convertOffsetParentRelativeRectToViewportRelativeRect ? await platform.convertOffsetParentRelativeRectToViewportRelativeRect({
+        rect: rects.reference,
+        offsetParent: await (platform.getOffsetParent == null ? void 0 : platform.getOffsetParent(elements.floating)),
+        strategy
+      }) : rects.reference);
+      const clientRects = (_await$platform$getCl = await (platform.getClientRects == null ? void 0 : platform.getClientRects(elements.reference))) != null ? _await$platform$getCl : [];
+      const paddingObject = getSideObjectFromPadding(padding);
+
+      function getBoundingClientRect() {
+        // There are two rects and they are disjoined
+        if (clientRects.length === 2 && clientRects[0].left > clientRects[1].right && x != null && y != null) {
+          var _clientRects$find;
+
+          // Find the first rect in which the point is fully inside
+          return (_clientRects$find = clientRects.find(rect => x > rect.left - paddingObject.left && x < rect.right + paddingObject.right && y > rect.top - paddingObject.top && y < rect.bottom + paddingObject.bottom)) != null ? _clientRects$find : fallback;
+        } // There are 2 or more connected rects
+
+
+        if (clientRects.length >= 2) {
+          if (getMainAxisFromPlacement(placement) === 'x') {
+            const firstRect = clientRects[0];
+            const lastRect = clientRects[clientRects.length - 1];
+            const isTop = getSide(placement) === 'top';
+            const top = firstRect.top;
+            const bottom = lastRect.bottom;
+            const left = isTop ? firstRect.left : lastRect.left;
+            const right = isTop ? firstRect.right : lastRect.right;
+            const width = right - left;
+            const height = bottom - top;
+            return {
+              top,
+              bottom,
+              left,
+              right,
+              width,
+              height,
+              x: left,
+              y: top
+            };
+          }
+
+          const isLeftSide = getSide(placement) === 'left';
+          const maxRight = max(...clientRects.map(rect => rect.right));
+          const minLeft = min(...clientRects.map(rect => rect.left));
+          const measureRects = clientRects.filter(rect => isLeftSide ? rect.left === minLeft : rect.right === maxRight);
+          const top = measureRects[0].top;
+          const bottom = measureRects[measureRects.length - 1].bottom;
+          const left = minLeft;
+          const right = maxRight;
+          const width = right - left;
+          const height = bottom - top;
+          return {
+            top,
+            bottom,
+            left,
+            right,
+            width,
+            height,
+            x: left,
+            y: top
+          };
+        }
+
+        return fallback;
+      }
+
+      const resetRects = await platform.getElementRects({
+        reference: {
+          getBoundingClientRect
+        },
+        floating: elements.floating,
+        strategy
+      });
+
+      if (rects.reference.x !== resetRects.reference.x || rects.reference.y !== resetRects.reference.y || rects.reference.width !== resetRects.reference.width || rects.reference.height !== resetRects.reference.height) {
+        return {
+          reset: {
+            rects: resetRects
+          }
+        };
+      }
+
+      return {};
+    }
+
+  };
+};
+
+exports.arrow = arrow;
+exports.autoPlacement = autoPlacement;
+exports.computePosition = computePosition;
+exports.detectOverflow = detectOverflow;
+exports.flip = flip;
+exports.hide = hide;
+exports.inline = inline;
+exports.limitShift = limitShift;
+exports.offset = offset;
+exports.rectToClientRect = rectToClientRect;
+exports.shift = shift;
+exports.size = size;
+
+
+/***/ }),
+
+/***/ 19618:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var core = __webpack_require__(14640);
+
+function isWindow(value) {
+  return value && value.document && value.location && value.alert && value.setInterval;
+}
+function getWindow(node) {
+  if (node == null) {
+    return window;
+  }
+
+  if (!isWindow(node)) {
+    const ownerDocument = node.ownerDocument;
+    return ownerDocument ? ownerDocument.defaultView || window : window;
+  }
+
+  return node;
+}
+
+function getComputedStyle$1(element) {
+  return getWindow(element).getComputedStyle(element);
+}
+
+function getNodeName(node) {
+  return isWindow(node) ? '' : node ? (node.nodeName || '').toLowerCase() : '';
+}
+
+function isHTMLElement(value) {
+  return value instanceof getWindow(value).HTMLElement;
+}
+function isElement(value) {
+  return value instanceof getWindow(value).Element;
+}
+function isNode(value) {
+  return value instanceof getWindow(value).Node;
+}
+function isShadowRoot(node) {
+  // Browsers without `ShadowRoot` support
+  if (typeof ShadowRoot === 'undefined') {
+    return false;
+  }
+
+  const OwnElement = getWindow(node).ShadowRoot;
+  return node instanceof OwnElement || node instanceof ShadowRoot;
+}
+function isOverflowElement(element) {
+  // Firefox wants us to check `-x` and `-y` variations as well
+  const {
+    overflow,
+    overflowX,
+    overflowY
+  } = getComputedStyle$1(element);
+  return /auto|scroll|overlay|hidden/.test(overflow + overflowY + overflowX);
+}
+function isTableElement(element) {
+  return ['table', 'td', 'th'].includes(getNodeName(element));
+}
+function isContainingBlock(element) {
+  // TODO: Try and use feature detection here instead
+  const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
+  const css = getComputedStyle$1(element); // This is non-exhaustive but covers the most common CSS properties that
+  // create a containing block.
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block
+
+  return css.transform !== 'none' || css.perspective !== 'none' || // @ts-ignore (TS 4.1 compat)
+  css.contain === 'paint' || ['transform', 'perspective'].includes(css.willChange) || isFirefox && css.willChange === 'filter' || isFirefox && (css.filter ? css.filter !== 'none' : false);
+}
+function isLayoutViewport() {
+  // Not Safari
+  return !/^((?!chrome|android).)*safari/i.test(navigator.userAgent); // Feature detection for this fails in various ways
+  // • Always-visible scrollbar or not
+  // • Width of <html>, etc.
+  // const vV = win.visualViewport;
+  // return vV ? Math.abs(win.innerWidth / vV.scale - vV.width) < 0.5 : true;
+}
+
+const min = Math.min;
+const max = Math.max;
+const round = Math.round;
+
+function getBoundingClientRect(element, includeScale, isFixedStrategy) {
+  var _win$visualViewport$o, _win$visualViewport, _win$visualViewport$o2, _win$visualViewport2;
+
+  if (includeScale === void 0) {
+    includeScale = false;
+  }
+
+  if (isFixedStrategy === void 0) {
+    isFixedStrategy = false;
+  }
+
+  const clientRect = element.getBoundingClientRect();
+  let scaleX = 1;
+  let scaleY = 1;
+
+  if (includeScale && isHTMLElement(element)) {
+    scaleX = element.offsetWidth > 0 ? round(clientRect.width) / element.offsetWidth || 1 : 1;
+    scaleY = element.offsetHeight > 0 ? round(clientRect.height) / element.offsetHeight || 1 : 1;
+  }
+
+  const win = isElement(element) ? getWindow(element) : window;
+  const addVisualOffsets = !isLayoutViewport() && isFixedStrategy;
+  const x = (clientRect.left + (addVisualOffsets ? (_win$visualViewport$o = (_win$visualViewport = win.visualViewport) == null ? void 0 : _win$visualViewport.offsetLeft) != null ? _win$visualViewport$o : 0 : 0)) / scaleX;
+  const y = (clientRect.top + (addVisualOffsets ? (_win$visualViewport$o2 = (_win$visualViewport2 = win.visualViewport) == null ? void 0 : _win$visualViewport2.offsetTop) != null ? _win$visualViewport$o2 : 0 : 0)) / scaleY;
+  const width = clientRect.width / scaleX;
+  const height = clientRect.height / scaleY;
+  return {
+    width,
+    height,
+    top: y,
+    right: x + width,
+    bottom: y + height,
+    left: x,
+    x,
+    y
+  };
+}
+
+function getDocumentElement(node) {
+  return ((isNode(node) ? node.ownerDocument : node.document) || window.document).documentElement;
+}
+
+function getNodeScroll(element) {
+  if (isElement(element)) {
+    return {
+      scrollLeft: element.scrollLeft,
+      scrollTop: element.scrollTop
+    };
+  }
+
+  return {
+    scrollLeft: element.pageXOffset,
+    scrollTop: element.pageYOffset
+  };
+}
+
+function getWindowScrollBarX(element) {
+  // If <html> has a CSS width greater than the viewport, then this will be
+  // incorrect for RTL.
+  return getBoundingClientRect(getDocumentElement(element)).left + getNodeScroll(element).scrollLeft;
+}
+
+function isScaled(element) {
+  const rect = getBoundingClientRect(element);
+  return round(rect.width) !== element.offsetWidth || round(rect.height) !== element.offsetHeight;
+}
+
+function getRectRelativeToOffsetParent(element, offsetParent, strategy) {
+  const isOffsetParentAnElement = isHTMLElement(offsetParent);
+  const documentElement = getDocumentElement(offsetParent);
+  const rect = getBoundingClientRect(element, // @ts-ignore - checked above (TS 4.1 compat)
+  isOffsetParentAnElement && isScaled(offsetParent), strategy === 'fixed');
+  let scroll = {
+    scrollLeft: 0,
+    scrollTop: 0
+  };
+  const offsets = {
+    x: 0,
+    y: 0
+  };
+
+  if (isOffsetParentAnElement || !isOffsetParentAnElement && strategy !== 'fixed') {
+    if (getNodeName(offsetParent) !== 'body' || isOverflowElement(documentElement)) {
+      scroll = getNodeScroll(offsetParent);
+    }
+
+    if (isHTMLElement(offsetParent)) {
+      const offsetRect = getBoundingClientRect(offsetParent, true);
+      offsets.x = offsetRect.x + offsetParent.clientLeft;
+      offsets.y = offsetRect.y + offsetParent.clientTop;
+    } else if (documentElement) {
+      offsets.x = getWindowScrollBarX(documentElement);
+    }
+  }
+
+  return {
+    x: rect.left + scroll.scrollLeft - offsets.x,
+    y: rect.top + scroll.scrollTop - offsets.y,
+    width: rect.width,
+    height: rect.height
+  };
+}
+
+function getParentNode(node) {
+  if (getNodeName(node) === 'html') {
+    return node;
+  }
+
+  return (// this is a quicker (but less type safe) way to save quite some bytes from the bundle
+    // @ts-ignore
+    node.assignedSlot || // step into the shadow DOM of the parent of a slotted node
+    node.parentNode || ( // DOM Element detected
+    isShadowRoot(node) ? node.host : null) || // ShadowRoot detected
+    getDocumentElement(node) // fallback
+
+  );
+}
+
+function getTrueOffsetParent(element) {
+  if (!isHTMLElement(element) || getComputedStyle(element).position === 'fixed') {
+    return null;
+  }
+
+  return element.offsetParent;
+}
+
+function getContainingBlock(element) {
+  let currentNode = getParentNode(element);
+
+  if (isShadowRoot(currentNode)) {
+    currentNode = currentNode.host;
+  }
+
+  while (isHTMLElement(currentNode) && !['html', 'body'].includes(getNodeName(currentNode))) {
+    if (isContainingBlock(currentNode)) {
+      return currentNode;
+    } else {
+      currentNode = currentNode.parentNode;
+    }
+  }
+
+  return null;
+} // Gets the closest ancestor positioned element. Handles some edge cases,
+// such as table ancestors and cross browser bugs.
+
+
+function getOffsetParent(element) {
+  const window = getWindow(element);
+  let offsetParent = getTrueOffsetParent(element);
+
+  while (offsetParent && isTableElement(offsetParent) && getComputedStyle(offsetParent).position === 'static') {
+    offsetParent = getTrueOffsetParent(offsetParent);
+  }
+
+  if (offsetParent && (getNodeName(offsetParent) === 'html' || getNodeName(offsetParent) === 'body' && getComputedStyle(offsetParent).position === 'static' && !isContainingBlock(offsetParent))) {
+    return window;
+  }
+
+  return offsetParent || getContainingBlock(element) || window;
+}
+
+function getDimensions(element) {
+  if (isHTMLElement(element)) {
+    return {
+      width: element.offsetWidth,
+      height: element.offsetHeight
+    };
+  }
+
+  const rect = getBoundingClientRect(element);
+  return {
+    width: rect.width,
+    height: rect.height
+  };
+}
+
+function convertOffsetParentRelativeRectToViewportRelativeRect(_ref) {
+  let {
+    rect,
+    offsetParent,
+    strategy
+  } = _ref;
+  const isOffsetParentAnElement = isHTMLElement(offsetParent);
+  const documentElement = getDocumentElement(offsetParent);
+
+  if (offsetParent === documentElement) {
+    return rect;
+  }
+
+  let scroll = {
+    scrollLeft: 0,
+    scrollTop: 0
+  };
+  const offsets = {
+    x: 0,
+    y: 0
+  };
+
+  if (isOffsetParentAnElement || !isOffsetParentAnElement && strategy !== 'fixed') {
+    if (getNodeName(offsetParent) !== 'body' || isOverflowElement(documentElement)) {
+      scroll = getNodeScroll(offsetParent);
+    }
+
+    if (isHTMLElement(offsetParent)) {
+      const offsetRect = getBoundingClientRect(offsetParent, true);
+      offsets.x = offsetRect.x + offsetParent.clientLeft;
+      offsets.y = offsetRect.y + offsetParent.clientTop;
+    } // This doesn't appear to be need to be negated.
+    // else if (documentElement) {
+    //   offsets.x = getWindowScrollBarX(documentElement);
+    // }
+
+  }
+
+  return { ...rect,
+    x: rect.x - scroll.scrollLeft + offsets.x,
+    y: rect.y - scroll.scrollTop + offsets.y
+  };
+}
+
+function getViewportRect(element, strategy) {
+  const win = getWindow(element);
+  const html = getDocumentElement(element);
+  const visualViewport = win.visualViewport;
+  let width = html.clientWidth;
+  let height = html.clientHeight;
+  let x = 0;
+  let y = 0;
+
+  if (visualViewport) {
+    width = visualViewport.width;
+    height = visualViewport.height;
+    const layoutViewport = isLayoutViewport();
+
+    if (layoutViewport || !layoutViewport && strategy === 'fixed') {
+      x = visualViewport.offsetLeft;
+      y = visualViewport.offsetTop;
+    }
+  }
+
+  return {
+    width,
+    height,
+    x,
+    y
+  };
+}
+
+// of the `<html>` and `<body>` rect bounds if horizontally scrollable
+
+function getDocumentRect(element) {
+  var _element$ownerDocumen;
+
+  const html = getDocumentElement(element);
+  const scroll = getNodeScroll(element);
+  const body = (_element$ownerDocumen = element.ownerDocument) == null ? void 0 : _element$ownerDocumen.body;
+  const width = max(html.scrollWidth, html.clientWidth, body ? body.scrollWidth : 0, body ? body.clientWidth : 0);
+  const height = max(html.scrollHeight, html.clientHeight, body ? body.scrollHeight : 0, body ? body.clientHeight : 0);
+  let x = -scroll.scrollLeft + getWindowScrollBarX(element);
+  const y = -scroll.scrollTop;
+
+  if (getComputedStyle$1(body || html).direction === 'rtl') {
+    x += max(html.clientWidth, body ? body.clientWidth : 0) - width;
+  }
+
+  return {
+    width,
+    height,
+    x,
+    y
+  };
+}
+
+function getNearestOverflowAncestor(node) {
+  const parentNode = getParentNode(node);
+
+  if (['html', 'body', '#document'].includes(getNodeName(parentNode))) {
+    // @ts-ignore assume body is always available
+    return node.ownerDocument.body;
+  }
+
+  if (isHTMLElement(parentNode) && isOverflowElement(parentNode)) {
+    return parentNode;
+  }
+
+  return getNearestOverflowAncestor(parentNode);
+}
+
+function getOverflowAncestors(node, list) {
+  var _node$ownerDocument;
+
+  if (list === void 0) {
+    list = [];
+  }
+
+  const scrollableAncestor = getNearestOverflowAncestor(node);
+  const isBody = scrollableAncestor === ((_node$ownerDocument = node.ownerDocument) == null ? void 0 : _node$ownerDocument.body);
+  const win = getWindow(scrollableAncestor);
+  const target = isBody ? [win].concat(win.visualViewport || [], isOverflowElement(scrollableAncestor) ? scrollableAncestor : []) : scrollableAncestor;
+  const updatedList = list.concat(target);
+  return isBody ? updatedList : // @ts-ignore: isBody tells us target will be an HTMLElement here
+  updatedList.concat(getOverflowAncestors(target));
+}
+
+function contains(parent, child) {
+  const rootNode = child == null ? void 0 : child.getRootNode == null ? void 0 : child.getRootNode(); // First, attempt with faster native method
+
+  if (parent != null && parent.contains(child)) {
+    return true;
+  } // then fallback to custom implementation with Shadow DOM support
+  else if (rootNode && isShadowRoot(rootNode)) {
+    let next = child;
+
+    do {
+      // use `===` replace node.isSameNode()
+      if (next && parent === next) {
+        return true;
+      } // @ts-ignore: need a better way to handle this...
+
+
+      next = next.parentNode || next.host;
+    } while (next);
+  }
+
+  return false;
+}
+
+function getInnerBoundingClientRect(element, strategy) {
+  const clientRect = getBoundingClientRect(element, false, strategy === 'fixed');
+  const top = clientRect.top + element.clientTop;
+  const left = clientRect.left + element.clientLeft;
+  return {
+    top,
+    left,
+    x: left,
+    y: top,
+    right: left + element.clientWidth,
+    bottom: top + element.clientHeight,
+    width: element.clientWidth,
+    height: element.clientHeight
+  };
+}
+
+function getClientRectFromClippingAncestor(element, clippingParent, strategy) {
+  if (clippingParent === 'viewport') {
+    return core.rectToClientRect(getViewportRect(element, strategy));
+  }
+
+  if (isElement(clippingParent)) {
+    return getInnerBoundingClientRect(clippingParent, strategy);
+  }
+
+  return core.rectToClientRect(getDocumentRect(getDocumentElement(element)));
+} // A "clipping ancestor" is an overflowable container with the characteristic of
+// clipping (or hiding) overflowing elements with a position different from
+// `initial`
+
+
+function getClippingAncestors(element) {
+  const clippingAncestors = getOverflowAncestors(element);
+  const canEscapeClipping = ['absolute', 'fixed'].includes(getComputedStyle$1(element).position);
+  const clipperElement = canEscapeClipping && isHTMLElement(element) ? getOffsetParent(element) : element;
+
+  if (!isElement(clipperElement)) {
+    return [];
+  } // @ts-ignore isElement check ensures we return Array<Element>
+
+
+  return clippingAncestors.filter(clippingAncestors => isElement(clippingAncestors) && contains(clippingAncestors, clipperElement) && getNodeName(clippingAncestors) !== 'body');
+} // Gets the maximum area that the element is visible in due to any number of
+// clipping ancestors
+
+
+function getClippingRect(_ref) {
+  let {
+    element,
+    boundary,
+    rootBoundary,
+    strategy
+  } = _ref;
+  const mainClippingAncestors = boundary === 'clippingAncestors' ? getClippingAncestors(element) : [].concat(boundary);
+  const clippingAncestors = [...mainClippingAncestors, rootBoundary];
+  const firstClippingAncestor = clippingAncestors[0];
+  const clippingRect = clippingAncestors.reduce((accRect, clippingAncestor) => {
+    const rect = getClientRectFromClippingAncestor(element, clippingAncestor, strategy);
+    accRect.top = max(rect.top, accRect.top);
+    accRect.right = min(rect.right, accRect.right);
+    accRect.bottom = min(rect.bottom, accRect.bottom);
+    accRect.left = max(rect.left, accRect.left);
+    return accRect;
+  }, getClientRectFromClippingAncestor(element, firstClippingAncestor, strategy));
+  return {
+    width: clippingRect.right - clippingRect.left,
+    height: clippingRect.bottom - clippingRect.top,
+    x: clippingRect.left,
+    y: clippingRect.top
+  };
+}
+
+const platform = {
+  getClippingRect,
+  convertOffsetParentRelativeRectToViewportRelativeRect,
+  isElement,
+  getDimensions,
+  getOffsetParent,
+  getDocumentElement,
+  getElementRects: _ref => {
+    let {
+      reference,
+      floating,
+      strategy
+    } = _ref;
+    return {
+      reference: getRectRelativeToOffsetParent(reference, getOffsetParent(floating), strategy),
+      floating: { ...getDimensions(floating),
+        x: 0,
+        y: 0
+      }
+    };
+  },
+  getClientRects: element => Array.from(element.getClientRects()),
+  isRTL: element => getComputedStyle$1(element).direction === 'rtl'
+};
+
+/**
+ * Automatically updates the position of the floating element when necessary.
+ * @see https://floating-ui.com/docs/autoUpdate
+ */
+function autoUpdate(reference, floating, update, options) {
+  if (options === void 0) {
+    options = {};
+  }
+
+  const {
+    ancestorScroll: _ancestorScroll = true,
+    ancestorResize: _ancestorResize = true,
+    elementResize: _elementResize = true,
+    animationFrame = false
+  } = options;
+  let cleanedUp = false;
+  const ancestorScroll = _ancestorScroll && !animationFrame;
+  const ancestorResize = _ancestorResize && !animationFrame;
+  const elementResize = _elementResize && !animationFrame;
+  const ancestors = ancestorScroll || ancestorResize ? [...(isElement(reference) ? getOverflowAncestors(reference) : []), ...getOverflowAncestors(floating)] : [];
+  ancestors.forEach(ancestor => {
+    ancestorScroll && ancestor.addEventListener('scroll', update, {
+      passive: true
+    });
+    ancestorResize && ancestor.addEventListener('resize', update);
+  });
+  let observer = null;
+
+  if (elementResize) {
+    observer = new ResizeObserver(update);
+    isElement(reference) && observer.observe(reference);
+    observer.observe(floating);
+  }
+
+  let frameId;
+  let prevRefRect = animationFrame ? getBoundingClientRect(reference) : null;
+
+  if (animationFrame) {
+    frameLoop();
+  }
+
+  function frameLoop() {
+    if (cleanedUp) {
+      return;
+    }
+
+    const nextRefRect = getBoundingClientRect(reference);
+
+    if (prevRefRect && (nextRefRect.x !== prevRefRect.x || nextRefRect.y !== prevRefRect.y || nextRefRect.width !== prevRefRect.width || nextRefRect.height !== prevRefRect.height)) {
+      update();
+    }
+
+    prevRefRect = nextRefRect;
+    frameId = requestAnimationFrame(frameLoop);
+  }
+
+  return () => {
+    var _observer;
+
+    cleanedUp = true;
+    ancestors.forEach(ancestor => {
+      ancestorScroll && ancestor.removeEventListener('scroll', update);
+      ancestorResize && ancestor.removeEventListener('resize', update);
+    });
+    (_observer = observer) == null ? void 0 : _observer.disconnect();
+    observer = null;
+
+    if (animationFrame) {
+      cancelAnimationFrame(frameId);
+    }
+  };
+}
+
+/**
+ * Computes the `x` and `y` coordinates that will place the floating element
+ * next to a reference element when it is given a certain CSS positioning
+ * strategy.
+ */
+
+const computePosition = (reference, floating, options) => core.computePosition(reference, floating, {
+  platform,
+  ...options
+});
+
+Object.defineProperty(exports, "arrow", ({
+  enumerable: true,
+  get: function () { return core.arrow; }
+}));
+Object.defineProperty(exports, "autoPlacement", ({
+  enumerable: true,
+  get: function () { return core.autoPlacement; }
+}));
+Object.defineProperty(exports, "detectOverflow", ({
+  enumerable: true,
+  get: function () { return core.detectOverflow; }
+}));
+Object.defineProperty(exports, "flip", ({
+  enumerable: true,
+  get: function () { return core.flip; }
+}));
+Object.defineProperty(exports, "hide", ({
+  enumerable: true,
+  get: function () { return core.hide; }
+}));
+Object.defineProperty(exports, "inline", ({
+  enumerable: true,
+  get: function () { return core.inline; }
+}));
+Object.defineProperty(exports, "limitShift", ({
+  enumerable: true,
+  get: function () { return core.limitShift; }
+}));
+Object.defineProperty(exports, "offset", ({
+  enumerable: true,
+  get: function () { return core.offset; }
+}));
+Object.defineProperty(exports, "shift", ({
+  enumerable: true,
+  get: function () { return core.shift; }
+}));
+Object.defineProperty(exports, "size", ({
+  enumerable: true,
+  get: function () { return core.size; }
+}));
+exports.autoUpdate = autoUpdate;
+exports.computePosition = computePosition;
+exports.getOverflowAncestors = getOverflowAncestors;
+
+
+/***/ }),
+
+/***/ 8324:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var React = __webpack_require__(67294);
+var reactDom = __webpack_require__(45597);
+var pointInPolygon = __webpack_require__(37526);
+var reactDom$1 = __webpack_require__(73935);
+var ariaHidden = __webpack_require__(76087);
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+function _interopNamespace(e) {
+  if (e && e.__esModule) return e;
+  var n = Object.create(null);
+  if (e) {
+    Object.keys(e).forEach(function (k) {
+      if (k !== 'default') {
+        var d = Object.getOwnPropertyDescriptor(e, k);
+        Object.defineProperty(n, k, d.get ? d : {
+          enumerable: true,
+          get: function () { return e[k]; }
+        });
+      }
+    });
+  }
+  n["default"] = e;
+  return Object.freeze(n);
+}
+
+var React__namespace = /*#__PURE__*/_interopNamespace(React);
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+var pointInPolygon__default = /*#__PURE__*/_interopDefaultLegacy(pointInPolygon);
+
+var index = typeof document !== 'undefined' ? React.useLayoutEffect : React.useEffect;
+
+function createPubSub() {
+  const map = new Map();
+  return {
+    emit(event, data) {
+      var _map$get;
+
+      (_map$get = map.get(event)) == null ? void 0 : _map$get.forEach(handler => handler(data));
+    },
+
+    on(event, listener) {
+      map.set(event, [...(map.get(event) || []), listener]);
+    },
+
+    off(event, listener) {
+      map.set(event, (map.get(event) || []).filter(l => l !== listener));
+    }
+
+  };
+}
+
+let serverHandoffComplete = false;
+let count = 0;
+
+const genId = () => "floating-ui-" + count++;
+
+function useFloatingId() {
+  const [id, setId] = React__namespace.useState(() => serverHandoffComplete ? genId() : undefined);
+  index(() => {
+    if (id == null) {
+      setId(genId());
+    } // eslint-disable-next-line react-hooks/exhaustive-deps
+
+  }, []);
+  React__namespace.useEffect(() => {
+    if (!serverHandoffComplete) {
+      serverHandoffComplete = true;
+    }
+  }, []);
+  return id;
+} // `toString()` prevents bundlers from trying to `import { useId } from 'react'`
+
+
+const useReactId = React__namespace[/*#__PURE__*/'useId'.toString()];
+/**
+ * Uses React 18's built-in `useId()` when available, or falls back to a
+ * slightly less performant (requiring a double render) implementation for
+ * earlier React versions.
+ * @see https://floating-ui.com/docs/useId
+ */
+
+const useId = useReactId != null ? useReactId : useFloatingId;
+
+const FloatingNodeContext = /*#__PURE__*/React.createContext(null);
+const FloatingTreeContext = /*#__PURE__*/React.createContext(null);
+const useFloatingParentNodeId = () => {
+  var _useContext$id, _useContext;
+
+  return (_useContext$id = (_useContext = React.useContext(FloatingNodeContext)) == null ? void 0 : _useContext.id) != null ? _useContext$id : null;
+};
+const useFloatingTree = () => React.useContext(FloatingTreeContext);
+/**
+ * Registers a node into the floating tree, returning its id.
+ */
+
+const useFloatingNodeId = () => {
+  const id = useId();
+  const tree = useFloatingTree();
+  const parentId = useFloatingParentNodeId();
+  index(() => {
+    const node = {
+      id,
+      parentId
+    };
+    tree == null ? void 0 : tree.addNode(node);
+    return () => {
+      tree == null ? void 0 : tree.removeNode(node);
+    };
+  }, [tree, id, parentId]);
+  return id;
+};
+/**
+ * Provides parent node context for nested floating elements.
+ * @see https://floating-ui.com/docs/FloatingTree
+ */
+
+const FloatingNode = _ref => {
+  let {
+    children,
+    id
+  } = _ref;
+  const parentId = useFloatingParentNodeId();
+  return /*#__PURE__*/React__default["default"].createElement(FloatingNodeContext.Provider, {
+    value: React.useMemo(() => ({
+      id,
+      parentId
+    }), [id, parentId])
+  }, children);
+};
+/**
+ * Provides context for nested floating elements when they are not children of
+ * each other on the DOM (i.e. portalled to a common node, rather than their
+ * respective parent).
+ * @see https://floating-ui.com/docs/FloatingTree
+ */
+
+const FloatingTree = _ref2 => {
+  let {
+    children
+  } = _ref2;
+  const nodesRef = React.useRef([]);
+  const addNode = React.useCallback(node => {
+    nodesRef.current = [...nodesRef.current, node];
+  }, []);
+  const removeNode = React.useCallback(node => {
+    nodesRef.current = nodesRef.current.filter(n => n !== node);
+  }, []);
+  const events = React.useState(() => createPubSub())[0];
+  return /*#__PURE__*/React__default["default"].createElement(FloatingTreeContext.Provider, {
+    value: React.useMemo(() => ({
+      nodesRef,
+      addNode,
+      removeNode,
+      events
+    }), [nodesRef, addNode, removeNode, events])
+  }, children);
+};
+
+function mergeProps(userProps, propsList, elementKey) {
+  const fnsMap = {};
+  return { ...(elementKey === 'floating' && {
+      tabIndex: -1
+    }),
+    ...userProps,
+    ...propsList.map(value => value ? value[elementKey] : null).concat(userProps).reduce((acc, props) => {
+      if (!props) {
+        return acc;
+      }
+
+      Object.entries(props).forEach(_ref => {
+        let [key, value] = _ref;
+
+        if (key.indexOf('on') === 0) {
+          if (!fnsMap[key]) {
+            fnsMap[key] = [];
+          }
+
+          if (typeof value === 'function') {
+            fnsMap[key].push(value);
+          }
+
+          acc[key] = function () {
+            for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+              args[_key] = arguments[_key];
+            }
+
+            fnsMap[key].forEach(fn => fn(...args));
+          };
+        } else {
+          acc[key] = value;
+        }
+      });
+      return acc;
+    }, {})
+  };
+}
+
+const useInteractions = function (propsList) {
+  if (propsList === void 0) {
+    propsList = [];
+  }
+
+  return {
+    getReferenceProps: userProps => mergeProps(userProps, propsList, 'reference'),
+    getFloatingProps: userProps => mergeProps(userProps, propsList, 'floating'),
+    getItemProps: userProps => mergeProps(userProps, propsList, 'item')
+  };
+};
+
+function getDocument(floating) {
+  var _floating$ownerDocume;
+
+  return (_floating$ownerDocume = floating == null ? void 0 : floating.ownerDocument) != null ? _floating$ownerDocume : document;
+}
+
+function getWindow(value) {
+  var _getDocument$defaultV;
+
+  return (_getDocument$defaultV = getDocument(value).defaultView) != null ? _getDocument$defaultV : window;
+}
+
+function isElement(value) {
+  return value ? value instanceof getWindow(value).Element : false;
+}
+function isHTMLElement(value) {
+  return value ? value instanceof getWindow(value).HTMLElement : false;
+}
+
+function getChildren(tree, id) {
+  var _tree$nodesRef$curren;
+
+  let allChildren = (_tree$nodesRef$curren = tree == null ? void 0 : tree.nodesRef.current.filter(node => {
+    var _node$context;
+
+    return node.parentId === id && ((_node$context = node.context) == null ? void 0 : _node$context.open);
+  })) != null ? _tree$nodesRef$curren : [];
+  let currentChildren = allChildren;
+
+  while (currentChildren.length) {
+    var _tree$nodesRef$curren2;
+
+    currentChildren = (_tree$nodesRef$curren2 = tree == null ? void 0 : tree.nodesRef.current.filter(node => {
+      var _currentChildren;
+
+      return (_currentChildren = currentChildren) == null ? void 0 : _currentChildren.some(n => {
+        var _node$context2;
+
+        return node.parentId === n.id && ((_node$context2 = node.context) == null ? void 0 : _node$context2.open);
+      });
+    })) != null ? _tree$nodesRef$curren2 : [];
+    allChildren = allChildren.concat(currentChildren);
+  }
+
+  return allChildren;
+}
+
+function safePolygon(_temp) {
+  let {
+    restMs = 0,
+    buffer = 1,
+    debug = null
+  } = _temp === void 0 ? {} : _temp;
+  let timeoutId;
+  return _ref => {
+    let {
+      x,
+      y,
+      placement,
+      refs,
+      onClose,
+      nodeId,
+      tree
+    } = _ref;
+    return function onPointerMove(event) {
+      var _refs$floating$curren;
+
+      clearTimeout(timeoutId);
+
+      if (event.pointerType && event.pointerType !== 'mouse') {
+        return;
+      }
+
+      const {
+        target,
+        clientX,
+        clientY
+      } = event;
+      const targetNode = target;
+
+      if (event.type === 'pointermove' && isElement(refs.reference.current) && refs.reference.current.contains(targetNode) || (_refs$floating$curren = refs.floating.current) != null && _refs$floating$curren.contains(targetNode)) {
+        return;
+      } // If any child has a menu open, abort
+
+
+      if (tree && getChildren(tree, nodeId).some(_ref2 => {
+        let {
+          context
+        } = _ref2;
+        return context == null ? void 0 : context.open;
+      })) {
+        return;
+      }
+
+      if (!refs.reference.current || !refs.floating.current || placement == null || x == null || y == null) {
+        return;
+      }
+
+      const refRect = refs.reference.current.getBoundingClientRect();
+      const rect = refs.floating.current.getBoundingClientRect();
+      const side = placement.split('-')[0];
+      const cursorLeaveFromRight = x > rect.right - rect.width / 2;
+      const cursorLeaveFromBottom = y > rect.bottom - rect.height / 2; // Within the rectangular trough between the two elements
+
+      switch (side) {
+        case 'top':
+          if (clientX >= rect.left && clientX <= rect.right && clientY >= rect.bottom && clientY <= refRect.top) {
+            return;
+          }
+
+          break;
+
+        case 'bottom':
+          if (clientX >= rect.left && clientX <= rect.right && clientY >= refRect.bottom && clientY <= rect.top) {
+            return;
+          }
+
+          break;
+
+        case 'left':
+          if (clientX >= rect.right && clientX <= refRect.left && clientY >= rect.left && clientY <= rect.right) {
+            return;
+          }
+
+          break;
+
+        case 'right':
+          if (clientX >= rect.right && clientX <= refRect.left && clientY >= rect.right && clientY <= refRect.left) {
+            return;
+          }
+
+          break;
+      }
+
+      function getPolygon(_ref3) {
+        let [x, y] = _ref3;
+        const isFloatingWider = rect.width > refRect.width;
+        const isFloatingTaller = rect.height > refRect.height;
+
+        switch (side) {
+          case 'top':
+            {
+              const cursorPointOne = [isFloatingWider ? x : cursorLeaveFromRight ? x + buffer : x - buffer, y + buffer];
+              const cursorPointTwo = [isFloatingWider ? x : cursorLeaveFromRight ? x - buffer : x + buffer, y + buffer];
+              const commonPoints = [[rect.left, cursorLeaveFromRight ? rect.bottom - buffer : isFloatingWider ? rect.bottom - buffer : rect.top], [rect.right, cursorLeaveFromRight ? isFloatingWider ? rect.bottom - buffer : rect.top : rect.bottom - buffer]];
+
+              if (cursorLeaveFromRight) {
+                return [cursorPointOne, cursorPointTwo, ...commonPoints];
+              }
+
+              return [cursorPointOne, ...commonPoints, cursorPointTwo];
+            }
+
+          case 'bottom':
+            {
+              const cursorPointOne = [isFloatingWider ? x : cursorLeaveFromRight ? x + buffer : x - buffer, y - buffer];
+              const cursorPointTwo = [isFloatingWider ? x : cursorLeaveFromRight ? x - buffer : x + buffer, y - buffer];
+              const commonPoints = [[rect.left, cursorLeaveFromRight ? rect.top + buffer : isFloatingWider ? rect.top + buffer : rect.bottom], [rect.right, cursorLeaveFromRight ? isFloatingWider ? rect.top + buffer : rect.bottom : rect.top + buffer]];
+
+              if (cursorLeaveFromRight) {
+                return [cursorPointOne, cursorPointTwo, ...commonPoints];
+              }
+
+              return [cursorPointOne, ...commonPoints, cursorPointTwo];
+            }
+
+          case 'left':
+            {
+              const cursorPointOne = [x + buffer, isFloatingTaller ? y : cursorLeaveFromBottom ? y - buffer : y + buffer];
+              const cursorPointTwo = [x + buffer, isFloatingTaller ? y : cursorLeaveFromBottom ? y + buffer : y - buffer];
+              const commonPoints = [[cursorLeaveFromBottom ? rect.right - buffer : isFloatingTaller ? rect.right - buffer : rect.left, rect.top], [cursorLeaveFromBottom ? isFloatingTaller ? rect.right - buffer : rect.left : rect.right - buffer, rect.bottom]];
+
+              if (cursorLeaveFromBottom) {
+                return [cursorPointOne, ...commonPoints, cursorPointTwo];
+              }
+
+              return [...commonPoints, cursorPointOne, cursorPointTwo];
+            }
+
+          case 'right':
+            {
+              const cursorPointOne = [x - buffer, isFloatingTaller ? y : cursorLeaveFromBottom ? y + buffer : y - buffer];
+              const cursorPointTwo = [x - buffer, isFloatingTaller ? y : cursorLeaveFromBottom ? y - buffer : y + buffer];
+              const commonPoints = [[cursorLeaveFromBottom ? rect.left + buffer : isFloatingTaller ? rect.left + buffer : rect.right, rect.top], [cursorLeaveFromBottom ? isFloatingTaller ? rect.left + buffer : rect.right : rect.left + buffer, rect.bottom]];
+
+              if (cursorLeaveFromBottom) {
+                return [cursorPointOne, cursorPointTwo, ...commonPoints];
+              }
+
+              return [cursorPointOne, ...commonPoints, cursorPointTwo];
+            }
+        }
+      }
+
+      const poly = getPolygon([x, y]);
+
+      if (false) {}
+
+      if (!pointInPolygon__default["default"]([clientX, clientY], poly)) {
+        clearTimeout(timeoutId);
+        onClose();
+      } else if (restMs) {
+        timeoutId = setTimeout(onClose, restMs);
+      }
+    };
+  };
+}
+
+const DEFAULT_ID = 'floating-ui-root';
+/**
+ * Portals your floating element outside of the main app node.
+ * @see https://floating-ui.com/docs/FloatingPortal
+ */
+
+const FloatingPortal = _ref => {
+  let {
+    children,
+    id = DEFAULT_ID
+  } = _ref;
+  const [mounted, setMounted] = React.useState(false);
+  const portalRef = React.useRef(null);
+  index(() => {
+    const root = document.getElementById(id);
+
+    if (root) {
+      portalRef.current = root;
+    } else {
+      portalRef.current = document.createElement('div');
+      portalRef.current.id = id;
+    }
+
+    const el = portalRef.current;
+
+    if (!document.body.contains(el)) {
+      document.body.appendChild(el);
+    }
+
+    setMounted(true);
+  }, [id]);
+
+  if (mounted && portalRef.current) {
+    return /*#__PURE__*/reactDom$1.createPortal(children, portalRef.current);
+  }
+
+  return null;
+};
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+const identifier = 'data-floating-ui-scroll-lock';
+/**
+ * Provides base styling for a fixed overlay element to dim content or block
+ * pointer events behind a floating element.
+ * It's a regular `<div>`, so it can be styled via any CSS solution you prefer.
+ * @see https://floating-ui.com/docs/FloatingOverlay
+ */
+
+const FloatingOverlay = /*#__PURE__*/React.forwardRef(function FloatingOverlay(_ref, ref) {
+  let {
+    lockScroll = false,
+    ...rest
+  } = _ref;
+  index(() => {
+    if (!lockScroll) {
+      return;
+    }
+
+    const scrollX = window.pageXOffset;
+    const scrollY = window.pageYOffset; // RTL <body> scrollbar
+
+    const scrollbarX = Math.round(document.documentElement.getBoundingClientRect().left) + document.documentElement.scrollLeft;
+    const paddingProp = scrollbarX ? 'paddingLeft' : 'paddingRight';
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    const alreadyLocked = document.body.hasAttribute(identifier);
+
+    if (alreadyLocked) {
+      return;
+    }
+
+    Object.assign(document.body.style, {
+      position: 'fixed',
+      overflow: 'hidden',
+      top: "-" + scrollY + "px",
+      left: "-" + scrollX + "px",
+      right: '0',
+      [paddingProp]: scrollbarWidth + "px"
+    });
+    document.body.setAttribute(identifier, '');
+    return () => {
+      Object.assign(document.body.style, {
+        position: '',
+        overflow: '',
+        top: '',
+        left: '',
+        right: '',
+        [paddingProp]: ''
+      });
+      document.body.removeAttribute(identifier);
+      window.scrollTo(scrollX, scrollY);
+    };
+  }, [lockScroll]);
+  return /*#__PURE__*/React__default["default"].createElement("div", _extends({
+    ref: ref
+  }, rest, {
+    style: {
+      position: 'fixed',
+      overflow: 'auto',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+      ...rest.style
+    }
+  }));
+});
+
+function stopEvent(event) {
+  event.preventDefault();
+  event.stopPropagation();
+}
+
+function useLatestRef(value) {
+  const ref = React.useRef(value);
+  index(() => {
+    ref.current = value;
+  });
+  return ref;
+}
+
+function focus$1(el) {
+  requestAnimationFrame(() => {
+    el == null ? void 0 : el.focus();
+  });
+}
+
+const SELECTOR = "input:not([type='hidden']):not([disabled]),select:not([disabled])," + 'textarea:not([disabled]),a[href],button:not([disabled]),[tabindex],' + 'iframe,object,embed,area[href],audio[controls],video[controls],' + "[contenteditable]:not([contenteditable='false'])";
+const FocusGuard = /*#__PURE__*/React.forwardRef(function FocusGuard(props, ref) {
+  return /*#__PURE__*/React__default["default"].createElement("span", _extends({}, props, {
+    ref: ref,
+    tabIndex: 0,
+    style: {
+      position: 'fixed',
+      opacity: '0',
+      pointerEvents: 'none',
+      outline: '0'
+    }
+  }));
+});
+
+/**
+ * Provides focus management for the floating element.
+ * @see https://floating-ui.com/docs/FloatingFocusManager
+ */
+function FloatingFocusManager(_ref) {
+  let {
+    context: {
+      refs,
+      nodeId,
+      onOpenChange
+    },
+    children,
+    order = ['content'],
+    endGuard = true,
+    preventTabbing = false,
+    initialFocus = 0,
+    returnFocus = true,
+    modal = true
+  } = _ref;
+  const orderRef = useLatestRef(order);
+  const onOpenChangeRef = useLatestRef(onOpenChange);
+  const tree = useFloatingTree();
+  const getTabbableElements = React.useCallback(() => {
+    return orderRef.current.map(type => {
+      if (isHTMLElement(refs.reference.current) && type === 'reference') {
+        return refs.reference.current;
+      }
+
+      if (refs.floating.current && type === 'floating') {
+        return refs.floating.current;
+      }
+
+      if (type === 'content') {
+        var _refs$floating$curren, _refs$floating$curren2;
+
+        return Array.from((_refs$floating$curren = (_refs$floating$curren2 = refs.floating.current) == null ? void 0 : _refs$floating$curren2.querySelectorAll(SELECTOR)) != null ? _refs$floating$curren : []);
+      }
+
+      return null;
+    }).flat().filter(el => {
+      if (el === refs.floating.current || el === refs.reference.current) {
+        return true;
+      }
+
+      if (isHTMLElement(el)) {
+        var _el$getAttribute;
+
+        const tabIndex = (_el$getAttribute = el.getAttribute('tabindex')) != null ? _el$getAttribute : '0';
+        return tabIndex[0].trim() !== '-';
+      }
+    });
+  }, [orderRef, refs.floating, refs.reference]);
+  React.useEffect(() => {
+    // If the floating element has no focusable elements inside it, fallback
+    // to focusing the floating element and preventing tab navigation
+    const noTabbableContentElements = getTabbableElements().filter(el => el !== refs.floating.current && // @ts-expect-error
+    el !== refs.reference.current).length === 0;
+
+    function onKeyDown(event) {
+      if (event.key === 'Tab') {
+        if (preventTabbing || noTabbableContentElements) {
+          stopEvent(event);
+        }
+
+        const els = getTabbableElements();
+
+        if (orderRef.current[0] === 'reference' && event.target === refs.reference.current) {
+          stopEvent(event);
+
+          if (event.shiftKey) {
+            focus$1(els[els.length - 1]);
+          } else {
+            focus$1(els[1]);
+          }
+        }
+
+        if (orderRef.current[1] === 'floating' && event.target === refs.floating.current && event.shiftKey) {
+          stopEvent(event);
+          focus$1(els[0]);
+        }
+      }
+    }
+
+    const doc = getDocument(refs.floating.current);
+    doc.addEventListener('keydown', onKeyDown);
+    return () => {
+      doc.removeEventListener('keydown', onKeyDown);
+    };
+  }, [preventTabbing, getTabbableElements, orderRef, refs.floating, refs.reference]);
+  React.useEffect(() => {
+    function onFloatingFocusOut(event) {
+      var _refs$floating$curren3;
+
+      const target = event.relatedTarget;
+
+      if (!((_refs$floating$curren3 = refs.floating.current) != null && _refs$floating$curren3.contains(target)) && isElement(refs.reference.current) && !refs.reference.current.contains(target) && !(tree && getChildren(tree, nodeId).some(child => {
+        var _child$context, _child$context$refs$f;
+
+        return (_child$context = child.context) == null ? void 0 : (_child$context$refs$f = _child$context.refs.floating.current) == null ? void 0 : _child$context$refs$f.contains(target);
+      }))) {
+        onOpenChangeRef.current(false);
+      }
+    }
+
+    const floating = refs.floating.current;
+    const reference = refs.reference.current;
+
+    if (floating && isHTMLElement(reference)) {
+      !modal && floating.addEventListener('focusout', onFloatingFocusOut);
+      const cleanup = modal ? ariaHidden.hideOthers(floating) : null;
+      return () => {
+        !modal && floating.removeEventListener('focusout', onFloatingFocusOut);
+        cleanup == null ? void 0 : cleanup();
+      };
+    }
+  }, [nodeId, tree, modal, onOpenChangeRef, getTabbableElements, initialFocus, refs.floating, refs.reference]);
+  React.useEffect(() => {
+    var _getDocument$activeEl;
+
+    if (preventTabbing) {
+      return;
+    }
+
+    const floating = refs.floating.current;
+    const previouslyFocusedElement = (_getDocument$activeEl = getDocument(floating).activeElement) != null ? _getDocument$activeEl : document.activeElement;
+
+    if (typeof initialFocus === 'number') {
+      var _getTabbableElements$;
+
+      focus$1((_getTabbableElements$ = getTabbableElements()[initialFocus]) != null ? _getTabbableElements$ : floating);
+    } else if (isHTMLElement(initialFocus == null ? void 0 : initialFocus.current)) {
+      var _initialFocus$current;
+
+      focus$1((_initialFocus$current = initialFocus.current) != null ? _initialFocus$current : floating);
+    }
+
+    return () => {
+      if (returnFocus && isHTMLElement(previouslyFocusedElement)) {
+        focus$1(previouslyFocusedElement);
+      }
+    };
+  }, [preventTabbing, getTabbableElements, initialFocus, modal, returnFocus, refs.floating]);
+  return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, modal && /*#__PURE__*/React__default["default"].createElement(FocusGuard, {
+    onFocus: event => {
+      stopEvent(event);
+      const els = getTabbableElements();
+
+      if (order[0] === 'reference') {
+        focus$1(els[0]);
+      } else {
+        focus$1(els[els.length - 1]);
+      }
+    }
+  }), /*#__PURE__*/React.cloneElement(children, order.includes('floating') ? {
+    tabIndex: 0
+  } : {}), modal && endGuard && /*#__PURE__*/React__default["default"].createElement(FocusGuard, {
+    onFocus: event => {
+      stopEvent(event);
+      focus$1(getTabbableElements()[0]);
+    }
+  }));
+}
+
+function getDelay(value, prop, pointerType) {
+  if (pointerType && pointerType !== 'mouse') {
+    return 0;
+  }
+
+  if (typeof value === 'number') {
+    return value;
+  }
+
+  return value == null ? void 0 : value[prop];
+}
+
+/**
+ * Adds hover event listeners that change the open state, like CSS :hover.
+ * @see https://floating-ui.com/docs/useHover
+ */
+const useHover = function (context, _temp) {
+  let {
+    enabled = true,
+    delay = 0,
+    handleClose = null,
+    mouseOnly = false,
+    restMs = 0
+  } = _temp === void 0 ? {} : _temp;
+  const {
+    open,
+    onOpenChange,
+    dataRef,
+    events,
+    refs
+  } = context;
+  const tree = useFloatingTree();
+  const onOpenChangeRef = useLatestRef(onOpenChange);
+  const handleCloseRef = useLatestRef(handleClose);
+  const pointerTypeRef = React.useRef();
+  const timeoutRef = React.useRef();
+  const handlerRef = React.useRef();
+  const restTimeoutRef = React.useRef();
+  const blockMouseMoveRef = React.useRef(true);
+  index(() => {
+    if (!enabled) {
+      return;
+    }
+
+    if (!open) {
+      pointerTypeRef.current = undefined;
+    }
+  });
+  React.useEffect(() => {
+    if (!enabled) {
+      return;
+    }
+
+    function onDismiss() {
+      clearTimeout(timeoutRef.current);
+      clearTimeout(restTimeoutRef.current);
+      blockMouseMoveRef.current = true;
+    }
+
+    events.on('dismiss', onDismiss);
+    return () => {
+      events.off('dismiss', onDismiss);
+    };
+  }, [enabled, events, refs.floating]);
+  React.useEffect(() => {
+    if (!enabled || !handleCloseRef.current) {
+      return;
+    }
+
+    function onLeave() {
+      var _dataRef$current$open;
+
+      if ((_dataRef$current$open = dataRef.current.openEvent) != null && _dataRef$current$open.type.includes('mouse')) {
+        onOpenChangeRef.current(false);
+      }
+    }
+
+    const html = getDocument(refs.floating.current).documentElement;
+    html.addEventListener('mouseleave', onLeave);
+    return () => {
+      html.removeEventListener('mouseleave', onLeave);
+    };
+  }, [refs.floating, onOpenChangeRef, enabled, handleCloseRef, dataRef]);
+  const closeWithDelay = React.useCallback(function (runElseBranch) {
+    if (runElseBranch === void 0) {
+      runElseBranch = true;
+    }
+
+    if (delay && !handlerRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(() => onOpenChangeRef.current(false), getDelay(delay, 'close', pointerTypeRef.current));
+    } else if (runElseBranch) {
+      onOpenChangeRef.current(false);
+    }
+  }, [delay, onOpenChangeRef]);
+  const cleanupPointerMoveHandler = React.useCallback(() => {
+    if (handlerRef.current) {
+      getDocument(refs.floating.current).removeEventListener('pointermove', handlerRef.current);
+      handlerRef.current = undefined;
+    }
+  }, [refs.floating]);
+  React.useEffect(() => {
+    if (!open) {
+      cleanupPointerMoveHandler();
+    }
+  }, [open, enabled, cleanupPointerMoveHandler]); // Registering the mouse events on the reference directly to bypass React's
+  // delegation system. If the cursor was on a disabled element and then entered
+  // the reference (no gap), `mouseenter` doesn't fire in the delegation system.
+
+  React.useEffect(() => {
+    if (!enabled) {
+      return;
+    }
+
+    function onMouseEnter(event) {
+      clearTimeout(timeoutRef.current);
+      blockMouseMoveRef.current = false;
+
+      if (open || mouseOnly && pointerTypeRef.current !== 'mouse' || restMs > 0 && getDelay(delay, 'open') === 0) {
+        return;
+      }
+
+      dataRef.current.openEvent = event;
+
+      if (delay) {
+        timeoutRef.current = setTimeout(() => {
+          onOpenChangeRef.current(true);
+        }, getDelay(delay, 'open', pointerTypeRef.current));
+      } else {
+        onOpenChangeRef.current(true);
+      }
+    }
+
+    function onMouseLeave(event) {
+      var _dataRef$current$open2, _dataRef$current$open3;
+
+      if (((_dataRef$current$open2 = dataRef.current.openEvent) == null ? void 0 : _dataRef$current$open2.type) === 'click' || ((_dataRef$current$open3 = dataRef.current.openEvent) == null ? void 0 : _dataRef$current$open3.type) === 'pointerdown') {
+        return;
+      }
+
+      const doc = getDocument(refs.floating.current);
+      clearTimeout(restTimeoutRef.current);
+
+      if (handleCloseRef.current) {
+        clearTimeout(timeoutRef.current);
+        handlerRef.current && doc.removeEventListener('pointermove', handlerRef.current);
+        handlerRef.current = handleCloseRef.current({ ...context,
+          tree,
+          x: event.clientX,
+          y: event.clientY,
+
+          onClose() {
+            cleanupPointerMoveHandler();
+            closeWithDelay();
+          }
+
+        });
+        doc.addEventListener('pointermove', handlerRef.current);
+        return;
+      }
+
+      closeWithDelay();
+    }
+
+    const reference = refs.reference.current;
+
+    if (isElement(reference)) {
+      reference.addEventListener('mouseenter', onMouseEnter);
+      reference.addEventListener('mouseleave', onMouseLeave);
+      return () => {
+        reference.removeEventListener('mouseenter', onMouseEnter);
+        reference.removeEventListener('mouseleave', onMouseLeave);
+      };
+    }
+  }, [enabled, closeWithDelay, context, delay, handleCloseRef, dataRef, mouseOnly, onOpenChangeRef, open, tree, restMs, cleanupPointerMoveHandler, refs.reference, refs.floating]);
+
+  if (!enabled) {
+    return {};
+  }
+
+  function setPointerRef(event) {
+    pointerTypeRef.current = event.pointerType;
+  }
+
+  return {
+    reference: {
+      onPointerDown: setPointerRef,
+      onPointerEnter: setPointerRef,
+
+      onMouseMove() {
+        if (open || restMs === 0) {
+          return;
+        }
+
+        clearTimeout(restTimeoutRef.current);
+        restTimeoutRef.current = setTimeout(() => {
+          if (!blockMouseMoveRef.current) {
+            onOpenChange(true);
+          }
+        }, restMs);
+      }
+
+    },
+    floating: {
+      onMouseEnter() {
+        clearTimeout(timeoutRef.current);
+      },
+
+      onMouseLeave: () => closeWithDelay(false)
+    }
+  };
+};
+
+const FloatingDelayGroupContext = /*#__PURE__*/React.createContext({
+  delay: 1000,
+  initialDelay: 1000,
+  currentId: null,
+  setCurrentId: () => {},
+  setState: () => {}
+});
+const useDelayGroupContext = () => React.useContext(FloatingDelayGroupContext);
+/**
+ * Provides context for a group of floating elements that should share a
+ * `delay`.
+ * @see https://floating-ui.com/docs/FloatingDelayGroup
+ */
+
+const FloatingDelayGroup = _ref => {
+  let {
+    children,
+    delay
+  } = _ref;
+  const [state, setState] = React.useState({
+    delay,
+    initialDelay: delay,
+    currentId: null
+  });
+  const setCurrentId = React.useCallback(currentId => {
+    setState(state => ({ ...state,
+      currentId
+    }));
+  }, []);
+  return /*#__PURE__*/React__default["default"].createElement(FloatingDelayGroupContext.Provider, {
+    value: React.useMemo(() => ({ ...state,
+      setState,
+      setCurrentId
+    }), [state, setState, setCurrentId])
+  }, children);
+};
+const useDelayGroup = (_ref2, _ref3) => {
+  let {
+    open,
+    onOpenChange
+  } = _ref2;
+  let {
+    id
+  } = _ref3;
+  const {
+    currentId,
+    initialDelay,
+    setState
+  } = useDelayGroupContext();
+  const onOpenChangeRef = useLatestRef(onOpenChange);
+  React.useEffect(() => {
+    if (currentId && onOpenChangeRef.current) {
+      setState(state => ({ ...state,
+        delay: {
+          open: 1,
+          close: getDelay(initialDelay, 'close')
+        }
+      }));
+
+      if (currentId !== id) {
+        onOpenChangeRef.current(false);
+      }
+    }
+  }, [id, onOpenChangeRef, setState, currentId, initialDelay]);
+  React.useEffect(() => {
+    if (!open && currentId === id && onOpenChangeRef.current) {
+      onOpenChangeRef.current(false);
+      setState(state => ({ ...state,
+        delay: initialDelay,
+        currentId: null
+      }));
+    }
+  }, [open, setState, currentId, id, onOpenChangeRef, initialDelay]);
+};
+
+/**
+ * Adds relevant screen reader props for a given element `role`.
+ * @see https://floating-ui.com/docs/useRole
+ */
+const useRole = function (_ref, _temp) {
+  let {
+    open
+  } = _ref;
+  let {
+    enabled = true,
+    role = 'dialog'
+  } = _temp === void 0 ? {} : _temp;
+  const rootId = useId();
+  const referenceId = useId();
+  const floatingProps = {
+    id: rootId,
+    role
+  };
+
+  if (!enabled) {
+    return {};
+  }
+
+  if (role === 'tooltip') {
+    return {
+      reference: {
+        'aria-describedby': open ? rootId : undefined
+      },
+      floating: floatingProps
+    };
+  }
+
+  return {
+    reference: {
+      'aria-expanded': open ? 'true' : 'false',
+      'aria-haspopup': role,
+      'aria-controls': open ? rootId : undefined,
+      ...(role === 'listbox' && {
+        role: 'combobox'
+      }),
+      ...(role === 'menu' && {
+        id: referenceId
+      })
+    },
+    floating: { ...floatingProps,
+      ...(role === 'menu' && {
+        'aria-labelledby': referenceId
+      })
+    }
+  };
+};
+
+/**
+ * Adds click event listeners that change the open state (toggle behavior).
+ * @see https://floating-ui.com/docs/useClick
+ */
+const useClick = function (_ref, _temp) {
+  let {
+    open,
+    onOpenChange,
+    dataRef
+  } = _ref;
+  let {
+    enabled = true,
+    pointerDown = false,
+    toggle = true
+  } = _temp === void 0 ? {} : _temp;
+  const pointerTypeRef = React.useRef();
+
+  if (!enabled) {
+    return {};
+  }
+
+  return {
+    reference: { ...(pointerDown && {
+        onPointerDown(event) {
+          pointerTypeRef.current = event.pointerType;
+
+          if (open) {
+            var _dataRef$current$open;
+
+            if (toggle && ((_dataRef$current$open = dataRef.current.openEvent) == null ? void 0 : _dataRef$current$open.type) === 'pointerdown') {
+              onOpenChange(false);
+            }
+          } else {
+            onOpenChange(true);
+          }
+
+          dataRef.current.openEvent = event.nativeEvent;
+        }
+
+      }),
+
+      onClick(event) {
+        if (pointerDown && pointerTypeRef.current) {
+          pointerTypeRef.current = undefined;
+          return;
+        }
+
+        if (open) {
+          var _dataRef$current$open2;
+
+          if (toggle && ((_dataRef$current$open2 = dataRef.current.openEvent) == null ? void 0 : _dataRef$current$open2.type) === 'click') {
+            onOpenChange(false);
+          }
+        } else {
+          onOpenChange(true);
+        }
+
+        dataRef.current.openEvent = event.nativeEvent;
+      }
+
+    }
+  };
+};
+
+/**
+ * Adds listeners that dismiss (close) the floating element.
+ * @see https://floating-ui.com/docs/useDismiss
+ */
+const useDismiss = function (_ref, _temp) {
+  let {
+    open,
+    onOpenChange,
+    refs,
+    events,
+    nodeId
+  } = _ref;
+  let {
+    enabled = true,
+    escapeKey = true,
+    outsidePointerDown = true,
+    referencePointerDown = false,
+    ancestorScroll = false,
+    bubbles = true
+  } = _temp === void 0 ? {} : _temp;
+  const tree = useFloatingTree();
+  const onOpenChangeRef = useLatestRef(onOpenChange);
+  const isFocusInsideFloating = React.useCallback(() => {
+    var _refs$floating$curren;
+
+    return (_refs$floating$curren = refs.floating.current) == null ? void 0 : _refs$floating$curren.contains(getDocument(refs.floating.current).activeElement);
+  }, [refs.floating]);
+  const focusReference = React.useCallback(() => {
+    if (isHTMLElement(refs.reference.current)) {
+      refs.reference.current.focus();
+    }
+  }, [refs.reference]);
+  React.useEffect(() => {
+    if (!open || !enabled) {
+      return;
+    }
+
+    function onKeyDown(event) {
+      if (event.key === 'Escape') {
+        if (!bubbles && !isFocusInsideFloating()) {
+          return;
+        }
+
+        events.emit('dismiss');
+        onOpenChangeRef.current(false);
+        focusReference();
+      }
+    }
+
+    function onPointerDown(event) {
+      var _refs$floating$curren2;
+
+      const targetIsInsideChildren = tree && getChildren(tree, nodeId).some(node => {
+        var _node$context, _node$context$refs$fl;
+
+        return (_node$context = node.context) == null ? void 0 : (_node$context$refs$fl = _node$context.refs.floating.current) == null ? void 0 : _node$context$refs$fl.contains(event.target);
+      });
+
+      if ((_refs$floating$curren2 = refs.floating.current) != null && _refs$floating$curren2.contains(event.target) || isElement(refs.reference.current) && refs.reference.current.contains(event.target) || targetIsInsideChildren) {
+        return;
+      }
+
+      if (!bubbles && !isFocusInsideFloating()) {
+        return;
+      }
+
+      events.emit('dismiss');
+      onOpenChangeRef.current(false);
+      focusReference();
+    }
+
+    function onScroll() {
+      onOpenChangeRef.current(false);
+    }
+
+    const doc = getDocument(refs.floating.current);
+    escapeKey && doc.addEventListener('keydown', onKeyDown); // Use `mousedown` instead of `pointerdown` as it acts more like a click
+    // on touch devices than a `touchstart` (which can result in accidental
+    // dismissals too easily.)
+
+    outsidePointerDown && doc.addEventListener('mousedown', onPointerDown);
+    const ancestors = (ancestorScroll ? [...(isElement(refs.reference.current) ? reactDom.getOverflowAncestors(refs.reference.current) : []), ...(isElement(refs.floating.current) ? reactDom.getOverflowAncestors(refs.floating.current) : [])] : []).filter(ancestor => {
+      var _doc$defaultView;
+
+      return (// Ignore the visual viewport for scrolling dismissal (allow pinch-zoom)
+        ancestor !== ((_doc$defaultView = doc.defaultView) == null ? void 0 : _doc$defaultView.visualViewport)
+      );
+    });
+    ancestors.forEach(ancestor => ancestor.addEventListener('scroll', onScroll, {
+      passive: true
+    }));
+    return () => {
+      escapeKey && doc.removeEventListener('keydown', onKeyDown);
+      outsidePointerDown && doc.removeEventListener('mousedown', onPointerDown);
+      ancestors.forEach(ancestor => ancestor.removeEventListener('scroll', onScroll));
+    };
+  }, [escapeKey, outsidePointerDown, events, tree, nodeId, open, onOpenChangeRef, focusReference, ancestorScroll, enabled, bubbles, isFocusInsideFloating, refs.floating, refs.reference]);
+
+  if (!enabled) {
+    return {};
+  }
+
+  return {
+    reference: {
+      onPointerDown() {
+        if (referencePointerDown) {
+          events.emit('dismiss');
+          onOpenChange(false);
+        }
+      }
+
+    }
+  };
+};
+
+/**
+ * Adds focus event listeners that change the open state, like CSS :focus.
+ * @see https://floating-ui.com/docs/useFocus
+ */
+const useFocus = function (_ref, _temp) {
+  let {
+    open,
+    onOpenChange,
+    dataRef,
+    refs,
+    events
+  } = _ref;
+  let {
+    enabled = true,
+    keyboardOnly = true
+  } = _temp === void 0 ? {} : _temp;
+  const blockFocusRef = React.useRef(false);
+  React.useEffect(() => {
+    var _doc$defaultView;
+
+    if (!enabled) {
+      return;
+    }
+
+    const doc = getDocument(refs.floating.current);
+    const win = (_doc$defaultView = doc.defaultView) != null ? _doc$defaultView : window;
+
+    function onBlur() {
+      blockFocusRef.current = !open;
+    }
+
+    function onFocus() {
+      setTimeout(() => {
+        blockFocusRef.current = false;
+      });
+    }
+
+    win.addEventListener('focus', onFocus);
+    win.addEventListener('blur', onBlur);
+    return () => {
+      win.removeEventListener('focus', onFocus);
+      win.removeEventListener('blur', onBlur);
+    };
+  }, [refs.floating, open, enabled]);
+  React.useEffect(() => {
+    if (!enabled) {
+      return;
+    }
+
+    function onDismiss() {
+      blockFocusRef.current = true;
+    }
+
+    events.on('dismiss', onDismiss);
+    return () => {
+      events.off('dismiss', onDismiss);
+    };
+  }, [events, enabled]);
+
+  if (!enabled) {
+    return {};
+  }
+
+  return {
+    reference: {
+      onPointerDown(_ref2) {
+        let {
+          pointerType
+        } = _ref2;
+        blockFocusRef.current = !!(pointerType && keyboardOnly);
+      },
+
+      onFocus(event) {
+        var _dataRef$current$open, _refs$reference$curre, _dataRef$current$open2;
+
+        // Note: due to the `window` focus/blur listeners, switching between
+        // DevTools touch/normal mode may cause this to fail on the first
+        // focus of the window/touch of the element as it gets set to `false`.
+        if (blockFocusRef.current) {
+          return;
+        } // Dismiss with click should ignore the subsequent `focus` trigger, but
+        // only if the click originated inside the reference element.
+
+
+        if (event.type === 'focus' && ((_dataRef$current$open = dataRef.current.openEvent) == null ? void 0 : _dataRef$current$open.type) === 'mousedown' && isElement(refs.reference.current) && (_refs$reference$curre = refs.reference.current) != null && _refs$reference$curre.contains((_dataRef$current$open2 = dataRef.current.openEvent) == null ? void 0 : _dataRef$current$open2.target)) {
+          return;
+        }
+
+        dataRef.current.openEvent = event.nativeEvent;
+        onOpenChange(true);
+      },
+
+      onBlur(event) {
+        var _refs$floating$curren;
+
+        const target = event.relatedTarget; // When focusing the reference element (e.g. regular click), then
+        // clicking into the floating element, prevent it from hiding.
+        // Note: it must be focusable, e.g. `tabindex="-1"`.
+
+        if ((_refs$floating$curren = refs.floating.current) != null && _refs$floating$curren.contains(target) || isElement(refs.reference.current) && refs.reference.current.contains(target)) {
+          return;
+        }
+
+        blockFocusRef.current = false;
+        onOpenChange(false);
+      }
+
+    }
+  };
+};
+
+const FOCUSABLE_ELEMENT_SELECTOR = 'a[href],area[href],input:not([disabled]),select:not([disabled]),textarea:not([disabled]),button:not([disabled]),iframe,object,embed,*[tabindex],*[contenteditable]';
+const DEFAULT_ORDER = ['content'];
+
+// When working with nested elements, we need to let the rendering occur before
+// attempting focus. This fixes unwanted scrolling to the bottom of the document
+function focus(el) {
+  requestAnimationFrame(() => {
+    el == null ? void 0 : el.focus();
+  });
+}
+/**
+ * @deprecated Use `<FloatingFocusManager />` instead.
+ */
+
+
+const useFocusTrap = function (_ref, _temp) {
+  let {
+    open,
+    onOpenChange,
+    refs,
+    nodeId
+  } = _ref;
+  let {
+    enabled = true,
+    initialContentFocus = 0,
+    order = DEFAULT_ORDER,
+    modal = true,
+    inert = false
+  } = _temp === void 0 ? {} : _temp;
+  const initializedRef = React.useRef(false);
+  const beforeRef = React.useRef(null);
+  const afterRef = React.useRef(null);
+  const modalRef = useLatestRef(modal);
+  const orderRef = useLatestRef(order);
+
+  if (false) {}
+
+  const getFocusableElements = React.useCallback(() => {
+    return orderRef.current.map(type => {
+      if (isHTMLElement(refs.reference.current) && type === 'reference') {
+        return refs.reference.current;
+      }
+
+      if (refs.floating.current && type === 'floating') {
+        return refs.floating.current;
+      }
+
+      if (type === 'content') {
+        var _refs$floating$curren, _refs$floating$curren2;
+
+        return Array.from((_refs$floating$curren = (_refs$floating$curren2 = refs.floating.current) == null ? void 0 : _refs$floating$curren2.querySelectorAll(FOCUSABLE_ELEMENT_SELECTOR)) != null ? _refs$floating$curren : []);
+      }
+
+      return null;
+    }).filter(Boolean).flat(); // Ignore `order` dep; only respond to changes on `open`
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [refs.floating, refs.reference]); // Focus guard elements
+  // https://github.com/w3c/aria-practices/issues/545
+
+  index(() => {
+    const floating = refs.floating.current;
+
+    if (!enabled || !open || !floating || !modal) {
+      return;
+    }
+
+    function createFocusGuardElement() {
+      const doc = getDocument(floating);
+      const el = doc.createElement('div');
+      el.tabIndex = 0;
+      Object.assign(el.style, {
+        position: 'fixed',
+        outline: '0',
+        pointerEvents: 'none'
+      });
+      el.setAttribute('aria-hidden', 'true');
+      return el;
+    }
+
+    if (!beforeRef.current) {
+      beforeRef.current = createFocusGuardElement();
+    }
+
+    if (!afterRef.current) {
+      afterRef.current = createFocusGuardElement();
+    }
+
+    const before = beforeRef.current;
+    const after = afterRef.current;
+    floating.insertAdjacentElement('beforebegin', before);
+    floating.insertAdjacentElement('afterend', after);
+
+    function onFocus(event) {
+      var _focusableElements;
+
+      stopEvent(event);
+      const focusableElements = getFocusableElements();
+      (_focusableElements = focusableElements[event.target === after ? 0 : focusableElements.length - 1]) == null ? void 0 : _focusableElements.focus();
+    }
+
+    before.addEventListener('focus', onFocus);
+    after.addEventListener('focus', onFocus);
+    return () => {
+      var _before$parentNode, _after$parentNode;
+
+      before.removeEventListener('focus', onFocus);
+      after.removeEventListener('focus', onFocus);
+
+      if ((_before$parentNode = before.parentNode) != null && _before$parentNode.contains(before)) {
+        before.parentNode.removeChild(before);
+      }
+
+      if ((_after$parentNode = after.parentNode) != null && _after$parentNode.contains(after)) {
+        after.parentNode.removeChild(after);
+      }
+    };
+  }, [enabled, open, modal, inert, getFocusableElements, refs.floating]); // Inert
+
+  React.useEffect(() => {
+    if (!enabled || !open || !inert) {
+      return;
+    }
+
+    function onKeyDown(event) {
+      if (event.key === 'Tab') {
+        stopEvent(event);
+      }
+    }
+
+    const doc = getDocument(refs.floating.current);
+    doc.addEventListener('keydown', onKeyDown);
+    return () => {
+      doc.removeEventListener('keydown', onKeyDown);
+    };
+  }, [enabled, open, inert, refs.floating]); // Initial focus
+
+  React.useEffect(() => {
+    if (!enabled) {
+      return;
+    }
+
+    const focusableElements = getFocusableElements();
+
+    if (inert) {
+      if (open) {
+        const first = focusableElements[0];
+
+        if (first === refs.floating.current && !first.contains(first.ownerDocument.activeElement)) {
+          focus(first);
+        }
+      }
+
+      return;
+    }
+
+    if (open) {
+      if (typeof initialContentFocus === 'number') {
+        focus(focusableElements[initialContentFocus]);
+      } else if (initialContentFocus.current) {
+        focus(focusableElements.find(element => element === initialContentFocus.current));
+      }
+    }
+  }, [getFocusableElements, open, inert, modal, initialContentFocus, enabled, refs.reference, refs.floating]); // Return focus to reference
+
+  React.useEffect(() => {
+    if (!enabled || inert) {
+      return;
+    }
+
+    if (!open && modalRef.current && initializedRef.current && isHTMLElement(refs.reference.current)) {
+      focus(refs.reference.current);
+    }
+  }, [open, enabled, inert, modalRef, refs.reference]); // Hide all outside nodes from screen readers
+
+  React.useEffect(() => {
+    if (!open || !modal || !enabled || !refs.floating.current) {
+      return;
+    }
+
+    return ariaHidden.hideOthers(refs.floating.current);
+  }, [open, modal, enabled, refs.floating]);
+  React.useEffect(() => {
+    initializedRef.current = true;
+    return () => {
+      initializedRef.current = false;
+    };
+  }, []);
+  const tree = useFloatingTree();
+
+  function onBlur(event) {
+    var _refs$floating$curren3;
+
+    const target = event.relatedTarget;
+
+    if (!((_refs$floating$curren3 = refs.floating.current) != null && _refs$floating$curren3.contains(target)) && isElement(refs.reference.current) && !refs.reference.current.contains(target) && !(tree && getChildren(tree, nodeId).some(child => {
+      var _child$context, _child$context$refs$f, _child$context$refs$f2;
+
+      return (_child$context = child.context) == null ? void 0 : (_child$context$refs$f = _child$context.refs.floating) == null ? void 0 : (_child$context$refs$f2 = _child$context$refs$f.current) == null ? void 0 : _child$context$refs$f2.contains(target);
+    }))) {
+      onOpenChange(false);
+    }
+  }
+
+  if (!enabled) {
+    return {};
+  }
+
+  if (modal) {
+    return {
+      floating: {
+        'aria-modal': 'true'
+      }
+    };
+  }
+
+  return {
+    reference: {
+      onBlur
+    },
+    floating: {
+      onBlur
+    }
+  };
+};
+
+function usePrevious(value) {
+  const ref = React.useRef();
+  index(() => {
+    ref.current = value;
+  }, [value]);
+  return ref.current;
+}
+
+const ARROW_UP = 'ArrowUp';
+const ARROW_DOWN = 'ArrowDown';
+const ARROW_LEFT = 'ArrowLeft';
+const ARROW_RIGHT = 'ArrowRight';
+
+function findNonDisabledIndex(listRef, _temp) {
+  let {
+    startingIndex = -1,
+    decrement = false
+  } = _temp === void 0 ? {} : _temp;
+  const list = listRef.current;
+  let index = startingIndex;
+
+  do {
+    var _list$index, _list$index2;
+
+    index = index + (decrement ? -1 : 1);
+  } while (index >= 0 && index <= list.length - 1 && (list[index] == null || (_list$index = list[index]) != null && _list$index.hasAttribute('disabled') || ((_list$index2 = list[index]) == null ? void 0 : _list$index2.getAttribute('aria-disabled')) === 'true'));
+
+  return index;
+}
+
+function doSwitch(orientation, vertical, horizontal) {
+  switch (orientation) {
+    case 'vertical':
+      return vertical;
+
+    case 'horizontal':
+      return horizontal;
+
+    default:
+      return vertical || horizontal;
+  }
+}
+
+function isMainOrientationKey(key, orientation) {
+  const vertical = key === ARROW_UP || key === ARROW_DOWN;
+  const horizontal = key === ARROW_LEFT || key === ARROW_RIGHT;
+  return doSwitch(orientation, vertical, horizontal);
+}
+
+function isMainOrientationToStartKey(key, orientation, rtl) {
+  const vertical = key === ARROW_UP;
+  const horizontal = rtl ? key === ARROW_RIGHT : key === ARROW_LEFT;
+  return doSwitch(orientation, vertical, horizontal);
+}
+
+function isMainOrientationToEndKey(key, orientation, rtl) {
+  const vertical = key === ARROW_DOWN;
+  const horizontal = rtl ? key === ARROW_LEFT : key === ARROW_RIGHT;
+  return doSwitch(orientation, vertical, horizontal);
+}
+
+function isCrossOrientationOpenKey(key, orientation, rtl) {
+  const vertical = rtl ? key === ARROW_LEFT : key === ARROW_RIGHT;
+  const horizontal = key === ARROW_DOWN;
+  return doSwitch(orientation, vertical, horizontal);
+}
+
+function isCrossOrientationCloseKey(key, orientation, rtl) {
+  const vertical = rtl ? key === ARROW_RIGHT : key === ARROW_LEFT;
+  const horizontal = key === ARROW_UP;
+  return doSwitch(orientation, vertical, horizontal);
+}
+
+function getMinIndex(listRef) {
+  return findNonDisabledIndex(listRef);
+}
+
+function getMaxIndex(listRef) {
+  return findNonDisabledIndex(listRef, {
+    decrement: true,
+    startingIndex: listRef.current.length
+  });
+}
+
+/**
+ * Adds focus-managed indexed navigation via arrow keys to a list of items
+ * within the floating element.
+ * @see https://floating-ui.com/docs/useListNavigation
+ */
+const useListNavigation = function (_ref, _temp2) {
+  let {
+    open,
+    onOpenChange,
+    refs
+  } = _ref;
+  let {
+    listRef,
+    activeIndex,
+    onNavigate,
+    enabled = true,
+    selectedIndex = null,
+    allowEscape = false,
+    loop = false,
+    nested = false,
+    rtl = false,
+    virtual = false,
+    focusItemOnOpen = 'auto',
+    focusItemOnHover = true,
+    orientation = 'vertical'
+  } = _temp2 === void 0 ? {
+    listRef: {
+      current: []
+    },
+    activeIndex: null,
+    onNavigate: () => {}
+  } : _temp2;
+
+  if (false) {}
+
+  const parentId = useFloatingParentNodeId();
+  const tree = useFloatingTree();
+  const previousOpen = usePrevious(open);
+  const focusOnOpenRef = React.useRef(focusItemOnOpen);
+  const indexRef = React.useRef(selectedIndex != null ? selectedIndex : -1);
+  const keyRef = React.useRef('');
+  const initializedRef = React.useRef(false);
+  const onNavigateRef = useLatestRef(onNavigate);
+  const blockPointerLeaveRef = React.useRef(false);
+  const [activeId, setActiveId] = React.useState();
+  const focusItem = React.useCallback((listRef, indexRef) => {
+    if (virtual) {
+      var _listRef$current$inde;
+
+      setActiveId((_listRef$current$inde = listRef.current[indexRef.current]) == null ? void 0 : _listRef$current$inde.id);
+    } else {
+      var _listRef$current$inde2;
+
+      (_listRef$current$inde2 = listRef.current[indexRef.current]) == null ? void 0 : _listRef$current$inde2.focus({
+        preventScroll: true
+      });
+    }
+  }, [virtual]);
+  index(() => {
+    if (!enabled) {
+      return;
+    }
+
+    if (selectedIndex != null) {
+      indexRef.current = selectedIndex;
+    }
+
+    if (!previousOpen && open && focusOnOpenRef.current) {
+      onNavigateRef.current(indexRef.current);
+      focusItem(listRef, indexRef);
+    }
+  }, [open, previousOpen, selectedIndex, listRef, onNavigateRef, focusItem, enabled]);
+  index(() => {
+    if (!enabled) {
+      return;
+    }
+
+    if (open) {
+      if (activeIndex === null) {
+        if (!previousOpen && focusOnOpenRef.current && selectedIndex == null || allowEscape) {
+          indexRef.current = allowEscape ? -1 : getMinIndex(listRef);
+          onNavigateRef.current(activeIndex);
+          focusItem(listRef, indexRef);
+        }
+      } else {
+        indexRef.current = activeIndex;
+        onNavigateRef.current(activeIndex);
+        focusItem(listRef, indexRef);
+      }
+    }
+  }, [open, previousOpen, activeIndex, selectedIndex, nested, listRef, onNavigateRef, focusItem, enabled, parentId, allowEscape, refs.floating, tree == null ? void 0 : tree.nodesRef]);
+  index(() => {
+    if (selectedIndex != null || !enabled) {
+      return;
+    }
+
+    if (open) {
+      if (isMainOrientationKey(keyRef.current, orientation) || focusOnOpenRef.current && (keyRef.current === ' ' || keyRef.current === 'Enter')) {
+        const minIndex = getMinIndex(listRef);
+        const maxIndex = getMaxIndex(listRef);
+        indexRef.current = isMainOrientationToStartKey(keyRef.current, orientation, rtl) ? allowEscape ? listRef.current.length : maxIndex : allowEscape ? -1 : minIndex;
+        onNavigateRef.current(indexRef.current);
+        focusItem(listRef, indexRef);
+      }
+    }
+
+    keyRef.current = '';
+  }, [open, listRef, selectedIndex, onNavigateRef, focusItem, enabled, orientation, rtl, allowEscape]);
+  index(() => {
+    if (!enabled) {
+      return;
+    }
+
+    if (!open && initializedRef.current && selectedIndex != null && isHTMLElement(refs.reference.current)) {
+      refs.reference.current.focus();
+    }
+  }, [refs.reference, selectedIndex, open, enabled]);
+  index(() => {
+    initializedRef.current = true;
+    return () => {
+      initializedRef.current = false;
+    };
+  }, []);
+  index(() => {
+    if (!enabled) {
+      return;
+    }
+
+    if (!open) {
+      var _ref2;
+
+      if (focusItemOnOpen === 'auto') {
+        focusOnOpenRef.current = true;
+      }
+
+      indexRef.current = (_ref2 = selectedIndex != null ? selectedIndex : activeIndex) != null ? _ref2 : -1;
+      onNavigateRef.current(null);
+    }
+  }, [open, selectedIndex, activeIndex, enabled, focusItemOnOpen, onNavigateRef]);
+
+  function pointerCheck(event) {
+    if (focusItemOnOpen === 'auto') {
+      // undefined or '' depending on the browser
+      focusOnOpenRef.current = !event.pointerType;
+    }
+  }
+
+  function onFloatingKeyDown(event) {
+    blockPointerLeaveRef.current = true;
+
+    if (nested && isCrossOrientationCloseKey(event.key, orientation, rtl)) {
+      stopEvent(event);
+      onOpenChange(false);
+
+      if (isHTMLElement(refs.reference.current)) {
+        refs.reference.current.focus();
+      }
+
+      return;
+    }
+
+    const currentIndex = indexRef.current;
+    const minIndex = getMinIndex(listRef);
+    const maxIndex = getMaxIndex(listRef);
+
+    if (event.key === 'Home') {
+      indexRef.current = minIndex;
+      onNavigate(indexRef.current);
+    }
+
+    if (event.key === 'End') {
+      indexRef.current = maxIndex;
+      onNavigate(indexRef.current);
+    }
+
+    if (isMainOrientationKey(event.key, orientation)) {
+      stopEvent(event);
+
+      if (!virtual && event.currentTarget.ownerDocument.activeElement === event.currentTarget) {
+        indexRef.current = selectedIndex != null ? selectedIndex : isMainOrientationToEndKey(event.key, orientation, rtl) ? minIndex : maxIndex;
+        onNavigate(indexRef.current);
+        return;
+      }
+
+      if (isMainOrientationToEndKey(event.key, orientation, rtl)) {
+        if (loop) {
+          indexRef.current = currentIndex >= maxIndex ? allowEscape && currentIndex !== listRef.current.length ? -1 : minIndex : findNonDisabledIndex(listRef, {
+            startingIndex: currentIndex
+          });
+        } else {
+          indexRef.current = Math.min(maxIndex, findNonDisabledIndex(listRef, {
+            startingIndex: currentIndex
+          }));
+        }
+      } else {
+        if (loop) {
+          indexRef.current = currentIndex <= minIndex ? allowEscape && currentIndex !== -1 ? listRef.current.length : maxIndex : findNonDisabledIndex(listRef, {
+            startingIndex: currentIndex,
+            decrement: true
+          });
+        } else {
+          indexRef.current = Math.max(minIndex, findNonDisabledIndex(listRef, {
+            startingIndex: currentIndex,
+            decrement: true
+          }));
+        }
+      }
+
+      onNavigate(indexRef.current);
+    }
+  }
+
+  if (!enabled) {
+    return {};
+  }
+
+  return {
+    reference: { ...(virtual && open && activeIndex != null && {
+        'aria-activedescendant': activeId
+      }),
+      onPointerEnter: pointerCheck,
+      onPointerDown: pointerCheck,
+
+      onKeyDown(event) {
+        blockPointerLeaveRef.current = true;
+
+        if (virtual && open) {
+          return onFloatingKeyDown(event);
+        }
+
+        if (focusItemOnOpen === 'auto') {
+          focusOnOpenRef.current = true;
+        }
+
+        keyRef.current = event.key;
+
+        if (nested) {
+          if (isCrossOrientationOpenKey(event.key, orientation, rtl)) {
+            stopEvent(event);
+
+            if (open) {
+              indexRef.current = getMinIndex(listRef);
+              onNavigate(indexRef.current);
+            } else {
+              onOpenChange(true);
+            }
+          }
+
+          return;
+        }
+
+        if (isMainOrientationKey(event.key, orientation)) {
+          if (selectedIndex == null) {
+            indexRef.current = isMainOrientationToEndKey(event.key, orientation, rtl) ? getMinIndex(listRef) : getMaxIndex(listRef);
+          } else {
+            indexRef.current = selectedIndex;
+          }
+
+          stopEvent(event);
+          onOpenChange(true);
+          onNavigate(indexRef.current);
+        }
+
+        if (virtual && !open) {
+          onFloatingKeyDown(event);
+        }
+      }
+
+    },
+    floating: {
+      'aria-orientation': orientation === 'both' ? undefined : orientation,
+      ...(virtual && activeIndex != null && {
+        'aria-activedescendant': activeId
+      }),
+      onKeyDown: onFloatingKeyDown,
+
+      onPointerMove() {
+        blockPointerLeaveRef.current = false;
+      }
+
+    },
+    item: {
+      onClick: _ref3 => {
+        let {
+          currentTarget
+        } = _ref3;
+        return currentTarget.focus({
+          preventScroll: true
+        });
+      },
+      // Safari
+      ...(focusItemOnHover && {
+        onPointerMove(_ref4) {
+          let {
+            currentTarget
+          } = _ref4;
+          const target = currentTarget;
+
+          if (target) {
+            const index = listRef.current.indexOf(target);
+
+            if (index !== -1) {
+              onNavigate(index);
+            }
+          }
+        },
+
+        onPointerLeave() {
+          if (!blockPointerLeaveRef.current) {
+            onNavigate(null);
+
+            if (!virtual) {
+              var _refs$floating$curren;
+
+              (_refs$floating$curren = refs.floating.current) == null ? void 0 : _refs$floating$curren.focus({
+                preventScroll: true
+              });
+            } else {
+              indexRef.current = -1;
+              focusItem(listRef, indexRef);
+            }
+          }
+        }
+
+      })
+    }
+  };
+};
+
+/**
+ * Provides a matching callback that can be used to focus an item as the user
+ * types, often used in tandem with `useListNavigation()`.
+ * @see https://floating-ui.com/docs/useTypeahead
+ */
+const useTypeahead = function (_ref, _temp) {
+  var _ref2;
+
+  let {
+    open,
+    dataRef
+  } = _ref;
+  let {
+    listRef,
+    activeIndex,
+    onMatch = () => {},
+    enabled = true,
+    findMatch = null,
+    resetMs = 1000,
+    ignoreKeys = [],
+    selectedIndex = null
+  } = _temp === void 0 ? {
+    listRef: {
+      current: []
+    },
+    activeIndex: null
+  } : _temp;
+  const timeoutIdRef = React.useRef();
+  const stringRef = React.useRef('');
+  const prevIndexRef = React.useRef((_ref2 = selectedIndex != null ? selectedIndex : activeIndex) != null ? _ref2 : -1);
+  const matchIndexRef = React.useRef(null);
+  index(() => {
+    if (open) {
+      clearTimeout(timeoutIdRef.current);
+      matchIndexRef.current = null;
+      stringRef.current = '';
+    }
+  }, [open]);
+  index(() => {
+    // Sync arrow key navigation but not typeahead navigation
+    if (open && stringRef.current === '') {
+      var _ref3;
+
+      prevIndexRef.current = (_ref3 = selectedIndex != null ? selectedIndex : activeIndex) != null ? _ref3 : -1;
+    }
+  }, [open, selectedIndex, activeIndex]);
+
+  function onKeyDown(event) {
+    if (!event.currentTarget.contains(getDocument(event.currentTarget).activeElement)) {
+      return;
+    }
+
+    if (stringRef.current.length > 0 && stringRef.current[0] !== ' ') {
+      dataRef.current.typing = true;
+
+      if (event.key === ' ') {
+        stopEvent(event);
+      }
+    }
+
+    const listContent = listRef.current;
+
+    if (listContent == null || ['Home', 'End', 'Escape', 'Enter', 'Tab', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', ...ignoreKeys].includes(event.key)) {
+      return;
+    } // Bail out if the list contains a word like "llama" or "aaron". TODO:
+    // allow it in this case, too.
+
+
+    const allowRapidSuccessionOfFirstLetter = listContent.every(text => {
+      var _text$, _text$2;
+
+      return text ? ((_text$ = text[0]) == null ? void 0 : _text$.toLocaleLowerCase()) !== ((_text$2 = text[1]) == null ? void 0 : _text$2.toLocaleLowerCase()) : true;
+    }); // Allows the user to cycle through items that start with the same letter
+    // in rapid succession
+
+    if (allowRapidSuccessionOfFirstLetter && stringRef.current === event.key) {
+      stringRef.current = '';
+      prevIndexRef.current = matchIndexRef.current;
+    }
+
+    stringRef.current += event.key;
+    clearTimeout(timeoutIdRef.current);
+    timeoutIdRef.current = setTimeout(() => {
+      stringRef.current = '';
+      prevIndexRef.current = matchIndexRef.current;
+      dataRef.current.typing = false;
+    }, resetMs);
+    const prevIndex = prevIndexRef.current;
+    const orderedList = [...listContent.slice((prevIndex != null ? prevIndex : 0) + 1), ...listContent.slice(0, (prevIndex != null ? prevIndex : 0) + 1)];
+    const str = findMatch ? findMatch(orderedList, stringRef.current) : orderedList.find(text => (text == null ? void 0 : text.toLocaleLowerCase().indexOf(stringRef.current)) === 0);
+    const index = str ? listContent.indexOf(str) : -1;
+
+    if (index !== -1) {
+      onMatch(index);
+      matchIndexRef.current = index;
+    }
+  }
+
+  if (!enabled) {
+    return {};
+  }
+
+  return {
+    reference: {
+      onKeyDown
+    },
+    floating: {
+      onKeyDown
+    }
+  };
+};
+
+function useFloating(_temp) {
+  let {
+    open = false,
+    onOpenChange = () => {},
+    placement,
+    middleware,
+    strategy,
+    nodeId
+  } = _temp === void 0 ? {} : _temp;
+  const tree = useFloatingTree();
+  const dataRef = React.useRef({});
+  const events = React.useState(() => createPubSub())[0];
+  const floating = reactDom.useFloating({
+    placement,
+    middleware,
+    strategy
+  });
+  const context = React.useMemo(() => ({ ...floating,
+    dataRef,
+    nodeId,
+    events,
+    open,
+    onOpenChange
+  }), [floating, dataRef, nodeId, events, open, onOpenChange]);
+  index(() => {
+    const node = tree == null ? void 0 : tree.nodesRef.current.find(node => node.id === nodeId);
+
+    if (node) {
+      node.context = context;
+    }
+  });
+  return React.useMemo(() => ({
+    context,
+    ...floating
+  }), [floating, context]);
+}
+
+exports.FloatingDelayGroup = FloatingDelayGroup;
+exports.FloatingFocusManager = FloatingFocusManager;
+exports.FloatingNode = FloatingNode;
+exports.FloatingOverlay = FloatingOverlay;
+exports.FloatingPortal = FloatingPortal;
+exports.FloatingTree = FloatingTree;
+exports.safePolygon = safePolygon;
+exports.useClick = useClick;
+exports.useDelayGroup = useDelayGroup;
+exports.useDelayGroupContext = useDelayGroupContext;
+exports.useDismiss = useDismiss;
+exports.useFloating = useFloating;
+exports.useFloatingNodeId = useFloatingNodeId;
+exports.useFloatingParentNodeId = useFloatingParentNodeId;
+exports.useFloatingTree = useFloatingTree;
+exports.useFocus = useFocus;
+exports.useFocusTrap = useFocusTrap;
+exports.useHover = useHover;
+exports.useId = useId;
+exports.useInteractions = useInteractions;
+exports.useListNavigation = useListNavigation;
+exports.useRole = useRole;
+exports.useTypeahead = useTypeahead;
+Object.keys(reactDom).forEach(function (k) {
+  if (k !== 'default' && !exports.hasOwnProperty(k)) Object.defineProperty(exports, k, {
+    enumerable: true,
+    get: function () { return reactDom[k]; }
+  });
+});
+
+
+/***/ }),
+
+/***/ 45597:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var dom = __webpack_require__(19618);
+var react = __webpack_require__(67294);
+var reactDom = __webpack_require__(73935);
+
+var index = typeof document !== 'undefined' ? react.useLayoutEffect : react.useEffect;
+
+// Fork of `fast-deep-equal` that only does the comparisons we need and compares
+// functions
+// @ts-nocheck
+function deepEqual(a, b) {
+  if (a === b) {
+    return true;
+  }
+
+  if (typeof a !== typeof b) {
+    return false;
+  }
+
+  if (typeof a === 'function' && a.toString() === b.toString()) {
+    return true;
+  }
+
+  let length, i, keys;
+
+  if (a && b && typeof a == 'object') {
+    if (Array.isArray(a)) {
+      length = a.length;
+      if (length != b.length) return false;
+
+      for (i = length; i-- !== 0;) {
+        if (!deepEqual(a[i], b[i])) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    keys = Object.keys(a);
+    length = keys.length;
+
+    if (length !== Object.keys(b).length) {
+      return false;
+    }
+
+    for (i = length; i-- !== 0;) {
+      if (!Object.prototype.hasOwnProperty.call(b, keys[i])) {
+        return false;
+      }
+    }
+
+    for (i = length; i-- !== 0;) {
+      const key = keys[i];
+
+      if (key === '_owner' && a.$$typeof) {
+        continue;
+      }
+
+      if (!deepEqual(a[key], b[key])) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  return a !== a && b !== b;
+}
+
+function useFloating(_temp) {
+  let {
+    middleware,
+    placement = 'bottom',
+    strategy = 'absolute'
+  } = _temp === void 0 ? {} : _temp;
+  const reference = react.useRef(null);
+  const floating = react.useRef(null);
+  const [data, setData] = react.useState({
+    // Setting these to `null` will allow the consumer to determine if
+    // `computePosition()` has run yet
+    x: null,
+    y: null,
+    strategy,
+    placement,
+    middlewareData: {}
+  });
+  const [latestMiddleware, setLatestMiddleware] = react.useState(middleware);
+
+  if (!deepEqual(latestMiddleware == null ? void 0 : latestMiddleware.map(_ref => {
+    let {
+      options
+    } = _ref;
+    return options;
+  }), middleware == null ? void 0 : middleware.map(_ref2 => {
+    let {
+      options
+    } = _ref2;
+    return options;
+  }))) {
+    setLatestMiddleware(middleware);
+  }
+
+  const isMountedRef = react.useRef(true);
+  index(() => {
+    isMountedRef.current = true;
+    return () => {
+      isMountedRef.current = false;
+    };
+  }, []);
+  const update = react.useCallback(() => {
+    if (!reference.current || !floating.current) {
+      return;
+    }
+
+    dom.computePosition(reference.current, floating.current, {
+      middleware: latestMiddleware,
+      placement,
+      strategy
+    }).then(data => {
+      if (isMountedRef.current) {
+        reactDom.flushSync(() => {
+          setData(data);
+        });
+      }
+    });
+  }, [latestMiddleware, placement, strategy]);
+  index(update, [update]);
+  const setReference = react.useCallback(node => {
+    reference.current = node;
+    update();
+  }, [update]);
+  const setFloating = react.useCallback(node => {
+    floating.current = node;
+    update();
+  }, [update]);
+  const refs = react.useMemo(() => ({
+    reference,
+    floating
+  }), []);
+  return react.useMemo(() => ({ ...data,
+    update,
+    refs,
+    reference: setReference,
+    floating: setFloating
+  }), [data, update, refs, setReference, setFloating]);
+}
+const arrow = options => {
+  const {
+    element,
+    padding
+  } = options;
+
+  function isRef(value) {
+    return Object.prototype.hasOwnProperty.call(value, 'current');
+  }
+
+  return {
+    name: 'arrow',
+    options,
+
+    fn(args) {
+      if (isRef(element)) {
+        if (element.current != null) {
+          return dom.arrow({
+            element: element.current,
+            padding
+          }).fn(args);
+        }
+
+        return {};
+      } else if (element) {
+        return dom.arrow({
+          element,
+          padding
+        }).fn(args);
+      }
+
+      return {};
+    }
+
+  };
+};
+
+exports.arrow = arrow;
+exports.useFloating = useFloating;
+Object.keys(dom).forEach(function (k) {
+  if (k !== 'default' && !exports.hasOwnProperty(k)) Object.defineProperty(exports, k, {
+    enumerable: true,
+    get: function () { return dom[k]; }
+  });
+});
+
+
+/***/ }),
+
 /***/ 70148:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
@@ -67321,6 +75746,33 @@ function _extends() {
 /***/ }),
 
 /***/ 14472:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (/* binding */ _extends)
+/* harmony export */ });
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+
+/***/ 54481:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
