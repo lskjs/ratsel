@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.18.0](https://github.com/lskjs/ratsel/compare/v0.17.7...v0.18.0) (2022-04-19)
+
+
+### Bug Fixes
+
+* **button:** docs decorator theme ([9d1e77c](https://github.com/lskjs/ratsel/commit/9d1e77c2ad664702644b773b4928c90c2c56444a))
+* **table:** docs decorator theme ([1f6827f](https://github.com/lskjs/ratsel/commit/1f6827fff9e404a0326bf999b9472f23f56e72af))
+
+
+### Features
+
+* **core:** add floating theme ([8bf961a](https://github.com/lskjs/ratsel/commit/8bf961a3a28e0abd306e1498dc8e8c6178e37e4a))
+* **floating:** Popover initiated ([778fa1d](https://github.com/lskjs/ratsel/commit/778fa1d4a8b1b6e2398b6d513b4d114c1f0506bf))
+
+
+
+
+
 ## [0.17.7](https://github.com/lskjs/ratsel/compare/v0.17.6...v0.17.7) (2022-04-15)
 
 
