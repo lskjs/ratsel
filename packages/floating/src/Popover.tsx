@@ -124,7 +124,12 @@ export const Popover: FC<PopoverProps> = ({
     <Fragment>
       {cloneElement(
         trigger as ReactElement,
-        getReferenceProps({ ref: reference, ...trigger?.props }),
+        getReferenceProps({
+          ref: reference,
+          ...trigger?.props,
+          isOpen: open,
+          close: handleClose,
+        }),
       )}
       {open && (
         <FloatingFocusManager
