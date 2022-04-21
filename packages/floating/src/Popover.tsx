@@ -7,6 +7,7 @@ import {
   offset as offsetMiddleware,
   Placement,
   shift as shiftMiddleware,
+  Strategy,
   useClick,
   useDismiss,
   useFloating,
@@ -42,6 +43,7 @@ export interface PopoverProps extends BaseProps {
   components?: PopoverComponents;
   middlewares?: string[];
   interactions?: string[];
+  strategy?: Strategy;
 }
 
 export const Popover: FC<PopoverProps> = ({
@@ -53,6 +55,7 @@ export const Popover: FC<PopoverProps> = ({
   components,
   middlewares = ['offset', 'flip', 'shift'],
   interactions = ['click', 'role', 'dismiss'],
+  strategy: propStrategy = 'absolute',
 }) => {
   const arrowRef = useRef(null);
   const [open, onOpenChange] = useState(defaultOpen);
@@ -79,6 +82,7 @@ export const Popover: FC<PopoverProps> = ({
     context,
     middlewareData,
   } = useFloating({
+    strategy: propStrategy,
     open,
     onOpenChange,
     middleware: _middlewares,
