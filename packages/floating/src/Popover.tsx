@@ -79,7 +79,7 @@ export const Popover: FC<PopoverProps> = ({
   const handleOpenChange = (_open: boolean) => {
     onOpenChange(_open);
     if (propOnOpenChange) {
-      const action = open ? 'open' : 'close';
+      const action = open ? 'close' : 'open';
       propOnOpenChange(_open, action);
     }
   };
