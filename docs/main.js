@@ -2046,6 +2046,19 @@ var content = /*#__PURE__*/_react["default"].createElement("div", {
   }
 }, "\u041A\u043E\u043D\u0442\u0435\u043D\u0442");
 
+var content2 = function content2(_ref) {
+  var close = _ref.close;
+  return /*#__PURE__*/_react["default"].createElement("button", {
+    type: "button",
+    style: {
+      width: 200,
+      height: 42,
+      background: 'none'
+    },
+    onClick: close
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430");
+};
+
 var _default = {
   "default": /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger
@@ -2054,81 +2067,85 @@ var _default = {
     trigger: trigger,
     defaultOpen: true
   }, content),
+  dropdown: /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    interactions: ['click', 'focus']
+  }, content2),
   arrow: /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     defaultOpen: true,
-    arrow: true
+    middlewares: ['offset', 'flip', 'shift', 'arrow']
   }, content),
   'arrow-placement-top-start': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     defaultOpen: true,
-    arrow: true,
+    middlewares: ['offset', 'flip', 'shift', 'arrow'],
     placement: "top-start"
   }, content),
   'arrow-placement-top-end': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     defaultOpen: true,
-    arrow: true,
+    middlewares: ['offset', 'flip', 'shift', 'arrow'],
     placement: "top-end"
   }, content),
   'arrow-placement-top': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     defaultOpen: true,
-    arrow: true,
+    middlewares: ['offset', 'flip', 'shift', 'arrow'],
     placement: "top"
   }, content),
   'arrow-placement-bottom-start': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     defaultOpen: true,
-    arrow: true,
+    middlewares: ['offset', 'flip', 'shift', 'arrow'],
     placement: "bottom-start"
   }, content),
   'arrow-placement-bottom-end': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     defaultOpen: true,
-    arrow: true,
+    middlewares: ['offset', 'flip', 'shift', 'arrow'],
     placement: "bottom-end"
   }, content),
   'arrow-placement-bottom': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     defaultOpen: true,
-    arrow: true,
+    middlewares: ['offset', 'flip', 'shift', 'arrow'],
     placement: "bottom"
   }, content),
   'arrow-placement-left-start': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     defaultOpen: true,
-    arrow: true,
+    middlewares: ['offset', 'flip', 'shift', 'arrow'],
     placement: "left-start"
   }, content),
   'arrow-placement-left-end': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     defaultOpen: true,
-    arrow: true,
+    middlewares: ['offset', 'flip', 'shift', 'arrow'],
     placement: "left-end"
   }, content),
   'arrow-placement-left': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     defaultOpen: true,
-    arrow: true,
+    middlewares: ['offset', 'flip', 'shift', 'arrow'],
     placement: "left"
   }, content),
   'arrow-placement-right-start': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     defaultOpen: true,
-    arrow: true,
+    middlewares: ['offset', 'flip', 'shift', 'arrow'],
     placement: "right-start"
   }, content),
   'arrow-placement-right-end': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     defaultOpen: true,
-    arrow: true,
+    middlewares: ['offset', 'flip', 'shift', 'arrow'],
     placement: "right-end"
   }, content),
   'arrow-placement-right': /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     defaultOpen: true,
-    arrow: true,
+    middlewares: ['offset', 'flip', 'shift', 'arrow'],
     placement: "right"
   }, content)
 };
@@ -2209,7 +2226,7 @@ var _reactDomInteractions = __webpack_require__(8324);
 
 var _react = _interopRequireWildcard(__webpack_require__(67294));
 
-var _Arrow = __webpack_require__(29822);
+var _Arrow = __webpack_require__(17206);
 
 var _PopoverBase = __webpack_require__(55700);
 
@@ -2228,12 +2245,16 @@ var Popover = function Popover(_ref) {
       children = _ref.children,
       _ref$placement = _ref.placement,
       placement = _ref$placement === void 0 ? 'bottom' : _ref$placement,
-      arrow = _ref.arrow,
       _ref$offset = _ref.offset,
-      offset = _ref$offset === void 0 ? 0 : _ref$offset,
+      _offset = _ref$offset === void 0 ? 0 : _ref$offset,
       _ref$defaultOpen = _ref.defaultOpen,
       defaultOpen = _ref$defaultOpen === void 0 ? false : _ref$defaultOpen,
-      components = _ref.components;
+      components = _ref.components,
+      _ref$middlewares = _ref.middlewares,
+      middlewares = _ref$middlewares === void 0 ? ['offset', 'flip', 'shift'] : _ref$middlewares,
+      _ref$interactions = _ref.interactions,
+      interactions = _ref$interactions === void 0 ? ['click', 'role', 'dismiss'] : _ref$interactions;
+
   var arrowRef = (0, _react.useRef)(null);
 
   var _useState = (0, _react.useState)(defaultOpen),
@@ -2241,15 +2262,31 @@ var Popover = function Popover(_ref) {
       open = _useState2[0],
       onOpenChange = _useState2[1];
 
-  var middlewares = [(0, _reactDomInteractions.offset)(offset), (0, _reactDomInteractions.flip)(), (0, _reactDomInteractions.shift)()];
-  if (arrow) middlewares.push((0, _reactDomInteractions.arrow)({
-    element: arrowRef
-  }));
+  var allMiddlewares = {
+    offset: function offset() {
+      return (0, _reactDomInteractions.offset)(_offset);
+    },
+    flip: function flip() {
+      return (0, _reactDomInteractions.flip)();
+    },
+    shift: function shift() {
+      return (0, _reactDomInteractions.shift)();
+    },
+    arrow: function arrow() {
+      return (0, _reactDomInteractions.arrow)({
+        element: arrowRef
+      });
+    }
+  };
+
+  var _middlewares = middlewares === null || middlewares === void 0 ? void 0 : middlewares.map(function (middlewareKey) {
+    return allMiddlewares[middlewareKey]();
+  });
 
   var _useFloating = (0, _reactDomInteractions.useFloating)({
     open: open,
     onOpenChange: onOpenChange,
-    middleware: middlewares,
+    middleware: _middlewares,
     placement: placement
   }),
       x = _useFloating.x,
@@ -2262,7 +2299,29 @@ var Popover = function Popover(_ref) {
       context = _useFloating.context,
       middlewareData = _useFloating.middlewareData;
 
-  var _useInteractions = (0, _reactDomInteractions.useInteractions)([(0, _reactDomInteractions.useClick)(context), (0, _reactDomInteractions.useRole)(context), (0, _reactDomInteractions.useDismiss)(context)]),
+  var allInteractions = {
+    click: function click(ctx) {
+      return (0, _reactDomInteractions.useClick)(ctx);
+    },
+    role: function role(ctx) {
+      return (0, _reactDomInteractions.useRole)(ctx);
+    },
+    dismiss: function dismiss(ctx) {
+      return (0, _reactDomInteractions.useDismiss)(ctx);
+    },
+    hover: function hover(ctx) {
+      return (0, _reactDomInteractions.useHover)(ctx);
+    },
+    focus: function focus(ctx) {
+      return (0, _reactDomInteractions.useFocus)(ctx);
+    }
+  };
+
+  var _interactions = interactions === null || interactions === void 0 ? void 0 : interactions.map(function (interactionKey) {
+    return allInteractions[interactionKey](context);
+  });
+
+  var _useInteractions = (0, _reactDomInteractions.useInteractions)(_interactions),
       getReferenceProps = _useInteractions.getReferenceProps,
       getFloatingProps = _useInteractions.getFloatingProps;
 
@@ -2279,7 +2338,17 @@ var Popover = function Popover(_ref) {
     bottom: 'top',
     left: 'right'
   }[placement.split('-')[0]];
+
+  var handleClose = function handleClose() {
+    return onOpenChange(false);
+  };
+
   var PopoverComponent = (components === null || components === void 0 ? void 0 : components.Popover) || _PopoverBase.PopoverBase;
+  var child = children;
+  if (typeof children === 'function') child = children({
+    close: handleClose,
+    isOpen: open
+  });
   return /*#__PURE__*/_react["default"].createElement(_react.Fragment, null, /*#__PURE__*/(0, _react.cloneElement)(trigger, getReferenceProps(_objectSpread({
     ref: reference
   }, trigger === null || trigger === void 0 ? void 0 : trigger.props))), open && /*#__PURE__*/_react["default"].createElement(_reactDomInteractions.FloatingFocusManager, {
@@ -2292,7 +2361,7 @@ var Popover = function Popover(_ref) {
     position: strategy,
     y: y,
     x: x
-  }), children, arrow && /*#__PURE__*/_react["default"].createElement(_Arrow.Arrow, {
+  }), child, middlewares.includes('arrow') && /*#__PURE__*/_react["default"].createElement(_Arrow.Arrow, {
     ref: arrowRef,
     staticSide: staticSide,
     x: (_middlewareData$arrow = middlewareData.arrow) === null || _middlewareData$arrow === void 0 ? void 0 : _middlewareData$arrow.x,
@@ -2304,7 +2373,7 @@ exports.Popover = Popover;
 
 /***/ }),
 
-/***/ 29822:
+/***/ 17206:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -42932,6 +43001,28 @@ exports.buttonTheme = buttonTheme;
 
 /***/ }),
 
+/***/ 45857:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.floatingTheme = void 0;
+var floatingTheme = {
+  background: '#fff',
+  borderRadius: '6px',
+  padding: '8px 0',
+  boxShadow: '-8px 12px 50px -3px hsla(146, 38.5%, 69.0%, 0.32)',
+  arrowSize: '14px'
+};
+exports.floatingTheme = floatingTheme;
+//# sourceMappingURL=floatingTheme.js.map
+
+/***/ }),
+
 /***/ 27901:
 /***/ ((__unused_webpack_module, exports) => {
 
@@ -43041,6 +43132,8 @@ exports.theme = void 0;
 
 var _buttonTheme = __webpack_require__(69252);
 
+var _floatingTheme = __webpack_require__(45857);
+
 var _fontsTheme = __webpack_require__(27901);
 
 var _selectTheme = __webpack_require__(95145);
@@ -43051,7 +43144,8 @@ var theme = {
   fonts: _fontsTheme.fontsTheme,
   button: _buttonTheme.buttonTheme,
   table: _tableTheme.tableTheme,
-  select: _selectTheme.selectTheme
+  select: _selectTheme.selectTheme,
+  floating: _floatingTheme.floatingTheme
 };
 exports.theme = theme;
 //# sourceMappingURL=theme.js.map
@@ -46550,6 +46644,28 @@ exports.buttonTheme = buttonTheme;
 
 /***/ }),
 
+/***/ 79435:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.floatingTheme = void 0;
+var floatingTheme = {
+  background: '#fff',
+  borderRadius: '6px',
+  padding: '8px 0',
+  boxShadow: '-8px 12px 50px -3px hsla(146, 38.5%, 69.0%, 0.32)',
+  arrowSize: '14px'
+};
+exports.floatingTheme = floatingTheme;
+//# sourceMappingURL=floatingTheme.js.map
+
+/***/ }),
+
 /***/ 93409:
 /***/ ((__unused_webpack_module, exports) => {
 
@@ -46659,6 +46775,8 @@ exports.theme = void 0;
 
 var _buttonTheme = __webpack_require__(83394);
 
+var _floatingTheme = __webpack_require__(79435);
+
 var _fontsTheme = __webpack_require__(93409);
 
 var _selectTheme = __webpack_require__(97610);
@@ -46669,7 +46787,8 @@ var theme = {
   fonts: _fontsTheme.fontsTheme,
   button: _buttonTheme.buttonTheme,
   table: _tableTheme.tableTheme,
-  select: _selectTheme.selectTheme
+  select: _selectTheme.selectTheme,
+  floating: _floatingTheme.floatingTheme
 };
 exports.theme = theme;
 //# sourceMappingURL=theme.js.map
@@ -53639,6 +53758,28 @@ exports.buttonTheme = buttonTheme;
 
 /***/ }),
 
+/***/ 622:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.floatingTheme = void 0;
+var floatingTheme = {
+  background: '#fff',
+  borderRadius: '6px',
+  padding: '8px 0',
+  boxShadow: '-8px 12px 50px -3px hsla(146, 38.5%, 69.0%, 0.32)',
+  arrowSize: '14px'
+};
+exports.floatingTheme = floatingTheme;
+//# sourceMappingURL=floatingTheme.js.map
+
+/***/ }),
+
 /***/ 68518:
 /***/ ((__unused_webpack_module, exports) => {
 
@@ -53748,6 +53889,8 @@ exports.theme = void 0;
 
 var _buttonTheme = __webpack_require__(7084);
 
+var _floatingTheme = __webpack_require__(622);
+
 var _fontsTheme = __webpack_require__(68518);
 
 var _selectTheme = __webpack_require__(24938);
@@ -53758,7 +53901,8 @@ var theme = {
   fonts: _fontsTheme.fontsTheme,
   button: _buttonTheme.buttonTheme,
   table: _tableTheme.tableTheme,
-  select: _selectTheme.selectTheme
+  select: _selectTheme.selectTheme,
+  floating: _floatingTheme.floatingTheme
 };
 exports.theme = theme;
 //# sourceMappingURL=theme.js.map
@@ -57249,6 +57393,28 @@ exports.buttonTheme = buttonTheme;
 
 /***/ }),
 
+/***/ 18041:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.floatingTheme = void 0;
+var floatingTheme = {
+  background: '#fff',
+  borderRadius: '6px',
+  padding: '8px 0',
+  boxShadow: '-8px 12px 50px -3px hsla(146, 38.5%, 69.0%, 0.32)',
+  arrowSize: '14px'
+};
+exports.floatingTheme = floatingTheme;
+//# sourceMappingURL=floatingTheme.js.map
+
+/***/ }),
+
 /***/ 60179:
 /***/ ((__unused_webpack_module, exports) => {
 
@@ -57358,6 +57524,8 @@ exports.theme = void 0;
 
 var _buttonTheme = __webpack_require__(30681);
 
+var _floatingTheme = __webpack_require__(18041);
+
 var _fontsTheme = __webpack_require__(60179);
 
 var _selectTheme = __webpack_require__(40752);
@@ -57368,7 +57536,8 @@ var theme = {
   fonts: _fontsTheme.fontsTheme,
   button: _buttonTheme.buttonTheme,
   table: _tableTheme.tableTheme,
-  select: _selectTheme.selectTheme
+  select: _selectTheme.selectTheme,
+  floating: _floatingTheme.floatingTheme
 };
 exports.theme = theme;
 //# sourceMappingURL=theme.js.map
@@ -65563,6 +65732,28 @@ exports.buttonTheme = buttonTheme;
 
 /***/ }),
 
+/***/ 25825:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.floatingTheme = void 0;
+var floatingTheme = {
+  background: '#fff',
+  borderRadius: '6px',
+  padding: '8px 0',
+  boxShadow: '-8px 12px 50px -3px hsla(146, 38.5%, 69.0%, 0.32)',
+  arrowSize: '14px'
+};
+exports.floatingTheme = floatingTheme;
+//# sourceMappingURL=floatingTheme.js.map
+
+/***/ }),
+
 /***/ 98283:
 /***/ ((__unused_webpack_module, exports) => {
 
@@ -65672,6 +65863,8 @@ exports.theme = void 0;
 
 var _buttonTheme = __webpack_require__(76377);
 
+var _floatingTheme = __webpack_require__(25825);
+
 var _fontsTheme = __webpack_require__(98283);
 
 var _selectTheme = __webpack_require__(69749);
@@ -65682,7 +65875,8 @@ var theme = {
   fonts: _fontsTheme.fontsTheme,
   button: _buttonTheme.buttonTheme,
   table: _tableTheme.tableTheme,
-  select: _selectTheme.selectTheme
+  select: _selectTheme.selectTheme,
+  floating: _floatingTheme.floatingTheme
 };
 exports.theme = theme;
 //# sourceMappingURL=theme.js.map
