@@ -46,6 +46,7 @@ export interface PopoverProps extends BaseProps {
   interactions?: string[];
   strategy?: Strategy;
   isPortal?: boolean;
+  onOpenChange?: (open: boolean, action: string) => void;
 }
 
 export const Popover: FC<PopoverProps> = ({
@@ -59,6 +60,7 @@ export const Popover: FC<PopoverProps> = ({
   interactions = ['click', 'role', 'dismiss'],
   strategy: propStrategy = 'absolute',
   isPortal = false,
+  onOpenChange: propOnOpenChange,
 }) => {
   const arrowRef = useRef(null);
   const [open, onOpenChange] = useState(defaultOpen);
@@ -74,6 +76,14 @@ export const Popover: FC<PopoverProps> = ({
     allMiddlewares[middlewareKey](),
   );
 
+  const handleOpenChange = (_open: boolean) => {
+    onOpenChange(_open);
+    if (propOnOpenChange) {
+      const action = open ? 'open' : 'close';
+      propOnOpenChange(_open, action);
+    }
+  };
+
   const {
     x,
     y,
@@ -87,7 +97,7 @@ export const Popover: FC<PopoverProps> = ({
   } = useFloating({
     strategy: propStrategy,
     open,
-    onOpenChange,
+    onOpenChange: handleOpenChange,
     middleware: _middlewares,
     placement,
   });
