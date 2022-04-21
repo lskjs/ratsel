@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.20.2](https://github.com/lskjs/ratsel/compare/v0.20.1...v0.20.2) (2022-04-21)
+
+
+### Bug Fixes
+
+* **floating:** correct onOpen ([af92b2a](https://github.com/lskjs/ratsel/commit/af92b2aab6c8bfddb978a005f4e6abd54170bb1c))
+
+
+
+
+
 ## [0.20.1](https://github.com/lskjs/ratsel/compare/v0.20.0...v0.20.1) (2022-04-21)
 
 
