@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.20.1](https://github.com/lskjs/ratsel/compare/v0.20.0...v0.20.1) (2022-04-21)
+
+
+### Bug Fixes
+
+* **floating:** Popover onOpenChange ([9ae3aa0](https://github.com/lskjs/ratsel/commit/9ae3aa0a3985cb4f2e73e89ac8b6add45d277129))
+
+
+
+
+
 # [0.20.0](https://github.com/lskjs/ratsel/compare/v0.19.2...v0.20.0) (2022-04-21)
 
 
