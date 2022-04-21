@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.2](https://github.com/lskjs/ratsel/compare/v0.19.1...v0.19.2) (2022-04-21)
+
+
+### Bug Fixes
+
+* **floating:** strategy pass ([ce11df4](https://github.com/lskjs/ratsel/commit/ce11df475494b887817a9544ba11047b4160be8a))
+
+
+
+
+
 ## [0.19.1](https://github.com/lskjs/ratsel/compare/v0.19.0...v0.19.1) (2022-04-21)
 
 
