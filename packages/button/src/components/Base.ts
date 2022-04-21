@@ -23,6 +23,8 @@ export const Base = styled('button', {
       'loading',
       'block',
       'minWidth',
+      'close',
+      'isOpen',
     ].includes(prop as string),
 })<BaseProps>`
   width: ${(props) => (props.block ? '100%' : 'auto')};
