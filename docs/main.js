@@ -1023,7 +1023,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-var Button = function Button(_ref) {
+var Button = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   var children = _ref.children,
       _ref$variant = _ref.variant,
       variant = _ref$variant === void 0 ? 'primary' : _ref$variant,
@@ -1120,6 +1120,7 @@ var Button = function Button(_ref) {
   var isOverlayRender = loadingRender || Boolean(statusRender);
   var inverse = ['primary'].includes(variant);
   return /*#__PURE__*/_react["default"].createElement(_Base.Base, (0, _extends2["default"])({}, props, {
+    ref: ref,
     block: block,
     variant: variant,
     bordered: bordered,
@@ -1135,8 +1136,7 @@ var Button = function Button(_ref) {
   }, loadingRender && /*#__PURE__*/_react["default"].createElement(_Spinner.Spinner, {
     inverse: inverse
   }), !loadingRender && statusRender === 'error' && /*#__PURE__*/_react["default"].createElement(_CloseIcon.CloseIcon, null), !loadingRender && statusRender === 'success' && /*#__PURE__*/_react["default"].createElement(_CheckIcon.CheckIcon, null)), iconLeft && /*#__PURE__*/_react["default"].createElement(_Icon.Icon, null, iconLeft), !icon ? children : /*#__PURE__*/_react["default"].createElement(_Icon.Icon, null, icon), iconRight && /*#__PURE__*/_react["default"].createElement(_Icon.Icon, null, iconRight));
-};
-
+});
 exports.Button = Button;
 var _default = Button;
 exports["default"] = _default;
@@ -1166,7 +1166,7 @@ var _templateObject, _templateObject2, _templateObject3;
 
 var Base = (0, _core.styled)('button', {
   shouldForwardProp: function shouldForwardProp(prop) {
-    return !['variant', 'bordered', 'iconLeft', 'iconRight', 'loading', 'block', 'minWidth'].includes(prop);
+    return !['variant', 'bordered', 'iconLeft', 'iconRight', 'loading', 'block', 'minWidth', 'close', 'isOpen'].includes(prop);
   }
 })(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n  width: ", ";\n  min-width: ", ";\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-family: ", ";\n  font-style: normal;\n  font-weight: ", ";\n  font-size: ", ";\n  letter-spacing: -0.01em;\n  border-radius: 8px;\n  border: none;\n  cursor: pointer;\n  outline: none;\n  padding-left: ", ";\n  padding-right: ", ";\n\n  padding-top: ", ";\n  padding-bottom: ", ";\n\n  box-shadow: ", ";\n\n  &:focus {\n    box-shadow: ", ";\n  }\n\n  ", "\n\n  &:disabled {\n    filter: grayscale(1) opacity(0.4);\n    pointer-events: none;\n    user-select: none;\n  }\n\n  transition: background 200ms ease-out, color 200ms ease-out;\n  will-change: background, color;\n\n  ", "\n"])), function (props) {
   return props.block ? '100%' : 'auto';
@@ -2067,6 +2067,10 @@ var _default = {
     trigger: trigger,
     defaultOpen: true
   }, content),
+  isPortal: /*#__PURE__*/_react["default"].createElement(_src.Popover, {
+    trigger: trigger,
+    isPortal: true
+  }, content),
   dropdown: /*#__PURE__*/_react["default"].createElement(_src.Popover, {
     trigger: trigger,
     interactions: ['click', 'focus']
@@ -2253,7 +2257,11 @@ var Popover = function Popover(_ref) {
       _ref$middlewares = _ref.middlewares,
       middlewares = _ref$middlewares === void 0 ? ['offset', 'flip', 'shift'] : _ref$middlewares,
       _ref$interactions = _ref.interactions,
-      interactions = _ref$interactions === void 0 ? ['click', 'role', 'dismiss'] : _ref$interactions;
+      interactions = _ref$interactions === void 0 ? ['click', 'role', 'dismiss'] : _ref$interactions,
+      _ref$strategy = _ref.strategy,
+      propStrategy = _ref$strategy === void 0 ? 'absolute' : _ref$strategy,
+      _ref$isPortal = _ref.isPortal,
+      isPortal = _ref$isPortal === void 0 ? false : _ref$isPortal;
 
   var arrowRef = (0, _react.useRef)(null);
 
@@ -2284,6 +2292,7 @@ var Popover = function Popover(_ref) {
   });
 
   var _useFloating = (0, _reactDomInteractions.useFloating)({
+    strategy: propStrategy,
     open: open,
     onOpenChange: onOpenChange,
     middleware: _middlewares,
@@ -2349,14 +2358,19 @@ var Popover = function Popover(_ref) {
     close: handleClose,
     isOpen: open
   });
-  return /*#__PURE__*/_react["default"].createElement(_react.Fragment, null, /*#__PURE__*/(0, _react.cloneElement)(trigger, getReferenceProps(_objectSpread({
-    ref: reference
-  }, trigger === null || trigger === void 0 ? void 0 : trigger.props))), open && /*#__PURE__*/_react["default"].createElement(_reactDomInteractions.FloatingFocusManager, {
-    context: context,
-    modal: false,
-    order: ['reference', 'content'],
-    returnFocus: false
-  }, /*#__PURE__*/_react["default"].createElement(PopoverComponent, getFloatingProps({
+  var focusManagerProps = {
+    context: context
+  };
+
+  if (!isPortal) {
+    focusManagerProps = _objectSpread(_objectSpread({}, focusManagerProps), {}, {
+      modal: false,
+      order: ['reference', 'content'],
+      returnFocus: false
+    });
+  }
+
+  var focusManager = /*#__PURE__*/_react["default"].createElement(_reactDomInteractions.FloatingFocusManager, focusManagerProps, /*#__PURE__*/_react["default"].createElement(PopoverComponent, getFloatingProps({
     ref: floating,
     position: strategy,
     y: y,
@@ -2366,7 +2380,15 @@ var Popover = function Popover(_ref) {
     staticSide: staticSide,
     x: (_middlewareData$arrow = middlewareData.arrow) === null || _middlewareData$arrow === void 0 ? void 0 : _middlewareData$arrow.x,
     y: (_middlewareData$arrow2 = middlewareData.arrow) === null || _middlewareData$arrow2 === void 0 ? void 0 : _middlewareData$arrow2.y
-  }))));
+  })));
+
+  var content = open && focusManager;
+  return /*#__PURE__*/_react["default"].createElement(_react.Fragment, null, /*#__PURE__*/(0, _react.cloneElement)(trigger, getReferenceProps(_objectSpread(_objectSpread({
+    ref: reference
+  }, trigger === null || trigger === void 0 ? void 0 : trigger.props), {}, {
+    isOpen: open,
+    close: handleClose
+  }))), isPortal ? /*#__PURE__*/_react["default"].createElement(_reactDomInteractions.FloatingPortal, null, content) : content);
 };
 
 exports.Popover = Popover;
