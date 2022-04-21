@@ -26,6 +26,11 @@ export default {
       {content}
     </Popover>
   ),
+  isPortal: (
+    <Popover trigger={trigger} isPortal>
+      {content}
+    </Popover>
+  ),
   dropdown: (
     <Popover trigger={trigger} interactions={['click', 'focus']}>
       {content2}

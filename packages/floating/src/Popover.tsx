@@ -4,6 +4,7 @@ import {
   flip as flipMiddleware,
   FloatingContext,
   FloatingFocusManager,
+  FloatingPortal,
   offset as offsetMiddleware,
   Placement,
   shift as shiftMiddleware,
@@ -44,6 +45,7 @@ export interface PopoverProps extends BaseProps {
   middlewares?: string[];
   interactions?: string[];
   strategy?: Strategy;
+  isPortal?: boolean;
 }
 
 export const Popover: FC<PopoverProps> = ({
@@ -56,6 +58,7 @@ export const Popover: FC<PopoverProps> = ({
   middlewares = ['offset', 'flip', 'shift'],
   interactions = ['click', 'role', 'dismiss'],
   strategy: propStrategy = 'absolute',
+  isPortal = false,
 }) => {
   const arrowRef = useRef(null);
   const [open, onOpenChange] = useState(defaultOpen);
@@ -124,6 +127,41 @@ export const Popover: FC<PopoverProps> = ({
   let child = children;
   if (typeof children === 'function')
     child = children({ close: handleClose, isOpen: open });
+
+  let focusManagerProps: any = {
+    context,
+  };
+  if (!isPortal) {
+    focusManagerProps = {
+      ...focusManagerProps,
+      modal: false,
+      order: ['reference', 'content'],
+      returnFocus: false,
+    };
+  }
+  const focusManager = (
+    <FloatingFocusManager {...focusManagerProps}>
+      <PopoverComponent
+        {...getFloatingProps({
+          ref: floating,
+          position: strategy,
+          y,
+          x,
+        } as HTMLProps<HTMLElement>)}
+      >
+        {child}
+        {middlewares.includes('arrow') && (
+          <Arrow
+            ref={arrowRef}
+            staticSide={staticSide}
+            x={middlewareData.arrow?.x}
+            y={middlewareData.arrow?.y}
+          />
+        )}
+      </PopoverComponent>
+    </FloatingFocusManager>
+  );
+  const content = open && focusManager;
   return (
     <Fragment>
       {cloneElement(
@@ -135,33 +173,7 @@ export const Popover: FC<PopoverProps> = ({
           close: handleClose,
         }),
       )}
-      {open && (
-        <FloatingFocusManager
-          context={context}
-          modal={false}
-          order={['reference', 'content']}
-          returnFocus={false}
-        >
-          <PopoverComponent
-            {...getFloatingProps({
-              ref: floating,
-              position: strategy,
-              y,
-              x,
-            } as HTMLProps<HTMLElement>)}
-          >
-            {child}
-            {middlewares.includes('arrow') && (
-              <Arrow
-                ref={arrowRef}
-                staticSide={staticSide}
-                x={middlewareData.arrow?.x}
-                y={middlewareData.arrow?.y}
-              />
-            )}
-          </PopoverComponent>
-        </FloatingFocusManager>
-      )}
+      {isPortal ? <FloatingPortal>{content}</FloatingPortal> : content}
     </Fragment>
   );
 };
