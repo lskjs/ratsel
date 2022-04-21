@@ -2,6 +2,7 @@ import {
   arrow as arrowMiddleware,
   autoUpdate,
   flip as flipMiddleware,
+  FloatingContext,
   FloatingFocusManager,
   offset as offsetMiddleware,
   Placement,
@@ -9,6 +10,8 @@ import {
   useClick,
   useDismiss,
   useFloating,
+  useFocus,
+  useHover,
   useInteractions,
   useRole,
 } from '@floating-ui/react-dom-interactions';
@@ -34,30 +37,36 @@ export interface PopoverComponents {
 
 export interface PopoverProps extends BaseProps {
   placement?: Placement;
-  arrow?: boolean;
   offset?: number;
   defaultOpen?: boolean;
-  components: PopoverComponents;
+  components?: PopoverComponents;
+  middlewares?: string[];
+  interactions?: string[];
 }
 
 export const Popover: FC<PopoverProps> = ({
   trigger,
   children,
   placement = 'bottom',
-  arrow,
   offset = 0,
   defaultOpen = false,
   components,
+  middlewares = ['offset', 'flip', 'shift'],
+  interactions = ['click', 'role', 'dismiss'],
 }) => {
   const arrowRef = useRef(null);
   const [open, onOpenChange] = useState(defaultOpen);
 
-  const middlewares = [
-    offsetMiddleware(offset),
-    flipMiddleware(),
-    shiftMiddleware(),
-  ];
-  if (arrow) middlewares.push(arrowMiddleware({ element: arrowRef }));
+  const allMiddlewares = {
+    offset: () => offsetMiddleware(offset),
+    flip: () => flipMiddleware(),
+    shift: () => shiftMiddleware(),
+    arrow: () => arrowMiddleware({ element: arrowRef }),
+  };
+
+  const _middlewares = middlewares?.map((middlewareKey: string) =>
+    allMiddlewares[middlewareKey](),
+  );
 
   const {
     x,
@@ -72,15 +81,24 @@ export const Popover: FC<PopoverProps> = ({
   } = useFloating({
     open,
     onOpenChange,
-    middleware: middlewares,
+    middleware: _middlewares,
     placement,
   });
 
-  const { getReferenceProps, getFloatingProps } = useInteractions([
-    useClick(context),
-    useRole(context),
-    useDismiss(context),
-  ]);
+  const allInteractions = {
+    click: (ctx: FloatingContext) => useClick(ctx),
+    role: (ctx: FloatingContext) => useRole(ctx),
+    dismiss: (ctx: FloatingContext) => useDismiss(ctx),
+    hover: (ctx: FloatingContext) => useHover(ctx),
+    focus: (ctx: FloatingContext) => useFocus(ctx),
+  };
+
+  const _interactions = interactions?.map((interactionKey: string) =>
+    allInteractions[interactionKey](context),
+  );
+
+  const { getReferenceProps, getFloatingProps } =
+    useInteractions(_interactions);
 
   useEffect(() => {
     if (refs.reference.current && refs.floating.current && open) {
@@ -88,6 +106,7 @@ export const Popover: FC<PopoverProps> = ({
     }
     return undefined;
   }, [open, update, refs.reference, refs.floating]);
+
   const staticSide = {
     top: 'bottom',
     right: 'left',
@@ -95,7 +114,12 @@ export const Popover: FC<PopoverProps> = ({
     left: 'right',
   }[(placement as string).split('-')[0]];
 
+  const handleClose = () => onOpenChange(false);
+
   const PopoverComponent = components?.Popover || PopoverBase;
+  let child = children;
+  if (typeof children === 'function')
+    child = children({ close: handleClose, isOpen: open });
   return (
     <Fragment>
       {cloneElement(
@@ -117,8 +141,8 @@ export const Popover: FC<PopoverProps> = ({
               x,
             } as HTMLProps<HTMLElement>)}
           >
-            {children}
-            {arrow && (
+            {child}
+            {middlewares.includes('arrow') && (
               <Arrow
                 ref={arrowRef}
                 staticSide={staticSide}
