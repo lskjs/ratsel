@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { css, make, PropsWithTheme, styled } from '@ratsel/core';
 
 export interface WrapperProps {
