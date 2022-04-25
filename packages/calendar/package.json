@@ -1,6 +1,6 @@
 {
   "name": "@ratsel/calendar",
-  "version": "0.21.2",
+  "version": "0.21.3",
   "description": "🧩 Rätsel Calendar",
   "keywords": [
     "lskjs",
@@ -31,7 +31,7 @@
     "watch": "lsk run watch"
   },
   "devDependencies": {
-    "@ratsel/core": "0.21.2",
+    "@ratsel/core": "0.21.3",
     "@types/react": "^17.0.43",
     "@types/react-calendar": "^3.5.0",
     "react": "^17.0.2"
