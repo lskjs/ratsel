@@ -1,5 +1,7 @@
 import type { ButtonTheme } from './buttonTheme';
 import { buttonTheme } from './buttonTheme';
+import type { CalendarTheme } from './calendarTheme';
+import { calendarTheme } from './calendarTheme';
 import type { FloatingTheme } from './floatingTheme';
 import { floatingTheme } from './floatingTheme';
 import type { FontsTheme } from './fontsTheme';
@@ -15,6 +17,7 @@ export interface InnerTheme {
   table: TableTheme;
   select: SelectTheme;
   floating: FloatingTheme;
+  calendar: CalendarTheme;
 }
 
 export interface Theme {
@@ -27,4 +30,5 @@ export const theme: InnerTheme = {
   table: tableTheme,
   select: selectTheme,
   floating: floatingTheme,
+  calendar: calendarTheme,
 };
