@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.21.0](https://github.com/lskjs/ratsel/compare/v0.20.2...v0.21.0) (2022-04-25)
+
+
+### Bug Fixes
+
+* eslint prettier not works ([7239e6c](https://github.com/lskjs/ratsel/commit/7239e6cec4bc1797da68ed13116ff2736e6b4696))
+
+
+### Features
+
+* **calendar:** introducing new component ([3d0589e](https://github.com/lskjs/ratsel/commit/3d0589ea633a306197082d5a2c608284a161e672))
+* **core:** add calendar theme ([fdf8804](https://github.com/lskjs/ratsel/commit/fdf880449d8946b850a8d706aec985b61b56fd9b))
+
+
+
+
+
 ## [0.20.2](https://github.com/lskjs/ratsel/compare/v0.20.1...v0.20.2) (2022-04-21)
 
 
