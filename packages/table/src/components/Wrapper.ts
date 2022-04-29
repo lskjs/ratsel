@@ -459,11 +459,6 @@ export const Wrapper = styled('div', {
     z-index: 20;
   }
 
-  .sticky-cell-thead.sticky-cell-left,
-  .sticky-cell-thead.sticky-cell-right {
-    pointer-events: none;
-  }
-
   .sticky-cell-right.sticky-cell-thead {
     box-shadow: inset ${(props) => props.theme.ratsel.table.borderWidth} -${(
         props,
