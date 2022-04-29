@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.7](https://github.com/lskjs/ratsel/compare/v0.21.6...v0.21.7) (2022-04-29)
+
+
+### Bug Fixes
+
+* **table:** extend utils ([b2e2d78](https://github.com/lskjs/ratsel/commit/b2e2d783560dded04cd7cdf0967abd942a7e5814))
+
+
+
+
+
 ## [0.21.6](https://github.com/lskjs/ratsel/compare/v0.21.5...v0.21.6) (2022-04-29)
 
 
