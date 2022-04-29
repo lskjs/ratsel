@@ -52,15 +52,19 @@ export const Table: FC<TableProps> = ({ data, onChangeState, onChange }) => {
   };
 
   const childComponents = {
+    ...(tableProps.childComponents || {}),
     headCell: {
+      ...(tableProps.childComponents?.headCell || {}),
       elementAttributes: (props: IHeadCellProps) =>
         getStickyAttrs('thead', custom?.sticky, props.column),
     },
     cell: {
+      ...(tableProps.childComponents?.cell || {}),
       elementAttributes: (props: ICellProps) =>
         getStickyAttrs('tbody', custom?.sticky, props.column),
     },
     cellText: {
+      ...(tableProps.childComponents?.cellText || {}),
       content: (props: ICellTextProps) =>
         renderCustomComponent(
           props,
@@ -68,17 +72,18 @@ export const Table: FC<TableProps> = ({ data, onChangeState, onChange }) => {
         ),
     },
     cellEditor: {
+      ...(tableProps.childComponents?.cellEditor || {}),
       content: (props: ICellEditorProps) =>
         renderCustomComponent(
           props,
           custom?.cellEditorComponents?.[props.column.key],
         ),
     },
-    ...(tableProps.childComponents || {}),
   };
 
   if (custom?.sticky?.summaryRow) {
     childComponents.summaryRow = {
+      ...(tableProps.childComponents?.summaryRow || {}),
       elementAttributes: () => ({
         className: 'sticky-row-bottom',
       }),
@@ -87,6 +92,7 @@ export const Table: FC<TableProps> = ({ data, onChangeState, onChange }) => {
 
   if (custom?.cellTotalComponent) {
     childComponents.summaryCell = {
+      ...(tableProps.childComponents?.summaryCell || {}),
       content: custom?.cellTotalComponent,
       elementAttributes: (props) =>
         getStickyAttrs('summary', custom?.sticky, props.column),
