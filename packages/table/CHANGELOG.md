@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.6](https://github.com/lskjs/ratsel/compare/v0.21.5...v0.21.6) (2022-04-29)
+
+
+### Bug Fixes
+
+* **table:** childComponents merge ([8166f90](https://github.com/lskjs/ratsel/commit/8166f9031f31d2ac6d564884d70ca55eb27a3bbb))
+
+
+
+
+
 ## [0.21.5](https://github.com/lskjs/ratsel/compare/v0.21.4...v0.21.5) (2022-04-29)
 
 **Note:** Version bump only for package @ratsel/table
