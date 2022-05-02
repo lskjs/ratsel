@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.22.0](https://github.com/lskjs/ratsel/compare/v0.21.8...v0.22.0) (2022-05-02)
+
+
+### Features
+
+* **core:** add theme for modal ([bb6a6f1](https://github.com/lskjs/ratsel/commit/bb6a6f1112bc59f24feb2c0bcaae7d1bb46a3959))
+* **modal:** introducing new package ([f0b66c7](https://github.com/lskjs/ratsel/commit/f0b66c75dc19662fdcf365ef1c65c0991f9aaf85))
+
+
+
+
+
 ## [0.21.8](https://github.com/lskjs/ratsel/compare/v0.21.7...v0.21.8) (2022-04-29)
 
 **Note:** Version bump only for package @ratsel/ui
