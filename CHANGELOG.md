@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.22.1](https://github.com/lskjs/ratsel/compare/v0.22.0...v0.22.1) (2022-05-02)
+
+**Note:** Version bump only for package @ratsel/ui
+
+
+
+
+
 # [0.22.0](https://github.com/lskjs/ratsel/compare/v0.21.8...v0.22.0) (2022-05-02)
 
 
