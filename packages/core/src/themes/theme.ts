@@ -6,6 +6,8 @@ import type { FloatingTheme } from './floatingTheme';
 import { floatingTheme } from './floatingTheme';
 import type { FontsTheme } from './fontsTheme';
 import { fontsTheme } from './fontsTheme';
+import type { ModalTheme } from './modalTheme';
+import { modalTheme } from './modalTheme';
 import type { SelectTheme } from './selectTheme';
 import { selectTheme } from './selectTheme';
 import type { TableTheme } from './tableTheme';
@@ -18,6 +20,7 @@ export interface InnerTheme {
   select: SelectTheme;
   floating: FloatingTheme;
   calendar: CalendarTheme;
+  modal: ModalTheme;
 }
 
 export interface Theme {
@@ -31,4 +34,5 @@ export const theme: InnerTheme = {
   select: selectTheme,
   floating: floatingTheme,
   calendar: calendarTheme,
+  modal: modalTheme,
 };
