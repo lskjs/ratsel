@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { styled } from '@ratsel/core';
 
 export interface ModalImageProps {

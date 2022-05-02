@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { styled } from '@ratsel/core';
 
 export const ModalInnerWrapper = styled('div')`
