@@ -21,17 +21,17 @@ const globalStyles = css`
 
   .ReactModal__Overlay .ReactModal__Content {
     opacity: 0;
-    transform: translate3d(0, 5%, 0);
+    transform: translate3d(0, 5%, 0) scale(1.05);
     transition: opacity 0.15s ease-out, transform 0.2s ease-out;
   }
 
   .ReactModal__Overlay--after-open .ReactModal__Content {
-    transform: translate3d(0, 0%, 0);
+    transform: translate3d(0, 0%, 0) scale(1);
     opacity: 1;
   }
 
   .ReactModal__Overlay--before-close .ReactModal__Content {
-    transform: translate3d(0, -5%, 0);
+    transform: translate3d(0, -5%, 0) scale(0.95);
     opacity: 0;
   }
 `;
