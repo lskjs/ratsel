@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.23.4](https://github.com/lskjs/ratsel/compare/v0.23.3...v0.23.4) (2022-05-05)
+
+
+### Bug Fixes
+
+* **table:** critical error of state loop ([40991cf](https://github.com/lskjs/ratsel/commit/40991cffa50ffe848729365b469ae18956a59aa5))
+
+
+
+
+
 ## [0.23.3](https://github.com/lskjs/ratsel/compare/v0.23.2...v0.23.3) (2022-05-05)
 
 
