@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.23.1](https://github.com/lskjs/ratsel/compare/v0.23.0...v0.23.1) (2022-05-05)
+
+
+### Bug Fixes
+
+* **table:** add custom dispatch ([be83237](https://github.com/lskjs/ratsel/commit/be832370a995c831b285bcb016ed11dffbebe76a))
+
+
+
+
+
 # [0.23.0](https://github.com/lskjs/ratsel/compare/v0.22.1...v0.23.0) (2022-05-04)
 
 **Note:** Version bump only for package @ratsel/table
