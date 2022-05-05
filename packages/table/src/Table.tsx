@@ -46,18 +46,31 @@ export const Table: FC<TableProps> = ({
   const [custom, changeCustom] = useState(_data.custom);
   const [tableProps, changeTableProps] = useState(_data.tableProps);
 
+  function updateTableData(__data: ExtendedITableProps) {
+    const ___data = deserialize(__data);
+    if (getReducer && !___data.tableProps.singleAction) {
+      ___data.tableProps.singleAction = true;
+    }
+    changeCustom(___data.custom);
+    changeTableProps(___data.tableProps);
+  }
+
   useEffect(() => {
-    const __data = deserialize(data);
-    changeCustom(__data.custom);
-    changeTableProps(__data.tableProps);
+    updateTableData(data);
   }, [data]);
 
   const reducer = async (__action: any, __dispatch: DispatchFunc) => {
+    if (__action?.type === 'UpdateTableData') {
+      updateTableData(__action?.data);
+      return;
+    }
+
     changeTableProps((prevState: ExtendedITableProps) => {
       const newState = kaReducer(prevState, __action);
       if (onChangeState) onChangeState({ state: newState, action: __action });
       return newState;
     });
+
     if (onChange) await onChange({ action: __action, dispatch: __dispatch });
   };
 
