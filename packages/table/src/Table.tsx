@@ -60,12 +60,18 @@ export const Table: FC<TableProps> = ({
   }, [data]);
 
   const reducer = async (__action: any, __dispatch: DispatchFunc) => {
-    if (__action?.type === 'UpdateTableData') {
-      updateTableData(__action?.data);
+    if (__action?.type === 'UpdateTableDataAsync') {
+      const newTableProps = await __action.updater(tableProps);
+      changeTableProps(newTableProps);
       return;
     }
 
     changeTableProps((prevState: ExtendedITableProps) => {
+      if (__action?.type === 'UpdateTableDataSync') {
+        const newTableProps = __action.updater(prevState);
+        return newTableProps;
+      }
+
       const newState = kaReducer(prevState, __action);
       if (onChangeState) onChangeState({ state: newState, action: __action });
       return newState;
