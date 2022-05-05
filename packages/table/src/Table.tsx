@@ -40,6 +40,9 @@ export const Table: FC<TableProps> = ({
   onChange,
 }) => {
   const _data = deserialize(data);
+  if (getReducer && !_data.tableProps.singleAction) {
+    _data.tableProps.singleAction = true;
+  }
   const [custom, changeCustom] = useState(_data.custom);
   const [tableProps, changeTableProps] = useState(_data.tableProps);
 
@@ -111,10 +114,6 @@ export const Table: FC<TableProps> = ({
       elementAttributes: (props) =>
         getStickyAttrs('summary', custom?.sticky, props.column),
     };
-  }
-
-  if (getReducer && !tableProps.singleAction) {
-    tableProps.singleAction = true;
   }
 
   return (
