@@ -24,15 +24,17 @@ export interface ExtendedITableProps extends ITableProps {
   childComponents?: ITableAllProps['childComponents'];
 }
 
+type ExternalReducer = (action: any, dispatch: DispatchFunc) => void;
+
 interface TableProps {
   data: ExtendedITableProps;
-  dispatch?: DispatchFunc;
+  getReducer?: (reducer: ExternalReducer) => void;
   onChangeState?: (arg: any) => any;
   onChange?: (arg: any) => any | Promise<any>;
 }
 
 export const Table: FC<TableProps> = ({
-  dispatch: propDispatch,
+  getReducer,
   data,
   onChangeState,
   onChange,
@@ -47,7 +49,7 @@ export const Table: FC<TableProps> = ({
     changeTableProps(__data.tableProps);
   }, [data]);
 
-  const executable = async (__action: any, __dispatch: DispatchFunc) => {
+  const reducer = async (__action: any, __dispatch: DispatchFunc) => {
     changeTableProps((prevState: ExtendedITableProps) => {
       const newState = kaReducer(prevState, __action);
       if (onChangeState) onChangeState({ state: newState, action: __action });
@@ -57,9 +59,9 @@ export const Table: FC<TableProps> = ({
   };
 
   const dispatch: DispatchFunc = async (action) => {
-    executable(action, dispatch);
-    if (propDispatch) {
-      propDispatch(executable);
+    reducer(action, dispatch);
+    if (getReducer) {
+      getReducer(reducer);
     }
   };
 
@@ -109,6 +111,10 @@ export const Table: FC<TableProps> = ({
       elementAttributes: (props) =>
         getStickyAttrs('summary', custom?.sticky, props.column),
     };
+  }
+
+  if (getReducer && !tableProps.singleAction) {
+    tableProps.singleAction = true;
   }
 
   return (
