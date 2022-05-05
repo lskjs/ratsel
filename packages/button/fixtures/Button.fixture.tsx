@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { BookmarkIcon } from '../assets/BookmarkIcon';
 import { Button } from '../src';
@@ -9,6 +9,31 @@ async function promiseClick() {
       resolve(null);
     }, 1000);
   });
+}
+
+async function negativePromiseClick() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject();
+    }, 1000);
+  });
+}
+
+function BugPromiseClick({ onClick }) {
+  const [visible, setVisible] = useState(true);
+
+  async function handleClose(event) {
+    event.preventDefault();
+    await onClick();
+    setVisible(false);
+  }
+
+  if (!visible) return null;
+  return (
+    <Button variant="primary" onClick={handleClose}>
+      Кнопка
+    </Button>
+  );
 }
 
 export default {
@@ -40,6 +65,13 @@ export default {
       Кнопка
     </Button>
   ),
+  promiseClickError: (
+    <Button variant="primary" onClick={negativePromiseClick}>
+      Кнопка
+    </Button>
+  ),
+  testBugPromiseClick: <BugPromiseClick onClick={promiseClick} />,
+  testBugPromiseClickError: <BugPromiseClick onClick={negativePromiseClick} />,
   disabled: (
     <Button variant="primary" disabled bordered={false}>
       Кнопка

@@ -4,6 +4,8 @@ import React, {
   LegacyRef,
   ReactNode,
   SyntheticEvent,
+  useEffect,
+  useRef,
   useState,
 } from 'react';
 
@@ -46,6 +48,14 @@ export const Button: FC<ButtonProps> = forwardRef(
     },
     ref,
   ) => {
+    const isMounted = useRef(false);
+
+    useEffect(() => {
+      isMounted.current = true;
+      return () => {
+        isMounted.current = false;
+      };
+    }, []);
     const [state, setState] = useState<ButtonState>({
       loading: false,
       status: null,
@@ -55,30 +65,38 @@ export const Button: FC<ButtonProps> = forwardRef(
       if (!onClick) return;
       const promise = onClick(event);
       if (isPromise(promise as unknown as Promise<() => unknown>)) {
-        setState({
-          ...state,
-          loading: true,
-        });
+        if (isMounted.current) {
+          setState({
+            ...state,
+            loading: true,
+          });
+        }
         try {
           await promise;
-          setState({
-            ...state,
-            loading: false,
-            status: 'success',
-          });
-        } catch (error) {
-          setState({
-            ...state,
-            loading: false,
-            status: 'error',
-          });
-        } finally {
-          setTimeout(() => {
+          if (isMounted.current) {
             setState({
               ...state,
               loading: false,
-              status: null,
+              status: 'success',
             });
+          }
+        } catch (error) {
+          if (isMounted.current) {
+            setState({
+              ...state,
+              loading: false,
+              status: 'error',
+            });
+          }
+        } finally {
+          setTimeout(() => {
+            if (isMounted.current) {
+              setState({
+                ...state,
+                loading: false,
+                status: null,
+              });
+            }
           }, 1000);
         }
       }
