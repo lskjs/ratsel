@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.23.2](https://github.com/lskjs/ratsel/compare/v0.23.1...v0.23.2) (2022-05-05)
+
+
+### Bug Fixes
+
+* **table:** executable dispatch ([a74ddeb](https://github.com/lskjs/ratsel/commit/a74ddeb5c7759b676a027c89996d89e7b4d123bd))
+
+
+
+
+
 ## [0.23.1](https://github.com/lskjs/ratsel/compare/v0.23.0...v0.23.1) (2022-05-05)
 
 
