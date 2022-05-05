@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.23.3](https://github.com/lskjs/ratsel/compare/v0.23.2...v0.23.3) (2022-05-05)
+
+
+### Bug Fixes
+
+* **table:** getReducer for possible creation external dispatch instance ([c324891](https://github.com/lskjs/ratsel/commit/c3248914965466e9c265b43236e281cf740ed7c8))
+
+
+
+
+
 ## [0.23.2](https://github.com/lskjs/ratsel/compare/v0.23.1...v0.23.2) (2022-05-05)
 
 
