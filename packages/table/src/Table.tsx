@@ -47,15 +47,20 @@ export const Table: FC<TableProps> = ({
     changeTableProps(__data.tableProps);
   }, [data]);
 
-  const dispatch: DispatchFunc = async (action) => {
+  const executable = async (__action: any, __dispatch: DispatchFunc) => {
     changeTableProps((prevState: ExtendedITableProps) => {
-      const newState = kaReducer(prevState, action);
-      if (onChangeState) onChangeState({ state: newState, action });
+      const newState = kaReducer(prevState, __action);
+      if (onChangeState) onChangeState({ state: newState, action: __action });
       return newState;
     });
+    if (onChange) await onChange({ action: __action, dispatch: __dispatch });
+  };
 
-    if (propDispatch) await propDispatch(action);
-    if (onChange) await onChange({ action, dispatch });
+  const dispatch: DispatchFunc = async (action) => {
+    executable(action, dispatch);
+    if (propDispatch) {
+      propDispatch(executable);
+    }
   };
 
   const childComponents = {
