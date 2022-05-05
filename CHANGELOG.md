@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.23.5](https://github.com/lskjs/ratsel/compare/v0.23.4...v0.23.5) (2022-05-05)
+
+
+### Bug Fixes
+
+* **table:** add updateTableData action ([3a8260d](https://github.com/lskjs/ratsel/commit/3a8260d84af7debc510eca8c35a1ddef1d931405))
+
+
+
+
+
 ## [0.23.4](https://github.com/lskjs/ratsel/compare/v0.23.3...v0.23.4) (2022-05-05)
 
 
