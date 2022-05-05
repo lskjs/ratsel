@@ -26,11 +26,17 @@ export interface ExtendedITableProps extends ITableProps {
 
 interface TableProps {
   data: ExtendedITableProps;
+  dispatch?: DispatchFunc;
   onChangeState?: (arg: any) => any;
   onChange?: (arg: any) => any | Promise<any>;
 }
 
-export const Table: FC<TableProps> = ({ data, onChangeState, onChange }) => {
+export const Table: FC<TableProps> = ({
+  dispatch: propDispatch,
+  data,
+  onChangeState,
+  onChange,
+}) => {
   const _data = deserialize(data);
   const [custom, changeCustom] = useState(_data.custom);
   const [tableProps, changeTableProps] = useState(_data.tableProps);
@@ -48,6 +54,7 @@ export const Table: FC<TableProps> = ({ data, onChangeState, onChange }) => {
       return newState;
     });
 
+    if (propDispatch) await propDispatch(action);
     if (onChange) await onChange({ action, dispatch });
   };
 
