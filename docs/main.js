@@ -759,6 +759,8 @@ var __webpack_unused_export__;
 
 var _interopRequireDefault = __webpack_require__(21902);
 
+var _typeof = __webpack_require__(38617);
+
 __webpack_unused_export__ = ({
   value: true
 });
@@ -766,25 +768,31 @@ exports.Z = void 0;
 
 var _regenerator = _interopRequireDefault(__webpack_require__(17988));
 
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(76118));
+
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(52792));
 
-var _react = _interopRequireDefault(__webpack_require__(67294));
+var _react = _interopRequireWildcard(__webpack_require__(67294));
 
 var _BookmarkIcon = __webpack_require__(54672);
 
 var _src = __webpack_require__(39604);
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function promiseClick() {
   return _promiseClick.apply(this, arguments);
 }
 
 function _promiseClick() {
-  _promiseClick = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
-    return _regenerator["default"].wrap(function _callee$(_context) {
+  _promiseClick = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2() {
+    return _regenerator["default"].wrap(function _callee2$(_context2) {
       while (1) {
-        switch (_context.prev = _context.next) {
+        switch (_context2.prev = _context2.next) {
           case 0:
-            return _context.abrupt("return", new Promise(function (resolve) {
+            return _context2.abrupt("return", new Promise(function (resolve) {
               setTimeout(function () {
                 resolve(null);
               }, 1000);
@@ -792,12 +800,80 @@ function _promiseClick() {
 
           case 1:
           case "end":
-            return _context.stop();
+            return _context2.stop();
         }
       }
-    }, _callee);
+    }, _callee2);
   }));
   return _promiseClick.apply(this, arguments);
+}
+
+function negativePromiseClick() {
+  return _negativePromiseClick.apply(this, arguments);
+}
+
+function _negativePromiseClick() {
+  _negativePromiseClick = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3() {
+    return _regenerator["default"].wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            return _context3.abrupt("return", new Promise(function (resolve, reject) {
+              setTimeout(function () {
+                reject();
+              }, 1000);
+            }));
+
+          case 1:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+  return _negativePromiseClick.apply(this, arguments);
+}
+
+function BugPromiseClick(_ref) {
+  var onClick = _ref.onClick;
+
+  var _useState = (0, _react.useState)(true),
+      _useState2 = (0, _slicedToArray2["default"])(_useState, 2),
+      visible = _useState2[0],
+      setVisible = _useState2[1];
+
+  function handleClose(_x) {
+    return _handleClose.apply(this, arguments);
+  }
+
+  function _handleClose() {
+    _handleClose = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(event) {
+      return _regenerator["default"].wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              event.preventDefault();
+              _context.next = 3;
+              return onClick();
+
+            case 3:
+              setVisible(false);
+
+            case 4:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+    return _handleClose.apply(this, arguments);
+  }
+
+  if (!visible) return null;
+  return /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    variant: "primary",
+    onClick: handleClose
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430");
 }
 
 var _default = {
@@ -830,6 +906,16 @@ var _default = {
     variant: "primary",
     onClick: promiseClick
   }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  promiseClickError: /*#__PURE__*/_react["default"].createElement(_src.Button, {
+    variant: "primary",
+    onClick: negativePromiseClick
+  }, "\u041A\u043D\u043E\u043F\u043A\u0430"),
+  testBugPromiseClick: /*#__PURE__*/_react["default"].createElement(BugPromiseClick, {
+    onClick: promiseClick
+  }),
+  testBugPromiseClickError: /*#__PURE__*/_react["default"].createElement(BugPromiseClick, {
+    onClick: negativePromiseClick
+  }),
   disabled: /*#__PURE__*/_react["default"].createElement(_src.Button, {
     variant: "primary",
     disabled: true,
@@ -1038,6 +1124,13 @@ var Button = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
       minWidth = _ref.minWidth,
       block = _ref.block,
       props = (0, _objectWithoutProperties2["default"])(_ref, _excluded);
+  var isMounted = (0, _react.useRef)(false);
+  (0, _react.useEffect)(function () {
+    isMounted.current = true;
+    return function () {
+      isMounted.current = false;
+    };
+  }, []);
 
   var _useState = (0, _react.useState)({
     loading: false,
@@ -1069,36 +1162,47 @@ var Button = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
                 break;
               }
 
-              setState(_objectSpread(_objectSpread({}, state), {}, {
-                loading: true
-              }));
+              if (isMounted.current) {
+                setState(_objectSpread(_objectSpread({}, state), {}, {
+                  loading: true
+                }));
+              }
+
               _context.prev = 5;
               _context.next = 8;
               return promise;
 
             case 8:
-              setState(_objectSpread(_objectSpread({}, state), {}, {
-                loading: false,
-                status: 'success'
-              }));
+              if (isMounted.current) {
+                setState(_objectSpread(_objectSpread({}, state), {}, {
+                  loading: false,
+                  status: 'success'
+                }));
+              }
+
               _context.next = 14;
               break;
 
             case 11:
               _context.prev = 11;
               _context.t0 = _context["catch"](5);
-              setState(_objectSpread(_objectSpread({}, state), {}, {
-                loading: false,
-                status: 'error'
-              }));
+
+              if (isMounted.current) {
+                setState(_objectSpread(_objectSpread({}, state), {}, {
+                  loading: false,
+                  status: 'error'
+                }));
+              }
 
             case 14:
               _context.prev = 14;
               setTimeout(function () {
-                setState(_objectSpread(_objectSpread({}, state), {}, {
-                  loading: false,
-                  status: null
-                }));
+                if (isMounted.current) {
+                  setState(_objectSpread(_objectSpread({}, state), {}, {
+                    loading: false,
+                    status: null
+                  }));
+                }
               }, 1000);
               return _context.finish(14);
 
@@ -5817,11 +5921,16 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 var Table = function Table(_ref) {
   var _tableProps$childComp, _tableProps$childComp2, _tableProps$childComp3, _tableProps$childComp4, _custom$sticky, _tableProps$virtualSc;
 
-  var data = _ref.data,
+  var getReducer = _ref.getReducer,
+      data = _ref.data,
       onChangeState = _ref.onChangeState,
       onChange = _ref.onChange;
 
   var _data = (0, _deserialize.deserialize)(data);
+
+  if (getReducer && !_data.tableProps.singleAction) {
+    _data.tableProps.singleAction = true;
+  }
 
   var _useState = (0, _react.useState)(_data.custom),
       _useState2 = (0, _slicedToArray2["default"])(_useState, 2),
@@ -5833,40 +5942,65 @@ var Table = function Table(_ref) {
       tableProps = _useState4[0],
       changeTableProps = _useState4[1];
 
-  (0, _react.useEffect)(function () {
-    var __data = (0, _deserialize.deserialize)(data);
+  function updateTableData(__data) {
+    var ___data = (0, _deserialize.deserialize)(__data);
 
-    changeCustom(__data.custom);
-    changeTableProps(__data.tableProps);
+    if (getReducer && !___data.tableProps.singleAction) {
+      ___data.tableProps.singleAction = true;
+    }
+
+    changeCustom(___data.custom);
+    changeTableProps(___data.tableProps);
+  }
+
+  (0, _react.useEffect)(function () {
+    updateTableData(data);
   }, [data]);
 
-  var dispatch = /*#__PURE__*/function () {
-    var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(action) {
+  var reducer = /*#__PURE__*/function () {
+    var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(__action, __dispatch) {
+      var newData;
       return _regenerator["default"].wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
+              if (!((__action === null || __action === void 0 ? void 0 : __action.type) === 'UpdateTableData')) {
+                _context.next = 6;
+                break;
+              }
+
+              _context.next = 3;
+              return __action.updater(_objectSpread(_objectSpread({}, tableProps), {}, {
+                custom: custom
+              }));
+
+            case 3:
+              newData = _context.sent;
+              updateTableData(newData);
+              return _context.abrupt("return");
+
+            case 6:
               changeTableProps(function (prevState) {
-                var newState = (0, _kaTable.kaReducer)(prevState, action);
+                var newState = (0, _kaTable.kaReducer)(prevState, __action);
                 if (onChangeState) onChangeState({
                   state: newState,
-                  action: action
+                  action: __action
                 });
                 return newState;
               });
 
               if (!onChange) {
-                _context.next = 4;
+                _context.next = 10;
                 break;
               }
 
-              _context.next = 4;
+              _context.next = 10;
               return onChange({
-                action: action,
-                dispatch: dispatch
+                action: __action,
+                dispatch: __dispatch
               });
 
-            case 4:
+            case 10:
             case "end":
               return _context.stop();
           }
@@ -5874,8 +6008,33 @@ var Table = function Table(_ref) {
       }, _callee);
     }));
 
-    return function dispatch(_x) {
+    return function reducer(_x, _x2) {
       return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var dispatch = /*#__PURE__*/function () {
+    var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(action) {
+      return _regenerator["default"].wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              reducer(action, dispatch);
+
+              if (getReducer) {
+                getReducer(reducer);
+              }
+
+            case 2:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function dispatch(_x3) {
+      return _ref3.apply(this, arguments);
     };
   }();
 
