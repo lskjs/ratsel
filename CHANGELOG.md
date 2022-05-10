@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.23.9](https://github.com/lskjs/ratsel/compare/v0.23.8...v0.23.9) (2022-05-10)
+
+
+### Bug Fixes
+
+* **modal:** footer spacings ([1c41da0](https://github.com/lskjs/ratsel/commit/1c41da0c3fc87121b976488d04c8742e0983de9c))
+
+
+
+
+
 ## [0.23.8](https://github.com/lskjs/ratsel/compare/v0.23.7...v0.23.8) (2022-05-05)
 
 
