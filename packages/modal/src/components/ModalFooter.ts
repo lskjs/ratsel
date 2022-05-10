@@ -28,6 +28,6 @@ export const ModalFooter = styled('div', {
   color: ${(props) => props.theme.ratsel.modal.footer.color};
 
   > * + * {
-    margin-right: 12px;
+    margin-left: 12px;
   }
 `;
