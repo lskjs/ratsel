@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { css, Theme } from '@ratsel/core';
 
 export const base = (theme: Theme) => css`
