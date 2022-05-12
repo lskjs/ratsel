@@ -12,6 +12,8 @@ import type { SelectTheme } from './selectTheme';
 import { selectTheme } from './selectTheme';
 import type { TableTheme } from './tableTheme';
 import { tableTheme } from './tableTheme';
+import type { TimePickerTheme } from './timePickerTheme';
+import { timePickerTheme } from './timePickerTheme';
 
 export interface InnerTheme {
   fonts: FontsTheme;
@@ -21,6 +23,7 @@ export interface InnerTheme {
   floating: FloatingTheme;
   calendar: CalendarTheme;
   modal: ModalTheme;
+  timePicker: TimePickerTheme;
 }
 
 export interface Theme {
@@ -35,4 +38,5 @@ export const theme: InnerTheme = {
   floating: floatingTheme,
   calendar: calendarTheme,
   modal: modalTheme,
+  timePicker: timePickerTheme,
 };
