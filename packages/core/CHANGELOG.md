@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.24.0](https://github.com/lskjs/ratsel/compare/v0.23.9...v0.24.0) (2022-05-12)
+
+
+### Features
+
+* **core:** add time-picker theme ([93ae99a](https://github.com/lskjs/ratsel/commit/93ae99a92bd5021df4a7c6954df52eee9e9eaf8c))
+
+
+
+
+
 # [0.23.0](https://github.com/lskjs/ratsel/compare/v0.22.1...v0.23.0) (2022-05-04)
 
 **Note:** Version bump only for package @ratsel/core

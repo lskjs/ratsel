@@ -1,6 +1,6 @@
 {
   "name": "@ratsel/select",
-  "version": "0.23.0",
+  "version": "0.24.0",
   "description": "🧩 Rätsel Select",
   "keywords": [
     "lskjs",
@@ -31,7 +31,7 @@
     "watch": "lsk run watch"
   },
   "devDependencies": {
-    "@ratsel/core": "0.23.0",
+    "@ratsel/core": "0.24.0",
     "@types/react": "^17.0.43",
     "react": "^17.0.2"
   },
