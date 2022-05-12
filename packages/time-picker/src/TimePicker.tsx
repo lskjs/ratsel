@@ -35,9 +35,10 @@ export const TimePicker: FC<TimePickerProps> = ({
   focusOnOpen,
   ...props
 }) => {
-  const [value, setValue] = useState<Moment | undefined>(() =>
-    convertDateToMoment(value || defaultValue),
-  );
+  const [value, setValue] = useState<Moment | undefined>(() => {
+    const _val = convertDateToMoment(value || defaultValue);
+    return _val;
+  });
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
