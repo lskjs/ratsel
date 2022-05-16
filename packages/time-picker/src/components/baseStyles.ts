@@ -39,7 +39,7 @@ export const popup = (theme: Theme) => css`
   z-index: ${theme.ratsel.timePicker.popup.zIndex};
   position: absolute;
   box-sizing: border-box;
-  display: none;
+  /* display: none; */
 
   * {
     box-sizing: border-box;

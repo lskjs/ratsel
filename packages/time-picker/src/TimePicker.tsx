@@ -100,9 +100,6 @@ export const TimePicker: FC<TimePickerProps> = ({
           focusOnOpen={focusOnOpen}
           className={css(base(theme as Theme))}
           popupClassName={css(popup(theme as Theme))}
-          popupStyle={{
-            fontSize: 25,
-          }}
           inputIcon={
             <IconButton as="span" order={2}>
               <ClockIcon />
