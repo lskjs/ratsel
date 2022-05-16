@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.24.6](https://github.com/lskjs/ratsel/compare/v0.24.5...v0.24.6) (2022-05-16)
+
+
+### Bug Fixes
+
+* **select:** value line-hegiht ([6f85148](https://github.com/lskjs/ratsel/commit/6f851488e0217e34986b27fc571300534e2fc039))
+
+
+
+
+
 ## [0.24.3](https://github.com/lskjs/ratsel/compare/v0.24.2...v0.24.3) (2022-05-16)
 
 
