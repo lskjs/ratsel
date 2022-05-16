@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.24.8](https://github.com/lskjs/ratsel/compare/v0.24.7...v0.24.8) (2022-05-16)
+
+
+### Bug Fixes
+
+* **select:** menu zIndex ([2f63204](https://github.com/lskjs/ratsel/commit/2f6320489633899cda67fa764099466e4ed85e91))
+
+
+
+
+
 ## [0.24.7](https://github.com/lskjs/ratsel/compare/v0.24.6...v0.24.7) (2022-05-16)
 
 
