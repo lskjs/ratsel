@@ -22,6 +22,10 @@ export const Wrapper = styled('div')`
     cursor: pointer;
   }
 
+  .ratsel-select .react-select__input {
+    z-index: 1;
+  }
+
   .ratsel-select .react-select__placeholder,
   .ratsel-select .react-select__single-value,
   .ratsel-select .react-select__value {
