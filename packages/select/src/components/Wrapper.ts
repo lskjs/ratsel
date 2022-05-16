@@ -114,6 +114,6 @@ export const Wrapper = styled('div')`
     line-height: 34px !important;
   }
   .react-select__value-container {
-    padding: 6px 11px;
+    padding: 2px 11px 1px;
   }
 `;
