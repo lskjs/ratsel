@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.24.3](https://github.com/lskjs/ratsel/compare/v0.24.2...v0.24.3) (2022-05-16)
+
+
+### Bug Fixes
+
+* **select:** padding ([c0c286e](https://github.com/lskjs/ratsel/commit/c0c286ec30c0b85ca1e268cba6cc12f07cb35247))
+
+
+
+
+
 ## [0.24.2](https://github.com/lskjs/ratsel/compare/v0.24.1...v0.24.2) (2022-05-16)
 
 
