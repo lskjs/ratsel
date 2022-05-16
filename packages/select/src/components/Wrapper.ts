@@ -71,6 +71,7 @@ export const Wrapper = styled('div')`
     margin-top: 0;
     overflow: hidden;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+    z-index: 10;
   }
 
   .ratsel-select .react-select__option {
