@@ -19,6 +19,7 @@ export interface TimePickerProps
   onChange?: (newValue: Date | undefined) => void;
   value?: Date | Moment;
   defaultValue?: Date | Moment;
+  withPositionUpdater?: boolean;
 }
 
 interface CloseParams {
@@ -33,6 +34,7 @@ export const TimePicker: FC<TimePickerProps> = ({
   submitOnClose,
   clearable,
   focusOnOpen,
+  withPositionUpdater,
   ...props
 }) => {
   const [value, setValue] = useState<Moment | undefined>(() => {
@@ -55,7 +57,9 @@ export const TimePicker: FC<TimePickerProps> = ({
   }, [propValue]);
 
   const handleChange = (newValue: Moment) => {
-    updatePanelPosition(true);
+    if (withPositionUpdater) {
+      updatePanelPosition(true);
+    }
     setValue(newValue);
     if (!submitOnClose && onChange) onChange(newValue?.toDate());
   };
@@ -66,7 +70,9 @@ export const TimePicker: FC<TimePickerProps> = ({
   };
 
   const handleOpen = () => {
-    updatePanelPosition();
+    if (withPositionUpdater) {
+      updatePanelPosition();
+    }
     if (focusOnOpen) {
       setTimeout(() => {
         document
