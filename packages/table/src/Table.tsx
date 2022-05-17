@@ -137,12 +137,16 @@ export const Table = forwardRef<TableRef, TableProps>(
       };
     }
 
-    useImperativeHandle(ref, () => ({
-      dispatch: (action: any) => {
-        reducer(action, dispatch);
-      },
-      getState: () => tableState,
-    }));
+    useImperativeHandle(
+      ref,
+      () => ({
+        dispatch: (action: any) => {
+          reducer(action, dispatch);
+        },
+        getState: () => tableState,
+      }),
+      [tableState, reducer],
+    );
 
     return (
       <Wrapper
