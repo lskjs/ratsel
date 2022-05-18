@@ -1,6 +1,7 @@
 import { ClassNames } from '@ratsel/core';
 import React, { forwardRef, ReactNode } from 'react';
 import ReactSelect from 'react-select';
+import ReactSelectAsync from 'react-select/async';
 import { SelectComponents } from 'react-select/dist/declarations/src/components';
 import SelectType from 'react-select/dist/declarations/src/Select';
 import {
@@ -38,6 +39,7 @@ interface SelectProps {
   components?: SelectComponents<SelectOption, false, GroupOption>;
   noOptionsMessage: (value: Record<string, unknown>) => ReactNode;
   isDisabled?: boolean;
+  isAsync?: boolean;
 }
 
 export const Select = forwardRef<
@@ -58,58 +60,62 @@ export const Select = forwardRef<
       components,
       className = '',
       onChange,
+      isAsync,
       ...props
     },
     ref,
-  ) => (
-    <ClassNames>
-      {({ cx }) => (
-        <Wrapper>
-          <ReactSelect
-            ref={ref}
-            options={options}
-            value={value}
-            placeholder={placeholder}
-            isSearchable={isSearchable}
-            isClearable={isClearable}
-            classNamePrefix="react-select"
-            blurInputOnSelect={blurInputOnSelect}
-            onMenuClose={onMenuClose}
-            styles={{
-              singleValue: (base) => ({
-                ...base,
-                position: 'relative',
-                top: 'inherit',
-                transform: 'inherit',
-                flexWrap: 'nowrap',
-              }),
-              valueContainer: (base) => ({
-                ...base,
-                flexWrap: 'nowrap',
-                whiteSpace: 'nowrap',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-              }),
-              ...styles,
-            }}
-            components={{
-              Option,
-              SingleValue,
-              DropdownIndicator,
-              ...components,
-            }}
-            className={cx({
-              'ratsel-select': true,
-              [className]: !!className,
-              'has-error': hasError,
-            })}
-            onChange={onChange}
-            {...props}
-          />
-        </Wrapper>
-      )}
-    </ClassNames>
-  ),
+  ) => {
+    const ReactSelectComponent = isAsync ? ReactSelectAsync : ReactSelect; 
+    return (
+      <ClassNames>
+        {({ cx }) => (
+          <Wrapper>
+            <ReactSelectComponent
+              ref={ref}
+              options={options}
+              value={value}
+              placeholder={placeholder}
+              isSearchable={isSearchable}
+              isClearable={isClearable}
+              classNamePrefix="react-select"
+              blurInputOnSelect={blurInputOnSelect}
+              onMenuClose={onMenuClose}
+              styles={{
+                singleValue: (base) => ({
+                  ...base,
+                  position: 'relative',
+                  top: 'inherit',
+                  transform: 'inherit',
+                  flexWrap: 'nowrap',
+                }),
+                valueContainer: (base) => ({
+                  ...base,
+                  flexWrap: 'nowrap',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                }),
+                ...styles,
+              }}
+              components={{
+                Option,
+                SingleValue,
+                DropdownIndicator,
+                ...components,
+              }}
+              className={cx({
+                'ratsel-select': true,
+                [className]: !!className,
+                'has-error': hasError,
+              })}
+              onChange={onChange}
+              {...props}
+            />
+          </Wrapper>
+        )}
+      </ClassNames>
+    );
+  },
 );
 
 Select.displayName = 'Select';
