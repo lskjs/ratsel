@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.25.3](https://github.com/lskjs/ratsel/compare/v0.25.2...v0.25.3) (2022-05-18)
+
+
+### Bug Fixes
+
+* **time-picker:** pseudo of-type ([1a23169](https://github.com/lskjs/ratsel/commit/1a2316981b98a54273700f041123ebdf06aa4075))
+* **time-picker:** ref support ([b49d2f6](https://github.com/lskjs/ratsel/commit/b49d2f69a889eb7592100b235c102e2afffa8c69))
+
+
+
+
+
 ## [0.25.2](https://github.com/lskjs/ratsel/compare/v0.25.1...v0.25.2) (2022-05-18)
 
 
