@@ -132,12 +132,12 @@ export const popup = (theme: Theme) => css`
     overflow-y: auto;
   }
 
-  .ratsel-tp-panel-select:first-child {
+  .ratsel-tp-panel-select:first-of-type {
     border-left: 0;
     margin-left: 0;
   }
 
-  .ratsel-tp-panel-select:last-child {
+  .ratsel-tp-panel-select:last-of-type {
     border-right: 0;
   }
 
