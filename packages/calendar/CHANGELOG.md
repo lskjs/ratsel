@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.25.4](https://github.com/lskjs/ratsel/compare/v0.25.3...v0.25.4) (2022-05-18)
+
+
+### Bug Fixes
+
+* **calendar:** ref support ([ec0dfe8](https://github.com/lskjs/ratsel/commit/ec0dfe807a7c7209683b9d889366e6799427077f))
+
+
+
+
+
 # [0.25.0](https://github.com/lskjs/ratsel/compare/v0.24.8...v0.25.0) (2022-05-17)
 
 **Note:** Version bump only for package @ratsel/calendar
