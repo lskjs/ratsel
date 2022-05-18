@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { forwardRef } from 'react';
 import BaseCalendar, {
   CalendarProps as BaseCalendarProps,
 } from 'react-calendar';
@@ -12,24 +12,25 @@ export interface CalendarProps extends WrapperProps, BaseCalendarProps {
   yearArrows?: boolean;
 }
 
-export const Calendar: FC<CalendarProps> = ({
-  size,
-  yearArrows,
-  locale,
-  ...props
-}) => (
-  <Wrapper size={size}>
-    <BaseCalendar
-      minDetail="year"
-      locale={locale}
-      nextLabel={<ChevronIcon />}
-      next2Label={yearArrows ? <DoubleChevronIcon /> : null}
-      prevLabel={<ChevronIcon reverse />}
-      prev2Label={yearArrows ? <DoubleChevronIcon reverse /> : null}
-      navigationLabel={({ label }) =>
-        capitalizeFirstLetter(label).replace(/ г\./g, '')
-      }
-      {...props}
-    />
-  </Wrapper>
+export const Calendar = forwardRef<any, CalendarProps>(
+  ({ size, yearArrows, locale, ...props }, ref) => (
+    <Wrapper size={size}>
+      <BaseCalendar
+        // @ts-ignore
+        ref={ref}
+        minDetail="year"
+        locale={locale}
+        nextLabel={<ChevronIcon />}
+        next2Label={yearArrows ? <DoubleChevronIcon /> : null}
+        prevLabel={<ChevronIcon reverse />}
+        prev2Label={yearArrows ? <DoubleChevronIcon reverse /> : null}
+        navigationLabel={({ label }) =>
+          capitalizeFirstLetter(label).replace(/ г\./g, '')
+        }
+        {...props}
+      />
+    </Wrapper>
+  ),
 );
+
+Calendar.displayName = 'Calendar';
