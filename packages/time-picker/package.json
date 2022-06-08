@@ -37,7 +37,7 @@
     "react": "^18.1.0"
   },
   "peerDependencies": {
-    "@ratsel/core": "0.x",
+    "@ratsel/core": "1.x",
     "moment": "2.x",
     "react": "18.x"
   },
