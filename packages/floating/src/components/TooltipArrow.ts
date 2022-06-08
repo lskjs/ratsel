@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { css, styled } from '@ratsel/core';
 
 interface ArrowProps {
