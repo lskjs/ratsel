@@ -1,6 +1,6 @@
 {
   "name": "@ratsel/modal",
-  "version": "0.25.0",
+  "version": "1.0.0",
   "description": "🧩 Rätsel Modal",
   "keywords": [
     "lskjs",
@@ -31,7 +31,7 @@
     "watch": "lsk run watch"
   },
   "devDependencies": {
-    "@ratsel/core": "0.25.0",
+    "@ratsel/core": "1.0.0",
     "@types/lodash.merge": "^4.6.7",
     "@types/lodash.omit": "^4.5.7",
     "@types/lodash.remove": "^4.7.7",

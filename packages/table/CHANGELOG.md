@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/lskjs/ratsel/compare/v0.25.5...v1.0.0) (2022-06-08)
+
+**Note:** Version bump only for package @ratsel/table
+
+
+
+
+
 ## [0.25.1](https://github.com/lskjs/ratsel/compare/v0.25.0...v0.25.1) (2022-05-17)
 
 

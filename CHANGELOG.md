@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/lskjs/ratsel/compare/v0.25.5...v1.0.0) (2022-06-08)
+
+
+### Features
+
+* **floating:** Tooltip introducing ([aecf018](https://github.com/lskjs/ratsel/commit/aecf0189292e4351961425b5a3889be9cee1a437))
+
+
+
+
+
 ## [0.25.5](https://github.com/lskjs/ratsel/compare/v0.25.4...v0.25.5) (2022-05-18)
 
 
