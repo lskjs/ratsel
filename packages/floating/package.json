@@ -1,6 +1,6 @@
 {
   "name": "@ratsel/floating",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🧩 Rätsel Floating",
   "keywords": [
     "lskjs",
@@ -34,7 +34,7 @@
     "watch": "lsk run watch"
   },
   "devDependencies": {
-    "@ratsel/core": "1.0.0",
+    "@ratsel/core": "1.0.1",
     "@types/react": "^18.0.12",
     "react": "^18.1.0"
   },

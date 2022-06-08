@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/lskjs/ratsel/compare/v1.0.0...v1.0.1) (2022-06-08)
+
+
+### Bug Fixes
+
+* peer core version ([36a993b](https://github.com/lskjs/ratsel/commit/36a993be6951e5db211c50c568fdf25a341aa688))
+
+
+
+
+
 # [1.0.0](https://github.com/lskjs/ratsel/compare/v0.25.5...v1.0.0) (2022-06-08)
 
 **Note:** Version bump only for package @ratsel/button
