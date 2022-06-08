@@ -1,4 +1,4 @@
-import { ComponentType } from 'react';
+import { ComponentType, PropsWithChildren } from 'react';
 
 import { ModalCloseIconProps } from './components/ModalCloseIcon/ModalCloseIcon';
 import { ModalContentProps } from './components/ModalContent';
@@ -13,17 +13,17 @@ import { ModalTriggerProps } from './components/ModalTrigger';
 export type AlignType = 'center' | 'left' | 'right';
 
 export interface ModalComponents {
-  Title: ComponentType;
-  Subtitle: ComponentType<ModalSubtitleProps>;
-  Image: ComponentType<ModalImageProps>;
-  Content: ComponentType<ModalContentProps>;
-  Description: ComponentType<ModalDescriptionProps>;
-  Help: ComponentType<ModalHelpProps>;
-  Footer: ComponentType<ModalFooterProps>;
-  Trigger: ComponentType<ModalTriggerProps>;
-  Inner: ComponentType<ModalInnerProps>;
-  InnerWrapper: ComponentType;
-  CloseIcon: ComponentType<ModalCloseIconProps>;
+  Title: ComponentType<PropsWithChildren>;
+  Subtitle: ComponentType<PropsWithChildren<ModalSubtitleProps>>;
+  Image: ComponentType<PropsWithChildren<ModalImageProps>>;
+  Content: ComponentType<PropsWithChildren<ModalContentProps>>;
+  Description: ComponentType<PropsWithChildren<ModalDescriptionProps>>;
+  Help: ComponentType<PropsWithChildren<ModalHelpProps>>;
+  Footer: ComponentType<PropsWithChildren<ModalFooterProps>>;
+  Trigger: ComponentType<PropsWithChildren<ModalTriggerProps>>;
+  Inner: ComponentType<PropsWithChildren<ModalInnerProps>>;
+  InnerWrapper: ComponentType<PropsWithChildren>;
+  CloseIcon: ComponentType<PropsWithChildren<ModalCloseIconProps>>;
 }
 
 export interface ModalContext {

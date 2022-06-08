@@ -1,5 +1,5 @@
 import { css, Global } from '@ratsel/core';
-import React, { FC } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 
 const globalStyles = css`
   .bodyModal {
@@ -36,7 +36,7 @@ const globalStyles = css`
   }
 `;
 
-export const ModalGlobalStyles: FC = ({ children }) => (
+export const ModalGlobalStyles: FC<PropsWithChildren> = ({ children }) => (
   <>
     <Global styles={globalStyles} />
     {children}

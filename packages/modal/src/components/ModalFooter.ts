@@ -1,4 +1,5 @@
 import { styled } from '@ratsel/core';
+import { PropsWithChildren } from 'react';
 
 import { AlignType } from '../common.types';
 
@@ -8,7 +9,7 @@ export interface ModalFooterProps {
 
 export const ModalFooter = styled('div', {
   shouldForwardProp: (prop) => !['align'].includes(prop as string),
-})<ModalFooterProps>`
+})<PropsWithChildren<ModalFooterProps>>`
   padding: 20px 16px 24px;
   position: relative;
   font-family: ${(props) => props.theme.ratsel.fonts.main};

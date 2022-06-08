@@ -26,7 +26,7 @@ export interface GroupOption {
 
 interface SelectProps {
   options: OptionsOrGroups<SelectOption, GroupOption>;
-  value: PropsValue<SelectOption>;
+  value?: PropsValue<SelectOption>;
   placeholder?: string;
   isSearchable?: boolean;
   isClearable?: boolean;

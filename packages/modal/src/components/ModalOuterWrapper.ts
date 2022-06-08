@@ -1,5 +1,6 @@
 import sizes from '@lskjs/utils/sizes';
 import { css, styled } from '@ratsel/core';
+import { PropsWithChildren } from 'react';
 
 export interface ModalOuterWrapperProps {
   size?: string;
@@ -30,7 +31,7 @@ const _sizes = {
 
 export const ModalOuterWrapper = styled('div', {
   shouldForwardProp: (prop) => !['size'].includes(prop as string),
-})<ModalOuterWrapperProps>`
+})<PropsWithChildren<ModalOuterWrapperProps>>`
   margin: 60px auto;
   @media screen and (max-width: 576px) {
     margin-top: 0;

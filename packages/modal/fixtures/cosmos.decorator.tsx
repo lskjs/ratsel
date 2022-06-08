@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@ratsel/core';
-import type { FC } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 import React from 'react';
 
 import { GlobalModalProvider } from '../src/Global';
@@ -52,7 +52,7 @@ const theme = (parentTheme) => ({
   },
 });
 
-const Decorator: FC = ({ children }) => (
+const Decorator: FC<PropsWithChildren> = ({ children }) => (
   <ThemeProvider theme={theme}>
     <GlobalModalProvider>{children}</GlobalModalProvider>
   </ThemeProvider>

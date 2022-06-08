@@ -4,7 +4,7 @@ import {
   SerializedStyles,
   ThemeProvider as EmotionThemeProvider,
 } from '@emotion/react';
-import type { FC } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 import React, { useMemo } from 'react';
 
 import { globalStyles as defaultGlobalStyles } from './globalStyles';
@@ -16,7 +16,7 @@ interface ThemeProviderProps {
   globalStyles?: SerializedStyles;
 }
 
-export const ThemeProvider: FC<ThemeProviderProps> = ({
+export const ThemeProvider: FC<PropsWithChildren<ThemeProviderProps>> = ({
   children,
   theme,
   globalStyles = defaultGlobalStyles,

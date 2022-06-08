@@ -1,4 +1,5 @@
 import { styled } from '@ratsel/core';
+import { PropsWithChildren } from 'react';
 
 export interface ModalContentProps {
   size?: 'large' | 'default';
@@ -7,7 +8,7 @@ export interface ModalContentProps {
 
 export const ModalContent = styled('div', {
   shouldForwardProp: (prop) => !['align', 'size'].includes(prop as string),
-})<ModalContentProps>`
+})<PropsWithChildren<ModalContentProps>>`
   padding: ${(props) => {
     switch (props.size) {
       case 'large':

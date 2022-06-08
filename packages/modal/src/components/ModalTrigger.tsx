@@ -1,4 +1,9 @@
-import React, { ComponentType, ReactNode, SyntheticEvent } from 'react';
+import React, {
+  ComponentType,
+  PropsWithChildren,
+  ReactNode,
+  SyntheticEvent,
+} from 'react';
 
 import { ModalContext } from '../common.types';
 import { contextToProps } from '../ModalContext';
@@ -31,7 +36,7 @@ export const ModalTrigger = contextToProps('modal')(
     as: Tag = 'span',
     onClick,
     ...props
-  }: ModalTriggerAllProps) => {
+  }: PropsWithChildren<ModalTriggerAllProps>) => {
     const handleClick: ClickHandler = (event) => {
       if (onClick) onClick(event);
       if (disabled) return;

@@ -1,6 +1,7 @@
 import { styled } from '@ratsel/core';
+import { PropsWithChildren } from 'react';
 
-export const CloseButton = styled('button')`
+export const CloseButton = styled('button')<PropsWithChildren>`
   width: ${(props) => props.theme.ratsel.modal.title.height};
   height: ${(props) => props.theme.ratsel.modal.title.height};
   position: absolute;

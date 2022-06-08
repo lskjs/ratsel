@@ -1,11 +1,8 @@
-import React, { FC, RefObject, useContext, useEffect, useRef } from 'react';
+import React, { FC, useContext, useEffect, useRef } from 'react';
 
 import { components, Modal } from '../src';
 import { GlobalModalConsumer, GlobalModalContext } from '../src/Global';
-import {
-  ModalListEntity,
-  ModalRefType,
-} from '../src/Global/GlobalModalProvider';
+import { ModalListEntity } from '../src/Global/GlobalModalProvider';
 
 const TestAutoGlobalModalHook: FC = () => {
   const modal = useContext(GlobalModalContext);

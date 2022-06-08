@@ -94,7 +94,7 @@ export interface MethodsList {
  * @property {ContentModal} content - Контент модалки
  */
 
-export interface ModalListEntity extends ModalProps {
+export interface ModalListEntity extends Omit<ModalProps, 'content'> {
   ref: RefObject<ModalRefType>;
   content: ContentModal;
 }
@@ -141,7 +141,7 @@ export interface GlobalModalProviderImplements extends MethodsList {
 }
 
 export class GlobalModalProvider
-  extends Component
+  extends Component<PropsWithChildren>
   implements GlobalModalProviderImplements
 {
   modals;
@@ -184,6 +184,7 @@ export class GlobalModalProvider
    */
   create(
     id: string,
+    // eslint-disable-next-line default-param-last
     props: ModalProps = {},
     content: ContentModal,
   ): ModalListEntity | null {
@@ -219,6 +220,7 @@ export class GlobalModalProvider
    */
   update(
     id: string,
+    // eslint-disable-next-line default-param-last
     props: ModalProps = {},
     content?: ContentModal,
   ): ModalListEntity | null {

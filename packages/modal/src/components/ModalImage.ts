@@ -1,4 +1,5 @@
 import { styled } from '@ratsel/core';
+import { PropsWithChildren } from 'react';
 
 export interface ModalImageProps {
   color?: string;
@@ -7,7 +8,7 @@ export interface ModalImageProps {
 
 export const ModalImage = styled('div', {
   shouldForwardProp: (prop) => !['src', 'color'].includes(prop as string),
-})<ModalImageProps>`
+})<PropsWithChildren<ModalImageProps>>`
   position: relative;
   min-height: 200px;
   max-height: 300px;

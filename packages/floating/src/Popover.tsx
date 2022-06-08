@@ -24,6 +24,7 @@ import React, {
   Fragment,
   HTMLProps,
   ReactElement,
+  ReactNode,
   useEffect,
   useRef,
   useState,
@@ -32,6 +33,11 @@ import React, {
 import { BaseProps } from './base';
 import { Arrow } from './components/Arrow';
 import { PopoverBase } from './components/PopoverBase';
+
+interface ChildrenArgs {
+  close(): void;
+  isOpen: boolean;
+}
 
 export interface PopoverComponents {
   Popover?: ComponentType;
@@ -47,6 +53,7 @@ export interface PopoverProps extends BaseProps {
   strategy?: Strategy;
   isPortal?: boolean;
   onOpenChange?: (open: boolean, action: string) => void;
+  children?: ReactNode | ((obj: ChildrenArgs) => ReactNode);
 }
 
 export const Popover: FC<PopoverProps> = ({

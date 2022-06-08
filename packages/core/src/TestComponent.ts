@@ -7,7 +7,7 @@ export interface TestProps {
 
 const variants = {
   main: (props: PropsWithTheme) => css`
-    fontfamily: ${props.theme.ratsel.fonts.headings};
+    font-family: ${props.theme.ratsel.fonts.headings};
   `,
 };
 

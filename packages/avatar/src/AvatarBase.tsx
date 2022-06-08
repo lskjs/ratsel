@@ -1,4 +1,4 @@
-import React, { CSSProperties, FC } from 'react';
+import React, { CSSProperties, FC, PropsWithChildren } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { WrapperProps } from './Avatar.styles';
@@ -20,7 +20,7 @@ export interface AvatarBaseProps extends WrapperProps {
   defaultAvatar?: string;
 }
 
-export const AvatarBase: FC<AvatarBaseProps> = (props) => {
+export const AvatarBase: FC<PropsWithChildren<AvatarBaseProps>> = (props) => {
   const alt = props.alt || props.title || props.name;
   const title = props.title || props.name;
   const src = props.src || props.avatar;

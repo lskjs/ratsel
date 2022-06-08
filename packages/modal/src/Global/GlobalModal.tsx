@@ -1,7 +1,7 @@
 import omit from 'lodash.omit';
 import remove from 'lodash.remove';
 import unset from 'lodash.unset';
-import React, { Component } from 'react';
+import React, { Component, ReactNode } from 'react';
 
 import { Modal } from '../index';
 import {
@@ -106,7 +106,7 @@ export class GlobalModal
               {...omit(modal, ['content', 'ref'])}
               ref={modal.ref}
             >
-              {modal.content}
+              {modal.content as ReactNode}
             </Modal>
           );
         })}

@@ -1,4 +1,5 @@
 import { styled } from '@ratsel/core';
+import { PropsWithChildren } from 'react';
 
 import { AlignType } from '../common.types';
 
@@ -8,7 +9,7 @@ export interface ModalHelpProps {
 
 export const ModalHelp = styled('div', {
   shouldForwardProp: (prop) => !['align'].includes(prop as string),
-})<ModalHelpProps>`
+})<PropsWithChildren<ModalHelpProps>>`
   padding: 12px 16px 32px;
   position: relative;
   font-family: ${(props) => props.theme.ratsel.fonts.main};

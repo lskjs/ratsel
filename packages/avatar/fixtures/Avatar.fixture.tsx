@@ -25,7 +25,7 @@ export default {
   ),
   Empty: (
     <>
-      <Avatar />
+      <Avatar src={null} />
     </>
   ),
   Size: (

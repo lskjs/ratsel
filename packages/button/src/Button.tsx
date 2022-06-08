@@ -2,6 +2,7 @@ import React, {
   FC,
   forwardRef,
   LegacyRef,
+  PropsWithChildren,
   ReactNode,
   SyntheticEvent,
   useEffect,
@@ -29,7 +30,7 @@ interface ButtonState {
   status: 'error' | 'success' | null;
 }
 
-export const Button: FC<ButtonProps> = forwardRef(
+export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef(
   (
     {
       children,

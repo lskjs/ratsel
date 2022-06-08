@@ -32,18 +32,13 @@
   },
   "devDependencies": {
     "@ratsel/core": "0.25.0",
-    "@types/react": "^17.0.43",
-    "@types/react-calendar": "^3.5.0",
-    "react": "^17.0.2"
+    "@types/react": "^18.0.12",
+    "@types/react-calendar": "^3.5.1",
+    "react": "^18.1.0"
   },
   "peerDependencies": {
     "@ratsel/core": "0.x",
-    "react": "17.x"
-  },
-  "overrides": {
-    "react-calendar": {
-      "react": "17.x"
-    }
+    "react": "18.x"
   },
   "dependencies": {
     "react-calendar": "^3.7.0"

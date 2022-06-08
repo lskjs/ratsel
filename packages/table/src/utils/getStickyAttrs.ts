@@ -1,3 +1,4 @@
+/* eslint-disable default-param-last */
 import { ISummaryCellProps } from 'ka-table/props';
 
 export const getStickyAttrs = (

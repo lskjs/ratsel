@@ -11,10 +11,14 @@ export interface ModalInnerProps {
   footer?: ReactNode | string;
 }
 
+interface ChildrenArgs {
+  modal: ModalContext;
+}
+
 type ModalInnerAllProps = ModalInnerProps & {
   Modal: ModalComponents;
   modal: ModalContext;
-  children?: ReactNode;
+  children?: ReactNode | ((args: ChildrenArgs) => ReactNode);
 };
 
 export const ModalInner = contextToProps(
