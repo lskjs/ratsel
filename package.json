@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "name": "@ratsel/ui",
   "description": "🧩 Rätsel — flexible styled component library for React",
   "author": "Andrey Kondalov <andrey@kondalov.com>",
@@ -53,5 +53,10 @@
     "jest": "28.1.1",
     "prettier": "2.6.2",
     "react-cosmos": "^5.7.2"
+  },
+  "overrides": {
+    "@lskjs/babel-preset": {
+      "@babel/core": "7.18.2"
+    }
   }
 }

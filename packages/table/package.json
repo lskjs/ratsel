@@ -42,5 +42,10 @@
   },
   "dependencies": {
     "ka-table": "^7.3.0"
+  },
+  "overrides": {
+    "ka-table": {
+      "react": "18.x"
+    }
   }
 }
