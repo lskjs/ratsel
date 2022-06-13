@@ -439,7 +439,7 @@ export const Wrapper = styled('div', {
   .sticky-row-bottom {
     bottom: 0;
     position: sticky;
-    z-index: 21;
+    z-index: 40;
     box-shadow: inset 0 ${(props) => props.theme.ratsel.table.borderWidth} 0 0
       ${(props) => props.theme.ratsel.table.borderColor};
   }
@@ -474,7 +474,7 @@ export const Wrapper = styled('div', {
 
   .sticky-cell-thead {
     background-color: ${(props) => props.theme.ratsel.table.head.background};
-    z-index: 21;
+    z-index: 21 !important;
   }
 
   .sticky-cell-tbody {
