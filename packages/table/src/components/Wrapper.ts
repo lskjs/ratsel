@@ -470,11 +470,12 @@ export const Wrapper = styled('div', {
         props,
       ) => props.theme.ratsel.table.borderWidth}
       0 0 ${(props) => props.theme.ratsel.table.borderColor};
+    z-index: 21 !important;
   }
 
   .sticky-cell-thead {
     background-color: ${(props) => props.theme.ratsel.table.head.background};
-    z-index: 21 !important;
+    z-index: 21;
   }
 
   .sticky-cell-tbody {
