@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/lskjs/ratsel/compare/v1.0.2...v1.0.3) (2022-06-13)
+
+
+### Bug Fixes
+
+* **table:** zIndexes ([896a046](https://github.com/lskjs/ratsel/commit/896a046702957ac43909bd5f71253e6cba61814d))
+
+
+
+
+
 ## [1.0.2](https://github.com/lskjs/ratsel/compare/v1.0.1...v1.0.2) (2022-06-13)
 
 
