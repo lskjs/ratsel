@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/lskjs/ratsel/compare/v1.1.0...v1.1.1) (2022-06-21)
+
+
+### Bug Fixes
+
+* **table:** maybe will receive props ([d4b1d07](https://github.com/lskjs/ratsel/commit/d4b1d07441fc08d97f6953a6dc4b24e9e403a162))
+
+
+
+
+
 # [1.1.0](https://github.com/lskjs/ratsel/compare/v1.0.3...v1.1.0) (2022-06-21)
 
 **Note:** Version bump only for package @ratsel/table
