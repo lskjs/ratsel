@@ -16,6 +16,7 @@ import React, {
   forwardRef,
   useEffect,
   useImperativeHandle,
+  useRef,
   useState,
 } from 'react';
 
@@ -33,11 +34,8 @@ export interface ITableState {
   tableProps: ExtendedITableProps;
 }
 
-type ExternalReducer = (action: any, dispatch: DispatchFunc) => void;
-
 interface TableProps {
   data: ExtendedITableProps;
-  getReducer?: (reducer: ExternalReducer) => void;
   onChangeState?: (arg: any) => any;
   onChange?: (arg: any) => any | Promise<any>;
 }
@@ -49,6 +47,7 @@ interface TableRef {
 
 export const Table = forwardRef<TableRef, TableProps>(
   ({ data, onChangeState, onChange }, ref) => {
+    const prevData = useRef(data);
     const _data = deserialize(data);
     // if (!_data.tableProps.singleAction) {
     //   _data.tableProps.singleAction = true;
@@ -64,7 +63,12 @@ export const Table = forwardRef<TableRef, TableProps>(
     }
 
     useEffect(() => {
-      updateTableData(data);
+      if (
+        prevData.current?.data?.length !== data?.data?.length ||
+        prevData.current?.columns.length !== data?.columns?.length
+      ) {
+        updateTableData(data);
+      }
     }, [data]);
 
     const reducer = async (__action: any, __dispatch: DispatchFunc) => {
