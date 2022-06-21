@@ -38,6 +38,7 @@ function BugPromiseClick({ onClick }) {
 
 export default {
   primary: <Button variant="primary">Кнопка</Button>,
+  danger: <Button variant="danger">Кнопка</Button>,
   secondary: <Button variant="secondary">Кнопка</Button>,
   shadow: <Button variant="shadow">Кнопка</Button>,
   'shadow-bordered': (

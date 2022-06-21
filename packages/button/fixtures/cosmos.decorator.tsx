@@ -37,6 +37,16 @@ const theme = (parentTheme) => ({
           activeBackground: 'hsl(151, 55.0%, 41.5%)',
           activeColor: 'hsl(137, 72.0%, 94.0%)',
         },
+        danger: {
+          background: 'hsl(349, 49%, 46%)',
+          color: '#fff',
+          hoverBackground: 'hsl(349, 49%, 43%)',
+          hoverColor: '#fff',
+          focusBackground: 'hsl(349, 49%, 43%)',
+          focusColor: '#fff',
+          activeBackground: 'hsl(349, 49%, 40%)',
+          activeColor: '#fff',
+        },
         secondary: {
           background: 'hsl(120, 7%, 89%)',
           color: 'hsl(110, 25%, 9%)',

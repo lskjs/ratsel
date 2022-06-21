@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 import { variants } from '../utils/variants';
 
 export interface BaseProps {
-  variant?: 'primary' | 'secondary' | 'shadow';
+  variant?: 'primary' | 'danger' | 'secondary' | 'shadow';
   bordered?: boolean;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;

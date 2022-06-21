@@ -22,6 +22,26 @@ export const variants = {
       color: ${theme.ratsel.button.variants.secondary.color};
     }
   `,
+  danger: ({ theme }: PropsWithTheme) => css`
+    background: ${theme.ratsel.button.variants.danger.background};
+    color: ${theme.ratsel.button.variants.danger.color};
+    &:hover {
+      background: ${theme.ratsel.button.variants.danger.hoverBackground};
+      color: ${theme.ratsel.button.variants.danger.hoverColor};
+    }
+    &:focus {
+      background: ${theme.ratsel.button.variants.danger.focusBackground};
+      color: ${theme.ratsel.button.variants.danger.focusColor};
+    }
+    &:active {
+      background: ${theme.ratsel.button.variants.danger.activeBackground};
+      color: ${theme.ratsel.button.variants.danger.activeColor};
+    }
+    &:disabled {
+      background: ${theme.ratsel.button.variants.secondary.background};
+      color: ${theme.ratsel.button.variants.secondary.color};
+    }
+  `,
   secondary: ({ theme }: PropsWithTheme) => css`
     background: ${theme.ratsel.button.variants.secondary.background};
     color: ${theme.ratsel.button.variants.secondary.color};
