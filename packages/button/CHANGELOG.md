@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/lskjs/ratsel/compare/v1.0.3...v1.1.0) (2022-06-21)
+
+
+### Features
+
+* **button:** add danger variant ([4d9219d](https://github.com/lskjs/ratsel/commit/4d9219dbdb630d002d0bd134e282c7bfdbad0a02))
+
+
+
+
+
 ## [1.0.2](https://github.com/lskjs/ratsel/compare/v1.0.1...v1.0.2) (2022-06-13)
 
 **Note:** Version bump only for package @ratsel/button
