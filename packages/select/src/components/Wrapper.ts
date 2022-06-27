@@ -29,7 +29,7 @@ export const Wrapper = styled('div')`
   .ratsel-select .react-select__placeholder,
   .ratsel-select .react-select__single-value,
   .ratsel-select .react-select__value {
-    line-height: 43px !important;
+    line-height: 43px;
   }
 
   .ratsel-select .react-select__value .react-select__value-label {
