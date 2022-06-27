@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/lskjs/ratsel/compare/v1.1.1...v1.1.2) (2022-06-27)
+
+
+### Bug Fixes
+
+* **select:** line height not important ([6a1fa21](https://github.com/lskjs/ratsel/commit/6a1fa212fb79e737f369b113fde3dbe6f6b50228))
+
+
+
+
+
 ## [1.1.1](https://github.com/lskjs/ratsel/compare/v1.1.0...v1.1.1) (2022-06-21)
 
 
