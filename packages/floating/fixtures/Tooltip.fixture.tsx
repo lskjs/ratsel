@@ -29,6 +29,11 @@ export default {
   default: <Tooltip label={contentSimple}>{trigger}</Tooltip>,
   renderLabel: <Tooltip label={<ContentComponent />}>{trigger}</Tooltip>,
   functionLabel: <Tooltip label={funcComponent}>{trigger}</Tooltip>,
+  isPortal: (
+    <Tooltip placement="right-end" label={contentSimple} isPortal>
+      {trigger}
+    </Tooltip>
+  ),
   'placement-top-start': (
     <Tooltip placement="top-start" label={contentSimple}>
       {trigger}
@@ -84,4 +89,5 @@ export default {
       {trigger}
     </Tooltip>
   ),
+  
 };
