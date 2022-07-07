@@ -7,6 +7,7 @@ import {
   useHover,
   useInteractions,
   useRole,
+  FloatingPortal,
 } from '@floating-ui/react-dom-interactions';
 import React, {
   cloneElement,
@@ -26,6 +27,7 @@ interface TooltipProps {
   placement?: Placement;
   children: ReactElement;
   offset?: number;
+  isPortal?: boolean;
 }
 
 export const Tooltip: FC<TooltipProps> = ({
@@ -33,6 +35,7 @@ export const Tooltip: FC<TooltipProps> = ({
   label: Label,
   placement = 'top',
   offset: propOffset = 10,
+  isPortal,
 }) => {
   const arrowRef = useRef(null);
   const [open, setOpen] = useState(false);
@@ -66,32 +69,34 @@ export const Tooltip: FC<TooltipProps> = ({
     _label = Label();
   }
 
+  const tooltipBase = open && (
+    <TooltipBase
+      {...getFloatingProps({
+        ref: floating,
+        style: {
+          position: strategy,
+          top: y ?? '',
+          left: x ?? '',
+        },
+      })}
+    >
+      {_label}
+      <TooltipArrow
+        ref={arrowRef}
+        staticSide={staticSide}
+        x={middlewareData.arrow?.x}
+        y={middlewareData.arrow?.y}
+      />
+    </TooltipBase>
+  );
+
   return (
     <Fragment>
       {cloneElement(
         children,
         getReferenceProps({ ref: reference, ...children?.props }),
       )}
-      {open && (
-        <TooltipBase
-          {...getFloatingProps({
-            ref: floating,
-            style: {
-              position: strategy,
-              top: y ?? '',
-              left: x ?? '',
-            },
-          })}
-        >
-          {_label}
-          <TooltipArrow
-            ref={arrowRef}
-            staticSide={staticSide}
-            x={middlewareData.arrow?.x}
-            y={middlewareData.arrow?.y}
-          />
-        </TooltipBase>
-      )}
+      {isPortal ? <FloatingPortal>{tooltipBase}</FloatingPortal> : tooltipBase}
     </Fragment>
   );
 };
