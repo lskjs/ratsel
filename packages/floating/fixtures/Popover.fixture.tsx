@@ -9,25 +9,29 @@ const trigger = (
 );
 
 const content = <div style={{ width: 250 }}>Контент</div>;
-const content2 = ({ close }) => (
+const content2 = (props) => (
   <button
     type="button"
     style={{ width: 200, height: 42, background: 'none' }}
-    onClick={close}
+    onClick={props?.close}
   >
     Кнопка
   </button>
 );
 
 export default {
-  default: <Popover trigger={trigger}>{content}</Popover>,
+  default: (
+    <Popover isControlled={false} trigger={trigger}>
+      {content}
+    </Popover>
+  ),
   defaultOpen: (
-    <Popover trigger={trigger} defaultOpen>
+    <Popover isControlled={false} trigger={trigger} defaultOpen>
       {content}
     </Popover>
   ),
   isPortal: (
-    <Popover trigger={trigger} isPortal>
+    <Popover isControlled={false} trigger={trigger} isPortal>
       {content}
     </Popover>
   ),
@@ -38,6 +42,7 @@ export default {
   ),
   arrow: (
     <Popover
+      isControlled={false}
       trigger={trigger}
       defaultOpen
       middlewares={['offset', 'flip', 'shift', 'arrow']}
@@ -47,6 +52,7 @@ export default {
   ),
   'arrow-placement-top-start': (
     <Popover
+      isControlled={false}
       trigger={trigger}
       defaultOpen
       middlewares={['offset', 'flip', 'shift', 'arrow']}
@@ -57,6 +63,7 @@ export default {
   ),
   'arrow-placement-top-end': (
     <Popover
+      isControlled={false}
       trigger={trigger}
       defaultOpen
       middlewares={['offset', 'flip', 'shift', 'arrow']}
@@ -67,6 +74,7 @@ export default {
   ),
   'arrow-placement-top': (
     <Popover
+      isControlled={false}
       trigger={trigger}
       defaultOpen
       middlewares={['offset', 'flip', 'shift', 'arrow']}
@@ -77,6 +85,7 @@ export default {
   ),
   'arrow-placement-bottom-start': (
     <Popover
+      isControlled={false}
       trigger={trigger}
       defaultOpen
       middlewares={['offset', 'flip', 'shift', 'arrow']}
@@ -87,6 +96,7 @@ export default {
   ),
   'arrow-placement-bottom-end': (
     <Popover
+      isControlled={false}
       trigger={trigger}
       defaultOpen
       middlewares={['offset', 'flip', 'shift', 'arrow']}
@@ -97,6 +107,7 @@ export default {
   ),
   'arrow-placement-bottom': (
     <Popover
+      isControlled={false}
       trigger={trigger}
       defaultOpen
       middlewares={['offset', 'flip', 'shift', 'arrow']}
@@ -107,6 +118,7 @@ export default {
   ),
   'arrow-placement-left-start': (
     <Popover
+      isControlled={false}
       trigger={trigger}
       defaultOpen
       middlewares={['offset', 'flip', 'shift', 'arrow']}
@@ -117,6 +129,7 @@ export default {
   ),
   'arrow-placement-left-end': (
     <Popover
+      isControlled={false}
       trigger={trigger}
       defaultOpen
       middlewares={['offset', 'flip', 'shift', 'arrow']}
@@ -127,6 +140,7 @@ export default {
   ),
   'arrow-placement-left': (
     <Popover
+      isControlled={false}
       trigger={trigger}
       defaultOpen
       middlewares={['offset', 'flip', 'shift', 'arrow']}
@@ -137,6 +151,7 @@ export default {
   ),
   'arrow-placement-right-start': (
     <Popover
+      isControlled={false}
       trigger={trigger}
       defaultOpen
       middlewares={['offset', 'flip', 'shift', 'arrow']}
@@ -147,6 +162,7 @@ export default {
   ),
   'arrow-placement-right-end': (
     <Popover
+      isControlled={false}
       trigger={trigger}
       defaultOpen
       middlewares={['offset', 'flip', 'shift', 'arrow']}
@@ -157,6 +173,7 @@ export default {
   ),
   'arrow-placement-right': (
     <Popover
+      isControlled={false}
       trigger={trigger}
       defaultOpen
       middlewares={['offset', 'flip', 'shift', 'arrow']}

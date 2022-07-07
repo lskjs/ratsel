@@ -35,8 +35,8 @@ import { Arrow } from './components/Arrow';
 import { PopoverBase } from './components/PopoverBase';
 
 interface ChildrenArgs {
-  close(): void;
-  isOpen: boolean;
+  close?: () => void;
+  isOpen?: boolean;
 }
 
 export interface PopoverComponents {
@@ -52,6 +52,7 @@ export interface PopoverProps extends BaseProps {
   interactions?: string[];
   strategy?: Strategy;
   isPortal?: boolean;
+  isControlled?: boolean;
   onOpenChange?: (open: boolean, action: string) => void;
   children?: ReactNode | ((obj: ChildrenArgs) => ReactNode);
 }
@@ -68,6 +69,7 @@ export const Popover: FC<PopoverProps> = ({
   strategy: propStrategy = 'absolute',
   isPortal = false,
   onOpenChange: propOnOpenChange,
+  isControlled = true,
 }) => {
   const arrowRef = useRef(null);
   const [open, onOpenChange] = useState(defaultOpen);
@@ -143,7 +145,7 @@ export const Popover: FC<PopoverProps> = ({
   const PopoverComponent = components?.Popover || PopoverBase;
   let child = children;
   if (typeof children === 'function')
-    child = children({ close: handleClose, isOpen: open });
+    child = children(isControlled ? { close: handleClose, isOpen: open } : {});
 
   let focusManagerProps: any = {
     context,
@@ -186,8 +188,12 @@ export const Popover: FC<PopoverProps> = ({
         getReferenceProps({
           ref: reference,
           ...trigger?.props,
-          isOpen: open,
-          close: handleClose,
+          ...(isControlled
+            ? {
+                isOpen: open,
+                close: handleClose,
+              }
+            : {}),
         }),
       )}
       {isPortal ? <FloatingPortal>{content}</FloatingPortal> : content}
