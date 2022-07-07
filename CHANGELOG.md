@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/lskjs/ratsel/compare/v1.1.2...v1.2.0) (2022-07-07)
+
+
+### Bug Fixes
+
+* **Popover:** isControlled by default ([940426e](https://github.com/lskjs/ratsel/commit/940426e9bae24ab7b14c77bc3ee7092690e8cb7b))
+
+
+### Features
+
+* isPortal for tooltip ([c29afe4](https://github.com/lskjs/ratsel/commit/c29afe4eff391e2538795219ee797d821beebfa7))
+
+
+
+
+
 ## [1.1.2](https://github.com/lskjs/ratsel/compare/v1.1.1...v1.1.2) (2022-06-27)
 
 
