@@ -1,16 +1,17 @@
 import {
   arrow,
   autoUpdate,
+  FloatingPortal,
   offset,
   Placement,
   useFloating,
   useHover,
   useInteractions,
   useRole,
-  FloatingPortal,
 } from '@floating-ui/react-dom-interactions';
 import React, {
   cloneElement,
+  CSSProperties,
   FC,
   Fragment,
   ReactElement,
@@ -28,6 +29,7 @@ interface TooltipProps {
   children: ReactElement;
   offset?: number;
   isPortal?: boolean;
+  labelStyle?: CSSProperties;
 }
 
 export const Tooltip: FC<TooltipProps> = ({
@@ -36,6 +38,7 @@ export const Tooltip: FC<TooltipProps> = ({
   placement = 'top',
   offset: propOffset = 10,
   isPortal,
+  labelStyle = {},
 }) => {
   const arrowRef = useRef(null);
   const [open, setOpen] = useState(false);
@@ -74,6 +77,7 @@ export const Tooltip: FC<TooltipProps> = ({
       {...getFloatingProps({
         ref: floating,
         style: {
+          ...labelStyle,
           position: strategy,
           top: y ?? '',
           left: x ?? '',
