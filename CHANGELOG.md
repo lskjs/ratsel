@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/lskjs/ratsel/compare/v1.2.0...v1.3.0) (2022-07-11)
+
+
+### Features
+
+* **floating:** add labelStyle prop ([b4671c3](https://github.com/lskjs/ratsel/commit/b4671c3cc63bdb2e06f5ed40b54df4bef29af5d9))
+
+
+
+
+
 # [1.2.0](https://github.com/lskjs/ratsel/compare/v1.1.2...v1.2.0) (2022-07-07)
 
 
