@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Select } from '../src';
+import { CreatableSelect } from '../src/CreatableSelect';
 
 const options = [
   {
@@ -17,12 +18,40 @@ const options = [
   },
 ];
 
-export default (
-  <Select
+const DemoCreatable = ({ options: _options, onChange }) => (
+  <CreatableSelect
     placeholder="Выберите период"
-    options={options}
+    options={_options}
     isSearchable
-    onChange={(val) => console.log(val)}
+    onChange={onChange}
     noOptionsMessage={() => <div>No options!</div>}
   />
 );
+
+export default {
+  default: (
+    <Select
+      placeholder="Выберите период"
+      options={options}
+      isSearchable
+      onChange={(val) => console.log(val)}
+      noOptionsMessage={() => <div>No options!</div>}
+    />
+  ),
+  creatable: () => {
+    const [optionsState, setOptionsState] = useState(options);
+
+    function handleChange(option, { action }) {
+      console.log({
+        option,
+        action,
+      });
+
+      if (action === 'create-option') {
+        setOptionsState((prev) => [...prev, option]);
+      }
+    }
+
+    return <DemoCreatable options={optionsState} onChange={handleChange} />;
+  },
+};
