@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/lskjs/ratsel/compare/v1.3.0...v1.4.0) (2022-07-20)
+
+
+### Features
+
+* **select:** creatable select demo ([b9478d2](https://github.com/lskjs/ratsel/commit/b9478d28c6bb081b3549f58bec0d3a59f427f1d9))
+
+
+
+
+
 # [1.3.0](https://github.com/lskjs/ratsel/compare/v1.2.0...v1.3.0) (2022-07-11)
 
 **Note:** Version bump only for package @ratsel/select
