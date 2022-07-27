@@ -20,6 +20,7 @@ const theme = (parentTheme) => ({
       tooltipFontSize: '9px',
       tooltipFontWeight: '400',
       tooltipLineHeight: '12px',
+      zIndex: '1030',
     },
   },
 });

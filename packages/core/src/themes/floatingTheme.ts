@@ -11,6 +11,7 @@ export interface FloatingTheme {
   tooltipFontSize: string;
   tooltipFontWeight: string;
   tooltipLineHeight: string;
+  zIndex: string;
 }
 
 export const floatingTheme: FloatingTheme = {
@@ -26,4 +27,5 @@ export const floatingTheme: FloatingTheme = {
   tooltipFontSize: '9px',
   tooltipFontWeight: '400',
   tooltipLineHeight: '12px',
+  zIndex: '1030',
 };

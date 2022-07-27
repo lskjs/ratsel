@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { styled } from '@ratsel/core';
 
 export const TooltipBase = styled('div')`
@@ -11,5 +12,5 @@ export const TooltipBase = styled('div')`
   border-radius: ${(props) => props.theme.ratsel.floating.borderRadius};
   padding: ${(props) => props.theme.ratsel.floating.tooltipPadding};
   color: ${(props) => props.theme.ratsel.floating.tooltipColor};
-  z-index: 1020;
+  z-index: ${(props) => props.theme.ratsel.floating.zIndex};
 `;
