@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/lskjs/ratsel/compare/v1.4.0...v1.5.0) (2022-07-27)
+
+
+### Features
+
+* **floating:** add zIndex to theme ([0a39901](https://github.com/lskjs/ratsel/commit/0a39901b3ef33c86ef0eafbf505e10eefa180ba5))
+
+
+
+
+
 # [1.3.0](https://github.com/lskjs/ratsel/compare/v1.2.0...v1.3.0) (2022-07-11)
 
 
