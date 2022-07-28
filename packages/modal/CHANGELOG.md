@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.2](https://github.com/lskjs/ratsel/compare/v1.5.1...v1.5.2) (2022-07-28)
+
+
+### Bug Fixes
+
+* **modal:** zIndex modalCloseIcon ([d636049](https://github.com/lskjs/ratsel/commit/d636049bb82922c4bb7966f2a3afd9f5fc210653))
+
+
+
+
+
 ## [1.5.1](https://github.com/lskjs/ratsel/compare/v1.5.0...v1.5.1) (2022-07-27)
 
 **Note:** Version bump only for package @ratsel/modal
