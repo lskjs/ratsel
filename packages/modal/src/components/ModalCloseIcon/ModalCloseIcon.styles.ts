@@ -20,4 +20,5 @@ export const CloseButton = styled('button')<PropsWithChildren>`
   align-items: center;
   justify-content: center;
   border-radius: ${(props) => `0 ${props.theme.ratsel.modal.borderRadius} 0 0`};
+  z-index: 1;
 `;
