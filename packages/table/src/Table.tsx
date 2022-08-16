@@ -13,7 +13,11 @@ import {
 } from 'ka-table/props';
 import { DispatchFunc } from 'ka-table/types';
 import React, {
+  ComponentType,
+  Dispatch,
   forwardRef,
+  PropsWithChildren,
+  SetStateAction,
   useEffect,
   useImperativeHandle,
   useRef,
@@ -21,8 +25,9 @@ import React, {
 } from 'react';
 
 import { globalFonts } from './components/globalFonts';
+import { ThemedWrapper } from './components/ThemedWrapper';
 import { Wrapper } from './components/Wrapper';
-import { deserialize } from './utils/deserialize';
+import { deserialize, DeserializeReturn } from './utils/deserialize';
 import { getStickyAttrs } from './utils/getStickyAttrs';
 import { renderCustomComponent } from './utils/renderCustomComponent';
 
@@ -38,6 +43,9 @@ interface TableProps {
   data: ExtendedITableProps;
   onChangeState?: (arg: any) => any;
   onChange?: (arg: any) => any | Promise<any>;
+  state?: DeserializeReturn;
+  setState?: Dispatch<SetStateAction<DeserializeReturn>>;
+  ThemedWrapper?: ComponentType<PropsWithChildren>;
 }
 
 interface TableRef {
@@ -46,33 +54,50 @@ interface TableRef {
 }
 
 export const Table = forwardRef<TableRef, TableProps>(
-  ({ data, onChangeState, onChange }, ref) => {
+  (
+    {
+      data,
+      onChangeState,
+      onChange,
+      state,
+      setState,
+      ThemedWrapper: ThemedWrapperProp,
+    },
+    ref,
+  ) => {
+    let _data = {} as DeserializeReturn;
     const prevData = useRef(data);
-    const _data = deserialize(data);
+    if (!state) {
+      _data = deserialize(data);
+    }
+    let tableState = state as DeserializeReturn;
+    let changeTableState = setState;
+    if (!state || !setState) {
+      [tableState, changeTableState] = useState<DeserializeReturn>(_data);
+    }
     // if (!_data.tableProps.singleAction) {
     //   _data.tableProps.singleAction = true;
     // }
-    const [tableState, changeTableState] = useState(_data);
-
     function updateTableData(__data: ExtendedITableProps) {
       const ___data = deserialize(__data);
       // if (!___data.tableProps.singleAction) {
       //   ___data.tableProps.singleAction = true;
       // }
-      changeTableState(___data);
+      changeTableState?.(___data);
     }
 
     useEffect(() => {
       if (
-        prevData.current?.data?.length !== data?.data?.length ||
-        prevData.current?.columns.length !== data?.columns?.length
+        !state &&
+        (prevData.current?.data?.length !== data?.data?.length ||
+          prevData.current?.columns.length !== data?.columns?.length)
       ) {
         updateTableData(data);
       }
     }, [data]);
 
     const reducer = async (__action: any, __dispatch: DispatchFunc) => {
-      changeTableState((prevState: ITableState) => {
+      changeTableState?.((prevState: ITableState) => {
         const newTableProps = kaReducer(prevState.tableProps, __action);
         const newState = { ...prevState, tableProps: newTableProps };
 
@@ -151,18 +176,20 @@ export const Table = forwardRef<TableRef, TableProps>(
       }),
       [tableState, reducer],
     );
-
+    const ThemedWrapperRender = ThemedWrapperProp || ThemedWrapper;
     return (
-      <Wrapper
-        virtual={Boolean(tableState.tableProps.virtualScrolling?.enabled)}
-      >
-        <Global styles={globalFonts} />
-        <KaTable
-          {...tableState.tableProps}
-          dispatch={dispatch}
-          childComponents={childComponents}
-        />
-      </Wrapper>
+      <ThemedWrapperRender>
+        <Wrapper
+          virtual={Boolean(tableState.tableProps.virtualScrolling?.enabled)}
+        >
+          <Global styles={globalFonts} />
+          <KaTable
+            {...tableState.tableProps}
+            dispatch={dispatch}
+            childComponents={childComponents}
+          />
+        </Wrapper>
+      </ThemedWrapperRender>
     );
   },
 );

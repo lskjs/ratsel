@@ -32,7 +32,7 @@ interface ExtendedTableProps extends ExtendedITableProps {
   custom?: CustomProps;
 }
 
-interface DeserializeReturn {
+export interface DeserializeReturn {
   tableProps: ExtendedITableProps;
   custom?: CustomProps;
 }
