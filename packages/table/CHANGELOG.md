@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/lskjs/ratsel/compare/v1.5.2...v1.6.0) (2022-08-16)
+
+
+### Features
+
+* **table:** support rewrite ThemedWrapper & controlled state ([6a4e7be](https://github.com/lskjs/ratsel/commit/6a4e7bec158d47c152bc73c9564088e77d8259e0))
+
+
+
+
+
 ## [1.5.2](https://github.com/lskjs/ratsel/compare/v1.5.1...v1.5.2) (2022-07-28)
 
 **Note:** Version bump only for package @ratsel/table
