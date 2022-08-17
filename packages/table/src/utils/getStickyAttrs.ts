@@ -6,7 +6,10 @@ export const getStickyAttrs = (
   sticky = {},
   column: ISummaryCellProps['column'],
 ) => {
-  let attrs = {};
+  let attrs = {
+    className: 'static-cell',
+    style: column.style,
+  };
   Object.keys(sticky).forEach((key) => {
     if (!['left', 'right'].includes(key)) return;
     if ((sticky?.[key] || []).includes(column.key)) {
