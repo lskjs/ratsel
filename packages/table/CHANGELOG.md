@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/lskjs/ratsel/compare/v1.6.0...v1.6.1) (2022-08-17)
+
+
+### Bug Fixes
+
+* **table:** static-cell for regular thead cells ([4613e3f](https://github.com/lskjs/ratsel/commit/4613e3f92b639826c99b661589cf6a9e4e9a9fef))
+
+
+
+
+
 # [1.6.0](https://github.com/lskjs/ratsel/compare/v1.5.2...v1.6.0) (2022-08-16)
 
 
