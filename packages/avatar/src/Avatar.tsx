@@ -27,6 +27,9 @@ export const Avatar: FC<AvatarProps> = ({
   iconPosition = 'br',
   iconBackground,
   objectFit,
+  scrollPosition,
+  native,
+  loading,
   ...props
 }) => (
   <Wrapper shape={shape} objectFit={objectFit}>
@@ -41,6 +44,9 @@ export const Avatar: FC<AvatarProps> = ({
       style={style}
       innerStyle={innerStyle}
       defaultAvatar={defaultAvatar}
+      scrollPosition={scrollPosition}
+      native={native}
+      loading={loading}
       {...props}
     >
       {icon && (

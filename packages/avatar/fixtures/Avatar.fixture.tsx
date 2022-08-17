@@ -23,6 +23,16 @@ export default {
       <Avatar title="John Smith" src={avatarImg} />
     </>
   ),
+  'Native img tag': (
+    <>
+      <Avatar native title="John Smith" src={avatarImg} />
+    </>
+  ),
+  'Native img tag Lazy': (
+    <>
+      <Avatar native loading="lazy" title="John Smith" src={avatarImg} />
+    </>
+  ),
   Empty: (
     <>
       <Avatar src={null} />

@@ -1,5 +1,5 @@
 import React, { CSSProperties, FC, PropsWithChildren } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage, ScrollPosition } from 'react-lazy-load-image-component';
 
 import { WrapperProps } from './Avatar.styles';
 
@@ -18,6 +18,9 @@ export interface AvatarBaseProps extends WrapperProps {
   style?: CSSProperties;
   innerStyle?: CSSProperties;
   defaultAvatar?: string;
+  scrollPosition?: ScrollPosition;
+  native?: boolean;
+  loading?: 'eager' | 'lazy' | undefined;
 }
 
 export const AvatarBase: FC<PropsWithChildren<AvatarBaseProps>> = (props) => {
@@ -64,14 +67,24 @@ export const AvatarBase: FC<PropsWithChildren<AvatarBaseProps>> = (props) => {
 
   return (
     <div className={props.className} style={wrapperStyle as CSSProperties}>
-      <LazyLoadImage
-        alt={alt}
-        title={title}
-        placeholderSrc={props.defaultAvatar}
-        src={realSrc}
-        effect="opacity"
-        style={getInnerStyle() as CSSProperties}
-      />
+      {props.native ? (
+        <img
+          alt={alt}
+          loading={props.loading}
+          src={realSrc}
+          style={getInnerStyle() as CSSProperties}
+        />
+      ) : (
+        <LazyLoadImage
+          alt={alt}
+          title={title}
+          placeholderSrc={props.defaultAvatar}
+          src={realSrc}
+          effect="opacity"
+          style={getInnerStyle() as CSSProperties}
+          scrollPosition={props.scrollPosition}
+        />
+      )}
       {props.children}
     </div>
   );
