@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/lskjs/ratsel/compare/v1.7.0...v1.7.1) (2022-08-18)
+
+
+### Bug Fixes
+
+* **floating:** outline: none ([0d05d93](https://github.com/lskjs/ratsel/commit/0d05d932ca6f971e9c186593009859bcd3d0283a))
+
+
+
+
+
 # [1.7.0](https://github.com/lskjs/ratsel/compare/v1.6.1...v1.7.0) (2022-08-17)
 
 
