@@ -21,4 +21,5 @@ export const PopoverBase = styled('div', {
   z-index: ${(props) => props.theme.ratsel.floating.zIndex};
   transition: opacity 300ms ease 0s, transform 300ms ease 0s;
   opacity: 1;
+  outline: none;
 `;
