@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.2](https://github.com/lskjs/ratsel/compare/v1.7.1...v1.7.2) (2022-08-23)
+
+
+### Bug Fixes
+
+* **calendar:** small increase ([15dfe62](https://github.com/lskjs/ratsel/commit/15dfe6297777c07f9889828ce5c07b4d6afae3be))
+
+
+
+
+
 ## [1.5.2](https://github.com/lskjs/ratsel/compare/v1.5.1...v1.5.2) (2022-07-28)
 
 **Note:** Version bump only for package @ratsel/calendar
