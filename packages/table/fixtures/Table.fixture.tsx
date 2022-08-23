@@ -294,7 +294,7 @@ const data = {
   custom: {
     sticky: {
       summaryRow: true,
-      left: ['user'],
+      left: ['user', 'status'],
       right: ['cmd:options'],
     },
     cellViewComponents: {

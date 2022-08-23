@@ -123,12 +123,22 @@ export const Table = forwardRef<TableRef, TableProps>(
       headCell: {
         ...(tableState.tableProps.childComponents?.headCell || {}),
         elementAttributes: (props: IHeadCellProps) =>
-          getStickyAttrs('thead', tableState.custom?.sticky, props.column),
+          getStickyAttrs(
+            'thead',
+            tableState.custom?.sticky,
+            props.column,
+            tableState.tableProps.columns,
+          ),
       },
       cell: {
         ...(tableState.tableProps.childComponents?.cell || {}),
         elementAttributes: (props: ICellProps) =>
-          getStickyAttrs('tbody', tableState.custom?.sticky, props.column),
+          getStickyAttrs(
+            'tbody',
+            tableState.custom?.sticky,
+            props.column,
+            tableState.tableProps.columns,
+          ),
       },
       cellText: {
         ...(tableState.tableProps.childComponents?.cellText || {}),
@@ -162,7 +172,12 @@ export const Table = forwardRef<TableRef, TableProps>(
         ...(tableState.tableProps.childComponents?.summaryCell || {}),
         content: tableState.custom?.cellTotalComponent,
         elementAttributes: (props) =>
-          getStickyAttrs('summary', tableState.custom?.sticky, props.column),
+          getStickyAttrs(
+            'summary',
+            tableState.custom?.sticky,
+            props.column,
+            tableState.tableProps.columns,
+          ),
       };
     }
 

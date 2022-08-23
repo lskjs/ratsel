@@ -437,14 +437,14 @@ export const ThemedWrapper = styled('div')`
   }
 
   .sticky-cell-left {
-    left: 0;
+    left: var(--sticky-offset, 0);
     position: sticky;
     box-shadow: inset -${(props) => props.theme.ratsel.table.borderWidth} 0 0 0 ${(props) => props.theme.ratsel.table.borderColor};
     z-index: 20;
   }
 
   .sticky-cell-right {
-    right: 0;
+    right: var(--sticky-offset, 0);
     position: sticky;
     box-shadow: inset ${(props) => props.theme.ratsel.table.borderWidth} 0 0 0
       ${(props) => props.theme.ratsel.table.borderColor};
