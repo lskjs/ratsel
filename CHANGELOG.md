@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/lskjs/ratsel/compare/v1.7.2...v1.8.0) (2022-08-23)
+
+
+### Features
+
+* **table:** support multiple sticky elements ([625c831](https://github.com/lskjs/ratsel/commit/625c831c99faa73b33125dc794699c83b8a4faf5))
+
+
+
+
+
 ## [1.7.2](https://github.com/lskjs/ratsel/compare/v1.7.1...v1.7.2) (2022-08-23)
 
 
