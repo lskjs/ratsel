@@ -6,8 +6,8 @@ export interface WrapperProps {
 
 const sizes = {
   small: (props: PropsWithTheme) => css`
-    width: 196px;
-    min-height: 240px;
+    width: 230px;
+    min-height: 250px;
     padding: ${props.theme.ratsel.calendar.wrapper.smallPadding};
 
     .react-calendar {
@@ -166,7 +166,7 @@ const sizes = {
         &__days__day {
           transition: background 0.1s ease-out;
           will-change: background;
-          height: 24px;
+          height: 26px;
           margin-top: 6px;
           background: transparent;
           margin-left: 0;
@@ -238,7 +238,7 @@ const sizes = {
           abbr {
             transition: background 0.1s ease-out, color 0.1s ease-out;
             will-change: background, color;
-            width: 24px;
+            width: 26px;
             height: 100%;
             display: flex;
             align-items: center;
