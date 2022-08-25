@@ -1,3 +1,4 @@
+import { ITableProps } from 'ka-table';
 import { ISummaryCellProps } from 'ka-table/props';
 import { ComponentType, PropsWithChildren } from 'react';
 
@@ -8,6 +9,10 @@ interface StickyProps {
   left?: string[];
   right?: string[];
   summaryRow?: boolean;
+}
+
+export interface ISummaryCustomCellProps extends ISummaryCellProps {
+  tableProps: ITableProps;
 }
 
 export interface CustomComponentProps {
@@ -26,6 +31,7 @@ interface CustomProps {
   cellViewComponents?: CustomComponentsProps;
   cellEditorComponents?: CustomComponentsProps;
   cellTotalComponent?: (arg: PropsWithChildren<ISummaryCellProps>) => any;
+  cellTotal?: CustomComponentProps;
 }
 
 interface ExtendedTableProps extends ExtendedITableProps {

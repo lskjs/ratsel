@@ -318,7 +318,9 @@ const data = {
         },
       },
     },
-    cellTotalComponent: TotalComponent,
+    cellTotal: {
+      component: TotalComponent,
+    },
   },
 };
 

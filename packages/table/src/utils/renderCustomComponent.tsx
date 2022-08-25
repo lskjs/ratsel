@@ -2,10 +2,10 @@
 import { ICellEditorProps, ICellProps } from 'ka-table/props';
 import React, { ComponentType, ReactNode } from 'react';
 
-import { CustomComponentProps } from './deserialize';
+import { CustomComponentProps, ISummaryCustomCellProps } from './deserialize';
 
 export const renderCustomComponent = (
-  props: ICellProps | ICellEditorProps,
+  props: ICellProps | ICellEditorProps | ISummaryCustomCellProps,
   componentObject?: CustomComponentProps,
 ): ReactNode | void => {
   const CustomCell = componentObject?.component as ComponentType<any>;

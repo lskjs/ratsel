@@ -27,7 +27,11 @@ import React, {
 import { globalFonts } from './components/globalFonts';
 import { ThemedWrapper } from './components/ThemedWrapper';
 import { Wrapper } from './components/Wrapper';
-import { deserialize, DeserializeReturn } from './utils/deserialize';
+import {
+  deserialize,
+  DeserializeReturn,
+  ISummaryCustomCellProps,
+} from './utils/deserialize';
 import { getStickyAttrs } from './utils/getStickyAttrs';
 import { renderCustomComponent } from './utils/renderCustomComponent';
 
@@ -167,17 +171,30 @@ export const Table = forwardRef<TableRef, TableProps>(
       };
     }
 
-    if (tableState.custom?.cellTotalComponent) {
+    if (tableState.custom?.cellTotalComponent || tableState.custom?.cellTotal) {
+      let content = tableState.custom?.cellTotalComponent;
+      if (tableState.custom?.cellTotal) {
+        content = (props: ISummaryCustomCellProps) =>
+          renderCustomComponent(
+            {
+              ...props,
+              tableProps: tableState.tableProps,
+            },
+            tableState.custom?.cellTotal,
+          );
+      }
+
       childComponents.summaryCell = {
         ...(tableState.tableProps.childComponents?.summaryCell || {}),
-        content: tableState.custom?.cellTotalComponent,
-        elementAttributes: (props) =>
-          getStickyAttrs(
+        content,
+        elementAttributes: (props) => ({
+          ...getStickyAttrs(
             'summary',
             tableState.custom?.sticky,
             props.column,
             tableState.tableProps.columns,
           ),
+        }),
       };
     }
 
