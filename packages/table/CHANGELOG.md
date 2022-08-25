@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/lskjs/ratsel/compare/v1.8.0...v1.9.0) (2022-08-25)
+
+
+### Features
+
+* **table:** support custom summary cell ([3050c52](https://github.com/lskjs/ratsel/commit/3050c527bdf751b56b4307ccd72d95554f7b1bde))
+
+
+
+
+
 # [1.8.0](https://github.com/lskjs/ratsel/compare/v1.7.2...v1.8.0) (2022-08-23)
 
 
