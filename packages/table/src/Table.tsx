@@ -148,7 +148,7 @@ export const Table = forwardRef<TableRef, TableProps>(
         ...(tableState.tableProps.childComponents?.cellText || {}),
         content: (props: ICellTextProps) =>
           renderCustomComponent(
-            props,
+            { columns: tableState.tableProps.columns, ...props },
             tableState.custom?.cellViewComponents?.[props.column.key],
           ),
       },
@@ -156,7 +156,7 @@ export const Table = forwardRef<TableRef, TableProps>(
         ...(tableState.tableProps.childComponents?.cellEditor || {}),
         content: (props: ICellEditorProps) =>
           renderCustomComponent(
-            props,
+            { columns: tableState.tableProps.columns, ...props },
             tableState.custom?.cellEditorComponents?.[props.column.key],
           ),
       },
