@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.1](https://github.com/lskjs/ratsel/compare/v1.9.0...v1.9.1) (2022-09-02)
+
+
+### Bug Fixes
+
+* **table:** add columns to cells & editors ([a70d71b](https://github.com/lskjs/ratsel/commit/a70d71ba5c09172c3c6638231a41bef1b90eae04))
+
+
+
+
+
 # [1.9.0](https://github.com/lskjs/ratsel/compare/v1.8.0...v1.9.0) (2022-08-25)
 
 
