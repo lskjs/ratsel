@@ -1,5 +1,5 @@
 import { Global } from '@ratsel/core';
-import { ITableAllProps, ITableProps, Table as KaTable } from 'ka-table';
+import { ITableAllProps, ITableProps } from 'ka-table';
 import {
   ICellEditorProps,
   ICellProps,
@@ -157,14 +157,6 @@ export const Table = forwardRef<TableRef, TableProps>(
             tableState.custom?.cellEditorComponents?.[props.column.key],
           ),
       },
-      rootDiv: {
-        ...(tableState.tableProps.childComponents?.rootDiv || {}),
-        content: (props: ITableAllProps) =>
-          renderCustomComponent(props, {
-            component: tableState.custom?.rootDiv || RootTable,
-            props: tableState.custom?.rootDiv?.props,
-          }),
-      },
     };
 
     if (tableState.custom?.tableWrapper) {
@@ -228,7 +220,7 @@ export const Table = forwardRef<TableRef, TableProps>(
           virtual={Boolean(tableState.tableProps.virtualScrolling?.enabled)}
         >
           <Global styles={globalFonts} />
-          <KaTable
+          <RootTable
             {...tableState.tableProps}
             dispatch={dispatch}
             childComponents={childComponents}
