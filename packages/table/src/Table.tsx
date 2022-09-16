@@ -20,7 +20,7 @@ import React, {
 } from 'react';
 
 import { globalFonts } from './components/globalFonts';
-import { TableWrapper } from './components/TableWrapper';
+import { RootTable } from './components/RootTable';
 import { ThemedWrapper } from './components/ThemedWrapper';
 import { Wrapper } from './components/Wrapper';
 import {
@@ -157,16 +157,23 @@ export const Table = forwardRef<TableRef, TableProps>(
             tableState.custom?.cellEditorComponents?.[props.column.key],
           ),
       },
-      tableWrapper: {
-        ...(tableState.tableProps.childComponents?.tableWrapper || {}),
+      rootDiv: {
+        ...(tableState.tableProps.childComponents?.rootDiv || {}),
         content: (props: ITableAllProps) =>
           renderCustomComponent(props, {
-            component:
-              tableState.custom?.tableWrapper?.component || TableWrapper,
-            props: tableState.custom?.tableWrapper?.props,
+            component: tableState.custom?.rootDiv || RootTable,
+            props: tableState.custom?.rootDiv?.props,
           }),
       },
     };
+
+    if (tableState.custom?.tableWrapper) {
+      childComponents.tableWrapper = {
+        ...(tableState.tableProps.childComponents?.tableWrapper || {}),
+        content: (props: ITableAllProps) =>
+          renderCustomComponent(props, tableState.custom?.tableWrapper),
+      };
+    }
 
     if (tableState.custom?.sticky?.summaryRow) {
       childComponents.summaryRow = {
