@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.1](https://github.com/lskjs/ratsel/compare/v1.10.0...v1.10.1) (2022-09-16)
+
+
+### Bug Fixes
+
+* **table:** rootDiv instead tableWrapper ([c0f680a](https://github.com/lskjs/ratsel/commit/c0f680ae085c121e8fd8ff78629010fc7af8d610))
+
+
+
+
+
 # [1.10.0](https://github.com/lskjs/ratsel/compare/v1.9.1...v1.10.0) (2022-09-16)
 
 
