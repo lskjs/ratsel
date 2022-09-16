@@ -1,10 +1,5 @@
 import { Global } from '@ratsel/core';
-import {
-  ITableAllProps,
-  ITableProps,
-  kaReducer,
-  Table as KaTable,
-} from 'ka-table';
+import { ITableAllProps, ITableProps, Table as KaTable } from 'ka-table';
 import {
   ICellEditorProps,
   ICellProps,
@@ -25,6 +20,7 @@ import React, {
 } from 'react';
 
 import { globalFonts } from './components/globalFonts';
+import { TableWrapper } from './components/TableWrapper';
 import { ThemedWrapper } from './components/ThemedWrapper';
 import { Wrapper } from './components/Wrapper';
 import {
@@ -33,6 +29,7 @@ import {
   ISummaryCustomCellProps,
 } from './utils/deserialize';
 import { getStickyAttrs } from './utils/getStickyAttrs';
+import { kaReducer } from './utils/kaReducer';
 import { renderCustomComponent } from './utils/renderCustomComponent';
 
 export interface ExtendedITableProps extends ITableProps {
@@ -159,6 +156,15 @@ export const Table = forwardRef<TableRef, TableProps>(
             { columns: tableState.tableProps.columns, ...props },
             tableState.custom?.cellEditorComponents?.[props.column.key],
           ),
+      },
+      tableWrapper: {
+        ...(tableState.tableProps.childComponents?.tableWrapper || {}),
+        content: (props: ITableAllProps) =>
+          renderCustomComponent(props, {
+            component:
+              tableState.custom?.tableWrapper?.component || TableWrapper,
+            props: tableState.custom?.tableWrapper?.props,
+          }),
       },
     };
 

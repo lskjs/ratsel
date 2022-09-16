@@ -9,6 +9,15 @@ import React, { useState } from 'react';
 
 import { Table } from '../src';
 
+function getFormulaValue(key: string, rowData: ICellProps['rowData']) {
+  return rowData.totalBudget ?? 0 / rowData.totalSpent ?? 0;
+}
+
+const ComputedCell: React.FC<ICellProps> = ({ column, rowData }) => {
+  const value = getFormulaValue(column.key, rowData);
+  return <strong>{value}</strong>;
+};
+
 function TotalComponent({ column, data }) {
   switch (column.key) {
     case 'user':
@@ -208,6 +217,12 @@ const data = {
       width: 160,
     },
     {
+      key: 'computedCPM',
+      title: 'Computed CPM',
+      width: 160,
+      getComputedValue: getFormulaValue,
+    },
+    {
       key: 'er',
       title: 'ER',
       width: 140,
@@ -300,6 +315,9 @@ const data = {
     cellViewComponents: {
       user: {
         component: UserCell,
+      },
+      computedCPM: {
+        component: ComputedCell,
       },
       'cmd:options': {
         component: OptionsCell,

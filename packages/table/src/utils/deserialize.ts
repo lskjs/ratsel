@@ -32,6 +32,7 @@ interface CustomProps {
   cellEditorComponents?: CustomComponentsProps;
   cellTotalComponent?: (arg: PropsWithChildren<ISummaryCellProps>) => any;
   cellTotal?: CustomComponentProps;
+  tableWrapper?: CustomComponentProps;
 }
 
 interface ExtendedTableProps extends ExtendedITableProps {
