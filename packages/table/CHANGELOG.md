@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.2](https://github.com/lskjs/ratsel/compare/v1.10.1...v1.10.2) (2022-09-16)
+
+
+### Bug Fixes
+
+* **table:** rootTable ([c32c9b9](https://github.com/lskjs/ratsel/commit/c32c9b910a86569bc91a70be167afe14921d991e))
+
+
+
+
+
 ## [1.10.1](https://github.com/lskjs/ratsel/compare/v1.10.0...v1.10.1) (2022-09-16)
 
 
