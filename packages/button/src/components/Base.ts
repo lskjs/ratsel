@@ -25,6 +25,7 @@ export const Base = styled('button', {
       'minWidth',
       'close',
       'isOpen',
+      'as',
     ].includes(prop as string),
 })<BaseProps>`
   width: ${(props) => (props.block ? '100%' : 'auto')};
