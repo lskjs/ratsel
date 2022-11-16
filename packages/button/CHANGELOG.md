@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.3](https://github.com/lskjs/ratsel/compare/v1.10.2...v1.10.3) (2022-11-16)
+
+
+### Bug Fixes
+
+* **button:** as ignore pass prop ([485e745](https://github.com/lskjs/ratsel/commit/485e745c20c88cd7b1efe3d2a35e5c18b5e4828a))
+
+
+
+
+
 ## [1.10.1](https://github.com/lskjs/ratsel/compare/v1.10.0...v1.10.1) (2022-09-16)
 
 **Note:** Version bump only for package @ratsel/button
