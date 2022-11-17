@@ -8,6 +8,7 @@ import { getElementCustomization } from 'ka-table/Utils/ComponentUtils';
 import { getExpandedGroups } from 'ka-table/Utils/GroupUtils';
 import { isVirtualScrollingEnabled } from 'ka-table/Utils/Virtualize';
 import React from 'react';
+import { kaPropsUtils } from '../utils';
 
 import { ActionType, EditingMode, FilteringMode, SortingMode } from '../enums';
 import { prepareTableOptions } from '../utils/prepareTableOptions';
@@ -37,7 +38,8 @@ export const TableWrapper: React.FunctionComponent<ITableAllProps> = (
     groupsExpanded = getExpandedGroups(preparedOptions.groupedData);
   }
 
-  const areAllRowsSelected = data.length === selectedRows.length;
+  // const areAllRowsSelected = data.length === selectedRows.length;
+  const areAllRowsSelected = kaPropsUtils.areAllFilteredRowsSelected(props);
 
   const tableWrapper = getElementCustomization(
     {
