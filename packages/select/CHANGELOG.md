@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/lskjs/ratsel/compare/v1.10.4...v1.11.0) (2022-11-22)
+
+**Note:** Version bump only for package @ratsel/select
+
+
+
+
+
 ## [1.10.4](https://github.com/lskjs/ratsel/compare/v1.10.3...v1.10.4) (2022-11-17)
 
 **Note:** Version bump only for package @ratsel/select

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/lskjs/ratsel/compare/v1.10.4...v1.11.0) (2022-11-22)
+
+
+### Bug Fixes
+
+* **avatar:** types ([8b725fb](https://github.com/lskjs/ratsel/commit/8b725fb3eea5bb53210b3e7c7d72bc2da95a66b1))
+
+
+### Features
+
+* avatar srcs ([b5d506e](https://github.com/lskjs/ratsel/commit/b5d506e074174063a38ec5b39285a7e1ccc5cd2a))
+
+
+
+
+
 ## [1.10.4](https://github.com/lskjs/ratsel/compare/v1.10.3...v1.10.4) (2022-11-17)
 
 
