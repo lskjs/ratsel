@@ -1,4 +1,10 @@
-import React, { CSSProperties, FC, PropsWithChildren } from 'react';
+import React, {
+  CSSProperties,
+  FC,
+  PropsWithChildren,
+  useEffect,
+  useState,
+} from 'react';
 import { LazyLoadImage, ScrollPosition } from 'react-lazy-load-image-component';
 
 import { WrapperProps } from './Avatar.styles';
@@ -6,6 +12,7 @@ import { WrapperProps } from './Avatar.styles';
 export interface AvatarBaseProps extends WrapperProps {
   title?: string;
   src: string;
+  srcs: Array<string>;
   avatar?: string;
   name?: string;
   alt?: string;
@@ -27,7 +34,16 @@ export const AvatarBase: FC<PropsWithChildren<AvatarBaseProps>> = (props) => {
   const alt = props.alt || props.title || props.name;
   const title = props.title || props.name;
   const src = props.src || props.avatar;
-  const realSrc = src || props.defaultAvatar;
+  const { srcs } = props;
+  const rawRealSrc = srcs?.[0] || src || props.defaultAvatar;
+
+  const [realSrc, setRealSrc] = useState(rawRealSrc);
+
+  useEffect(() => {
+    if (rawRealSrc && rawRealSrc !== realSrc) {
+      setRealSrc(rawRealSrc);
+    }
+  }, [rawRealSrc]);
 
   const wrapperStyle = {
     display: 'flex',
@@ -65,6 +81,24 @@ export const AvatarBase: FC<PropsWithChildren<AvatarBaseProps>> = (props) => {
     };
   };
 
+  const selectNextSrc = (url) => {
+    if (!srcs || !Array.isArray(srcs)) return null;
+    const currentIdx = srcs.indexOf(realSrc);
+    let idx = srcs.indexOf(url);
+    if (currentIdx === idx) idx += 1;
+
+    if (idx < 0 || idx >= srcs.length) return null;
+    return srcs[idx];
+  };
+
+  const errorHandler = () => {
+    let nextUrl = selectNextSrc(realSrc);
+    if (!nextUrl && props.defaultAvatar) {
+      nextUrl = props.defaultAvatar;
+    }
+    setRealSrc(nextUrl);
+  };
+
   return (
     <div className={props.className} style={wrapperStyle as CSSProperties}>
       {props.native ? (
@@ -83,6 +117,7 @@ export const AvatarBase: FC<PropsWithChildren<AvatarBaseProps>> = (props) => {
           effect="opacity"
           style={getInnerStyle() as CSSProperties}
           scrollPosition={props.scrollPosition}
+          onError={errorHandler}
         />
       )}
       {props.children}

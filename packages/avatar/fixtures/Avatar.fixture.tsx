@@ -131,4 +131,16 @@ export default {
       />
     </>
   ),
+  Srcs: (
+    <>
+      <Avatar
+        title="John Smith"
+        srcs={[
+          'https://s3.eu-central-2.wasabisys.com/buzzguru-twitch-stream-preview/twitchStreamPreview/2022-09-29/6335b4d9ff6a4dd3cbc199bc/preview.jpeg',
+          'https://static-cdn.jtvnw.net/jtv_user_pictures/a67c96d4-76a2-4ea1-8d3e-704c81b8e7f5-profile_image-300x300.png',
+        ]}
+        defaultAvatar="https://picsum.photos/200/300"
+      />
+    </>
+  ),
 };
