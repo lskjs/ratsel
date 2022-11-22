@@ -81,10 +81,10 @@ export const AvatarBase: FC<PropsWithChildren<AvatarBaseProps>> = (props) => {
     };
   };
 
-  const selectNextSrc = (url) => {
+  const selectNextSrc = (url: string | undefined) => {
     if (!srcs || !Array.isArray(srcs)) return null;
-    const currentIdx = srcs.indexOf(realSrc);
-    let idx = srcs.indexOf(url);
+    const currentIdx = srcs.indexOf(realSrc || '');
+    let idx = srcs.indexOf(url || '');
     if (currentIdx === idx) idx += 1;
 
     if (idx < 0 || idx >= srcs.length) return null;
@@ -96,7 +96,7 @@ export const AvatarBase: FC<PropsWithChildren<AvatarBaseProps>> = (props) => {
     if (!nextUrl && props.defaultAvatar) {
       nextUrl = props.defaultAvatar;
     }
-    setRealSrc(nextUrl);
+    setRealSrc(nextUrl as string);
   };
 
   return (
