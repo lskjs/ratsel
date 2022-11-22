@@ -14,6 +14,7 @@ interface AvatarProps extends AvatarBaseProps, IconProps {
 export const Avatar: FC<AvatarProps> = ({
   title = '',
   src,
+  srcs,
   size = 64,
   width,
   height,
@@ -36,6 +37,7 @@ export const Avatar: FC<AvatarProps> = ({
     <AvatarBase
       title={title}
       src={src}
+      srcs={srcs}
       size={size}
       width={width}
       height={height}
