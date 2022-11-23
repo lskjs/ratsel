@@ -36,22 +36,24 @@ export interface ExtendedITableProps extends ITableProps {
   childComponents?: ITableAllProps['childComponents'];
 }
 
-export interface ITableState {
-  tableProps: ExtendedITableProps;
+export interface InnerState {
+  tableState: DeserializeReturn;
+  dataUpdatedAt?: number;
 }
 
 interface TableProps {
-  data: ExtendedITableProps;
+  data?: ExtendedITableProps;
   onChangeState?: (arg: any) => any;
   onChange?: (arg: any) => any | Promise<any>;
-  state?: DeserializeReturn;
-  setState?: Dispatch<SetStateAction<DeserializeReturn>>;
+  state?: InnerState;
+  setState?: Dispatch<SetStateAction<InnerState>>;
   ThemedWrapper?: ComponentType<PropsWithChildren>;
+  dataUpdatedAt?: number;
 }
 
 interface TableRef {
   dispatch(action: any): void;
-  getState(): ITableState;
+  getState(): InnerState;
 }
 
 export const Table = forwardRef<TableRef, TableProps>(
@@ -63,18 +65,21 @@ export const Table = forwardRef<TableRef, TableProps>(
       state,
       setState,
       ThemedWrapper: ThemedWrapperProp,
+      dataUpdatedAt,
     },
     ref,
   ) => {
-    let _data = {} as DeserializeReturn;
+    let _data = {} as InnerState;
     const prevData = useRef(data);
-    if (!state) {
-      _data = deserialize(data);
+    if (!state && data) {
+      _data = {
+        tableState: deserialize(data),
+      };
     }
-    let tableState = state as DeserializeReturn;
+    let innerState = state as InnerState;
     let changeTableState = setState;
     if (!state || !setState) {
-      [tableState, changeTableState] = useState<DeserializeReturn>(_data);
+      [innerState, changeTableState] = useState<InnerState>(_data);
     }
     // if (!_data.tableProps.singleAction) {
     //   _data.tableProps.singleAction = true;
@@ -84,12 +89,25 @@ export const Table = forwardRef<TableRef, TableProps>(
       // if (!___data.tableProps.singleAction) {
       //   ___data.tableProps.singleAction = true;
       // }
-      changeTableState?.(___data);
+      const _state: InnerState = {
+        tableState: ___data,
+      };
+      if (dataUpdatedAt) {
+        _state.dataUpdatedAt = dataUpdatedAt;
+      }
+      changeTableState?.(_state);
     }
+
+    useEffect(() => {
+      if (data && dataUpdatedAt && dataUpdatedAt !== innerState.dataUpdatedAt) {
+        updateTableData(data);
+      }
+    }, [dataUpdatedAt]);
 
     useEffect(() => {
       if (
         !state &&
+        data &&
         (prevData.current?.data?.length !== data?.data?.length ||
           prevData.current?.columns.length !== data?.columns?.length)
       ) {
@@ -98,18 +116,33 @@ export const Table = forwardRef<TableRef, TableProps>(
     }, [data]);
 
     const reducer = async (__action: any, __dispatch: DispatchFunc) => {
-      changeTableState?.((prevState: ITableState) => {
-        const newTableProps = kaReducer(prevState.tableProps, __action);
-        const newState = { ...prevState, tableProps: newTableProps };
+      changeTableState?.((__innerState: InnerState) => {
+        const realInnerState = (
+          __innerState.tableState ? __innerState : { tableState: __innerState }
+        ) as InnerState;
+        const newTableProps = kaReducer(
+          realInnerState.tableState?.tableProps,
+          __action,
+        );
+        const newState = {
+          ...realInnerState?.tableState,
+          tableProps: newTableProps,
+        };
 
         if (onChangeState) onChangeState({ state: newState, action: __action });
 
         if (__action?.type === 'UpdateTableData') {
           const _newState = __action.updater(newState);
-          return _newState;
+          return {
+            ...realInnerState,
+            tableState: _newState,
+          };
         }
 
-        return newState;
+        return {
+          ...realInnerState,
+          tableState: newState,
+        };
       });
 
       if (onChange) await onChange({ action: __action, dispatch: __dispatch });
@@ -120,84 +153,96 @@ export const Table = forwardRef<TableRef, TableProps>(
     };
 
     const childComponents = {
-      ...(tableState.tableProps.childComponents || {}),
+      ...(innerState.tableState.tableProps.childComponents || {}),
       headCell: {
-        ...(tableState.tableProps.childComponents?.headCell || {}),
+        ...(innerState.tableState.tableProps.childComponents?.headCell || {}),
         elementAttributes: (props: IHeadCellProps) =>
           getStickyAttrs(
             'thead',
-            tableState.custom?.sticky,
+            innerState.tableState.custom?.sticky,
             props.column,
-            tableState.tableProps.columns,
+            innerState.tableState.tableProps.columns,
           ),
       },
       cell: {
-        ...(tableState.tableProps.childComponents?.cell || {}),
+        ...(innerState.tableState.tableProps.childComponents?.cell || {}),
         elementAttributes: (props: ICellProps) =>
           getStickyAttrs(
             'tbody',
-            tableState.custom?.sticky,
+            innerState.tableState.custom?.sticky,
             props.column,
-            tableState.tableProps.columns,
+            innerState.tableState.tableProps.columns,
           ),
       },
       cellText: {
-        ...(tableState.tableProps.childComponents?.cellText || {}),
+        ...(innerState.tableState.tableProps.childComponents?.cellText || {}),
         content: (props: ICellTextProps) =>
           renderCustomComponent(
-            { columns: tableState.tableProps.columns, ...props },
-            tableState.custom?.cellViewComponents?.[props.column.key],
+            { columns: innerState.tableState.tableProps.columns, ...props },
+            innerState.tableState.custom?.cellViewComponents?.[
+              props.column.key
+            ],
           ),
       },
       cellEditor: {
-        ...(tableState.tableProps.childComponents?.cellEditor || {}),
+        ...(innerState.tableState.tableProps.childComponents?.cellEditor || {}),
         content: (props: ICellEditorProps) =>
           renderCustomComponent(
-            { columns: tableState.tableProps.columns, ...props },
-            tableState.custom?.cellEditorComponents?.[props.column.key],
+            { columns: innerState.tableState.tableProps.columns, ...props },
+            innerState.tableState.custom?.cellEditorComponents?.[
+              props.column.key
+            ],
           ),
       },
     };
 
-    if (tableState.custom?.tableWrapper) {
+    if (innerState.tableState.custom?.tableWrapper) {
       childComponents.tableWrapper = {
-        ...(tableState.tableProps.childComponents?.tableWrapper || {}),
+        ...(innerState.tableState.tableProps.childComponents?.tableWrapper ||
+          {}),
         content: (props: ITableAllProps) =>
-          renderCustomComponent(props, tableState.custom?.tableWrapper),
+          renderCustomComponent(
+            props,
+            innerState.tableState.custom?.tableWrapper,
+          ),
       };
     }
 
-    if (tableState.custom?.sticky?.summaryRow) {
+    if (innerState.tableState.custom?.sticky?.summaryRow) {
       childComponents.summaryRow = {
-        ...(tableState.tableProps.childComponents?.summaryRow || {}),
+        ...(innerState.tableState.tableProps.childComponents?.summaryRow || {}),
         elementAttributes: () => ({
           className: 'sticky-row-bottom',
         }),
       };
     }
 
-    if (tableState.custom?.cellTotalComponent || tableState.custom?.cellTotal) {
-      let content = tableState.custom?.cellTotalComponent;
-      if (tableState.custom?.cellTotal) {
+    if (
+      innerState.tableState.custom?.cellTotalComponent ||
+      innerState.tableState.custom?.cellTotal
+    ) {
+      let content = innerState.tableState.custom?.cellTotalComponent;
+      if (innerState.tableState.custom?.cellTotal) {
         content = (props: ISummaryCustomCellProps) =>
           renderCustomComponent(
             {
               ...props,
-              tableProps: tableState.tableProps,
+              tableProps: innerState.tableState.tableProps,
             },
-            tableState.custom?.cellTotal,
+            innerState.tableState.custom?.cellTotal,
           );
       }
 
       childComponents.summaryCell = {
-        ...(tableState.tableProps.childComponents?.summaryCell || {}),
+        ...(innerState.tableState.tableProps.childComponents?.summaryCell ||
+          {}),
         content,
         elementAttributes: (props) => ({
           ...getStickyAttrs(
             'summary',
-            tableState.custom?.sticky,
+            innerState.tableState.custom?.sticky,
             props.column,
-            tableState.tableProps.columns,
+            innerState.tableState.tableProps.columns,
           ),
         }),
       };
@@ -209,19 +254,21 @@ export const Table = forwardRef<TableRef, TableProps>(
         dispatch: (action: any) => {
           reducer(action, dispatch);
         },
-        getState: () => tableState,
+        getState: () => innerState,
       }),
-      [tableState, reducer],
+      [innerState, reducer],
     );
     const ThemedWrapperRender = ThemedWrapperProp || ThemedWrapper;
     return (
       <ThemedWrapperRender>
         <Wrapper
-          virtual={Boolean(tableState.tableProps.virtualScrolling?.enabled)}
+          virtual={Boolean(
+            innerState.tableState.tableProps?.virtualScrolling?.enabled,
+          )}
         >
           <Global styles={globalFonts} />
           <RootTable
-            {...tableState.tableProps}
+            {...(innerState.tableState.tableProps || {})}
             dispatch={dispatch}
             childComponents={childComponents}
           />

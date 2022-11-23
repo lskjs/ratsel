@@ -8,6 +8,8 @@ import { ICellEditorProps, ICellProps } from 'ka-table/props';
 import React, { useState } from 'react';
 
 import { Table } from '../src';
+import { InnerState } from '../src/Table';
+import { deserialize } from '../src/utils/deserialize';
 
 function getFormulaValue(key: string, rowData: ICellProps['rowData']) {
   return rowData.totalBudget ?? 0 / rowData.totalSpent ?? 0;
@@ -342,14 +344,77 @@ const data = {
   },
 };
 
-export default (
-  <Table
-    data={data}
-    onChangeState={(obj) => {
-      console.log('onChangeState', obj.action.type, obj);
-    }}
-    onChange={(obj) => {
-      console.log('onChange', obj.action.type, obj);
-    }}
-  />
-);
+const DemoExternalStateTable = ({ data: __data, dataUpdatedAt }) => {
+  const [innerState, changeInnerState] = useState<InnerState>({
+    tableState: deserialize(__data),
+    dataUpdatedAt,
+  });
+  return (
+    <>
+      <Table
+        data={__data}
+        state={innerState}
+        setState={changeInnerState}
+        dataUpdatedAt={dataUpdatedAt}
+        onChangeState={(obj) => {
+          console.log('onChangeState', obj.action.type, obj);
+        }}
+        onChange={(obj) => {
+          console.log('onChange', obj.action.type, obj);
+        }}
+      />
+    </>
+  );
+};
+
+export default {
+  'with-data': (
+    <Table
+      data={data}
+      onChangeState={(obj) => {
+        console.log('onChangeState', obj.action.type, obj);
+      }}
+      onChange={(obj) => {
+        console.log('onChange', obj.action.type, obj);
+      }}
+    />
+  ),
+  'with-external-state': () => {
+    const [__data, setData] = useState<any>({
+      data,
+      dataUpdatedAt: Date.now(),
+    });
+
+    const handleChangeData = () => {
+      const newData = {
+        dataUpdatedAt: Date.now(),
+        data: {
+          ...__data.data,
+          columns: __data.data.columns
+            .map((item, idx) => {
+              if (data.columns.length - 10 <= idx) return null;
+              return item;
+            })
+            .filter((o) => !!o),
+          data: __data.data.data
+            .map((item, idx) => {
+              if (data.data.length - 1 <= idx) return null;
+              return item;
+            })
+            .filter((o) => !!o),
+        },
+      };
+
+      setData(newData);
+    };
+    return (
+      <>
+        <button onClick={handleChangeData}>Change data</button>
+        <DemoExternalStateTable
+          data={__data.data}
+          dataUpdatedAt={__data.dataUpdatedAt}
+        />
+      </>
+    );
+  },
+};
