@@ -1,13 +1,9 @@
 {
-  "version": "1.11.0",
-  "packages": [
-    "packages/*"
-  ],
+  "version": "1.12.0",
+  "packages": ["packages/*"],
   "command": {
     "version": {
-      "allowBranch": [
-        "main"
-      ],
+      "allowBranch": ["main"],
       "exact": true,
       "conventionalCommits": true,
       "conventionalPrerelease": false,
