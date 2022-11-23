@@ -23,6 +23,7 @@ import React, {
   FC,
   Fragment,
   HTMLProps,
+  PropsWithChildren,
   ReactElement,
   ReactNode,
   useEffect,
@@ -142,7 +143,8 @@ export const Popover: FC<PopoverProps> = ({
 
   const handleClose = () => onOpenChange(false);
 
-  const PopoverComponent = components?.Popover || PopoverBase;
+  const PopoverComponent = (components?.Popover ||
+    PopoverBase) as ComponentType<PropsWithChildren<Record<string, unknown>>>;
   let child = children;
   if (typeof children === 'function')
     child = children(isControlled ? { close: handleClose, isOpen: open } : {});
@@ -168,15 +170,17 @@ export const Popover: FC<PopoverProps> = ({
           x,
         } as HTMLProps<HTMLElement>)}
       >
-        {child}
-        {middlewares.includes('arrow') && (
-          <Arrow
-            ref={arrowRef}
-            staticSide={staticSide}
-            x={middlewareData.arrow?.x}
-            y={middlewareData.arrow?.y}
-          />
-        )}
+        <>
+          {child}
+          {middlewares.includes('arrow') && (
+            <Arrow
+              ref={arrowRef}
+              staticSide={staticSide}
+              x={middlewareData.arrow?.x}
+              y={middlewareData.arrow?.y}
+            />
+          )}
+        </>
       </PopoverComponent>
     </FloatingFocusManager>
   );

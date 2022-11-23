@@ -84,13 +84,15 @@ export const Tooltip: FC<TooltipProps> = ({
         },
       })}
     >
-      {_label}
-      <TooltipArrow
-        ref={arrowRef}
-        staticSide={staticSide}
-        x={middlewareData.arrow?.x}
-        y={middlewareData.arrow?.y}
-      />
+      <>
+        {_label}
+        <TooltipArrow
+          ref={arrowRef}
+          staticSide={staticSide}
+          x={middlewareData.arrow?.x}
+          y={middlewareData.arrow?.y}
+        />
+      </>
     </TooltipBase>
   );
 
