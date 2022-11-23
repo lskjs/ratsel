@@ -36,10 +36,10 @@
     "@types/lodash.omit": "^4.5.7",
     "@types/lodash.remove": "^4.7.7",
     "@types/lodash.unset": "^4.5.7",
-    "@types/react": "^18.0.12",
+    "@types/react": "^18.0.25",
     "@types/react-modal": "^3.13.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "peerDependencies": {
     "@ratsel/core": "1.x",
@@ -47,11 +47,11 @@
     "react-dom": "18.x"
   },
   "dependencies": {
-    "@lskjs/utils": "^2.72.0",
+    "@lskjs/utils": "^2.84.11",
     "lodash.merge": "^4.6.2",
     "lodash.omit": "^4.5.0",
     "lodash.remove": "^4.7.0",
     "lodash.unset": "^4.5.2",
-    "react-modal": "^3.15.1"
+    "react-modal": "^3.16.1"
   }
 }
