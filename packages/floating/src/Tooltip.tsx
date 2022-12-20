@@ -30,6 +30,7 @@ interface TooltipProps {
   offset?: number;
   isPortal?: boolean;
   labelStyle?: CSSProperties;
+  defaultOpen?: boolean;
 }
 
 export const Tooltip: FC<TooltipProps> = ({
@@ -39,9 +40,10 @@ export const Tooltip: FC<TooltipProps> = ({
   offset: propOffset = 10,
   isPortal,
   labelStyle = {},
+  defaultOpen = false,
 }) => {
   const arrowRef = useRef(null);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(defaultOpen);
 
   const { x, y, reference, floating, strategy, context, middlewareData } =
     useFloating({
