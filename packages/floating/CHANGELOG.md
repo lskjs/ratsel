@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/lskjs/ratsel/compare/v1.12.1...v1.13.0) (2022-12-20)
+
+### Features
+
+- **floating:** tooltip defaultOpen ([83098a9](https://github.com/lskjs/ratsel/commit/83098a980f6667b474319e1e86eabed8fe806a7b))
+
 ## [1.12.1](https://github.com/lskjs/ratsel/compare/v1.12.0...v1.12.1) (2022-11-23)
 
 **Note:** Version bump only for package @ratsel/floating
