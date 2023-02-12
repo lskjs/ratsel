@@ -32,7 +32,7 @@
     "@babel/cli": "7.19.3",
     "@babel/core": "7.20.2",
     "@lskjs/babel-preset": "2.10.0",
-    "@lskjs/cli": "2.52.0",
+    "@lskjs/cli": "3.0.0-alpha.7",
     "babel-jest": "29.3.1",
     "babel-loader": "9.1.0",
     "lerna": "6.0.3",
