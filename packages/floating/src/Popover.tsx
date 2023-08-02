@@ -16,7 +16,7 @@ import {
   useHover,
   useInteractions,
   useRole,
-} from '@floating-ui/react-dom-interactions';
+} from '@floating-ui/react';
 import React, {
   cloneElement,
   ComponentType,
@@ -82,9 +82,7 @@ export const Popover: FC<PopoverProps> = ({
     arrow: () => arrowMiddleware({ element: arrowRef }),
   };
 
-  const _middlewares = middlewares?.map((middlewareKey: string) =>
-    allMiddlewares[middlewareKey](),
-  );
+  const _middlewares = middlewares?.map((middlewareKey: string) => allMiddlewares[middlewareKey]());
 
   const handleOpenChange = (_open: boolean) => {
     onOpenChange(_open);
@@ -94,17 +92,7 @@ export const Popover: FC<PopoverProps> = ({
     }
   };
 
-  const {
-    x,
-    y,
-    reference,
-    floating,
-    strategy,
-    refs,
-    update,
-    context,
-    middlewareData,
-  } = useFloating({
+  const { x, y, strategy, refs, update, context, middlewareData } = useFloating({
     strategy: propStrategy,
     open,
     onOpenChange: handleOpenChange,
@@ -124,8 +112,7 @@ export const Popover: FC<PopoverProps> = ({
     allInteractions[interactionKey](context),
   );
 
-  const { getReferenceProps, getFloatingProps } =
-    useInteractions(_interactions);
+  const { getReferenceProps, getFloatingProps } = useInteractions(_interactions);
 
   useEffect(() => {
     if (refs.reference.current && refs.floating.current && open) {
@@ -143,8 +130,9 @@ export const Popover: FC<PopoverProps> = ({
 
   const handleClose = () => onOpenChange(false);
 
-  const PopoverComponent = (components?.Popover ||
-    PopoverBase) as ComponentType<PropsWithChildren<Record<string, unknown>>>;
+  const PopoverComponent = (components?.Popover || PopoverBase) as ComponentType<
+    PropsWithChildren<Record<string, unknown>>
+  >;
   let child = children;
   if (typeof children === 'function')
     child = children(isControlled ? { close: handleClose, isOpen: open } : {});
@@ -164,7 +152,7 @@ export const Popover: FC<PopoverProps> = ({
     <FloatingFocusManager {...focusManagerProps}>
       <PopoverComponent
         {...getFloatingProps({
-          ref: floating,
+          ref: refs.setFloating,
           position: strategy,
           y,
           x,
@@ -190,7 +178,7 @@ export const Popover: FC<PopoverProps> = ({
       {cloneElement(
         trigger as ReactElement,
         getReferenceProps({
-          ref: reference,
+          ref: refs.setReference,
           ...trigger?.props,
           ...(isControlled
             ? {

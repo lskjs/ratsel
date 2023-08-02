@@ -1,6 +1,9 @@
 {
   "extends": "@lskjs/babel-preset/tsconfig.json",
   "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "compilerOptions": {
+    "ignoreDeprecations": "5.0",
+  },
   "exclude": [
     "node_modules",
     "build",

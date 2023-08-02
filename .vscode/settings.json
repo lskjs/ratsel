@@ -8,4 +8,5 @@
     "**/packages/*/cra/src/**": true,
     "**/packages/*/public/**": true
   },
+  "typescript.tsdk": "node_modules/typescript/lib",
 }

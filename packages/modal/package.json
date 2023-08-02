@@ -36,8 +36,8 @@
     "@types/lodash.omit": "^4.5.7",
     "@types/lodash.remove": "^4.7.7",
     "@types/lodash.unset": "^4.5.7",
-    "@types/react": "^18.0.25",
-    "@types/react-modal": "^3.13.1",
+    "@types/react": "^18.2.18",
+    "@types/react-modal": "^3.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -47,7 +47,7 @@
     "react-dom": "18.x"
   },
   "dependencies": {
-    "@lskjs/utils": "^2.84.11",
+    "@lskjs/utils": "^3.8.1",
     "lodash.merge": "^4.6.2",
     "lodash.omit": "^4.5.0",
     "lodash.remove": "^4.7.0",
