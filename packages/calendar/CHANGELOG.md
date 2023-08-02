@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.1](https://github.com/lskjs/ratsel/compare/v1.13.0...v1.13.1) (2023-08-02)
+
+
+### Bug Fixes
+
+* ignore ts 5 deprecation ([0e2110d](https://github.com/lskjs/ratsel/commit/0e2110d32d9c842f673ad9adb3ff5999274e6550))
+
+
+
+
+
 ## [1.12.1](https://github.com/lskjs/ratsel/compare/v1.12.0...v1.12.1) (2022-11-23)
 
 **Note:** Version bump only for package @ratsel/calendar
