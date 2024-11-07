@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.3](https://github.com/lskjs/ratsel/compare/v1.13.2...v1.13.3) (2024-11-07)
+
+
+### Bug Fixes
+
+* select theme border color ([94ac8d8](https://github.com/lskjs/ratsel/commit/94ac8d80d567c1286588871e1e2f05d086b0d12b))
+
+
+
+
+
 ## [1.13.1](https://github.com/lskjs/ratsel/compare/v1.13.0...v1.13.1) (2023-08-02)
 
 
