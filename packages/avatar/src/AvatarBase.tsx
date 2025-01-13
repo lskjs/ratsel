@@ -1,28 +1,19 @@
-import React, {
-  CSSProperties,
-  FC,
-  PropsWithChildren,
-  useEffect,
-  useState,
-} from 'react';
+import React, { CSSProperties, FC, HTMLProps, PropsWithChildren, useEffect, useState } from 'react';
 import { LazyLoadImage, ScrollPosition } from 'react-lazy-load-image-component';
 
 import { WrapperProps } from './Avatar.styles';
 
-export interface AvatarBaseProps extends WrapperProps {
+export interface AvatarBaseProps
+  extends WrapperProps,
+    Omit<HTMLProps<HTMLImageElement>, 'shape' | 'loading'> {
   title?: string;
-  src: string;
   srcs: Array<string>;
   avatar?: string;
-  name?: string;
-  alt?: string;
   size?: number;
-  className?: string;
   width?: string | number;
   height?: string | number;
   backgroundColor?: string;
   placeholder?: string;
-  style?: CSSProperties;
   innerStyle?: CSSProperties;
   defaultAvatar?: string;
   scrollPosition?: ScrollPosition;

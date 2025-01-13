@@ -52,11 +52,7 @@ export const Avatar: FC<AvatarProps> = ({
       {...props}
     >
       {icon && (
-        <Icon
-          iconColor={iconColor}
-          iconPosition={iconPosition}
-          iconBackground={iconBackground}
-        >
+        <Icon iconColor={iconColor} iconPosition={iconPosition} iconBackground={iconBackground}>
           {icon}
         </Icon>
       )}

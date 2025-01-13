@@ -1,13 +1,7 @@
 import React from 'react';
 
 export const BookmarkIcon = () => (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="icon/action/turned_in_24px">
       <path
         id="icon/action/turned_in_24px_2"
