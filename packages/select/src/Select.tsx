@@ -37,6 +37,7 @@ export interface SelectProps extends Omit<Props, 'components' | 'classNames'> {
   noOptionsMessage: (value: Record<string, unknown>) => ReactNode;
   isDisabled?: boolean;
   isAsync?: boolean;
+  defaultOptions?: boolean;
 }
 
 export const Select = forwardRef<SelectType<SelectOption, false, GroupOption>, SelectProps>(
