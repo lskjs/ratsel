@@ -38,9 +38,7 @@ export const CreatableSelect = forwardRef<
     },
     ref,
   ) => {
-    const ReactSelectComponent = isAsync
-      ? ReactSelectCreatableAsync
-      : ReactSelectCreatable;
+    const ReactSelectComponent = isAsync ? ReactSelectCreatableAsync : ReactSelectCreatable;
     return (
       <ClassNames>
         {({ cx }) => (

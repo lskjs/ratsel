@@ -1,13 +1,10 @@
 import { ClassNames } from '@ratsel/core';
 import React, { forwardRef, ReactNode } from 'react';
-import ReactSelect from 'react-select';
+import ReactSelect, { Props } from 'react-select';
 import ReactSelectAsync from 'react-select/async';
 import { SelectComponents } from 'react-select/dist/declarations/src/components';
 import SelectType from 'react-select/dist/declarations/src/Select';
-import {
-  OptionsOrGroups,
-  PropsValue,
-} from 'react-select/dist/declarations/src/types';
+import { OptionsOrGroups, PropsValue } from 'react-select/dist/declarations/src/types';
 
 import DropdownIndicator from './components/DropdownIndicator';
 import { Option } from './components/Option';
@@ -24,7 +21,7 @@ export interface GroupOption {
   options: SelectOption[];
 }
 
-export interface SelectProps {
+export interface SelectProps extends Omit<Props, 'components' | 'classNames'> {
   options: OptionsOrGroups<SelectOption, GroupOption>;
   value?: PropsValue<SelectOption>;
   placeholder?: string;
@@ -42,10 +39,7 @@ export interface SelectProps {
   isAsync?: boolean;
 }
 
-export const Select = forwardRef<
-  SelectType<SelectOption, false, GroupOption>,
-  SelectProps
->(
+export const Select = forwardRef<SelectType<SelectOption, false, GroupOption>, SelectProps>(
   (
     {
       options,
@@ -71,6 +65,7 @@ export const Select = forwardRef<
         {({ cx }) => (
           <Wrapper>
             <ReactSelectComponent
+              // @ts-ignore
               ref={ref}
               options={options}
               value={value}
