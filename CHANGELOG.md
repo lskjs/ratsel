@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.4](https://github.com/lskjs/ratsel/compare/v1.13.3...v1.13.4) (2025-01-13)
+
+
+### Bug Fixes
+
+* **avatar:** extends html types ([64411f5](https://github.com/lskjs/ratsel/commit/64411f52d76a739ea70625109c51e6959954c980))
+* **button:** change focus behavior ([a7bd90a](https://github.com/lskjs/ratsel/commit/a7bd90a8d05d1b7a85e7a7abb9d1678bff18e461))
+* **button:** html types ([d04ec1e](https://github.com/lskjs/ratsel/commit/d04ec1ee0987e6284fe8a9e095cccfdf3a1207a7))
+* **calendar:** types ([35da9c2](https://github.com/lskjs/ratsel/commit/35da9c22f28da36872a0409371ae3f08610d631a))
+* **core:** format ([68a3295](https://github.com/lskjs/ratsel/commit/68a329509c457200ff13a90cef4f1567f294547d))
+* **floating:** html types ([21eeaf3](https://github.com/lskjs/ratsel/commit/21eeaf3abed2dd8117e17202d83291fa6bfd5e97))
+* **modal:** any types ([61019bb](https://github.com/lskjs/ratsel/commit/61019bb2d1b6e4e9c96f2c5d2b7233a9ea9c4ce6))
+* **select:** types ([3be8729](https://github.com/lskjs/ratsel/commit/3be8729da21716f3a26527baadd352ddabfeeba1))
+
+
+
+
+
 ## [1.13.3](https://github.com/lskjs/ratsel/compare/v1.13.2...v1.13.3) (2024-11-07)
 
 

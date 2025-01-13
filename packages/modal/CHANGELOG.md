@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.4](https://github.com/lskjs/ratsel/compare/v1.13.3...v1.13.4) (2025-01-13)
+
+
+### Bug Fixes
+
+* **modal:** any types ([61019bb](https://github.com/lskjs/ratsel/commit/61019bb2d1b6e4e9c96f2c5d2b7233a9ea9c4ce6))
+
+
+
+
+
 ## [1.13.3](https://github.com/lskjs/ratsel/compare/v1.13.2...v1.13.3) (2024-11-07)
 
 **Note:** Version bump only for package @ratsel/modal

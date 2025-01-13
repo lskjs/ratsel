@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.4](https://github.com/lskjs/ratsel/compare/v1.13.3...v1.13.4) (2025-01-13)
+
+
+### Bug Fixes
+
+* **avatar:** extends html types ([64411f5](https://github.com/lskjs/ratsel/commit/64411f52d76a739ea70625109c51e6959954c980))
+
+
+
+
+
 ## [1.13.3](https://github.com/lskjs/ratsel/compare/v1.13.2...v1.13.3) (2024-11-07)
 
 **Note:** Version bump only for package @ratsel/avatar

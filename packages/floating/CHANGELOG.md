@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.4](https://github.com/lskjs/ratsel/compare/v1.13.3...v1.13.4) (2025-01-13)
+
+
+### Bug Fixes
+
+* **floating:** html types ([21eeaf3](https://github.com/lskjs/ratsel/commit/21eeaf3abed2dd8117e17202d83291fa6bfd5e97))
+
+
+
+
+
 ## [1.13.3](https://github.com/lskjs/ratsel/compare/v1.13.2...v1.13.3) (2024-11-07)
 
 **Note:** Version bump only for package @ratsel/floating
