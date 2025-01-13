@@ -38,6 +38,7 @@ export interface SelectProps extends Omit<Props, 'components' | 'classNames'> {
   isDisabled?: boolean;
   isAsync?: boolean;
   defaultOptions?: boolean;
+  [key: string]: any;
 }
 
 export const Select = forwardRef<SelectType<SelectOption, false, GroupOption>, SelectProps>(

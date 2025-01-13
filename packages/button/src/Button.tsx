@@ -19,7 +19,9 @@ import { Overlay } from './components/Overlay';
 import { Spinner } from './components/Spinner';
 import { isPromise } from './utils/isPromise';
 
-export interface ButtonProps extends BaseProps, Omit<HTMLProps<HTMLButtonElement>, 'type' | 'as'> {
+export interface ButtonProps
+  extends BaseProps,
+    Omit<HTMLProps<HTMLButtonElement>, 'type' | 'as' | 'size'> {
   disabled?: boolean;
   icon?: ReactNode;
   status?: 'error' | 'success' | null;
