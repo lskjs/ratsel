@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.6](https://github.com/lskjs/ratsel/compare/v1.13.5...v1.13.6) (2025-01-13)
+
+
+### Bug Fixes
+
+* types ([c9d2e52](https://github.com/lskjs/ratsel/commit/c9d2e5223d28839f07eaf73e53fe718321fb26a1))
+
+
+
+
+
 ## [1.13.5](https://github.com/lskjs/ratsel/compare/v1.13.4...v1.13.5) (2025-01-13)
 
 
