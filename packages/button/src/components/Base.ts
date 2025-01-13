@@ -44,14 +44,12 @@ export const Base = styled('button', {
   cursor: pointer;
   outline: none;
   padding-left: ${(props) => {
-    if (props.iconRight && !props.iconLeft)
-      return props.theme.ratsel.button.paddings.baseIcon;
+    if (props.iconRight && !props.iconLeft) return props.theme.ratsel.button.paddings.baseIcon;
     if (props.iconLeft) return '0px';
     return props.theme.ratsel.button.paddings.base;
   }};
   padding-right: ${(props) => {
-    if (props.iconLeft && !props.iconRight)
-      return props.theme.ratsel.button.paddings.baseIcon;
+    if (props.iconLeft && !props.iconRight) return props.theme.ratsel.button.paddings.baseIcon;
     if (props.iconRight) return '0px';
     return props.theme.ratsel.button.paddings.base;
   }};
@@ -72,7 +70,7 @@ export const Base = styled('button', {
     return 'none';
   }};
 
-  &:focus {
+  &:focus-visible {
     box-shadow: ${(props) => {
       if (props.bordered) {
         return `inset 0 0 0 1px ${props.theme.ratsel.button.borderColor}, ${props.theme.ratsel.button.focusShadow}`;
@@ -94,7 +92,9 @@ export const Base = styled('button', {
     user-select: none;
   }
 
-  transition: background 200ms ease-out, color 200ms ease-out;
+  transition:
+    background 200ms ease-out,
+    color 200ms ease-out;
   will-change: background, color;
 
   ${(props) => make(variants, props.variant, 'primary')}
