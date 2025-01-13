@@ -8,9 +8,7 @@ export interface PropsWithTheme {
   [arg: string]: unknown;
 }
 
-export type MakeReturnType =
-  | SerializedStyles
-  | ((arg: PropsWithTheme) => SerializedStyles);
+export type MakeReturnType = SerializedStyles | ((arg: PropsWithTheme) => SerializedStyles);
 
 export const make = (
   obj: Record<string, MakeReturnType>,

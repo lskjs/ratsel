@@ -1,9 +1,5 @@
 import type { Theme as AnyTheme } from '@emotion/react';
-import {
-  Global,
-  SerializedStyles,
-  ThemeProvider as EmotionThemeProvider,
-} from '@emotion/react';
+import { Global, SerializedStyles, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import type { FC, PropsWithChildren } from 'react';
 import React, { useMemo } from 'react';
 

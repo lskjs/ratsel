@@ -8,15 +8,7 @@ import {
   withEmotionCache,
 } from '@emotion/react';
 
-export {
-  css,
-  keyframes,
-  withEmotionCache,
-  ThemeContext,
-  CacheProvider,
-  ClassNames,
-  Global,
-};
+export { css, keyframes, withEmotionCache, ThemeContext, CacheProvider, ClassNames, Global };
 
 export { styled, withTheme, useTheme } from './styled';
 export { ThemeProvider } from './ThemeProvider';

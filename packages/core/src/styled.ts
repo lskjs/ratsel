@@ -1,16 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import type {
-  ComponentSelector,
-  DistributiveOmit,
-  Interpolation,
-  PropsOf,
-} from '@emotion/react';
-import {
-  useTheme as emotionUseTheme,
-  withTheme as emotionWithTheme,
-} from '@emotion/react';
+import type { ComponentSelector, DistributiveOmit, Interpolation, PropsOf } from '@emotion/react';
+import { useTheme as emotionUseTheme, withTheme as emotionWithTheme } from '@emotion/react';
 import type { StyledOptions } from '@emotion/styled';
 import emotionStyled from '@emotion/styled';
+// eslint-disable-next-line import/no-unresolved
 import { FilteringStyledOptions } from '@emotion/styled/types/base';
 
 import type { Theme } from './themes/theme';
@@ -23,11 +16,7 @@ export interface StyledComponent<
     ComponentSelector {
   withComponent<C extends React.ComponentClass<React.ComponentProps<C>>>(
     component: C,
-  ): StyledComponent<
-    ComponentProps & PropsOf<C>,
-    {},
-    { ref?: React.Ref<InstanceType<C>> }
-  >;
+  ): StyledComponent<ComponentProps & PropsOf<C>, {}, { ref?: React.Ref<InstanceType<C>> }>;
   withComponent<C extends React.ComponentType<React.ComponentProps<C>>>(
     component: C,
   ): StyledComponent<ComponentProps & PropsOf<C>>;
@@ -43,46 +32,28 @@ export interface CreateStyledComponent<
 > {
   <AdditionalProps extends {} = {}>(
     ...styles: Array<
-      Interpolation<
-        ComponentProps &
-          SpecificComponentProps &
-          AdditionalProps & { theme: Theme }
-      >
+      Interpolation<ComponentProps & SpecificComponentProps & AdditionalProps & { theme: Theme }>
     >
-  ): StyledComponent<
-    ComponentProps & AdditionalProps,
-    SpecificComponentProps,
-    JSXProps
-  >;
+  ): StyledComponent<ComponentProps & AdditionalProps, SpecificComponentProps, JSXProps>;
 
   (
     template: TemplateStringsArray,
-    ...styles: Array<
-      Interpolation<ComponentProps & SpecificComponentProps & { theme: Theme }>
-    >
+    ...styles: Array<Interpolation<ComponentProps & SpecificComponentProps & { theme: Theme }>>
   ): StyledComponent<ComponentProps, SpecificComponentProps, JSXProps>;
 
   <AdditionalProps extends {}>(
     template: TemplateStringsArray,
     ...styles: Array<
-      Interpolation<
-        ComponentProps &
-          SpecificComponentProps &
-          AdditionalProps & { theme: Theme }
-      >
+      Interpolation<ComponentProps & SpecificComponentProps & AdditionalProps & { theme: Theme }>
     >
-  ): StyledComponent<
-    ComponentProps & AdditionalProps,
-    SpecificComponentProps,
-    JSXProps
-  >;
+  ): StyledComponent<ComponentProps & AdditionalProps, SpecificComponentProps, JSXProps>;
 }
 
 export interface BaseCreateStyled {
   <
     C extends React.ComponentClass<React.ComponentProps<C>>,
-    ForwardedProps extends keyof React.ComponentProps<C> &
-      string = keyof React.ComponentProps<C> & string,
+    ForwardedProps extends keyof React.ComponentProps<C> & string = keyof React.ComponentProps<C> &
+      string,
   >(
     component: C,
     options: FilteringStyledOptions<React.ComponentProps<C>, ForwardedProps>,
@@ -111,8 +82,8 @@ export interface BaseCreateStyled {
 
   <
     C extends React.ComponentType<React.ComponentProps<C>>,
-    ForwardedProps extends keyof React.ComponentProps<C> &
-      string = keyof React.ComponentProps<C> & string,
+    ForwardedProps extends keyof React.ComponentProps<C> & string = keyof React.ComponentProps<C> &
+      string,
   >(
     component: C,
     options: FilteringStyledOptions<React.ComponentProps<C>, ForwardedProps>,
@@ -146,10 +117,7 @@ export interface BaseCreateStyled {
   <Tag extends keyof JSX.IntrinsicElements>(
     tag: Tag,
     options?: StyledOptions<JSX.IntrinsicElements[Tag]>,
-  ): CreateStyledComponent<
-    { theme?: Theme; as?: React.ElementType },
-    JSX.IntrinsicElements[Tag]
-  >;
+  ): CreateStyledComponent<{ theme?: Theme; as?: React.ElementType }, JSX.IntrinsicElements[Tag]>;
 }
 
 export type StyledTags = {
@@ -164,9 +132,7 @@ export type StyledTags = {
 
 export interface CreateStyled extends BaseCreateStyled, StyledTags {}
 
-export type withThemeType = <
-  C extends React.ComponentType<React.ComponentProps<C>>,
->(
+export type withThemeType = <C extends React.ComponentType<React.ComponentProps<C>>>(
   component: C,
 ) => React.FC<DistributiveOmit<PropsOf<C>, 'theme'> & { theme?: Theme }>;
 
