@@ -1,7 +1,5 @@
 import React, { forwardRef } from 'react';
-import BaseCalendar, {
-  CalendarProps as BaseCalendarProps,
-} from 'react-calendar';
+import BaseCalendar, { CalendarProps as BaseCalendarProps } from 'react-calendar';
 
 import { ChevronIcon } from './components/ChevronIcon';
 import { DoubleChevronIcon } from './components/DoubleChevronIcon';
@@ -24,9 +22,7 @@ export const Calendar = forwardRef<any, CalendarProps>(
         next2Label={yearArrows ? <DoubleChevronIcon /> : null}
         prevLabel={<ChevronIcon reverse />}
         prev2Label={yearArrows ? <DoubleChevronIcon reverse /> : null}
-        navigationLabel={({ label }) =>
-          capitalizeFirstLetter(label).replace(/ г\./g, '')
-        }
+        navigationLabel={({ label }) => capitalizeFirstLetter(label).replace(/ г\./g, '')}
         {...props}
       />
     </Wrapper>
