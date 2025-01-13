@@ -82,7 +82,9 @@ export const Popover: FC<PopoverProps> = ({
     arrow: () => arrowMiddleware({ element: arrowRef }),
   };
 
-  const _middlewares = middlewares?.map((middlewareKey: string) => allMiddlewares[middlewareKey]());
+  const _middlewares = middlewares?.map((middlewareKey: string) =>
+    allMiddlewares[middlewareKey as keyof typeof allMiddlewares](),
+  );
 
   const handleOpenChange = (_open: boolean) => {
     onOpenChange(_open);
@@ -109,7 +111,7 @@ export const Popover: FC<PopoverProps> = ({
   };
 
   const _interactions = interactions?.map((interactionKey: string) =>
-    allInteractions[interactionKey](context),
+    allInteractions[interactionKey as keyof typeof allInteractions](context),
   );
 
   const { getReferenceProps, getFloatingProps } = useInteractions(_interactions);
@@ -158,8 +160,8 @@ export const Popover: FC<PopoverProps> = ({
           x,
         } as HTMLProps<HTMLElement>)}
       >
-        <>
-          {child}
+        <Fragment>
+          {child as ReactNode}
           {middlewares.includes('arrow') && (
             <Arrow
               ref={arrowRef}
@@ -168,7 +170,7 @@ export const Popover: FC<PopoverProps> = ({
               y={middlewareData.arrow?.y}
             />
           )}
-        </>
+        </Fragment>
       </PopoverComponent>
     </FloatingFocusManager>
   );

@@ -19,7 +19,9 @@ export const PopoverBase = styled('div', {
   padding: ${(props) => props.theme.ratsel.floating.padding};
   box-shadow: ${(props) => props.theme.ratsel.floating.boxShadow};
   z-index: ${(props) => props.theme.ratsel.floating.zIndex};
-  transition: opacity 300ms ease 0s, transform 300ms ease 0s;
+  transition:
+    opacity 300ms ease 0s,
+    transform 300ms ease 0s;
   opacity: 1;
   outline: none;
 `;

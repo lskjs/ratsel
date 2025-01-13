@@ -82,15 +82,15 @@ export const Tooltip: FC<TooltipProps> = ({
         },
       })}
     >
-      <>
-        {_label}
+      <Fragment>
+        {_label as ReactNode}
         <TooltipArrow
           ref={arrowRef}
           staticSide={staticSide}
           x={middlewareData.arrow?.x}
           y={middlewareData.arrow?.y}
         />
-      </>
+      </Fragment>
     </TooltipBase>
   );
 
