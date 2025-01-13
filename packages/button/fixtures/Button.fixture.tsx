@@ -80,21 +80,9 @@ export default {
   ),
   'min-width': <Button minWidth={160}>Кнопка</Button>,
   block: <Button block>Кнопка</Button>,
-  icon: (
-    <Button
-      variant="primary"
-      bordered={false}
-      disabled={false}
-      icon={<BookmarkIcon />}
-    />
-  ),
+  icon: <Button variant="primary" bordered={false} disabled={false} icon={<BookmarkIcon />} />,
   iconLeft: (
-    <Button
-      variant="primary"
-      bordered={false}
-      disabled={false}
-      iconLeft={<BookmarkIcon />}
-    >
+    <Button variant="primary" bordered={false} disabled={false} iconLeft={<BookmarkIcon />}>
       Кнопка
     </Button>
   ),
@@ -104,12 +92,7 @@ export default {
     </Button>
   ),
   iconRight: (
-    <Button
-      variant="primary"
-      bordered={false}
-      disabled={false}
-      iconRight={<BookmarkIcon />}
-    >
+    <Button variant="primary" bordered={false} disabled={false} iconRight={<BookmarkIcon />}>
       Кнопка
     </Button>
   ),

@@ -1,10 +1,11 @@
 import React, {
+  ElementType,
   FC,
   forwardRef,
-  LegacyRef,
+  HTMLProps,
+  MouseEvent,
   PropsWithChildren,
   ReactNode,
-  SyntheticEvent,
   useEffect,
   useRef,
   useState,
@@ -18,11 +19,13 @@ import { Overlay } from './components/Overlay';
 import { Spinner } from './components/Spinner';
 import { isPromise } from './utils/isPromise';
 
-export interface ButtonProps extends BaseProps {
+export interface ButtonProps extends BaseProps, Omit<HTMLProps<HTMLButtonElement>, 'type' | 'as'> {
   disabled?: boolean;
   icon?: ReactNode;
   status?: 'error' | 'success' | null;
-  onClick?: (event: SyntheticEvent<HTMLElement>) => void;
+  type?: 'button' | 'submit' | 'reset';
+  as?: ElementType;
+  [key: string]: any;
 }
 
 interface ButtonState {
@@ -62,7 +65,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef(
       status: null,
     });
 
-    const handleSubmit = async (event: SyntheticEvent<HTMLElement>) => {
+    const handleSubmit = async (event: MouseEvent<HTMLButtonElement>) => {
       if (!onClick) return;
       const promise = onClick(event);
       if (isPromise(promise as unknown as Promise<() => unknown>)) {
@@ -110,8 +113,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef(
 
     return (
       <Base
-        {...props}
-        ref={ref as LegacyRef<HTMLButtonElement>}
+        ref={ref}
         block={block}
         variant={variant}
         bordered={bordered}
@@ -121,6 +123,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef(
         minWidth={minWidth}
         loading={isOverlayRender}
         onClick={isOverlayRender ? undefined : handleSubmit}
+        {...props}
       >
         {isOverlayRender && (
           <Overlay variant={variant} status={statusRender}>
@@ -136,5 +139,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef(
     );
   },
 );
+
+Button.displayName = 'Button';
 
 export default Button;
