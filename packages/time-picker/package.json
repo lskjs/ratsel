@@ -1,6 +1,6 @@
 {
   "name": "@ratsel/time-picker",
-  "version": "1.13.3",
+  "version": "1.13.2",
   "description": "🧩 Rätsel Time Picker",
   "keywords": [
     "lskjs",
@@ -31,7 +31,7 @@
     "watch": "lsk run watch"
   },
   "devDependencies": {
-    "@ratsel/core": "1.13.3",
+    "@ratsel/core": "1.13.1",
     "@types/react": "^18.2.18",
     "moment": "^2.29.4",
     "react": "^18.2.0"
