@@ -1,10 +1,4 @@
-import React, {
-  Component,
-  createRef,
-  PropsWithChildren,
-  ReactNode,
-  RefObject,
-} from 'react';
+import React, { Component, createRef, PropsWithChildren, ReactNode, RefObject } from 'react';
 
 import { ModalComponents, ModalContext } from '../common.types';
 import { Modal } from '../index';
@@ -65,22 +59,11 @@ import { Provider } from './GlobalModalContext';
  */
 
 export type ModalRefType = ModalContext;
-export type ContentModal =
-  | ReactNode
-  | string
-  | ((ctx: SelfCallback & ModalProps) => ReactNode);
+export type ContentModal = ReactNode | string | ((ctx: SelfCallback & ModalProps) => ReactNode);
 
 export interface MethodsList {
-  create(
-    id: string,
-    props: ModalProps,
-    content: ContentModal,
-  ): ModalListEntity | null;
-  update(
-    id: string,
-    props: ModalProps,
-    content?: ContentModal,
-  ): ModalListEntity | null;
+  create(id: string, props: ModalProps, content: ContentModal): ModalListEntity | null;
+  update(id: string, props: ModalProps, content?: ContentModal): ModalListEntity | null;
   remove(id: string): string | null;
   get(id: string): ModalListEntity | null;
   open(id: string): string | null;
@@ -134,10 +117,7 @@ export interface SelfCallback {
 export interface GlobalModalProviderImplements extends MethodsList {
   getMethods(): MethodsList;
   _getContent(id: string): ContentModal;
-  _prepareContent(
-    content: ContentModal,
-    self: SelfCallback & ModalProps,
-  ): ReactNode;
+  _prepareContent(content: ContentModal, self: SelfCallback & ModalProps): ReactNode;
 }
 
 export class GlobalModalProvider
@@ -318,10 +298,7 @@ export class GlobalModalProvider
     return contents[id];
   }
 
-  _prepareContent(
-    content: ContentModal,
-    self: SelfCallback & ModalProps,
-  ): ReactNode {
+  _prepareContent(content: ContentModal, self: SelfCallback & ModalProps): ReactNode {
     return typeof content === 'function' ? content(self) : content;
   }
 

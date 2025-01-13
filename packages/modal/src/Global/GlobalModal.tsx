@@ -4,11 +4,7 @@ import unset from 'lodash.unset';
 import React, { Component, ReactNode } from 'react';
 
 import { Modal } from '../index';
-import {
-  ContentModal,
-  ModalListEntity,
-  ModalsList,
-} from './GlobalModalProvider';
+import { ContentModal, ModalListEntity, ModalsList } from './GlobalModalProvider';
 
 export interface GlobalModalMethods {
   addModal(id: string, modal: ModalListEntity, content: ContentModal): void;
@@ -101,11 +97,7 @@ export class GlobalModal
           const isRendered = renderedIds.find((id: string) => id === key);
           if (!isRendered) return false;
           return (
-            <Modal
-              key={key}
-              {...omit(modal, ['content', 'ref'])}
-              ref={modal.ref}
-            >
+            <Modal key={key} {...omit(modal, ['content', 'ref'])} ref={modal.ref}>
               {modal.content as ReactNode}
             </Modal>
           );

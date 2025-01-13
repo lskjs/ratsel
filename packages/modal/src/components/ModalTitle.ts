@@ -2,8 +2,7 @@ import { styled } from '@ratsel/core';
 import { PropsWithChildren } from 'react';
 
 export const ModalTitle = styled('div')<PropsWithChildren>`
-  padding: ${(props) =>
-    `11px ${props.theme.ratsel.modal.title.height} 11px 16px`};
+  padding: ${(props) => `11px ${props.theme.ratsel.modal.title.height} 11px 16px`};
   margin: 0;
   display: flex;
   align-items: center;

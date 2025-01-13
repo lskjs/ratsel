@@ -15,7 +15,6 @@ export const ModalImage = styled('div', {
   margin-top: 8px;
   background-size: cover;
   background-position: center;
-  background-color: ${(props) =>
-    props.color || props.theme.ratsel.modal.image.background};
+  background-color: ${(props) => props.color || props.theme.ratsel.modal.image.background};
   background-image: ${(props) => (props.src ? `url(${props.src})` : 'none')};
 `;

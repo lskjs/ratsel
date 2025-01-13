@@ -39,10 +39,10 @@ export interface ModalProps extends ModalInnerProps {
   defaultVisible?: boolean;
   visible?: boolean;
   ref?: RefObject<ModalContext>;
+  [key: string]: any;
 }
 
-interface ExtendedForwardRefExoticComponent<P>
-  extends ForwardRefExoticComponent<P> {
+interface ExtendedForwardRefExoticComponent<P> extends ForwardRefExoticComponent<P> {
   defaultStyles: ReactModal.Styles;
   components: ModalComponents;
 }
@@ -121,6 +121,7 @@ export const Modal = forwardRef(
 
     const modalComponents = {} as ModalComponents;
     Object.keys(Modal.components).forEach((key) => {
+      // @ts-ignore
       modalComponents[key] = components?.[key] || Modal.components[key];
     });
 
@@ -202,16 +203,14 @@ export const Modal = forwardRef(
               </modalComponents.InnerWrapper>
             </ModalOuterWrapper>
           </ReactModal>
-          {trigger && (
-            <modalComponents.Trigger type="open">
-              {trigger}
-            </modalComponents.Trigger>
-          )}
+          {trigger && <modalComponents.Trigger type="open">{trigger}</modalComponents.Trigger>}
         </ModalGlobalStyles>
       </ModalProvider>
     );
   },
 ) as ExtendedForwardRefExoticComponent<PropsWithChildren<ModalProps>>;
+
+Modal.displayName = 'Modal';
 
 export const components: ModalComponents = {
   Title: ModalTitle,

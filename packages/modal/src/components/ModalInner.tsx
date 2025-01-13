@@ -24,31 +24,20 @@ type ModalInnerAllProps = ModalInnerProps & {
 export const ModalInner = contextToProps(
   'Modal',
   'modal',
-)(
-  ({
-    Modal,
-    modal,
-    title,
-    subtitle,
-    image,
-    content,
-    footer,
-    children,
-  }: ModalInnerAllProps) => {
-    if (children) {
-      if (typeof children === 'function') {
-        return children({ modal });
-      }
-      return children;
+)(({ Modal, modal, title, subtitle, image, content, footer, children }: ModalInnerAllProps) => {
+  if (children) {
+    if (typeof children === 'function') {
+      return children({ modal });
     }
-    return (
-      <>
-        {title && <Modal.Title>{title}</Modal.Title>}
-        {subtitle && <Modal.Subtitle>{subtitle}</Modal.Subtitle>}
-        {image && <Modal.Image src={image} />}
-        {content && <Modal.Content>{content}</Modal.Content>}
-        {footer && <Modal.Footer>{footer}</Modal.Footer>}
-      </>
-    );
-  },
-);
+    return children;
+  }
+  return (
+    <>
+      {title && <Modal.Title>{title}</Modal.Title>}
+      {subtitle && <Modal.Subtitle>{subtitle}</Modal.Subtitle>}
+      {image && <Modal.Image src={image} />}
+      {content && <Modal.Content>{content}</Modal.Content>}
+      {footer && <Modal.Footer>{footer}</Modal.Footer>}
+    </>
+  );
+});
