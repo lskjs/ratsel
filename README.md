@@ -60,3 +60,23 @@ Rätsel ([German for puzzle/riddle](https://en.wiktionary.org/wiki/R%C3%A4tsel))
        <Button>A coolest button</Button>
      );
      ```
+
+## Development
+
+### Setup
+Development happens in the `main` branch.
+
+**Install dependencies:**
+1. `npm i`
+2. `npm run bootstrap`
+
+**Build packages:**
+```bash
+npm run build
+```
+
+### Release
+1. Make necessary changes
+2. Build packages (build must succeed without errors)
+3. Commit and push changes
+4. Run `npm run release`
