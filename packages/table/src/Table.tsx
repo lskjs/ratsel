@@ -1,11 +1,6 @@
 import { Global } from '@ratsel/core';
 import { ITableAllProps, ITableProps } from 'ka-table';
-import {
-  ICellEditorProps,
-  ICellProps,
-  ICellTextProps,
-  IHeadCellProps,
-} from 'ka-table/props';
+import { ICellEditorProps, ICellProps, ICellTextProps, IHeadCellProps } from 'ka-table/props';
 import { DispatchFunc } from 'ka-table/types';
 import React, {
   ComponentType,
@@ -23,11 +18,7 @@ import { globalFonts } from './components/globalFonts';
 import { RootTable } from './components/RootTable';
 import { ThemedWrapper } from './components/ThemedWrapper';
 import { Wrapper } from './components/Wrapper';
-import {
-  deserialize,
-  DeserializeReturn,
-  ISummaryCustomCellProps,
-} from './utils/deserialize';
+import { deserialize, DeserializeReturn, ISummaryCustomCellProps } from './utils/deserialize';
 import { getStickyAttrs } from './utils/getStickyAttrs';
 import { kaReducer } from './utils/kaReducer';
 import { renderCustomComponent } from './utils/renderCustomComponent';
@@ -120,10 +111,7 @@ export const Table = forwardRef<TableRef, TableProps>(
         const realInnerState = (
           __innerState.tableState ? __innerState : { tableState: __innerState }
         ) as InnerState;
-        const newTableProps = kaReducer(
-          realInnerState.tableState?.tableProps,
-          __action,
-        );
+        const newTableProps = kaReducer(realInnerState.tableState?.tableProps, __action);
         const newState = {
           ...realInnerState?.tableState,
           tableProps: newTableProps,
@@ -179,9 +167,7 @@ export const Table = forwardRef<TableRef, TableProps>(
         content: (props: ICellTextProps) =>
           renderCustomComponent(
             { columns: innerState.tableState.tableProps.columns, ...props },
-            innerState.tableState.custom?.cellViewComponents?.[
-              props.column.key
-            ],
+            innerState.tableState.custom?.cellViewComponents?.[props.column.key],
           ),
       },
       cellEditor: {
@@ -189,22 +175,16 @@ export const Table = forwardRef<TableRef, TableProps>(
         content: (props: ICellEditorProps) =>
           renderCustomComponent(
             { columns: innerState.tableState.tableProps.columns, ...props },
-            innerState.tableState.custom?.cellEditorComponents?.[
-              props.column.key
-            ],
+            innerState.tableState.custom?.cellEditorComponents?.[props.column.key],
           ),
       },
     };
 
     if (innerState.tableState.custom?.tableWrapper) {
       childComponents.tableWrapper = {
-        ...(innerState.tableState.tableProps.childComponents?.tableWrapper ||
-          {}),
+        ...(innerState.tableState.tableProps.childComponents?.tableWrapper || {}),
         content: (props: ITableAllProps) =>
-          renderCustomComponent(
-            props,
-            innerState.tableState.custom?.tableWrapper,
-          ),
+          renderCustomComponent(props, innerState.tableState.custom?.tableWrapper),
       };
     }
 
@@ -234,8 +214,7 @@ export const Table = forwardRef<TableRef, TableProps>(
       }
 
       childComponents.summaryCell = {
-        ...(innerState.tableState.tableProps.childComponents?.summaryCell ||
-          {}),
+        ...(innerState.tableState.tableProps.childComponents?.summaryCell || {}),
         content,
         elementAttributes: (props) => ({
           ...getStickyAttrs(
@@ -261,11 +240,7 @@ export const Table = forwardRef<TableRef, TableProps>(
     const ThemedWrapperRender = ThemedWrapperProp || ThemedWrapper;
     return (
       <ThemedWrapperRender>
-        <Wrapper
-          virtual={Boolean(
-            innerState.tableState.tableProps?.virtualScrolling?.enabled,
-          )}
-        >
+        <Wrapper virtual={Boolean(innerState.tableState.tableProps?.virtualScrolling?.enabled)}>
           <Global styles={globalFonts} />
           <RootTable
             {...(innerState.tableState.tableProps || {})}

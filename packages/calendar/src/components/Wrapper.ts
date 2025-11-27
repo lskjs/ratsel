@@ -112,7 +112,9 @@ const sizes = {
           }
 
           abbr {
-            transition: background 0.1s ease-out, color 0.1s ease-out;
+            transition:
+              background 0.1s ease-out,
+              color 0.1s ease-out;
             will-change: background, color;
             width: calc(100% - 8px);
             height: 100%;
@@ -193,26 +195,20 @@ const sizes = {
 
           &:nth-of-type(7n),
           &:nth-of-type(7n) abbr {
-            border-top-right-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
-            border-bottom-right-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
+            border-top-right-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
+            border-bottom-right-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
           }
 
           &:nth-of-type(7n + 1),
           &:nth-of-type(7n + 1) abbr {
-            border-top-left-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
-            border-bottom-left-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
+            border-top-left-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
+            border-bottom-left-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
           }
 
           &.react-calendar__tile--rangeStart,
           &.react-calendar__tile--rangeStart abbr {
-            border-top-left-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
-            border-bottom-left-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
+            border-top-left-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
+            border-bottom-left-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
           }
 
           &.react-calendar__tile--rangeEnd {
@@ -220,10 +216,8 @@ const sizes = {
           }
 
           &.react-calendar__tile--rangeEnd abbr {
-            border-top-right-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
-            border-bottom-right-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
+            border-top-right-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
+            border-bottom-right-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
           }
 
           &.react-calendar__tile--rangeBothEnds {
@@ -236,7 +230,9 @@ const sizes = {
           }
 
           abbr {
-            transition: background 0.1s ease-out, color 0.1s ease-out;
+            transition:
+              background 0.1s ease-out,
+              color 0.1s ease-out;
             will-change: background, color;
             width: 26px;
             height: 100%;
@@ -373,7 +369,9 @@ const sizes = {
           }
 
           abbr {
-            transition: background 0.1s ease-out, color 0.1s ease-out;
+            transition:
+              background 0.1s ease-out,
+              color 0.1s ease-out;
             will-change: background, color;
             width: calc(100% - 8px);
             height: 100%;
@@ -454,26 +452,20 @@ const sizes = {
 
           &:nth-of-type(7n),
           &:nth-of-type(7n) abbr {
-            border-top-right-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
-            border-bottom-right-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
+            border-top-right-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
+            border-bottom-right-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
           }
 
           &:nth-of-type(7n + 1),
           &:nth-of-type(7n + 1) abbr {
-            border-top-left-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
-            border-bottom-left-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
+            border-top-left-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
+            border-bottom-left-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
           }
 
           &.react-calendar__tile--rangeStart,
           &.react-calendar__tile--rangeStart abbr {
-            border-top-left-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
-            border-bottom-left-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
+            border-top-left-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
+            border-bottom-left-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
           }
 
           &.react-calendar__tile--rangeEnd {
@@ -481,10 +473,8 @@ const sizes = {
           }
 
           &.react-calendar__tile--rangeEnd abbr {
-            border-top-right-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
-            border-bottom-right-radius: ${props.theme.ratsel.calendar.tile
-              .borderRadius};
+            border-top-right-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
+            border-bottom-right-radius: ${props.theme.ratsel.calendar.tile.borderRadius};
           }
 
           &.react-calendar__tile--rangeBothEnds {
@@ -497,7 +487,9 @@ const sizes = {
           }
 
           abbr {
-            transition: background 0.1s ease-out, color 0.1s ease-out;
+            transition:
+              background 0.1s ease-out,
+              color 0.1s ease-out;
             will-change: background, color;
             width: 32px;
             height: 100%;

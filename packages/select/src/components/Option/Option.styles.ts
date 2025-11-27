@@ -7,8 +7,7 @@ interface OptionItemProps {
 }
 
 export const OptionItem = styled('div', {
-  shouldForwardProp: (prop) =>
-    !['selected', 'focused'].includes(prop as string),
+  shouldForwardProp: (prop) => !['selected', 'focused'].includes(prop as string),
 })<OptionItemProps>`
   display: flex;
   align-items: center;
@@ -33,20 +32,17 @@ export const OptionItem = styled('div', {
   letter-spacing: -0.1px;
   color: ${(props) => props.theme.ratsel.select.colors.base};
   &:focus {
-    background-color: ${(props) =>
-      props.theme.ratsel.select.colors.hover} !important;
+    background-color: ${(props) => props.theme.ratsel.select.colors.hover} !important;
     color: ${(props) => props.theme.ratsel.select.colors.base};
   }
   &:hover {
-    background-color: ${(props) =>
-      props.theme.ratsel.select.colors.hover} !important;
+    background-color: ${(props) => props.theme.ratsel.select.colors.hover} !important;
     color: ${(props) => props.theme.ratsel.select.colors.base};
   }
   ${(props) =>
     props.selected &&
     css`
-      background-color: ${props.theme.ratsel.select.colors
-        .background} !important;
+      background-color: ${props.theme.ratsel.select.colors.background} !important;
       color: ${props.theme.ratsel.select.colors.primary} !important;
     `}
 `;

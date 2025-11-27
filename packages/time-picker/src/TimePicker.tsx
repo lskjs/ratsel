@@ -1,8 +1,6 @@
 import { ClassNames, Theme } from '@ratsel/core';
 import { Moment } from 'moment';
-import RcTimePicker, {
-  TimePickerProps as RcTimePickerProps,
-} from 'rc-time-picker';
+import RcTimePicker, { TimePickerProps as RcTimePickerProps } from 'rc-time-picker';
 import React, { forwardRef, useEffect, useState } from 'react';
 
 import { base, popup } from './components/baseStyles';
@@ -48,9 +46,7 @@ export const TimePicker = forwardRef<RcTimePicker, TimePickerProps>(
 
     useEffect(() => {
       if (typeof window !== 'undefined') {
-        document
-          .querySelector('.ratsel-tp-input')
-          ?.setAttribute('readonly', 'true');
+        document.querySelector('.ratsel-tp-input')?.setAttribute('readonly', 'true');
       }
     }, []);
 
@@ -79,9 +75,7 @@ export const TimePicker = forwardRef<RcTimePicker, TimePickerProps>(
       }
       if (focusOnOpen) {
         setTimeout(() => {
-          document
-            .querySelector<HTMLInputElement>('.ratsel-tp-panel-input')
-            ?.focus();
+          document.querySelector<HTMLInputElement>('.ratsel-tp-panel-input')?.focus();
         }, 0);
       }
     };

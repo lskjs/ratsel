@@ -1,8 +1,8 @@
 import { ClassNames } from '@ratsel/core';
 import React, { forwardRef } from 'react';
+import { SelectInstance } from 'react-select';
 import ReactSelectCreatableAsync from 'react-select/async-creatable';
 import ReactSelectCreatable from 'react-select/creatable';
-import SelectType from 'react-select/dist/declarations/src/Select';
 
 import DropdownIndicator from './components/DropdownIndicator';
 import { Option } from './components/Option';
@@ -15,7 +15,7 @@ interface SelectCreatableProps extends SelectProps {
 }
 
 export const CreatableSelect = forwardRef<
-  SelectType<SelectOption, false, GroupOption>,
+  SelectInstance<SelectOption, false, GroupOption>,
   SelectCreatableProps
 >(
   (

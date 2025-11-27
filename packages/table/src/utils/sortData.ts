@@ -6,11 +6,7 @@ import { ascendSort } from './ascendSort';
 import { descendSort } from './descendSort';
 import { getValueByColumn } from './getValueByColumn';
 
-export const sortData = (
-  columns: Column[],
-  data: any,
-  sort?: ExtendedSortFunc,
-): any[] => {
+export const sortData = (columns: Column[], data: any, sort?: ExtendedSortFunc): any[] => {
   const column = columns.find((c) => c.sortDirection);
   if (!column) {
     return data;
@@ -19,13 +15,8 @@ export const sortData = (
   const sortFunc =
     (customSort &&
       ((rowDataA: any, rowDataB: any) =>
-        customSort(
-          getValueByColumn(rowDataA, column),
-          getValueByColumn(rowDataB, column),
-        ))) ||
-    (column.sortDirection === SortDirection.Ascend
-      ? ascendSort(column)
-      : descendSort(column));
+        customSort(getValueByColumn(rowDataA, column), getValueByColumn(rowDataB, column)))) ||
+    (column.sortDirection === SortDirection.Ascend ? ascendSort(column) : descendSort(column));
   const newData = [...data].sort(sortFunc);
   return newData;
 };

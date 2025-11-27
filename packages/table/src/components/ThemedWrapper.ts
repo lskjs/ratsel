@@ -452,15 +452,13 @@ export const ThemedWrapper = styled('div')`
   }
 
   .sticky-cell-right.sticky-cell-thead {
-    box-shadow: inset ${(props) => props.theme.ratsel.table.borderWidth} -${(
-        props,
-      ) => props.theme.ratsel.table.borderWidth} 0 0 ${(props) => props.theme.ratsel.table.borderColor};
+    box-shadow: inset ${(props) => props.theme.ratsel.table.borderWidth} -${(props) =>
+        props.theme.ratsel.table.borderWidth} 0 0 ${(props) => props.theme.ratsel.table.borderColor};
   }
 
   .sticky-cell-left.sticky-cell-thead {
-    box-shadow: inset -${(props) => props.theme.ratsel.table.borderWidth} -${(
-        props,
-      ) => props.theme.ratsel.table.borderWidth}
+    box-shadow: inset -${(props) => props.theme.ratsel.table.borderWidth} -${(props) =>
+        props.theme.ratsel.table.borderWidth}
       0 0 ${(props) => props.theme.ratsel.table.borderColor};
     z-index: 21 !important;
   }

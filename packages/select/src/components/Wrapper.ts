@@ -54,16 +54,11 @@ export const Wrapper = styled('div')`
     color: ${(props) => props.theme.ratsel.select.colors.base};
   }
 
-  .ratsel-select
-    .react-select__control--menu-is-open
-    .react-select__dropdown-indicator {
+  .ratsel-select .react-select__control--menu-is-open .react-select__dropdown-indicator {
     color: ${(props) => props.theme.ratsel.select.colors.primary};
   }
 
-  .ratsel-select
-    .react-select__control--menu-is-open
-    .react-select__dropdown-indicator
-    > svg {
+  .ratsel-select .react-select__control--menu-is-open .react-select__dropdown-indicator > svg {
     transform: rotate(180deg);
   }
 
@@ -82,8 +77,7 @@ export const Wrapper = styled('div')`
   }
 
   .ratsel-select .react-select__option.react-select__option--is-focused {
-    background-color: ${(props) =>
-      props.theme.ratsel.select.colors.hover} !important;
+    background-color: ${(props) => props.theme.ratsel.select.colors.hover} !important;
     color: ${(props) => props.theme.ratsel.select.colors.base} !important;
   }
 
@@ -98,14 +92,12 @@ export const Wrapper = styled('div')`
   }
 
   .ratsel-select.has-error .react-select__control {
-    border-color: ${(props) =>
-      props.theme.ratsel.select.colors.error} !important;
+    border-color: ${(props) => props.theme.ratsel.select.colors.error} !important;
     color: ${(props) => props.theme.ratsel.select.colors.error} !important;
   }
 
   .ratsel-select.has-error .react-select__control {
-    border-color: ${(props) =>
-      props.theme.ratsel.select.colors.error} !important;
+    border-color: ${(props) => props.theme.ratsel.select.colors.error} !important;
   }
 
   .ratsel-select .react-select__clear {

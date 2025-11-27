@@ -21,12 +21,7 @@ import { getElementCustomization } from 'ka-table/Utils/ComponentUtils';
 import { isPagingShown } from 'ka-table/Utils/PagingUtils';
 import React from 'react';
 
-import {
-  EditingMode,
-  FilteringMode,
-  PagingPosition,
-  SortingMode,
-} from '../enums';
+import { EditingMode, FilteringMode, PagingPosition, SortingMode } from '../enums';
 import { ILoadingProps } from '../props';
 import { TableWrapper } from './TableWrapper';
 
@@ -88,14 +83,13 @@ export const RootTable: React.FunctionComponent<ITableAllProps> = (props) => {
   const isLoadingActive = loading && loading.enabled;
   const kaCss = isLoadingActive ? 'ka ka-loading-active' : 'ka';
 
-  const { elementAttributes, content: rootDivContent } =
-    getElementCustomization(
-      {
-        className: kaCss,
-      },
-      props,
-      childComponents?.rootDiv,
-    );
+  const { elementAttributes, content: rootDivContent } = getElementCustomization(
+    {
+      className: kaCss,
+    },
+    props,
+    childComponents?.rootDiv,
+  );
   elementAttributes.style = { width, height, ...elementAttributes.style };
 
   React.useEffect(() => {
@@ -109,13 +103,9 @@ export const RootTable: React.FunctionComponent<ITableAllProps> = (props) => {
     <div {...elementAttributes}>
       {rootDivContent || (
         <>
-          {isPagingShown(PagingPosition.Top, paging) && (
-            <TablePaging {...props} />
-          )}
+          {isPagingShown(PagingPosition.Top, paging) && <TablePaging {...props} />}
           <TableWrapper {...props} />
-          {isPagingShown(PagingPosition.Bottom, paging) && (
-            <TablePaging {...props} />
-          )}
+          {isPagingShown(PagingPosition.Bottom, paging) && <TablePaging {...props} />}
           {/* @ts-ignore */}
           <Loading {...loading} childComponents={childComponents} />
           {columns.map(

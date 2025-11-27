@@ -6,10 +6,4 @@ import * as kaSortUtils from 'ka-table/Utils/SortUtils';
 
 export * from 'ka-table/utils';
 
-export {
-  kaComponentUtils,
-  kaSortUtils,
-  kaCellUtils,
-  kaFilterUtils,
-  kaCellResizeUtils,
-};
+export { kaComponentUtils, kaSortUtils, kaCellUtils, kaFilterUtils, kaCellResizeUtils };

@@ -4,9 +4,10 @@ import { components, DropdownIndicatorProps } from 'react-select';
 
 import { GroupOption, SelectOption } from '../Select';
 
-const DropdownIndicator: FC<
-  DropdownIndicatorProps<SelectOption, false, GroupOption>
-> = ({ selectProps, ...props }) => {
+const DropdownIndicator: FC<DropdownIndicatorProps<SelectOption, false, GroupOption>> = ({
+  selectProps,
+  ...props
+}) => {
   const DropdownIndicatorBase = components.DropdownIndicator as (
     arg: DropdownIndicatorProps<SelectOption, false, GroupOption>,
   ) => JSX.Element;

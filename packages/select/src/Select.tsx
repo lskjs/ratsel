@@ -1,10 +1,7 @@
 import { ClassNames } from '@ratsel/core';
 import React, { forwardRef, ReactNode } from 'react';
-import ReactSelect, { Props } from 'react-select';
+import ReactSelect, { GroupBase, Props, SelectInstance } from 'react-select';
 import ReactSelectAsync from 'react-select/async';
-import { SelectComponents } from 'react-select/dist/declarations/src/components';
-import SelectType from 'react-select/dist/declarations/src/Select';
-import { OptionsOrGroups, PropsValue } from 'react-select/dist/declarations/src/types';
 
 import DropdownIndicator from './components/DropdownIndicator';
 import { Option } from './components/Option';
@@ -17,13 +14,14 @@ export interface SelectOption {
   [key: string]: unknown;
 }
 
-export interface GroupOption {
+export interface GroupOption extends GroupBase<SelectOption> {
   options: SelectOption[];
 }
 
-export interface SelectProps extends Omit<Props, 'components' | 'classNames'> {
-  options: OptionsOrGroups<SelectOption, GroupOption>;
-  value?: PropsValue<SelectOption>;
+export interface SelectProps
+  extends Omit<Props<SelectOption, false, GroupOption>, 'components' | 'classNames'> {
+  options?: readonly (SelectOption | GroupOption)[];
+  value?: SelectOption | null;
   placeholder?: string;
   isSearchable?: boolean;
   isClearable?: boolean;
@@ -33,15 +31,15 @@ export interface SelectProps extends Omit<Props, 'components' | 'classNames'> {
   className?: string;
   hasError?: boolean;
   onChange?: (value: any) => void | undefined;
-  components?: SelectComponents<SelectOption, false, GroupOption>;
-  noOptionsMessage: (value: Record<string, unknown>) => ReactNode;
+  components?: Partial<Props<SelectOption, false, GroupOption>['components']>;
+  noOptionsMessage?: (value: Record<string, unknown>) => ReactNode;
   isDisabled?: boolean;
   isAsync?: boolean;
   defaultOptions?: boolean;
   [key: string]: any;
 }
 
-export const Select = forwardRef<SelectType<SelectOption, false, GroupOption>, SelectProps>(
+export const Select = forwardRef<SelectInstance<SelectOption, false, GroupOption>, SelectProps>(
   (
     {
       options,

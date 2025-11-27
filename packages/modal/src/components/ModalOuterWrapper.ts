@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import sizes from '@lskjs/utils/sizes';
 import { css, styled } from '@ratsel/core';
 import { PropsWithChildren } from 'react';

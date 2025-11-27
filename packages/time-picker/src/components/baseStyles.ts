@@ -55,7 +55,8 @@ export const popup = (theme: Theme) => css`
     border-radius: ${theme.ratsel.timePicker.base.borderRadius};
     background-clip: padding-box;
     line-height: 1.5;
-    box-shadow: inset 0 0 0 1px ${theme.ratsel.timePicker.base.borderColor},
+    box-shadow:
+      inset 0 0 0 1px ${theme.ratsel.timePicker.base.borderColor},
       ${theme.ratsel.timePicker.popup.boxShadow};
   }
 

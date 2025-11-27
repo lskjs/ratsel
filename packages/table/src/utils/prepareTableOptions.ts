@@ -11,9 +11,7 @@ export const prepareTableOptions = (props: ITableProps) => {
   let groupedColumns: Column[] = [];
   if (groups) {
     groupColumnsCount = groups.length;
-    groupedColumns = columns.filter((c) =>
-      groups.some((g) => g.columnKey === c.key),
-    );
+    groupedColumns = columns.filter((c) => groups.some((g) => g.columnKey === c.key));
     columns = columns.filter((c) => !groups.some((g) => g.columnKey === c.key));
   }
   columns = columns.filter((c) => c.visible !== false);

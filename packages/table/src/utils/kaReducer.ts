@@ -7,27 +7,12 @@ import { ITableProps } from 'ka-table';
 import { newRowId } from 'ka-table/const';
 import { Column } from 'ka-table/models';
 import { getCopyOfArrayAndInsertOrReplaceItem } from 'ka-table/Utils/ArrayUtils';
-import {
-  addItemToEditableCells,
-  removeItemFromEditableCells,
-} from 'ka-table/Utils/CellUtils';
-import {
-  getValueByField,
-  reorderData,
-  replaceValue,
-} from 'ka-table/Utils/DataUtils';
+import { addItemToEditableCells, removeItemFromEditableCells } from 'ka-table/Utils/CellUtils';
+import { getValueByField, reorderData, replaceValue } from 'ka-table/Utils/DataUtils';
 import { filterAndSearchData } from 'ka-table/Utils/FilterUtils';
-import {
-  getExpandedGroups,
-  updateExpandedGroups,
-} from 'ka-table/Utils/GroupUtils';
+import { getExpandedGroups, updateExpandedGroups } from 'ka-table/Utils/GroupUtils';
 import { getUpdatedSortedColumns } from 'ka-table/Utils/HeadRowUtils';
-import {
-  getDownCell,
-  getLeftCell,
-  getRightCell,
-  getUpCell,
-} from 'ka-table/Utils/NavigationUtils';
+import { getDownCell, getLeftCell, getRightCell, getUpCell } from 'ka-table/Utils/NavigationUtils';
 import { isValid } from 'ka-table/Utils/PropsUtils';
 import {
   addColumnsToRowEditableCells,
@@ -44,10 +29,7 @@ import { kaPropsUtils } from '../utils';
 import { getData } from './getData';
 import { prepareTableOptions } from './prepareTableOptions';
 
-export const kaReducer: any = (
-  props: ITableProps,
-  action: any,
-): ITableProps => {
+export const kaReducer: any = (props: ITableProps, action: any): ITableProps => {
   const {
     columns,
     data = [],
@@ -77,9 +59,7 @@ export const kaReducer: any = (
               headerFilterValues.push(action.item);
             }
           } else {
-            headerFilterValues = headerFilterValues?.filter(
-              (value: any) => value !== action.item,
-            );
+            headerFilterValues = headerFilterValues?.filter((value: any) => value !== action.item);
           }
           c.headerFilterValues = headerFilterValues;
         }
@@ -97,8 +77,7 @@ export const kaReducer: any = (
     case ActionType.UpdateHeaderFilterPopupState: {
       const newColumns = columns.map((c: Column) => ({
         ...c,
-        isHeaderFilterPopupShown:
-          c.key === action.columnKey ? !c.isHeaderFilterPopupShown : false,
+        isHeaderFilterPopupShown: c.key === action.columnKey ? !c.isHeaderFilterPopupShown : false,
       }));
       return { ...props, columns: newColumns };
     }
@@ -128,17 +107,13 @@ export const kaReducer: any = (
     }
     case ActionType.ShowColumn: {
       const newColumns = [...columns];
-      const columnIndex = newColumns.findIndex(
-        (c) => c.key === action.columnKey,
-      );
+      const columnIndex = newColumns.findIndex((c) => c.key === action.columnKey);
       newColumns[columnIndex] = { ...newColumns[columnIndex], visible: true };
       return { ...props, columns: newColumns };
     }
     case ActionType.HideColumn: {
       const newColumns = [...columns];
-      const columnIndex = newColumns.findIndex(
-        (c) => c.key === action.columnKey,
-      );
+      const columnIndex = newColumns.findIndex((c) => c.key === action.columnKey);
       newColumns[columnIndex] = { ...newColumns[columnIndex], visible: false };
       return { ...props, columns: newColumns };
     }
@@ -152,12 +127,7 @@ export const kaReducer: any = (
       return { ...props, data: newData };
     }
     case ActionType.ReorderColumns: {
-      const newData = reorderData(
-        columns,
-        (d) => d.key,
-        action.columnKey,
-        action.targetColumnKey,
-      );
+      const newData = reorderData(columns, (d) => d.key, action.columnKey, action.targetColumnKey);
       return { ...props, columns: newData };
     }
     case ActionType.ResizeColumn: {
@@ -210,9 +180,7 @@ export const kaReducer: any = (
       return { ...props, detailsRows: newDetailsRows };
     }
     case ActionType.HideDetailsRow: {
-      const newDetailsRows = detailsRows.filter(
-        (row) => row !== action.rowKeyValue,
-      );
+      const newDetailsRows = detailsRows.filter((row) => row !== action.rowKeyValue);
       return { ...props, detailsRows: newDetailsRows };
     }
     case ActionType.OpenEditor: {
@@ -220,10 +188,7 @@ export const kaReducer: any = (
       return { ...props, editableCells: newEditableCells };
     }
     case ActionType.CloseEditor: {
-      const newEditableCells = removeItemFromEditableCells(
-        action,
-        editableCells,
-      );
+      const newEditableCells = removeItemFromEditableCells(action, editableCells);
       return { ...props, editableCells: newEditableCells };
     }
     case ActionType.UpdateFilterRowValue: {
@@ -232,11 +197,7 @@ export const kaReducer: any = (
         ...column,
         filterRowValue: action.filterRowValue,
       };
-      const newColumns = getCopyOfArrayAndInsertOrReplaceItem(
-        newColumn,
-        'key',
-        columns,
-      );
+      const newColumns = getCopyOfArrayAndInsertOrReplaceItem(newColumn, 'key', columns);
       return { ...props, columns: newColumns };
     }
     case ActionType.UpdateFilterRowOperator: {
@@ -245,19 +206,13 @@ export const kaReducer: any = (
         ...column,
         filterRowOperator: action.filterRowOperator,
       };
-      const newColumns = getCopyOfArrayAndInsertOrReplaceItem(
-        newColumn,
-        'key',
-        columns,
-      );
+      const newColumns = getCopyOfArrayAndInsertOrReplaceItem(newColumn, 'key', columns);
       return { ...props, columns: newColumns };
     }
     case ActionType.UpdateEditorValue: {
       const newEditableCells = [...editableCells];
       const editableCellIndex = newEditableCells.findIndex(
-        (c) =>
-          c.columnKey === action.columnKey &&
-          c.rowKeyValue === action.rowKeyValue,
+        (c) => c.columnKey === action.columnKey && c.rowKeyValue === action.rowKeyValue,
       );
       const editableCell = {
         ...newEditableCells[editableCellIndex],
@@ -267,16 +222,10 @@ export const kaReducer: any = (
       return { ...props, editableCells: newEditableCells };
     }
     case ActionType.UpdateCellValue: {
-      const row = data.find(
-        (d) => getValueByField(d, rowKeyField) === action.rowKeyValue,
-      );
+      const row = data.find((d) => getValueByField(d, rowKeyField) === action.rowKeyValue);
       const column = columns.find((c) => c.key === action.columnKey)!;
       const updatedRowData = replaceValue(row, column, action.value);
-      const newData = getCopyOfArrayAndInsertOrReplaceItem(
-        updatedRowData,
-        rowKeyField,
-        data,
-      );
+      const newData = getCopyOfArrayAndInsertOrReplaceItem(updatedRowData, rowKeyField, data);
       return { ...props, data: newData };
     }
     case ActionType.DeleteRow: {
@@ -291,11 +240,7 @@ export const kaReducer: any = (
     }
     case ActionType.SelectAllFilteredRows: {
       const newData = filterAndSearchData(props);
-      let newSelectedRows = removeDataKeysFromSelectedRows(
-        selectedRows,
-        newData,
-        rowKeyField,
-      );
+      let newSelectedRows = removeDataKeysFromSelectedRows(selectedRows, newData, rowKeyField);
       newSelectedRows = [
         ...newSelectedRows,
         ...newData.map((d) => getValueByField(d, rowKeyField)),
@@ -304,11 +249,7 @@ export const kaReducer: any = (
     }
     case ActionType.SelectAllVisibleRows: {
       const newData = getData(props);
-      let newSelectedRows = removeDataKeysFromSelectedRows(
-        selectedRows,
-        newData,
-        rowKeyField,
-      );
+      let newSelectedRows = removeDataKeysFromSelectedRows(selectedRows, newData, rowKeyField);
       newSelectedRows = [
         ...newSelectedRows,
         ...newData.map((d) => getValueByField(d, rowKeyField)),
@@ -326,20 +267,12 @@ export const kaReducer: any = (
       return { ...props, selectedRows: [] };
     case ActionType.DeselectAllFilteredRows: {
       const newData = filterAndSearchData(props);
-      const newSelectedRows = removeDataKeysFromSelectedRows(
-        selectedRows,
-        newData,
-        rowKeyField,
-      );
+      const newSelectedRows = removeDataKeysFromSelectedRows(selectedRows, newData, rowKeyField);
       return { ...props, selectedRows: newSelectedRows };
     }
     case ActionType.DeselectAllVisibleRows: {
       const newData = getData(props);
-      const newSelectedRows = removeDataKeysFromSelectedRows(
-        selectedRows,
-        newData,
-        rowKeyField,
-      );
+      const newSelectedRows = removeDataKeysFromSelectedRows(selectedRows, newData, rowKeyField);
       return { ...props, selectedRows: newSelectedRows };
     }
     case ActionType.SelectRow:
@@ -378,17 +311,11 @@ export const kaReducer: any = (
       };
     }
     case ActionType.DeselectRow: {
-      const newSelectedRows = [...selectedRows].filter(
-        (s) => s !== action.rowKeyValue,
-      );
+      const newSelectedRows = [...selectedRows].filter((s) => s !== action.rowKeyValue);
       return { ...props, selectedRows: newSelectedRows };
     }
     case ActionType.UpdateSortDirection:
-      const sortedColumns = getUpdatedSortedColumns(
-        columns,
-        action.columnKey,
-        sortingMode,
-      );
+      const sortedColumns = getUpdatedSortedColumns(columns, action.columnKey, sortingMode);
       return { ...props, columns: sortedColumns };
     case ActionType.UpdateVirtualScrolling:
       return { ...props, virtualScrolling: action.virtualScrolling };
@@ -406,38 +333,23 @@ export const kaReducer: any = (
         const preparedOptions = prepareTableOptions(props);
         currentGroupsExpanded = getExpandedGroups(preparedOptions.groupedData);
       }
-      const newGroupsExpanded = updateExpandedGroups(
-        currentGroupsExpanded,
-        action.groupKey,
-      );
+      const newGroupsExpanded = updateExpandedGroups(currentGroupsExpanded, action.groupKey);
       return { ...props, groupsExpanded: newGroupsExpanded };
     }
     case ActionType.ShowNewRow:
     case ActionType.OpenRowEditors: {
-      const rowKeyValue =
-        action.type === ActionType.ShowNewRow ? newRowId : action.rowKeyValue;
-      const newEditableCells = addColumnsToRowEditableCells(
-        editableCells,
-        columns,
-        rowKeyValue,
-      );
+      const rowKeyValue = action.type === ActionType.ShowNewRow ? newRowId : action.rowKeyValue;
+      const newEditableCells = addColumnsToRowEditableCells(editableCells, columns, rowKeyValue);
       return { ...props, editableCells: newEditableCells };
     }
     case ActionType.OpenAllEditors: {
-      const newEditableCells = getEditableCellsByData(
-        data,
-        rowKeyField,
-        columns,
-      );
+      const newEditableCells = getEditableCellsByData(data, rowKeyField, columns);
       return { ...props, editableCells: newEditableCells };
     }
     case ActionType.HideNewRow:
     case ActionType.CloseRowEditors: {
-      const rowKeyValue =
-        action.type === ActionType.HideNewRow ? newRowId : action.rowKeyValue;
-      const newEditableCells = editableCells.filter(
-        (e) => e.rowKeyValue !== rowKeyValue,
-      );
+      const rowKeyValue = action.type === ActionType.HideNewRow ? newRowId : action.rowKeyValue;
+      const newEditableCells = editableCells.filter((e) => e.rowKeyValue !== rowKeyValue);
       return { ...props, editableCells: newEditableCells };
     }
     case ActionType.Validate: {
@@ -452,14 +364,8 @@ export const kaReducer: any = (
             (d) => getValueByField(d, rowKeyField) === editableCell.rowKeyValue,
           );
           if (rowIndex != null) {
-            const column = columns.find(
-              (c) => c.key === editableCell.columnKey,
-            )!;
-            newData[rowIndex] = replaceValue(
-              newData[rowIndex],
-              column,
-              editableCell.editorValue,
-            );
+            const column = columns.find((c) => c.key === editableCell.columnKey)!;
+            newData[rowIndex] = replaceValue(newData[rowIndex], column, editableCell.editorValue);
           }
         }
       });
@@ -469,19 +375,14 @@ export const kaReducer: any = (
     case ActionType.SaveNewRow: {
       const isNewRow = action.type === ActionType.SaveNewRow;
       const rowEditorKeyValue = isNewRow ? newRowId : action.rowKeyValue;
-      let updatedRowData = data.find(
-        (d) => getValueByField(d, rowKeyField) === rowEditorKeyValue,
-      );
+      let updatedRowData = data.find((d) => getValueByField(d, rowKeyField) === rowEditorKeyValue);
       const rowEditableCells = editableCells.filter(
         (editableCell) =>
           editableCell.rowKeyValue === rowEditorKeyValue &&
           // eslint-disable-next-line no-prototype-builtins
           (isNewRow || editableCell.hasOwnProperty('editorValue')),
       );
-      if (
-        action.validate &&
-        !isValid({ ...props, editableCells: rowEditableCells })
-      ) {
+      if (action.validate && !isValid({ ...props, editableCells: rowEditableCells })) {
         rowEditableCells.forEach((cell) => {
           const column = columns.find((c) => c.key === cell.columnKey)!;
           cell.validationMessage =
@@ -494,9 +395,7 @@ export const kaReducer: any = (
         });
         return { ...props, editableCells: [...editableCells] };
       }
-      const newEditableCells = editableCells.filter(
-        (e) => e.rowKeyValue !== rowEditorKeyValue,
-      );
+      const newEditableCells = editableCells.filter((e) => e.rowKeyValue !== rowEditorKeyValue);
       rowEditableCells.forEach((cell) => {
         const column = columns.find((c) => c.key === cell.columnKey)!;
         updatedRowData = replaceValue(updatedRowData, column, cell.editorValue);
@@ -506,27 +405,17 @@ export const kaReducer: any = (
         updatedRowData[rowKeyField] = action.rowKeyValue;
         newData = [updatedRowData, ...data];
       } else {
-        newData = getCopyOfArrayAndInsertOrReplaceItem(
-          updatedRowData,
-          rowKeyField,
-          data,
-        );
+        newData = getCopyOfArrayAndInsertOrReplaceItem(updatedRowData, rowKeyField, data);
       }
       return { ...props, data: newData, editableCells: newEditableCells };
     }
     case ActionType.UpdateRow: {
-      const newData = getCopyOfArrayAndInsertOrReplaceItem(
-        action.rowData,
-        rowKeyField,
-        data,
-      );
+      const newData = getCopyOfArrayAndInsertOrReplaceItem(action.rowData, rowKeyField, data);
       return { ...props, data: newData };
     }
     case ActionType.UpdateTreeGroupsExpanded: {
       const { rowKeyValue } = action;
-      const value = treeGroupsExpanded
-        ? !treeGroupsExpanded.some((v) => v === rowKeyValue)
-        : false;
+      const value = treeGroupsExpanded ? !treeGroupsExpanded.some((v) => v === rowKeyValue) : false;
       if (value) {
         return {
           ...props,
@@ -536,16 +425,11 @@ export const kaReducer: any = (
       let currentExpanded = treeGroupsExpanded;
       if (!currentExpanded) {
         const preparedOptions = prepareTableOptions(props);
-        currentExpanded = getExpandedParents(
-          preparedOptions.groupedData,
-          rowKeyField,
-        );
+        currentExpanded = getExpandedParents(preparedOptions.groupedData, rowKeyField);
       }
       return {
         ...props,
-        treeGroupsExpanded: currentExpanded.filter(
-          (item) => item !== rowKeyValue,
-        ),
+        treeGroupsExpanded: currentExpanded.filter((item) => item !== rowKeyValue),
       };
     }
     default:

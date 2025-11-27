@@ -6,11 +6,7 @@ import React, { ComponentType, ReactNode } from 'react';
 import { CustomComponentProps, ISummaryCustomCellProps } from './deserialize';
 
 export const renderCustomComponent = (
-  props:
-    | ICellProps
-    | ICellEditorProps
-    | ISummaryCustomCellProps
-    | ITableAllProps,
+  props: ICellProps | ICellEditorProps | ISummaryCustomCellProps | ITableAllProps,
   componentObject?: CustomComponentProps,
 ): ReactNode | void => {
   const CustomCell = componentObject?.component as ComponentType<any>;

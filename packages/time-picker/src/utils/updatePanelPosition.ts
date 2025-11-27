@@ -3,9 +3,7 @@ export function updatePanelPosition(instant?: boolean) {
   const baseRect = baseEl?.getBoundingClientRect();
 
   const updatePosition = () => {
-    const panelEl = document.querySelector<HTMLDivElement & { style: any }>(
-      '.ratsel-tp-panel',
-    );
+    const panelEl = document.querySelector<HTMLDivElement & { style: any }>('.ratsel-tp-panel');
     if (panelEl) {
       panelEl.style.cssText = `
           width: ${baseRect?.width}px;

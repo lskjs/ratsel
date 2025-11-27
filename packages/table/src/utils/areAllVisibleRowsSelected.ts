@@ -5,7 +5,5 @@ import { getData } from './getData';
 
 export const areAllVisibleRowsSelected = (props: ITableProps) => {
   const { selectedRows = [], rowKeyField } = props;
-  return getData(props).every((d: any) =>
-    selectedRows.includes(getValueByField(d, rowKeyField)),
-  );
+  return getData(props).every((d: any) => selectedRows.includes(getValueByField(d, rowKeyField)));
 };

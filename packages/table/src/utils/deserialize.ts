@@ -45,9 +45,7 @@ export interface DeserializeReturn {
   custom?: CustomProps;
 }
 
-export const deserialize = (
-  tableProps: ExtendedTableProps,
-): DeserializeReturn => {
+export const deserialize = (tableProps: ExtendedTableProps): DeserializeReturn => {
   const data = {
     ...defaults,
     ...tableProps,
